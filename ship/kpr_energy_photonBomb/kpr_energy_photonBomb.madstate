@@ -1,0 +1,17 @@
+KPR_ENERGY_PHOTONBOMB_Launched_OnSet = function(ship)
+    startEffect(ship, "energy")
+    startAnim(ship, "Zhuan")
+    setLoopCount(ship, "Zhuan", 100000)
+    if(isAnimRunning(ship,"Open") == 0) then
+        startTime = 0
+        if(isAnimRunning(ship,"Close") ~= 0) then
+            startTime = getAnimLength(ship, "Close") - getTime(ship, "Close")
+            stopAnim(ship, "Close")
+            endEffect(ship, "Close")
+        end
+        startAnim(ship, "Open")
+        startEffect(ship, "Open")
+        setTime(ship,"Open",startTime)
+        setPauseTime(ship, "Open", 1000)
+    end
+end

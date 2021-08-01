@@ -1,0 +1,324 @@
+-- FX:G Skirmish Campaign - Hall of Fame
+-- Generated using PayDay's Homeworld Remastered Map Editor
+-- ============================================================
+-- Name: sp34.level
+-- By HW_Lover & WildHeart|GENESIS|
+-- Last updated Fri 8 Feb 2019.
+-- ============================================================
+
+function addFame(famename,shipname,shippos,shipowner,shipdirect,ex1,ex2)
+	addSquadron(famename,shipname,shippos,shipowner,shipdirect,ex1,ex2)
+	createSOBGroup(famename)
+	addToSOBGroup(famename, famename)
+end
+
+function DetermChunk()
+	-- Points
+	addPoint("PlayerStartPoint", {9659.155, 111.1873, -9778.732}, {0, -44, 0})
+
+	addFame("HW_Lover",   "nccn_sajuuk",             {6159.155, 111.1873, -7178.732}, 1, {0, 136, 0}, 1, 0)
+	addFame("WildHeart",  "nccn_wildheart",          {7059.155, 111.1873, -6378.732}, 1, {0, 136, 0}, 1, 0)
+
+	addFame("Midnight",   "tai_ioncannonfrigate",    {7159.155, 111.1873, -2178.732}, 2, {0, 136, 0}, 1, 0)
+	addFame("Adun",       "hgn_ioncannonfrigate",    {6659.155, 111.1873, -2678.732}, 2, {0, 136, 0}, 1, 0)
+	addFame("Marine",     "hgn_marinefrigate",       {6159.155, 111.1873, -3178.732}, 2, {0, 136, 0}, 1, 0)
+	addFame("Corvette",   "tur_minelayercorvette",   {5659.155, 111.1873, -3678.732}, 2, {0, 136, 0}, 1, 0)
+	addFame("Starlancer", "kpr_ioncannonfrigate",    {5159.155, 111.1873, -4178.732}, 2, {0, 136, 0}, 1, 0)
+	addFame("Droid",      "kpr_destroyer",           {4659.155, 111.1873, -4678.732}, 2, {0, 136, 0}, 1, 0)
+	addFame("Explorer",   "kad_multibeamfrigate",    {4159.155, 111.1873, -5178.732}, 2, {0, 136, 0}, 1, 0)
+	addFame("CPU1",       "kad_salvager",            {3659.155, 111.1873, -5678.732}, 2, {0, 136, 0}, 1, 0)
+	addFame("DeatH",      "tai_destroyer",           {3159.155, 111.1873, -6178.732}, 2, {0, 136, 0}, 1, 0)
+	addFame("KarBo",      "kad_swarmer",    		 {2659.155, 111.1873, -6678.732}, 2, {0, 136, 0}, 1, 0)
+	addFame("LinLin",     "ben_probe",    			 {2159.155, 111.1873, -7178.732}, 2, {0, 136, 0}, 1, 0)
+	addFame("EmptySoul",  "tai_scout",    			 {1659.155, 111.1873, -7678.732}, 2, {0, 136, 0}, 1, 0)
+
+	addFame("PayDay",     "kpr_energy_PhasedCannon", {4659.155, 611.1873, -4678.732}, 3, {0, 136, 0}, 1, 0)
+	addCamera("CameraStart", {6711.161621, 110.258034, -6904.325195}, {7165.018066, 526.877930, -7299.921387}) 
+	-- Squadrons
+	addSquadron("sp_lighth", "meg_veildebris_flake7", {15510.21, -2170.086, -16270.21}, -1, {0, 51, -22}, 1, 0)
+	addSquadron("sp_lighth", "meg_veildebris_bit13", {15917.11, -2243.711, -16080.88}, -1, {-8, -30, -3}, 1, 0)
+	addSquadron("sp_lighth", "meg_veildebris_bit4", {15432.14, -1726.976, -16062.05}, -1, {0, 29, -18}, 1, 0)
+	addSquadron("sp_lighth", "meg_veildebris_bit9", {16407.84, -2290.997, -15754.15}, -1, {16, 24, 0}, 1, 0)
+	addSquadron("sp_lighth", "meg_veildebris_bit14", {16017.89, -1834.415, -15771.83}, -1, {-16, -54, 0}, 1, 0)
+	addSquadron("sp_lighth", "meg_veildebris_chunk_lighthouse", {15352.83, -1708.497, -15222.57}, -1, {-19, -40, 15}, 1, 0)
+	addSquadron("sp_lighth", "meg_veildebris_bit1", {15738.47, -1517.325, -15261.55}, -1, {0, 20, -10}, 1, 0)
+	addSquadron("sp_lighth", "meg_veildebris_bit4", {15832.89, -1813.762, -15191.26}, -1, {0, -17, 16}, 1, 0)
+	addSquadron("sp_lighth", "meg_veildebris_flake5", {16280.19, -1888.891, -15409.83}, -1, {28, -54, 0}, 1, 0)
+
+	-- Dust clouds
+	addDustCloud("Polysurface1", "dustcloud_nores3", {-414.7442, -18.01092, 13195.54}, {1, 0.5, 0, 1.992188}, 0, 4246)
+	addDustCloud("Polysurface1", "dustcloud_nores3", {-353.3665, -1490.317, 10686.93}, {1, 0.5, 0, 1.992188}, 0, 4246)
+	addDustCloud("Polysurface1", "dustcloud_nores3", {-4510.857, -246.5187, 10298.4}, {1, 0.5, 0, 1.992188}, 0, 4246)
+	addDustCloud("Polysurface1", "dustcloud_nores3", {-4562.563, -1871.452, 6754.182}, {1, 0.5, 0, 1.992188}, 0, 4246)
+	addDustCloud("Polysurface1", "dustcloud_nores3", {-9216.813, -716.2287, 6536.446}, {1, 0.5, 0, 1.992188}, 0, 4246)
+	addDustCloud("Polysurface1", "dustcloud_nores3", {-8655.242, -1224.012, 2583.611}, {1, 0.5, 0, 1.992188}, 0, 4246)
+	addDustCloud("Polysurface1", "dustcloud_nores3", {-13194.53, -43.39959, 1978.208}, {1, 0.5, 0, 1.992188}, 0, 4246)
+	addDustCloud("Polysurface1", "dustcloud_nores3", {-12843.82, -1655.638, -1493.14}, {1, 0.5, 0, 1.992188}, 0, 4246)
+	addDustCloud("Polysurface1", "dustcloud_nores3", {2929.159, -1490.317, 13756.17}, {1, 0.5, 0, 1.992188}, 0, 4246)
+
+	-- Settings
+	setWorldBoundsInner({0, 0, 0}, {16000, 5000, 16000})
+end
+
+function NonDetermChunk()
+	-- Pebbles
+	addPebble("pebble_0", {7776.632, -1327.156, -17178.94}, 0, 0, 0)
+	addPebble("pebble_0", {8314.715, -886.3546, -18006.32}, 0, 0, 0)
+	addPebble("pebble_0", {7704.562, -1355.35, -16931.47}, 0, 0, 0)
+	addPebble("pebble_0", {8602.955, -1179.12, -17766.65}, 0, 0, 0)
+	addPebble("pebble_0", {7969.343, -1357.801, -16663.48}, 0, 0, 0)
+	addPebble("pebble_0", {9009.322, -1015.194, -17843.29}, 0, 0, 0)
+	addPebble("pebble_0", {8768.791, -423.3788, -17486.24}, 0, 0, 0)
+	addPebble("pebble_0", {9453.146, -1404.99, -17257.6}, 0, 0, 0)
+	addPebble("pebble_0", {9078.955, -516.6039, -17371.76}, 0, 0, 0)
+	addPebble("pebble_0", {8948.557, -1378.639, -16409.91}, 0, 0, 0)
+	addPebble("pebble_0", {9881.253, -1440.767, -17374.09}, 0, 0, 0)
+	addPebble("pebble_0", {10186.32, -1443.423, -17616.05}, 0, 0, 0)
+	addPebble("pebble_0", {9532.95, -689.7404, -17516.4}, 0, 0, 0)
+	addPebble("pebble_0", {9652.2, -1435.66, -16873.94}, 0, 0, 0)
+	addPebble("pebble_0", {9406.31, -476.6508, -17376.29}, 0, 0, 0)
+	addPebble("pebble_0", {10147.02, -982.7423, -17692.68}, 0, 0, 0)
+	addPebble("pebble_0", {10457.1, -1155.878, -17800.91}, 0, 0, 0)
+	addPebble("pebble_0", {9728.663, -1389.67, -16749.02}, 0, 0, 0)
+	addPebble("pebble_0", {9035.947, -1375.572, -15937.2}, 0, 0, 0)
+	addPebble("pebble_0", {12961.7, -3115.27, -18538.53}, 0, 0, 0)
+	addPebble("pebble_0", {9429.435, -1337.576, -16230.24}, 0, 0, 0)
+	addPebble("pebble_0", {10256.96, -1421.537, -17014.5}, 0, 0, 0)
+	addPebble("pebble_0", {13638.92, -3143.886, -19057.98}, 0, 0, 0)
+	addPebble("pebble_0", {10851.39, -1442.988, -17411.97}, 0, 0, 0)
+	addPebble("pebble_0", {10659.17, -1435.019, -17218.86}, 0, 0, 0)
+	addPebble("pebble_0", {10285.35, -825.7316, -17356.57}, 0, 0, 0)
+	addPebble("pebble_0", {13439.35, -3393.83, -18390.33}, 0, 0, 0)
+	addPebble("pebble_0", {9649.161, -423.3788, -16956.53}, 0, 0, 0)
+	addPebble("pebble_0", {10980.03, -1090.976, -17762.76}, 0, 0, 0)
+	addPebble("pebble_0", {9914.019, -596.5121, -17021.58}, 0, 0, 0)
+	addPebble("pebble_0", {10223.29, -1414.183, -16607.34}, 0, 0, 0)
+	addPebble("pebble_0", {9289.757, -130.3787, -16786.93}, 0, 0, 0)
+	addPebble("pebble_0", {10136.02, -729.6935, -17059.39}, 0, 0, 0)
+	addPebble("pebble_0", {10605.29, -901.5109, -17291.81}, 0, 0, 0)
+	addPebble("pebble_0", {12421.37, -2354.507, -17898.54}, 0, 0, 0)
+	addPebble("pebble_0", {10400.09, -822.922, -17013.1}, 0, 0, 0)
+	addPebble("pebble_0", {12600.29, -2421.097, -17871.96}, 0, 0, 0)
+	addPebble("pebble_0", {9741.351, -303.5155, -16726.98}, 0, 0, 0)
+	addPebble("pebble_0", {13569.8, -3219.731, -18156.82}, 0, 0, 0)
+	addPebble("pebble_0", {13285.34, -2412.713, -18549.61}, 0, 0, 0)
+	addPebble("pebble_0", {12308.26, -1736.052, -18095.04}, 0, 0, 0)
+	addPebble("pebble_0", {11163.81, -1315.695, -17213.27}, 0, 0, 0)
+	addPebble("pebble_0", {11683.96, -1608.693, -17457.17}, 0, 0, 0)
+	addPebble("pebble_0", {11533.29, -1680.23, -17165.39}, 0, 0, 0)
+	addPebble("pebble_0", {12317.3, -1671.286, -18028.21}, 0, 0, 0)
+	addPebble("pebble_0", {13025.93, -2121.958, -18318.29}, 0, 0, 0)
+	addPebble("pebble_0", {17258.64, -1344.631, -11216.99}, 0, 0, 0)
+	addPebble("pebble_0", {10997.37, -1075.969, -17071.92}, 0, 0, 0)
+	addPebble("pebble_0", {10509.53, -729.6935, -16809.31}, 0, 0, 0)
+	addPebble("pebble_0", {11579.96, -1137.695, -17537.22}, 0, 0, 0)
+	addPebble("pebble_0", {11933.75, -2026.811, -17043.74}, 0, 0, 0)
+	addPebble("pebble_0", {11657.58, -1515.468, -17167.13}, 0, 0, 0)
+	addPebble("pebble_0", {12176.58, -1380.531, -17770.34}, 0, 0, 0)
+	addPebble("pebble_0", {46822.73, -8644.214, -45939.91}, 0, 0, 0)
+	addPebble("pebble_0", {10568.81, -716.3751, -16750.98}, 0, 0, 0)
+	addPebble("pebble_0", {10072.53, -316.8339, -16523.87}, 0, 0, 0)
+	addPebble("pebble_0", {11050.88, -954.5558, -16899.85}, 0, 0, 0)
+	addPebble("pebble_0", {10465.63, -583.1957, -16633.59}, 0, 0, 0)
+	addPebble("pebble_0", {14044.6, -2876.005, -18281.11}, 0, 0, 0)
+	addPebble("pebble_0", {12193.88, -1458.543, -17636.19}, 0, 0, 0)
+	addPebble("pebble_0", {10696.27, -729.6954, -16684.29}, 0, 0, 0)
+	addPebble("pebble_0", {12275.46, -1380.531, -17748.2}, 0, 0, 0)
+	addPebble("pebble_0", {11727.1, -1736.052, -16720.71}, 0, 0, 0)
+	addPebble("pebble_0", {13423.54, -2687.457, -17620.25}, 0, 0, 0)
+	addPebble("pebble_0", {12115.63, -1456.295, -17392.45}, 0, 0, 0)
+	addPebble("pebble_0", {11634.4, -1453.408, -16818.02}, 0, 0, 0)
+	addPebble("pebble_0", {11084.39, -1442.402, -16238.18}, 0, 0, 0)
+	addPebble("pebble_0", {11162.47, -946.9835, -16752.45}, 0, 0, 0)
+	addPebble("pebble_0", {11260.54, -1444.445, -16349.46}, 0, 0, 0)
+	addPebble("pebble_0", {15822.41, -546.433, -10163.26}, 0, 0, 0)
+	addPebble("pebble_0", {13974.47, -2398.177, -18381.04}, 0, 0, 0)
+	addPebble("pebble_0", {13919.51, -2325.488, -18321}, 0, 0, 0)
+	addPebble("pebble_0", {13020.17, -1803.354, -17860.57}, 0, 0, 0)
+	addPebble("pebble_0", {12450.3, -1848.419, -17170.57}, 0, 0, 0)
+	addPebble("pebble_0", {10977.73, -809.6036, -16602.98}, 0, 0, 0)
+	addPebble("pebble_0", {12324.53, -1269.819, -17599.08}, 0, 0, 0)
+	addPebble("pebble_0", {38716.85, -9724.757, -47959.13}, 0, 0, 0)
+	addPebble("pebble_0", {11468.13, -1060.668, -16842.06}, 0, 0, 0)
+	addPebble("pebble_0", {11174.15, -929.4689, -16639.29}, 0, 0, 0)
+	addPebble("pebble_0", {11418.34, -1445.262, -16302.22}, 0, 0, 0)
+	addPebble("pebble_0", {14465, -3015.284, -18015.46}, 0, 0, 0)
+	addPebble("pebble_0", {17918.97, -2226.815, -12239.77}, 0, 0, 0)
+	addPebble("pebble_0", {14063.52, -2993.403, -17540.11}, 0, 0, 0)
+	addPebble("pebble_0", {12762.45, -1438.681, -17697.19}, 0, 0, 0)
+	addPebble("pebble_0", {14149.74, -2482.312, -18092.45}, 0, 0, 0)
+	addPebble("pebble_0", {13599.51, -2401.467, -17436.15}, 0, 0, 0)
+	addPebble("pebble_0", {12456.94, -1147.925, -17396.29}, 0, 0, 0)
+	addPebble("pebble_0", {13807.46, -2523.335, -17372.1}, 0, 0, 0)
+	addPebble("pebble_0", {12721.19, -1374.279, -17378.13}, 0, 0, 0)
+	addPebble("pebble_0", {12333.47, -828.09, -17389.13}, 0, 0, 0)
+	addPebble("pebble_0", {11820.12, -1009.377, -16622.51}, 0, 0, 0)
+	addPebble("pebble_0", {12037.98, -1450.166, -16407.87}, 0, 0, 0)
+	addPebble("pebble_0", {13218.91, -1697.258, -17322.91}, 0, 0, 0)
+	addPebble("pebble_0", {12939.99, -1861.737, -16787.88}, 0, 0, 0)
+	addPebble("pebble_0", {12270.39, -1040.526, -16846.73}, 0, 0, 0)
+	addPebble("pebble_0", {13647.43, -1627.673, -17581.1}, 0, 0, 0)
+	addPebble("pebble_0", {12745.66, -1017.084, -17201.49}, 0, 0, 0)
+	addPebble("pebble_0", {12465.81, -1235.78, -16676.89}, 0, 0, 0)
+	addPebble("pebble_0", {12702.94, -1288.016, -16704.71}, 0, 0, 0)
+	addPebble("pebble_0", {17985.84, -2649.271, -12739.46}, 0, 0, 0)
+	addPebble("pebble_0", {17211.14, -2152.265, -12371.53}, 0, 0, 0)
+	addPebble("pebble_0", {17068.83, -2068.04, -12297.5}, 0, 0, 0)
+	addPebble("pebble_0", {18622.93, -3009.6, -12373.92}, 0, 0, 0)
+	addPebble("pebble_0", {17740.14, -2425.618, -12321.61}, 0, 0, 0)
+	addPebble("pebble_0", {17463.57, -2288.728, -12192.53}, 0, 0, 0)
+	addPebble("pebble_0", {18745.04, -2127.415, -13504.86}, 0, 0, 0)
+	addPebble("pebble_0", {17223.8, -1996.289, -12018.36}, 0, 0, 0)
+	addPebble("pebble_0", {18765.46, -2835.647, -12173.45}, 0, 0, 0)
+	addPebble("pebble_0", {18267.48, -2512.594, -12162.63}, 0, 0, 0)
+	addPebble("pebble_0", {17163.74, -1943.788, -11866.82}, 0, 0, 0)
+	addPebble("pebble_0", {17382.28, -2309.194, -11551.64}, 0, 0, 0)
+	addPebble("pebble_0", {17025.75, -1754.66, -12005.31}, 0, 0, 0)
+	addPebble("pebble_0", {17209.46, -2058.056, -11636.29}, 0, 0, 0)
+	addPebble("pebble_0", {16750.11, -1605.559, -11825.18}, 0, 0, 0)
+	addPebble("pebble_0", {15655.17, -1313.578, -10995.07}, 0, 0, 0)
+	addPebble("pebble_0", {16128.51, -924.6027, -10724.29}, 0, 0, 0)
+	addPebble("pebble_0", {19218.05, -2393.536, -12927.89}, 0, 0, 0)
+	addPebble("pebble_0", {16964.88, -1776.697, -11577.18}, 0, 0, 0)
+	addPebble("pebble_0", {17571.23, -1785.781, -12118.46}, 0, 0, 0)
+	addPebble("pebble_0", {19334.16, -2226.815, -13180.08}, 0, 0, 0)
+	addPebble("pebble_0", {16646.96, -1419.181, -11644.1}, 0, 0, 0)
+	addPebble("pebble_0", {18982.96, -1990.738, -13079.07}, 0, 0, 0)
+	addPebble("pebble_0", {18501.28, -2388.343, -11840.08}, 0, 0, 0)
+	addPebble("pebble_0", {18524.84, -1897.423, -12658.02}, 0, 0, 0)
+	addPebble("pebble_0", {18016.57, -2127.415, -11734.4}, 0, 0, 0)
+	addPebble("pebble_0", {17483.31, -1791.936, -11545.86}, 0, 0, 0)
+	addPebble("pebble_0", {16869.06, -1512.701, -11306.88}, 0, 0, 0)
+	addPebble("pebble_0", {18948.89, -2106.313, -12498.63}, 0, 0, 0)
+	addPebble("pebble_0", {15859.41, -977.1261, -11044.02}, 0, 0, 0)
+	addPebble("pebble_0", {16977.39, -971.8741, -12270.32}, 0, 0, 0)
+	addPebble("pebble_0", {17292.5, -1630.41, -11421.96}, 0, 0, 0)
+	addPebble("pebble_0", {43203.94, -9834.11, -43371.86}, 0, 0, 0)
+	addPebble("pebble_0", {16564.86, -1041.599, -11607.64}, 0, 0, 0)
+	addPebble("pebble_0", {18595.98, -1630.409, -12721.92}, 0, 0, 0)
+	addPebble("pebble_0", {16337.74, -991.2277, -11383.18}, 0, 0, 0)
+	addPebble("pebble_0", {57457.69, -4914.559, -55316.16}, 0, 0, 0)
+	addPebble("pebble_0", {16811.86, -1104.653, -11457.46}, 0, 0, 0)
+	addPebble("pebble_0", {16421.26, -915.4913, -11384.67}, 0, 0, 0)
+	addPebble("pebble_0", {17185.66, -1132.678, -11769.35}, 0, 0, 0)
+	addPebble("pebble_0", {16456.53, -985.5509, -11224.11}, 0, 0, 0)
+	addPebble("pebble_0", {16816.88, -628.2462, -10103.5}, 0, 0, 0)
+	addPebble("pebble_0", {16455.5, -950.5206, -11068.43}, 0, 0, 0)
+	addPebble("pebble_0", {17185.64, -950.5206, -11762.92}, 0, 0, 0)
+	addPebble("pebble_0", {17046.86, -1183.104, -11222.32}, 0, 0, 0)
+	addPebble("pebble_0", {15703.89, -651.4796, -10477.07}, 0, 0, 0)
+	addPebble("pebble_0", {17006.13, -860.0499, -11485.96}, 0, 0, 0)
+	addPebble("pebble_0", {50637.86, -8824.866, -71749.37}, 0, 0, 0)
+	addPebble("pebble_0", {16040.01, -901.4796, -10328.72}, 0, 0, 0)
+	addPebble("pebble_0", {17617.79, -998.1359, -11863.2}, 0, 0, 0)
+	addPebble("pebble_0", {15972.74, -756.5284, -10490.25}, 0, 0, 0)
+	addPebble("pebble_0", {54343.43, -7906.222, -67970.27}, 0, 0, 0)
+	addPebble("pebble_0", {17017.2, -959.4503, -11127.38}, 0, 0, 0)
+	addPebble("pebble_0", {15794.7, -687.7609, -10221.08}, 0, 0, 0)
+	addPebble("pebble_0", {16675.32, -824.4142, -10789.65}, 0, 0, 0)
+	addPebble("pebble_0", {16558.67, -831.42, -10673.56}, 0, 0, 0)
+	addPebble("pebble_0", {16228.46, -831.42, -10257.43}, 0, 0, 0)
+	addPebble("pebble_0", {16979.11, -789.3839, -11018.1}, 0, 0, 0)
+	addPebble("pebble_0", {16489.47, -810.4015, -10493.71}, 0, 0, 0)
+	addPebble("pebble_0", {16225.65, -735.5187, -10249.62}, 0, 0, 0)
+	addPebble("pebble_0", {17050.61, -797.9249, -10846.64}, 0, 0, 0)
+	addPebble("pebble_0", {16919.58, -998.1359, -10533.07}, 0, 0, 0)
+	addPebble("pebble_0", {57000.72, -5763.201, -53278.04}, 0, 0, 0)
+	addPebble("pebble_0", {16661.52, -872.0792, -10467.14}, 0, 0, 0)
+	addPebble("pebble_0", {16281.87, -747.3478, -9954.209}, 0, 0, 0)
+	addPebble("pebble_0", {15949.32, -754.3546, -9566.021}, 0, 0, 0)
+	addPebble("pebble_0", {16582.29, -684.295, -10054.9}, 0, 0, 0)
+	addPebble("pebble_0", {16465.65, -691.2999, -9938.795}, 0, 0, 0)
+	addPebble("pebble_0", {17124.17, -914.0988, -10196.83}, 0, 0, 0)
+	addPebble("pebble_0", {16182.91, -535.9291, -9861.287}, 0, 0, 0)
+	addPebble("pebble_0", {16123.84, -462.3959, -9751.865}, 0, 0, 0)
+	addPebble("pebble_0", {17083.58, -628.2462, -10439.6}, 0, 0, 0)
+	addPebble("pebble_0", {16973.74, -767.0323, -10003}, 0, 0, 0)
+	addPebble("pebble_0", {58004.97, -5355.7, -52862.15}, 0, 0, 0)
+	addPebble("pebble_0", {17081.29, -809.0519, -10008.29}, 0, 0, 0)
+	addPebble("pebble_0", {16405.78, -642.2589, -9647.209}, 0, 0, 0)
+	addPebble("pebble_0", {16076.33, 136.3726, -8633.42}, 0, 0, 0)
+	addPebble("pebble_0", {16424.81, -294.3221, -8929.037}, 0, 0, 0)
+	addPebble("pebble_0", {16385.04, -628.2462, -9559.326}, 0, 0, 0)
+	addPebble("pebble_0", {54569.64, -7880.165, -67517.88}, 0, 0, 0)
+	addPebble("pebble_0", {15245.06, -133.5349, -8825.1}, 0, 0, 0)
+	addPebble("pebble_0", {16761.83, -588.4525, -9479.467}, 0, 0, 0)
+	addPebble("pebble_0", {16979.38, -598.9584, -9643.717}, 0, 0, 0)
+	addPebble("pebble_0", {16820.77, -502.139, -9552.646}, 0, 0, 0)
+	addPebble("pebble_0", {16478.39, -441.3866, -9198.037}, 0, 0, 0)
+	addPebble("pebble_0", {15801.65, -52.71265, -9136.756}, 0, 0, 0)
+	addPebble("pebble_0", {15406.13, -130.0603, -8482.364}, 0, 0, 0)
+	addPebble("pebble_0", {16764.49, -388.8632, -9366.826}, 0, 0, 0)
+	addPebble("pebble_0", {16720.5, -441.3866, -9010.115}, 0, 0, 0)
+	addPebble("pebble_0", {16420.11, -231.2928, -9033.896}, 0, 0, 0)
+	addPebble("pebble_0", {16291.08, -168.2654, -9000.936}, 0, 0, 0)
+	addPebble("pebble_0", {15424.52, -128.0173, -8062.067}, 0, 0, 0)
+	addPebble("pebble_0", {16169.28, -132.3064, -8721.865}, 0, 0, 0)
+	addPebble("pebble_0", {16650.88, -231.2928, -8620.506}, 0, 0, 0)
+	addPebble("pebble_0", {16849.64, -137.0056, -8913.35}, 0, 0, 0)
+	addPebble("pebble_0", {15712, -128.6306, -7711.114}, 0, 0, 0)
+	addPebble("pebble_0", {15569.98, -126.5857, -7551.966}, 0, 0, 0)
+	addPebble("pebble_0", {15717.21, -127.8142, -7546.474}, 0, 0, 0)
+	addPebble("pebble_0", {16624.14, -126.2439, -8419.427}, 0, 0, 0)
+	addPebble("pebble_0", {16248.94, -134.5564, -7968.974}, 0, 0, 0)
+	addPebble("pebble_0", {15884.33, -128.0173, -7313.428}, 0, 0, 0)
+
+	-- Fog
+	fogSetActive(1)
+	fogSetStart(200)
+	fogSetEnd(20000)
+	fogSetColour(0.38, 0.21, 0.06, 1)
+	fogSetType("linear")
+	fogSetDensity(0.15)
+
+	-- Settings
+	loadBackground("ez12")
+	setGlareIntensity(0)
+	setLevelShadowColour(0, 0, 0, 1)
+	setSensorsManagerCameraDistances(10000, 36000)
+
+	-- Music
+	setDefaultMusic("data:sound/music/ambient/amb_01")
+	setBattleMusic("data:sound/music/battle/battle_01")
+end
+
+levelDesc = ""; -- Level description displayed in the lobby.
+maxPlayers = 4; -- Maximum number of players allowed on this level.
+
+player = {}; -- Info on each possible player on this level.
+player[0] =
+{
+	id = 0,
+	name = "",
+	resources = 0,
+	raceName = "Hiigaran",
+	startPos = 1
+}
+
+player[1] =
+{
+	id = 1,
+	name = "",
+	resources = 0,
+	raceName = "Hiigaran",
+	startPos = 1
+}
+
+player[2] =
+{
+	id = 2,
+	name = "",
+	resources = 0,
+	raceName = "Hiigaran",
+	startPos = 1
+}
+
+player[3] =
+{
+	id = 3,
+	name = "",
+	resources = 0,
+	raceName = "Hiigaran",
+	startPos = 1
+}
+

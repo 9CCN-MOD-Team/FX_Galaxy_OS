@@ -1,0 +1,1566 @@
+effects = {
+  animations = {
+    animation1 = {
+      name = "Death",
+      length = 2,
+      loop = 0,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+    animation2 = {
+      name = "Damage",
+      length = 1,
+      loop = 1,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+    animation3 = {
+      name = "dmg01",
+      length = 1,
+      loop = 1,
+      parent = "Damage",
+      minimum = 0.25,
+      maximum = 1,
+      markers = {
+        "",
+      },
+    },
+    animation4 = {
+      name = "dmg02",
+      length = 1,
+      loop = 1,
+      parent = "Damage",
+      minimum = 0.5,
+      maximum = 1,
+      markers = {
+        "",
+      },
+    },
+    animation5 = {
+      name = "dmg03",
+      length = 1,
+      loop = 1,
+      parent = "Damage",
+      minimum = 0.75,
+      maximum = 1,
+      markers = {
+        "",
+      },
+    },
+    animation6 = {
+      name = "Weapon_TurretTop_1",
+      length = 2,
+      loop = 0,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+    animation7 = {
+      name = "Weapon_TurretTop_2",
+      length = 2,
+      loop = 0,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+    animation8 = {
+      name = "Weapon_TurretTop_L1",
+      length = 3,
+      loop = 0,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+    animation9 = {
+      name = "Weapon_TurretTop_L2",
+      length = 3,
+      loop = 0,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+    animation10 = {
+      name = "E_Open",--开启
+      length = 8,
+      loop = 0,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+    animation11 = {
+      name = "E_Shock",--中间态
+      length = 8,
+      loop = 1,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+    animation12 = {
+      name = "E_Close",--关闭
+      length = 4,
+      loop = 0,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+  },
+  events = {
+      event1 = {
+      {
+        "anim",
+        "Death",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "marker2",
+      },
+      {
+        "fx",
+        "dmg_cloud_explosion_large",
+      },
+      {
+        "sound",
+        "Explosion/Small/ETG_Explode_Small_Plasma",
+      },
+      {
+        "fx_scale",
+        "1.5",
+      },
+    },
+    event2 = {
+      {
+        "anim",
+        "Death",
+      },
+      {
+        "animtime",
+        "0.2",
+      },
+      {
+        "marker",
+        "marker6",
+      },
+      {
+        "fx",
+        "dmg_cloud_explosion_large",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+    },
+    event3 = {
+      {
+        "anim",
+        "Death",
+      },
+      {
+        "animtime",
+        "0.1",
+      },
+      {
+        "marker",
+        "marker4",
+      },
+      {
+        "fx",
+        "dmg_cloud_explosion_large",
+      },
+      {
+        "sound",
+        "EXPLOSION/MEDIUM/ETG_EXPLODE_MEDIUM_PLASMA",
+      },
+      {
+        "fx_scale",
+        "1.5",
+      },
+    },
+    event4 = {
+      {
+        "anim",
+        "Death",
+      },
+      {
+        "animtime",
+        "0.3",
+      },
+      {
+        "marker",
+        "marker8",
+      },
+      {
+        "fx",
+        "dmg_cloud_explosion_large",
+      },
+      {
+        "fx_scale",
+        "2.5",
+      },
+    },
+    event5 = {
+      {
+        "anim",
+        "Death",
+      },
+      {
+        "animtime",
+        "0.4",
+      },
+      {
+        "marker",
+        "Root",
+      },
+      {
+        "fx",
+        "dmg_cloud_main_explosion_combo",
+      },
+      {
+        "sound",
+        "EXPLOSION/MEDIUM/ETG_EXPLODE_MEDIUM_PLASMA",
+      },
+      {
+        "fx_scale",
+        "15",
+      },
+    },
+    event6 = {
+      {
+        "anim",
+        "Death",
+      },
+      {
+        "animtime",
+        "0.05",
+      },
+      {
+        "marker",
+        "marker1",
+      },
+      {
+        "fx",
+        "dmg_cloud_explosion_large",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+    },
+    event7 = {
+      {
+        "anim",
+        "Death",
+      },
+      {
+        "animtime",
+        "0.1",
+      },
+      {
+        "marker",
+        "marker5",
+      },
+      {
+        "fx",
+        "dmg_cloud_explosion_large",
+      },
+      {
+        "sound",
+        "Explosion/Small/ETG_Explode_Small_Plasma",
+      },
+      {
+        "fx_scale",
+        "2.5",
+      },
+    },
+    event8 = {
+      {
+        "anim",
+        "Death",
+      },
+      {
+        "animtime",
+        "0.25",
+      },
+      {
+        "marker",
+        "marker7",
+      },
+      {
+        "fx",
+        "dmg_cloud_explosion_large",
+      },
+      {
+        "fx_scale",
+        "2",
+      },
+    },
+    event9 = {
+      {
+        "anim",
+        "Death",
+      },
+      {
+        "animtime",
+        "0.2",
+      },
+      {
+        "marker",
+        "marker3",
+      },
+      {
+        "fx",
+        "dmg_cloud_explosion_large",
+      },
+      {
+        "sound",
+        "Explosion/Large/ETG_Explode_Large_Firey",
+      },
+      {
+        "fx_scale",
+        "0.75",
+      },
+    },
+    event10 = {
+      {
+        "anim",
+        "dmg01",
+      },
+      {
+        "animtime",
+        "-1",
+      },
+      {
+        "marker",
+        "marker1,maker2",
+      },
+      {
+        "fx",
+        "dmg_damage_puff_combo_frigate,dmg_damage_cloud_puff_spray",
+      },
+      {
+        "sound",
+        "DAMAGE/SMOKE/DAMAGE_SMOKE_EXHAUST_HEAVY",
+      },
+      {
+        "fx_scale",
+        "5",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event11 = {
+      {
+        "anim",
+        "dmg02",
+      },
+      {
+        "animtime",
+        "-1",
+      },
+      {
+        "marker",
+        "marker3,maker4",
+      },
+      {
+        "fx",
+        "dmg_damage_puff_combo_frigate,dmg_damage_cloud_puff_spray",
+      },
+      {
+        "sound",
+        "DAMAGE/SMOKE/DAMAGE_SMOKE_EXHAUST_HEAVY",
+      },
+      {
+        "fx_scale",
+        "7.5",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event12 = {
+      {
+        "anim",
+        "dmg03",
+      },
+      {
+        "animtime",
+        "-1",
+      },
+      {
+        "marker",
+        "marker5",
+      },
+      {
+        "fx",
+        "dmg_damage_puff_combo_frigate,dmg_damage_cloud_puff_spray",
+      },
+      {
+        "sound",
+        "DAMAGE/SMOKE/DAMAGE_SMOKE_EXHAUST_HEAVY",
+      },
+      {
+        "fx_scale",
+        "10",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+     event13 = {
+      {
+        "anim",
+        "Death",
+      },
+      {
+        "animtime",
+        "0.05",
+      },
+      {
+        "marker",
+        "marker10",
+      },
+      {
+        "fx",
+        "dmg_cloud_explosion_large",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+    },
+     event14 = {
+      {
+        "anim",
+        "Death",
+      },
+      {
+        "animtime",
+        "0.05",
+      },
+      {
+        "marker",
+        "marker9",
+      },
+      {
+        "fx",
+        "dmg_cloud_explosion_large",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+    },
+    event15 = {
+      {
+        "anim",
+        "Weapon_TurretTop_1",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "Weapon_TurretTopA_Muzzle",
+      },
+      {
+        "fx",
+        "muzzle_flash_combo_plasma",   --防空炮开火
+      },
+      {
+        "sound",
+        "WEAPON/FIGHTER/FIRE/WEAPON_FIGHTER_FLECHETTE_REPEATER_SHELL",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event16 = {
+      {
+        "anim",
+        "Weapon_TurretTop_2",
+      },
+      {
+        "marker",
+        "Weapon_TurretTop1A_Muzzle",
+      },
+      {
+        "fx",
+        "muzzle_flash_combo_plasma",
+      },
+      {
+        "sound",
+         "WEAPON/FIGHTER/FIRE/WEAPON_FIGHTER_FLECHETTE_REPEATER_SHELL",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event17 = {
+      {
+        "anim",
+        "Weapon_TurretTop_L1",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "Weapon_TurretTop_Muzzle",
+      },
+      {
+        "fx",
+        "muzzle_flash_combo_small_capital_dread_kpr",  --远程炮开火
+      },
+      {
+        "sound",
+         "WEAPON/MEGASHIP/FIRE/DWEAPON_MOVER_KINETIC_AUTOGUN_SHELL",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event18 = {
+      {
+        "anim",
+        "Weapon_TurretTop_L2",
+      },
+      {
+        "marker",
+        "Weapon_TurretTop1_Muzzle",
+      },
+      {
+        "fx",
+        "muzzle_flash_combo_small_capital_dread_kpr",  
+      },
+      {
+        "sound",
+         "WEAPON/MEGASHIP/FIRE/DWEAPON_MOVER_KINETIC_AUTOGUN_SHELL",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event19 = {
+      {
+        "anim",
+        "Weapon_TurretTop_L1",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "Weapon_TurretTop_Muzzle",
+      },
+      {
+        "fx",
+        "super_beam_flare_spray_blue_kpr",  --远程炮开火后粒子喷射
+      },
+      {
+        "sound",
+         "WEAPON/MEGASHIP/FIRE/DWEAPON_MOVER_KINETIC_AUTOGUN_SHELL",
+      },
+      {
+        "fx_scale",
+        "0.25",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event20 = {
+      {
+        "anim",
+        "Weapon_TurretTop_L2",
+      },
+      {
+        "marker",
+        "Weapon_TurretTop1_Muzzle",
+      },
+      {
+        "fx",
+        "super_beam_flare_spray_blue_kpr",  
+      },
+      {
+        "sound",
+         "WEAPON/MEGASHIP/FIRE/DWEAPON_MOVER_KINETIC_AUTOGUN_SHELL",
+      },
+      {
+        "fx_scale",
+        "0.25",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event21 = {
+      {
+        "anim",
+        "Weapon_TurretTop_1",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "Weapon_TurretTopA_Muzzle",
+      },
+      {
+        "fx",
+        "assaultfrigate_TurretCannon",     --炮塔特效
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event22 = {
+      {
+        "anim",
+        "Weapon_TurretTop_2",
+      },
+      {
+        "marker",
+        "Weapon_TurretTop1A_Muzzle",
+      },
+      {
+        "fx",
+        "assaultfrigate_TurretCannon",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event23 = {
+      {
+        "anim",
+        "Weapon_TurretTop_L1",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "Weapon_TurretTop_Muzzle",
+      },
+      {
+        "fx",
+        "assaultfrigate_TurretCannon",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event24 = {
+      {
+        "anim",
+        "Weapon_TurretTop_L2",
+      },
+      {
+        "marker",
+        "Weapon_TurretTop1_Muzzle",
+      },
+      {
+        "fx",
+        "assaultfrigate_TurretCannon",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event25 = {
+      {
+        "anim",
+        "Weapon_TurretTop_L1",                     
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "Weapon_TurretTop_Muzzle",
+      },
+      {
+        "fx",
+        "assaultfrigate_cannon_combo",   --炮口蓝色光球、粒子和喷射流
+      },
+      {
+        "sound",
+         "",
+      },
+      {
+        "fx_scale",
+        "0.25",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event26 = {
+      {
+        "anim",
+        "Weapon_TurretTop_L2",
+      },
+      {
+        "marker",
+        "Weapon_TurretTop1_Muzzle",
+      },
+      {
+        "fx",
+        "assaultfrigate_cannon_combo",
+      },
+      {
+        "sound",
+         "",
+      },
+      {
+        "fx_scale",
+        "0.25",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event27 = {
+      {
+        "anim",
+        "E_Open",
+      },
+      {
+        "animtime",
+        "0.1",
+      },
+      {
+        "marker",
+        "joint1",
+      },
+      {
+        "fx",
+        "assaultfrigate_energy",     --喷口发光
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+      {
+        "sound",
+        "SP_ELEMENTS/HGN_RESOURCECOLLECTOR_RESOURCING2",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event28 = {
+      {
+        "anim",
+        "E_Open",
+      },
+      {
+        "animtime",
+        "0.2",
+      },
+      {
+        "marker",
+        "joint2",
+      },
+      {
+        "fx",
+        "assaultfrigate_energy",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+      {
+        "sound",
+        "SP_ELEMENTS/HGN_RESOURCECOLLECTOR_RESOURCING2",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event29 = {
+      {
+        "anim",
+        "E_Open",
+      },
+      {
+        "animtime",
+        "0.3",
+      },
+      {
+        "marker",
+        "joint3",
+      },
+      {
+        "fx",
+        "assaultfrigate_energy",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+      {
+        "sound",
+        "SP_ELEMENTS/HGN_RESOURCECOLLECTOR_RESOURCING2",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event30 = {
+      {
+        "anim",
+        "E_Open",
+      },
+      {
+        "animtime",
+        "0.1",
+      },
+      {
+        "marker",
+        "joint4",
+      },
+      {
+        "fx",
+        "assaultfrigate_energy",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+      {
+        "sound",
+        "SP_ELEMENTS/HGN_RESOURCECOLLECTOR_RESOURCING2",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event31 = {
+      {
+        "anim",
+        "E_Open",
+      },
+      {
+        "animtime",
+        "0.2",
+      },
+      {
+        "marker",
+        "joint5",
+      },
+      {
+        "fx",
+        "assaultfrigate_energy",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+      {
+        "sound",
+        "SP_ELEMENTS/HGN_RESOURCECOLLECTOR_RESOURCING2",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event32 = {
+      {
+        "anim",
+        "E_Open",
+      },
+      {
+        "animtime",
+        "0.24",
+      },
+      {
+        "marker",
+        "joint6",
+      },
+      {
+        "fx",
+        "assaultfrigate_energy",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+      {
+        "sound",
+        "SP_ELEMENTS/HGN_RESOURCECOLLECTOR_RESOURCING2",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event33 = {
+      {
+        "anim",
+        "E_Open",
+      },
+      {
+        "animtime",
+        "0.9",
+      },
+      {
+        "marker",
+        "Left1e",
+      },
+      {
+        "fx",
+        "assaultfrigate_power_light1",   --喷口闪光
+      },
+      {
+        "fx_scale",
+        "0.5",
+      },
+      {
+        "sound",
+        "SP_ELEMENTS/HGN_RESOURCECOLLECTOR_RESOURCING2",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event34 = {
+      {
+        "anim",
+        "E_Open",
+      },
+      {
+        "animtime",
+        "0.9",
+      },
+      {
+        "marker",
+        "Left2e",
+      },
+      {
+        "fx",
+        "assaultfrigate_power_light1",
+      },
+      {
+        "fx_scale",
+        "0.5",
+      },
+      {
+        "sound",
+        "SP_ELEMENTS/HGN_RESOURCECOLLECTOR_RESOURCING2",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event35 = {
+      {
+        "anim",
+        "E_Open",
+      },
+      {
+        "animtime",
+        "0.9",
+      },
+      {
+        "marker",
+        "Left3e",
+      },
+      {
+        "fx",
+        "assaultfrigate_power_light1",
+      },
+      {
+        "fx_scale",
+        "0.5",
+      },
+      {
+        "sound",
+        "SP_ELEMENTS/HGN_RESOURCECOLLECTOR_RESOURCING2",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event36 = {
+      {
+        "anim",
+        "E_Open",
+      },
+      {
+        "animtime",
+        "0.9",
+      },
+      {
+        "marker",
+        "Right1e",
+      },
+      {
+        "fx",
+        "assaultfrigate_power_light1",
+      },
+      {
+        "fx_scale",
+        "0.5",
+      },
+      {
+        "sound",
+        "SP_ELEMENTS/HGN_RESOURCECOLLECTOR_RESOURCING2",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event37 = {
+      {
+        "anim",
+        "E_Open",
+      },
+      {
+        "animtime",
+        "0.9",
+      },
+      {
+        "marker",
+        "Right2e",
+      },
+      {
+        "fx",
+        "assaultfrigate_power_light1",
+      },
+      {
+        "fx_scale",
+        "0.5",
+      },
+      {
+        "sound",
+        "SP_ELEMENTS/HGN_RESOURCECOLLECTOR_RESOURCING2",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event38 = {
+      {
+        "anim",
+        "E_Open",
+      },
+      {
+        "animtime",
+        "0.9",
+      },
+      {
+        "marker",
+        "Right3e",
+      },
+      {
+        "fx",
+        "assaultfrigate_power_light1",
+      },
+      {
+        "fx_scale",
+        "0.5",
+      },
+      {
+        "sound",
+        "SP_ELEMENTS/HGN_RESOURCECOLLECTOR_RESOURCING2",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event39 = {
+      {
+        "anim",
+        "E_Shock",                         --中间态
+      },
+      {
+        "animtime",
+        "-1",
+      },
+      {
+        "marker",
+        "Root",
+      },
+      {
+        "fx",
+        "assaultfrigate_energy_all",      --喷口常亮
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+      {
+        "sound",
+        "SP_ELEMENTS/HGN_RESOURCECOLLECTOR_RESOURCING2",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event40 = {
+      {
+        "anim",
+        "E_Shock",
+      },
+      {
+        "animtime",
+        "-1",
+      },
+      {
+        "marker",
+        "Left1e",
+      },
+      {
+        "fx",
+        "assaultfrigate_Shocking_beam_combo",  --喷射物
+      },
+      {
+        "fx_scale",
+        "0.5",
+      },
+      {
+        "sound",
+        "",
+      },
+    },
+    event41 = {
+      {
+        "anim",
+        "E_Shock",
+      },
+      {
+        "animtime",
+        "-1",
+      },
+      {
+        "marker",
+        "Left2e",
+      },
+      {
+        "fx",
+        "assaultfrigate_Shocking_beam_combo",
+      },
+      {
+        "fx_scale",
+        "0.5",
+      },
+      {
+        "sound",
+        "",
+      },
+    },
+    event42 = {
+      {
+        "anim",
+        "E_Shock",
+      },
+      {
+        "animtime",
+        "-1",
+      },
+      {
+        "marker",
+        "Left3e",
+      },
+      {
+        "fx",
+       "assaultfrigate_Shocking_beam_combo",
+      },
+      {
+        "fx_scale",
+        "0.5",
+      },
+      {
+        "sound",
+        "",
+      },
+    },
+    event43 = {
+      {
+        "anim",
+        "E_Shock",
+      },
+      {
+        "animtime",
+        "-1",
+      },
+      {
+        "marker",
+        "Right1e",
+      },
+      {
+        "fx",
+        "assaultfrigate_Shocking_beam_combo",
+      },
+      {
+        "fx_scale",
+        "0.5",
+      },
+      {
+        "sound",
+        "",
+      },
+    },
+    event44 = {
+      {
+        "anim",
+        "E_Shock",
+      },
+      {
+        "animtime",
+        "-1",
+      },
+      {
+        "marker",
+        "Right2e",
+      },
+      {
+        "fx",
+        "assaultfrigate_Shocking_beam_combo",
+      },
+      {
+        "fx_scale",
+        "0.5",
+      },
+      {
+        "sound",
+        "",
+      },
+    },
+    event45 = {
+      {
+        "anim",
+        "E_Shock",
+      },
+      {
+        "animtime",
+        "-1",
+      },
+      {
+        "marker",
+        "Right3e",
+      },
+      {
+        "fx",
+        "assaultfrigate_Shocking_beam_combo",
+      },
+      {
+        "fx_scale",
+        "0.5",
+      },
+      {
+        "sound",
+        "",
+      },
+    },
+    event46 = {
+      {
+        "anim",
+        "E_Close",
+      },
+      {
+        "animtime",
+        "-1",
+      },
+      {
+        "marker",
+        "Root",
+      },
+      {
+        "fx",
+        "assaultfrigate_energy_all_Close",    --喷口熄灭
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+      {
+        "sound",
+        "SP_ELEMENTS/HGN_RESOURCECOLLECTOR_RESOURCING2",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event47 = {
+      {
+        "anim",
+        "E_Close",
+      },
+      {
+        "animtime",
+        "-1",
+      },
+      {
+        "marker",
+        "Left1e",
+      },
+      {
+        "fx",
+        "assaultfrigate_power_light1",      --喷口闪光
+      },
+      {
+        "fx_scale",
+        "0.5",
+      },
+      {
+        "sound",
+        "SP_ELEMENTS/HGN_RESOURCECOLLECTOR_RESOURCING2",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event48 = {
+      {
+        "anim",
+        "E_Close",
+      },
+      {
+        "animtime",
+        "-1",
+      },
+      {
+        "marker",
+        "Left2e",
+      },
+      {
+        "fx",
+        "assaultfrigate_power_light1",
+      },
+      {
+        "fx_scale",
+        "0.5",
+      },
+      {
+        "sound",
+        "SP_ELEMENTS/HGN_RESOURCECOLLECTOR_RESOURCING2",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event49 = {
+      {
+        "anim",
+        "E_Close",
+      },
+      {
+        "animtime",
+        "-1",
+      },
+      {
+        "marker",
+        "Left3e",
+      },
+      {
+        "fx",
+        "assaultfrigate_power_light1",
+      },
+      {
+        "fx_scale",
+        "0.5",
+      },
+      {
+        "sound",
+        "SP_ELEMENTS/HGN_RESOURCECOLLECTOR_RESOURCING2",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event50 = {
+      {
+        "anim",
+        "E_Close",
+      },
+      {
+        "animtime",
+        "-1",
+      },
+      {
+        "marker",
+        "Right1e",
+      },
+      {
+        "fx",
+        "assaultfrigate_power_light1",
+      },
+      {
+        "fx_scale",
+        "0.5",
+      },
+      {
+        "sound",
+        "SP_ELEMENTS/HGN_RESOURCECOLLECTOR_RESOURCING2",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event51 = {
+      {
+        "anim",
+        "E_Close",
+      },
+      {
+        "animtime",
+        "-1",
+      },
+      {
+        "marker",
+        "Right2e",
+      },
+      {
+        "fx",
+        "assaultfrigate_power_light1",
+      },
+      {
+        "fx_scale",
+        "0.5",
+      },
+      {
+        "sound",
+        "SP_ELEMENTS/HGN_RESOURCECOLLECTOR_RESOURCING2",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event52 = {
+      {
+        "anim",
+        "E_Close",
+      },
+      {
+        "animtime",
+        "-1",
+      },
+      {
+        "marker",
+        "Right3e",
+      },
+      {
+        "fx",
+        "assaultfrigate_power_light1",
+      },
+      {
+        "fx_scale",
+        "0.5",
+      },
+      {
+        "sound",
+        "SP_ELEMENTS/HGN_RESOURCECOLLECTOR_RESOURCING2",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+  },
+}

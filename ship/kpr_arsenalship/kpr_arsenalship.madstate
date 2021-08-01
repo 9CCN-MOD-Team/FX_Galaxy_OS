@@ -1,0 +1,33 @@
+KPR_ARSENALSHIP_CodeRed_OnSet = function(ship)
+    if(isAnimRunning(ship,"open") == 0) then
+	setState(ship, "CodeRed", 0)
+        startTime = 0
+        if(isAnimRunning(ship,"close") ~= 0) then
+            startTime = getAnimLength(ship, "close") - getTime(ship, "close")
+            stopAnim(ship, "close")
+        end
+        startAnim(ship, "open")
+        setTime(ship,"open",startTime)
+        setPauseTime(ship, "open", 1000)
+    end
+end
+
+KPR_ARSENALSHIP_CodeRed_OnPause = function(ship)
+    setState(ship, "CodeRed", 1)
+    startEffect(ship, "Powerup")
+end
+
+KPR_ARSENALSHIP_CodeGreen_OnSet = function(ship)
+    if(isAnimRunning(ship,"close") == 0) then
+        startTime = 0
+        if(isAnimRunning(ship,"open") ~= 0) then
+            startTime = getAnimLength(ship, "open") - getTime(ship, "open")
+            stopAnim(ship, "open")
+        end
+        startAnim(ship, "close")
+        endEffect(ship, "Powerup")
+        setTime(ship,"close",startTime)
+        setPauseTime(ship, "close", 1000)
+    end
+end
+

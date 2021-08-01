@@ -1,0 +1,18 @@
+StartWeaponConfig(NewWeaponType,"Fixed","Missile","TAI_longrangeMissile","Normal",120,6000,0,0,0,0,1,0,0,90,0,0,1,0,0,0,0.1,"Normal",1,0,0)
+AddWeaponResult(NewWeaponType,"Hit","DamageHealth","Owner",900,900,"")
+setPenetration(NewWeaponType,30,1,{
+  PlanetKillerArmour = 0,
+},{
+  resarmour = 0.3,
+})
+setMissileKiller(NewWeaponType,1);setAccuracy(NewWeaponType,1,{
+  Fighter = 0,
+},{
+  Corvette = 0,
+},{
+  Resource = 0,
+},{
+  Utility = 0,
+})
+setAngles(NewWeaponType,180,0,0,0,0)
+setMiscValues(NewWeaponType,25,0.5)

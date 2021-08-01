@@ -1,0 +1,522 @@
+effects = {
+  animations = {
+    animation1 = {
+      name = "Weapon_TurretTop",
+      length = 1,
+      loop = 0,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+    animation2 = {
+      name = "Death",
+      length = 1,
+      loop = 0,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+    animation3 = {
+      name = "Deathtrail",
+      length = 3,
+      loop = 0,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+    animation4 = {
+      name = "Dmg",
+      length = 4,
+      loop = 0,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+    animation5 = {
+      name = "Weapon_TurretTop1",
+      length = 1,
+      loop = 0,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+    animation6 = {
+      name = "Red",
+      length = 3,
+      loop = 0,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+    animation7 = {
+      name = "Green",
+      length = 2,
+      loop = 0,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+  },
+
+events = {
+    event1 = {
+      {
+        "anim",
+        "Weapon_TurretTop",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "Weapon_TurretTop_Muzzle",
+      },
+      {
+        "fx",
+        "muzzle_flash_combo_plasma",
+      },
+      {
+        "sound",
+        "WEAPON/FIGHTER/FIRE/WEAPON_FIGHTER_FLECHETTE_REPEATER_SHELL",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event2 = {
+      {
+        "anim",
+        "Weapon_TurretTop",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "Weapon_TurretTopSlave_Muzzle",
+      },
+      {
+        "fx",
+        "muzzle_flash_combo_plasma",
+      },
+      {
+        "sound",
+        "WEAPON/FIGHTER/FIRE/WEAPON_FIGHTER_FLECHETTE_REPEATER_SHELL",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event3 = {
+      {
+        "anim",
+        "Weapon_TurretTop1",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "Weapon_TurretTop1_Muzzle",
+      },
+      {
+        "fx",
+        "muzzle_flash_combo_plasma",
+      },
+      {
+        "sound",
+        "WEAPON/FIGHTER/FIRE/WEAPON_FIGHTER_FLECHETTE_REPEATER_SHELL",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event4 = {
+      {
+        "anim",
+        "Weapon_TurretTop1",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "Weapon_TurretTop1Slave_Muzzle",
+      },
+      {
+        "fx",
+        "muzzle_flash_combo_plasma",
+      },
+      {
+        "sound",
+        "WEAPON/FIGHTER/FIRE/WEAPON_FIGHTER_FLECHETTE_REPEATER_SHELL",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event5 = {
+      {
+        "anim",
+        "Deathtrail",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "root",
+      },
+      {
+        "fx",
+        "FIERY_TRAIL_SPRAY",
+      },
+      {
+        "sound",
+        "EXPLOSION/DEATHTRAIL",
+      },
+      {
+        "fx_scale",
+        "5",
+      },
+    },
+    event6 = {
+      {
+        "anim",
+        "Deathtrail",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "root",
+      },
+      {
+        "fx",
+        "fiery_trail_spray_small",
+      },
+      {
+        "fx_scale",
+        "5",
+      },
+    },
+    event7 = {
+      {
+        "anim",
+        "Deathtrail",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "root",
+      },
+      {
+        "fx",
+        "fiery_flash_ring_long",
+      },
+      {
+        "fx_scale",
+        "30",
+      },
+    },
+    event8 = {
+      {
+        "anim",
+        "Death",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "root",
+      },
+      {
+        "fx",
+        "death_generic_fighter",
+      },
+      {
+        "sound",
+        "EXPLOSION/MEDIUM/ETG_EXPLODE_MEDIUM_FIREY",
+      },
+      {
+        "fx_scale",
+        "2",
+      },
+    },
+    event9 = {
+      {
+        "anim",
+        "Deathtrail",
+      },
+      {
+        "animtime",
+        "0.5",
+      },
+      {
+        "marker",
+        "root",
+      },
+      {
+        "fx",
+        "fiery_trail_lines_spray",
+      },
+      {
+        "fx_scale",
+        "entity",
+      },
+    },
+    event10 = {
+      {
+        "anim",
+        "Deathtrail",
+      },
+      {
+        "animtime",
+        "0.5",
+      },
+      {
+        "marker",
+        "root",
+      },
+      {
+        "fx",
+        "fiery_trail_death_combo",
+      },
+      {
+        "sound",
+        "EXPLOSION/MEDIUM/ETG_EXPLODE_MEDIUM_FIREY",
+      },
+      {
+        "fx_scale",
+        "20",
+      },
+    },
+    event11 = {
+      {
+        "anim",
+        "Deathtrail",
+      },
+      {
+        "animtime",
+        "1",
+      },
+      {
+        "marker",
+        "root",
+      },
+      {
+        "fx",
+        "fiery_trail_shockwave_small",
+      },
+      {
+        "fx_scale",
+        "entity",
+      },
+    },
+    event12 = {
+      {
+        "anim",
+        "Dmg",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "root",
+      },
+      {
+        "fx",
+        "dmg_fighter_combo",
+      },
+      {
+        "fx_scale",
+        "0.5",
+      },
+    },
+    event13 = {
+      {
+        "anim",
+        "Dmg",
+      },
+      {
+        "animtime",
+        "0.2",
+      },
+      {
+        "marker",
+        "root",
+      },
+      {
+        "fx",
+        "dmg_fighter_combo",
+      },
+      {
+        "fx_scale",
+        "0.2",
+      },
+    },
+    event14 = {
+      {
+        "anim",
+        "Dmg",
+      },
+      {
+        "animtime",
+        "0.1",
+      },
+      {
+        "marker",
+        "root",
+      },
+      {
+        "fx",
+        "dmg_fighter_combo",
+      },
+      {
+        "fx_scale",
+        "0.5",
+      },
+    },
+    event15 = {
+      {
+        "anim",
+        "Dmg",
+      },
+      {
+        "animtime",
+        "0.05",
+      },
+      {
+        "marker",
+        "root",
+      },
+      {
+        "fx",
+        "dmg_fighter_combo",
+      },
+      {
+        "fx_scale",
+        "0.5",
+      },
+    },
+    event16 = {
+      {
+        "anim",
+        "Weapon_TurretTop",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "Weapon_TurretTop_Latitude",
+      },
+      {
+        "fx",
+        "kad_Variationswarmer_right", --¹ÌÌåÌØÐ§
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event17 = {
+      {
+        "anim",
+        "Weapon_TurretTop1",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "Weapon_TurretTop1_Latitude",
+      },
+      {
+        "fx",
+        "kad_Variationswarmer_left",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event18 = {
+      {
+        "anim",
+        "Red",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "sound",
+        "SP_ELEMENTS/VGR_HEAVYMISSLEFRIGATE_OPEN",
+      },
+    },
+    event19 = {
+      {
+        "anim",
+        "Green",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "sound",
+        "SP_ELEMENTS/VGR_HEAVYMISSLEFRIGATE_CLOSE",
+      },
+    },
+  },
+}

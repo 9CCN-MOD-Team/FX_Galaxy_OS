@@ -1,0 +1,8 @@
+KPR_ENERGY_PHASEDCANNON_Launched_OnSet = function(ship)
+	startEffect(ship, "energy")
+	startEffect(ship, "dmg04")
+	startEffect(ship, "dmg05")
+	startEffect(ship, "dmg06")
+	startAnim(ship, "Zhuan")
+	setLoopCount(ship, "Zhuan", 100000)
+end

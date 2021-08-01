@@ -1,0 +1,15 @@
+StartWeaponConfig(NewWeaponType,"Gimble","InstantHit","Super_Beam","Normal",0,6000,0,8,4,0,20,0,1,15,0,0,0,0,0,0,0.1,"Enhanced",1,0,1000000)
+AddWeaponResult(NewWeaponType,"Hit","DamageHealth","Target",45000,45000,"")
+setPenetration(NewWeaponType,100,1,{
+  PlanetKillerArmour = 0,
+},{
+  SubSystemArmour = 0.2,
+})
+setMissileKiller(NewWeaponType,1);setAccuracy(NewWeaponType,1,{
+  Fighter = 0,
+},{
+  Corvette = 0,
+},{
+  munition = 0,
+})
+setAngles(NewWeaponType,6,0,0,0,0)

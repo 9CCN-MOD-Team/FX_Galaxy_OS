@@ -1,0 +1,5 @@
+bulletfx = ""
+nopenetratefx = ""
+deathtype = "deathBeam"
+hit_clamp = 
+    { 0.5, 1.25, }

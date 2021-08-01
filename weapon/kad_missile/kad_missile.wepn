@@ -1,0 +1,20 @@
+StartWeaponConfig(NewWeaponType,"Fixed","Missile","Kad_Missile","Special Attack",120,2500,0,0,0,0,1,0,0,6,0,0,0,0,0,0,0.1,"Normal",0,0,0)
+AddWeaponResult(NewWeaponType,"Hit","DamageHealth","Target",1200,1200,"")
+setPenetration(NewWeaponType,0,1,{
+  PlanetKillerArmour = 0,
+},{
+  SubSystemArmour = 0.3,
+})
+setMissileKiller(NewWeaponType,1);setAccuracy(NewWeaponType,1,{
+  Fighter = 0,
+},{
+  Corvette = 0,
+},{
+  Frigate = 0,
+},{
+  Utility = 0,
+},{
+  Resource = 0,
+})
+setAngles(NewWeaponType,9,0,0,0,0)
+setMiscValues(NewWeaponType,8,0)

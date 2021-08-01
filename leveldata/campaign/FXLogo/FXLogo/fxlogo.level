@@ -1,0 +1,58 @@
+-- LuaDC version 0.9.19
+-- 2010-11-13 23:10:43
+-- LuaDC by Age2uN
+-- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
+--
+maxPlayers = 4
+player = {}
+player[0] = 
+{ 
+    id = 0, 
+    name = "", 
+    resources = 2000, 
+    --raceID = 1, 
+    raceName = "Hiigaran",
+    startPos = 0, }
+player[1] = 
+{ 
+    id = 1, 
+    name = "", 
+    resources = 50000, 
+    --raceID = 1, 
+    raceName = "Hiigaran",
+    startPos = 0, }
+player[2] = 
+{ 
+    id = 2, 
+    name = "", 
+    resources = 0, 
+    --raceID = 5, 
+    raceName = "Kushan",
+    startPos = 0, }
+player[3] = 
+{ 
+    id = 3, 
+    name = "", 
+    resources = 50000, 
+    --raceID = 6, 
+    raceName = "Taiidan",
+    startPos = 0, }
+
+function DetermChunk()
+end
+
+function NonDetermChunk()
+    fogSetActive(1)
+    fogSetStart(10)
+    fogSetEnd(9000)
+    fogSetColour(0.083984, 0.123047, 0.207031, 1)
+    fogSetType("linear")
+    fogSetDensity(0.3)
+    setGlareIntensity(0)
+--setDefaultMusic("data:sound/music/staging/STAGING_04")
+
+
+    setLevelShadowColour(0, 0, 0, 1)
+    loadBackground("ez09")
+    setSensorsManagerCameraDistances(5000, 35000)
+end

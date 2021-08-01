@@ -1,0 +1,1 @@
+dofilepath("data:/scripts/rules/deathmatchFX2/unitcaps/normal.lua")

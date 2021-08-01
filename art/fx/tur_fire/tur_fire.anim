@@ -1,0 +1,24 @@
+-- LuaDC version 0.9.19
+-- 2011-5-1 21:04:28
+-- LuaDC by Age2uN
+-- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
+--
+fps = 20
+startFrame = 0
+loopCount = 1
+texture = 
+    {
+ "data:/ART/FX/TUR_Fire/Fire00000.tga",
+ "data:/ART/FX/TUR_Fire/Fire00000.tga",
+ "data:/ART/FX/TUR_Fire/Fire00000.tga",
+"data:/ART/FX/TUR_Fire/Fire00001.tga",
+"data:/ART/FX/TUR_Fire/Fire00001.tga",
+"data:/ART/FX/TUR_Fire/Fire00002.tga",
+"data:/ART/FX/TUR_Fire/Fire00003.tga",
+"data:/ART/FX/TUR_Fire/Fire00004.tga",
+"data:/ART/FX/TUR_Fire/Fire00004.tga",
+"data:/ART/FX/TUR_Fire/Fire00003.tga",
+"data:/ART/FX/TUR_Fire/Fire00002.tga",
+"data:/ART/FX/TUR_Fire/Fire00001.tga",
+"data:/ART/FX/TUR_Fire/Fire00000.tga",
+}

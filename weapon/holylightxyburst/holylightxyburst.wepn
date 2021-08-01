@@ -1,0 +1,8 @@
+-- LuaDC version 0.9.19
+-- 2010-8-11 21:06:24
+-- LuaDC by Age2uN
+-- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
+--
+StartWeaponConfig(NewWeaponType, "Fixed", "SphereBurst", "HolyLight_XDMG", "Normal", 0, 0, 5, 2, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.1, "Normal", 1, 0, 0)
+--AddWeaponResult(NewWeaponType, "Hit", "Disable", "Target", 35, 35, "")
+setPenetration(NewWeaponType, 5, 1)

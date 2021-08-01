@@ -1,0 +1,14 @@
+StartWeaponConfig(NewWeaponType,"Gimble","InstantHit","vgr_ionbeam_Small","Normal",0,1500,0,0.1,0,0,50,0,1,0.1,0,0,1,1,0,0,0.1,"Normal",0,0,0)
+AddWeaponResult(NewWeaponType,"Hit","DamageHealth","Target",20,20,"")
+setPenetration(NewWeaponType,10,1,{
+  PlanetKillerArmour = 2,
+},{
+  MissileArmour = 2,
+})
+setMissileKiller(NewWeaponType,1);setAccuracy(NewWeaponType,0,{
+  Missile = 1,
+},{
+  Munition = 1,
+})
+setAngles(NewWeaponType,30,0,0,0,0)
+setMiscValues(NewWeaponType,0,0)

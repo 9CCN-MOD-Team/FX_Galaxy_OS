@@ -1,0 +1,20 @@
+-------------------------------------------------------------
+-------------8p_random.level-----------2015年09月24日--------
+--由 9CCNMOD组 破天者-孤狼 编写
+--这个文件是为FXMOD编写的随机地图之一
+-------------------------------------------------------------
+-------------------------------------------------------------
+
+--加载Debug模块
+dofilepath("data:scripts/debug.lua")
+
+--定义地图列表
+DefaultLevels =
+{
+  "data:leveldata/multiplayer/deathmatchhw1/8p_hyperspacearena.level",
+  "data:leveldata/multiplayer/deathmatchhw1/8p_scattered.level",
+}
+
+playernumber = 8
+
+dofilepath("data:leveldata/multiplayer/fxrandom/randommap_template.lua")

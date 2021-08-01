@@ -1,0 +1,11 @@
+
+
+TUR_VULCANFRIGATE_CodeRed_OnSet = function(ship)
+    startAnim(ship, "zhuan")
+    setLoopCount(ship, "zhuan", 100000)
+end
+
+TUR_VULCANFRIGATE_CodeGreen_OnSet = function(ship)   
+    stopAnim(ship, "zhuan")
+end
+

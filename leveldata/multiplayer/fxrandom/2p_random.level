@@ -1,0 +1,26 @@
+-------------------------------------------------------------
+-------------2p_random.level-----------2015年09月24日--------
+--由 9CCNMOD组 破天者-孤狼 编写
+--这个文件是为FXMOD编写的随机地图之一
+-------------------------------------------------------------
+-------------------------------------------------------------
+
+--加载Debug模块
+dofilepath("data:scripts/debug.lua")
+
+DefaultLevels =
+{
+  "data:leveldata/multiplayer/fxdeathmatch/2p_attacking.level",
+  "data:leveldata/multiplayer/fxdeathmatch/2p_destiny.level",
+  "data:leveldata/multiplayer/fxdeathmatch/2P_Karos.level",
+  "data:leveldata/multiplayer/fxdeathmatch/2p_oppose.level",
+  "data:leveldata/multiplayer/fxdeathmatch/2p_piegate.level",
+  "data:leveldata/multiplayer/deathmatchhw2/2p_hostilities_end.level",
+  "data:leveldata/multiplayer/deathmatchhw2/2p_jadeth.level",
+  "data:leveldata/multiplayer/deathmatchhw2/2p_kharam_wreck.level",
+  "data:leveldata/multiplayer/deathmatchhw2/2p_shields.level",
+}
+
+playernumber = 2
+
+dofilepath("data:leveldata/multiplayer/fxrandom/randommap_template.lua")

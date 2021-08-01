@@ -1,0 +1,116 @@
+effects =
+{
+    animations =
+    {
+        animation1 =
+        {
+            name = "Burn",
+            length = 1,
+            loop = 1,
+            parent = "",
+            minimum = 0,
+            maximum = 0,
+            markers = {""}
+        },
+        animation2 =
+        {
+            name = "Death",
+            length = 2,
+            loop = 0,
+            parent = "",
+            minimum = 0,
+            maximum = 0,
+            markers = {""}
+        },
+        animation3 =
+        {
+            name = "Burn_Loop",
+            length = 1,
+            loop = 1,
+            parent = "",
+            minimum = 0,
+            maximum = 0,
+            markers = {""}
+        },
+    },
+    events =
+    {
+        event1 =
+        {
+            { "anim", "Burn" },
+            { "animtime", "-1" },
+            { "marker", "Root" },
+            { "fx", "planetkiller_atmosphere_mesh" },
+            { "fx_nlips", "on" },
+        },
+        event2 =
+        {
+      {
+        "anim",
+        "Death",
+      },
+      {
+        "animtime",
+        "0.5",
+      },
+      {
+        "marker",
+        "root",
+      },
+      {
+        "fx",
+        "dmg_capital_explosion_combo",
+      },
+      {
+        "sound",
+        "EXPLOSION/LARGE/ETG_EXPLODE_LARGE_PLASMA",
+      },
+      {
+        "fx_scale",
+        "20",
+      },
+    },
+    event3 = {
+      {
+        "anim",
+        "Death",
+      },
+      {
+        "animtime",
+        "0.5",
+      },
+      {
+        "marker",
+        "root",
+      },
+      {
+        "fx",
+        "DMG_MASSIVE_MESH_SPHERE_RING",
+      },
+      {
+        "sound",
+        "",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+        },
+        event7 =
+        {
+            { "anim", "Burn" },
+            { "animtime", "0" },
+            { "marker", "markerA2" },
+            { "fx", "planetkiller_atmosphere_lensflare" },
+            { "fx_nlips", "on" },
+        },
+        event8 =
+        {
+            { "anim", "Burn" },
+            { "animtime", "-1" },
+            { "marker", "markerA1" },
+            { "fx", "planetkiller_missle_atmospher_spray" },
+            { "fx_nlips", "on" },
+        },
+    }
+}

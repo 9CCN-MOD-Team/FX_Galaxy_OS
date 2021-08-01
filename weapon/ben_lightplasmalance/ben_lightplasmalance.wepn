@@ -1,0 +1,19 @@
+StartWeaponConfig(NewWeaponType,"Gimble","InstantHit","benBeam","Normal",0,1800,0,0.4,0,0,2,1,0,0.2,1,2,0,0,0,0,0.1,"Normal",0,1,60)
+AddWeaponResult(NewWeaponType,"Hit","DamageHealth","Target",30,30,"")
+setPenetration(NewWeaponType,5,1,{
+  PlanetKillerArmour = 0,
+},{
+  ResArmour = 0.5,
+},{
+  DroneArmour = 0.5,
+})
+setMissileKiller(NewWeaponType,1);setAccuracy(NewWeaponType,0,{
+  Fighter = 0.13,
+},{
+  Corvette = 0.2,
+},{
+  munition = 0.5,
+})
+setAngles(NewWeaponType,20,0,0,0,0)
+setMiscValues(NewWeaponType,0,0)
+

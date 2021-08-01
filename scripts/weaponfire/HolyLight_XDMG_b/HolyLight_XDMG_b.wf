@@ -1,0 +1,15 @@
+-- LuaDC version 0.9.19
+-- 2010-10-3 19:02:57
+-- LuaDC by Age2uN
+-- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
+--
+hitfx = "super_beam_b_dmg_combo"
+bulletfx = "super_beam_b_dmg_combo"
+nopenetratefx = "super_beam_b_dmg_combo"
+blowthroughfx = "null1"
+deathtype = "deathBeam"
+scartype = "Hgn_Torpedo/Torpedo"
+hit_sfx = "WEAPON/FRIGATE/IMPACT/WEAPON_FRIGATE_ION_CANNON_BEAM_HIT"
+nopentrate_sfx = "WEAPON/FRIGATE/IMPACT/WEAPON_FRIGATE_ION_CANNON_BEAM_HIT"
+hit_clamp = 
+    { 0.2, 0.75, }

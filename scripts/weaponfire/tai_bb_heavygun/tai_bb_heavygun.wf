@@ -1,0 +1,13 @@
+hitfx = "dmg_missle_explode_combo"
+bulletfx = "tur_wave_beam_combo_Medium"
+nopenetratefx = "dmg_missle_explode_combo"
+deathtype = "deathCannon"
+scartype = "Kinetic_Large/Kinetic_Large"
+firefx = "firefx_heavycannon_large"
+fire_sfx = "Weapon/Taiidan/Fire/heavy_gun"
+hit_sfx = "WEAPON/FRIGATE/IMPACT/WEAPON_FRIGATE_FLECHETTE_CANNON_HIT"
+nopenetrate_sfx = "WEAPON/FRIGATE/IMPACT/WEAPON_FRIGATE_FLECHETTE_CANNON_HIT"
+hit_clamp = {
+  1,
+  1,
+}

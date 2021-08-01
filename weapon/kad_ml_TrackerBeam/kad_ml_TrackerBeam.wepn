@@ -1,0 +1,29 @@
+StartWeaponConfig(NewWeaponType,"Gimble","InstantHit","TrackerBeam","Special Attack",0,7000,0,4,0,0,20,0,1,4,0,0,1,1,120,120,0.1,"Normal",1,0,0)
+AddWeaponResult(NewWeaponType,"Hit","Disable","Target",10,10,"")
+AddWeaponResult(NewWeaponType,"Hit","Disable","Target",10,10,"")
+AddWeaponResult(NewWeaponType,"Hit","Disable","Target",10,10,"")
+AddWeaponResult(NewWeaponType,"Hit","Disable","Target",10,10,"")
+AddWeaponResult(NewWeaponType,"Hit","Disable","Target",10,10,"")
+AddWeaponResult(NewWeaponType,"Hit","Disable","Target",10,10,"")
+AddWeaponResult(NewWeaponType,"Hit","Disable","Target",10,10,"")
+AddWeaponResult(NewWeaponType,"Hit","Disable","Target",10,10,"")
+AddWeaponResult(NewWeaponType,"Hit","Disable","Target",10,10,"")
+AddWeaponResult(NewWeaponType,"Hit","Disable","Target",10,10,"")
+--AddWeaponResult(NewWeaponType, "Hit", "Push", "Target", -4000, -4000, "")
+setPenetration(NewWeaponType,50,1,{
+  unarmoured = 0.017,
+},{
+  lightarmour = 0.04,
+},{
+  ResArmour = 0.2,
+},{
+  PlanetKillerArmour = 1,
+},{
+  SubSystemArmour = 0.5,
+})
+setAccuracy(NewWeaponType,0,{
+  SmallCapitalShip = 1,
+},{
+  BigCapitalShip = 1,
+})
+setAngles(NewWeaponType,45,0,0,0,0)

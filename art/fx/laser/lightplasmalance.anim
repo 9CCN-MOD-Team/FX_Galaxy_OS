@@ -1,0 +1,5 @@
+fps = 30
+startFrame = 0
+loopCount = 10
+texture = 
+    { "data:/ART/FX/laser/lightplasmalance.tga",}

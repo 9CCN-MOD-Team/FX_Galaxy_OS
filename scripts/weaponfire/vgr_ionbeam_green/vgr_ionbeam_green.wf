@@ -1,0 +1,12 @@
+hitfx = ""
+bulletfx = "pulsar_ionbeam_beam_green"
+nopenetratefx = ""
+blowthroughfx = "blowthrough_generic"
+deathtype = "deathBeam"
+scartype = "iontrail"
+hit_sfx = "WEAPON/FRIGATE/IMPACT/WEAPON_FRIGATE_ION_CANNON_BEAM_HIT"
+nopentrate_sfx = "WEAPON/FRIGATE/IMPACT/WEAPON_FRIGATE_ION_CANNON_BEAM_HIT"
+hit_clamp = {
+  0.5,
+  1.25,
+}

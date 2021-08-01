@@ -1,0 +1,7 @@
+filerange 90900 91000
+rangestart 90900 91000
+
+// Subtitles
+90900	TIMER£º%1MINUTES%:%2SECONDS%
+
+rangeend

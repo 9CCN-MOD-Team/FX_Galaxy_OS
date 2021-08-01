@@ -1,0 +1,274 @@
+effects = {
+  animations = {
+   animation7 = {
+      name = "Fire",
+      length = 4,
+      loop = 0,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+    animation8 = {
+      name = "Fire1",
+      length = 4,
+      loop = 0,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+   animation13 = {
+      name = "Weapon_TurretTop2",
+      length = 0.2,
+      loop = 0,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+    animation14 = {
+      name = "Weapon_TurretTop3",
+      length = 0.2,
+      loop = 0,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+  },
+  events = {
+   event35 = {
+      {
+        "anim",
+        "Fire",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "Weapon_TurretTop_Position",
+      },
+      {
+        "fx",
+        "boarding_beam_combo_tur",
+      },
+      {
+        "sound",
+        "WEAPON/FRIGATE/FIRE/WEAPON_FRIGATE_ION_CANNON_BEAM",
+      },
+      {
+        "fx_scale",
+        "0.5",
+      },
+    },
+    event36 = {
+      {
+        "anim",
+        "Fire1",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "Weapon_TurretTop1_Position",
+      },
+      {
+        "fx",
+        "boarding_beam_combo_tur",
+      },
+      {
+        "sound",
+        "WEAPON/FRIGATE/FIRE/WEAPON_FRIGATE_ION_CANNON_BEAM",
+      },
+      {
+        "fx_scale",
+        "0.5",
+      },
+    },
+   event37 = {
+      {
+        "anim",
+        "Fire",
+      },
+      {
+        "animtime",
+        "0.1",
+      },
+      {
+        "marker",
+        "marker54",
+      },
+      {
+        "fx",
+        "ion_cannon_steam_spray",
+      },
+      {
+        "sound",
+        "DAMAGE/SMOKE/ION_BEAM_DISCHARGE",
+      },
+      {
+        "fx_scale",
+        "2",
+      },
+    },
+    event38 = {
+      {
+        "anim",
+        "Fire1",
+      },
+      {
+        "animtime",
+        "0.1",
+      },
+      {
+        "marker",
+        "marker55",
+      },
+      {
+        "fx",
+        "ion_cannon_steam_spray",
+      },
+      {
+        "sound",
+        "DAMAGE/SMOKE/ION_BEAM_DISCHARGE",
+      },
+      {
+        "fx_scale",
+        "2",
+      },
+    },
+    event53 = {
+      {
+        "anim",
+        "Weapon_TurretTop2",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "Weapon_TurretTop2_Muzzle",
+      },
+      {
+        "fx",
+        "muzzle_flash_combo_small_capital",
+      },
+      {
+        "sound",
+        "weapon/fighter/fire/WEAPON_FIGHTER_KINETIC_AUTOGUN_SHELL",
+      },
+      {
+        "fx_scale",
+        "2",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event54 = {
+      {
+        "anim",
+        "Weapon_TurretTop2",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "danke01",
+      },
+      {
+        "fx",
+        "small_danke_COMBO",
+      },
+      {
+        "sound",
+        "",
+      },
+      {
+        "fx_scale",
+        "0.1",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event55 = {
+      {
+        "anim",
+        "Weapon_TurretTop3",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "Weapon_TurretTop3_Muzzle",
+      },
+      {
+        "fx",
+        "muzzle_flash_combo_small_capital",
+      },
+      {
+        "sound",
+        "weapon/fighter/fire/WEAPON_FIGHTER_KINETIC_AUTOGUN_SHELL",
+      },
+      {
+        "fx_scale",
+        "2",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event56 = {
+      {
+        "anim",
+        "Weapon_TurretTop3",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "danke03",
+      },
+      {
+        "fx",
+        "small_danke_COMBO",
+      },
+      {
+        "sound",
+        "",
+      },
+      {
+        "fx_scale",
+        "0.1",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+  },
+}

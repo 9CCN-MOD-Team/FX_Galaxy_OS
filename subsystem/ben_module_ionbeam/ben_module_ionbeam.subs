@@ -1,0 +1,42 @@
+NewSubSystemType = StartSubSystemConfig()
+NewSubSystemType.displayedName = "离子束升级模块"
+NewSubSystemType.sobDescription = "离子束升级模块"
+NewSubSystemType.tacticalIcon = "hexagon"
+NewSubSystemType.tacticalIconMinSize = 0.0035
+NewSubSystemType.tacticalIconMinFadeSize = 0.0045
+NewSubSystemType.tacticalIconMaxFadeSize = 0.008
+NewSubSystemType.groupMergeSize = 0.001
+NewSubSystemType.mouseOverMinFadeSize = 0.045
+NewSubSystemType.mouseOverMaxFadeSize = 0.1
+NewSubSystemType.maxhealth = 20000
+NewSubSystemType.regentime = 1
+NewSubSystemType.nlips = 0
+NewSubSystemType.nlipsRange = 0
+NewSubSystemType.nlipsFar = 0
+NewSubSystemType.nlipsFarRange = 0
+NewSubSystemType.meshRenderLimit = 0.004
+NewSubSystemType.minimumZoomFactor = 0.6800000000000001
+NewSubSystemType.selectionLimit = 0
+NewSubSystemType.preciseATILimit = 0
+NewSubSystemType.selectionPriority = 37.5
+NewSubSystemType.battleScarMaxTriBase = 40
+NewSubSystemType.battleScarMaxTriInc = 20
+NewSubSystemType.type = "System"
+NewSubSystemType.typeString = "SleeplessCity1"
+NewSubSystemType.collateralDamage = 100
+NewSubSystemType.inactiveTimeAfterDamage = 10
+NewSubSystemType.activateHealthPercentage = 0.1
+NewSubSystemType.costToBuild = 500
+NewSubSystemType.timeToBuild = 25
+NewSubSystemType.isResearch = 1
+NewSubSystemType.visible = 0
+LoadSharedModel(NewSubSystemType,"tur_module_gravwellgenerator")
+NewSubSystemType.BuildFamily = "SubSystem_Ben"
+NewSubSystemType.AttackFamily = "SubSystem"
+NewSubSystemType.DockFamily = "CantDock"
+NewSubSystemType.DisplayFamily = "SubSystemModule"
+NewSubSystemType.ArmourFamily = "SubSystemArmour"
+AddSubSystemAbility(NewSubSystemType,"Attack",1,"ThisShipOnly",0)
+AddSubSystemAbility(NewSubSystemType,"UseSpecialWeaponsInNormalAttack",1,"ThisShipOnly",0)
+
+loadShipPatchList(NewSubSystemType,"data:sound/sfx/ship/Hiigaran/Subsystems/",1,"HASubsystemHyperspaceInhibitAmb")

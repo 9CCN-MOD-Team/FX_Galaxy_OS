@@ -1,0 +1,8 @@
+MusicList["Yes_Homeworld"] = 
+		{
+			name = "Homeworld-Yes",
+			path = musicpath.."Yes_Homeworld",
+			minute = 9,
+			second = 34,
+			func = MP_Never,
+		}

@@ -1,0 +1,166 @@
+NewShipType = StartShipConfig()
+NewShipType.displayedName = "$1961"
+NewShipType.sobDescription = "$22521"
+NewShipType.maxhealth = 22500
+NewShipType.regentime = 1000
+NewShipType.minRegenTime = 100
+NewShipType.sideArmourDamage = 1
+NewShipType.rearArmourDamage = 1
+NewShipType.isTransferable = 0
+NewShipType.defaultROE="Defensive"
+NewShipType.defaultStance="Neutral"
+NewShipType.useEngagementRanges = 1
+NewShipType.unitCapsNumber = 1
+NewShipType.SquadronSize = 1
+NewShipType.formationSpacing = 150
+NewShipType.paradeData="dummy_parade"
+NewShipType.passiveFormation = "Spear"
+NewShipType.defensiveFormation = "x"
+NewShipType.aggressiveFormation = "Claw"
+NewShipType.mass = 800
+NewShipType.collisionMultiplier = 1
+NewShipType.thrusterMaxSpeed = 125
+NewShipType.mainEngineMaxSpeed = 125
+NewShipType.rotationMaxSpeed = 20
+NewShipType.thrusterAccelTime = 8
+NewShipType.thrusterBrakeTime = 4
+NewShipType.mainEngineAccelTime = 8
+NewShipType.mainEngineBrakeTime = 4
+NewShipType.rotationAccelTime = 0.75
+NewShipType.rotationBrakeTime = 0.35
+NewShipType.thrusterUsage = 0.5
+NewShipType.accelerationAngle = 40
+NewShipType.mirrorAngle = 0
+NewShipType.secondaryTurnAngle = 0
+NewShipType.maxBankingAmount = 20
+NewShipType.descendPitch = 20
+NewShipType.goalReachEpsilon = 30
+NewShipType.slideMoveRange = 100
+NewShipType.controllerType = "Ship"
+NewShipType.tumbleStaticX = 2
+NewShipType.tumbleStaticY = 4
+NewShipType.tumbleStaticZ = 3
+NewShipType.tumbleDynamicX = 1
+NewShipType.tumbleDynamicY = 2
+NewShipType.tumbleDynamicZ = 1
+NewShipType.tumbleSpecialDynamicX = 1
+NewShipType.tumbleSpecialDynamicY = 2
+NewShipType.tumbleSpecialDynamicZ = 1
+NewShipType.relativeMoveFactor = 1
+NewShipType.swayUpdateTime = 10
+NewShipType.swayOffsetRandomX = 10
+NewShipType.swayOffsetRandomY = 10
+NewShipType.swayOffsetRandomZ = 10
+NewShipType.swayBobbingFactor = 0
+NewShipType.swayRotateFactor = 0
+NewShipType.useTargetRandom = 1
+NewShipType.targetRandomPointXMin = -0.2
+NewShipType.targetRandomPointXMax = 0.2
+NewShipType.targetRandomPointYMin = -0.2
+NewShipType.targetRandomPointYMax = 0.2
+NewShipType.targetRandomPointZMin = -0.6
+NewShipType.targetRandomPointZMax = 0.6
+NewShipType.dustCloudDamageTime = 200
+NewShipType.nebulaDamageTime = 300
+NewShipType.MinimalFamilyToFindPathAround = "MotherShip"
+NewShipType.BuildFamily = "Platform_Kus"
+NewShipType.AttackFamily = "Frigate"
+NewShipType.DockFamily = "ResearchShip"
+NewShipType.AvoidanceFamily = "Frigate"
+NewShipType.DisplayFamily = "Platform"
+NewShipType.AutoFormationFamily = "Frigate"
+NewShipType.CollisionFamily = "Small"
+NewShipType.ArmourFamily = "TurretArmour"
+setSupplyValue(NewShipType, "Platform", 1)
+setSupplyValue(NewShipType, "Researchship", 1)
+NewShipType.fighterValue = 0
+NewShipType.corvetteValue = 0
+NewShipType.frigateValue = 0
+NewShipType.neutralValue = 10
+NewShipType.antiFighterValue = 0
+NewShipType.antiCorvetteValue = 0
+NewShipType.antiFrigateValue = 0
+NewShipType.totalValue = 10
+NewShipType.buildCost = 500
+NewShipType.buildTime = 33
+NewShipType.buildPriorityOrder = 30
+NewShipType.retaliationRange = 5500
+NewShipType.retaliationDistanceFromGoal = 160
+NewShipType.visualRange = 1000
+NewShipType.prmSensorRange = 5000
+NewShipType.secSensorRange = 5000
+NewShipType.detectionStrength = 1
+NewShipType.TOIcon = "Rectangle"
+NewShipType.TOScale=1
+NewShipType.TODistanceFade0=9000
+NewShipType.TODistanceDisappear0=7000
+NewShipType.TODistanceFade1=4500
+NewShipType.TODistanceDisappear1=3500
+NewShipType.TODistanceFade2=12000
+NewShipType.TODistanceDisappear2=35000
+NewShipType.TOGroupScale=1
+NewShipType.TOGroupMergeSize=0
+NewShipType.mouseOverMinFadeSize=0.045
+NewShipType.mouseOverMaxFadeSize=0.1
+NewShipType.healthBarStyle=1
+NewShipType.nlips=0.00015
+NewShipType.nlipsRange=6000
+NewShipType.nlipsFar=0.00015
+NewShipType.nlipsFarRange=10000
+NewShipType.SMRepresentation="HardDot"
+NewShipType.meshRenderLimit=14000
+NewShipType.dotRenderLimit=10
+NewShipType.visibleInSecondary=1
+NewShipType.minLOD=0.2
+NewShipType.goblinsStartFade=1540
+NewShipType.goblinsOff=1540
+NewShipType.minimumZoomFactor=0.75
+NewShipType.preciseSelectionLimit=5000
+NewShipType.selectionLimit=150000
+NewShipType.preciseATILimit=0
+NewShipType.selectionPriority = 75
+NewShipType.militaryUnit = 0
+addAbility(NewShipType,"MoveCommand",1,0);
+addAbility(NewShipType,"CanDock",1,0);
+NewShipType.dockTimeBetweenTwoFormations = 1
+NewShipType.dockTimeBeforeStart = 2
+NewShipType.dockNrOfShipsInDockFormation = 1
+NewShipType.dockFormation = "delta"
+NewShipType.queueFormation = "dockline"
+NewShipType.dontDockWithOtherRaceShips = 1
+NewShipType.ignoreRaceWhenDocking = 0
+addAbility(NewShipType, "CanLaunch")
+NewShipType.launchTimeBetweenTwoFormations = 1
+NewShipType.launchTimeBeforeStart = 2
+NewShipType.launchNrOfShipsInDockFormation = 1
+NewShipType.launchFormation = "delta"
+addAbility(NewShipType,"ShipHold",1,0,0,"rallypoint","",100);
+addAbility(NewShipType, "ParadeCommand",1)
+addAbility(NewShipType, "WaypointMove")
+addAbility(NewShipType,"HyperSpaceCommand",0,1,375,375,0,3)
+addAbility(NewShipType, "GuardCommand", 1,3000,600)
+addAbility(NewShipType,"CanBeRepaired");
+addAbility(NewShipType,"RetireAbility",0,0);
+--addAbility(NewShipType,"CanBuildShips",1,"Research_Tai","SubSystemModule")
+addCustomCode(NewShipType,"data:Ship/Kus_ResearchShip/Kus_ResearchShip.lua","Load_Kus_ResearchShip","Create_Kus_ResearchShip","Update_Kus_ResearchShip","Destroy_Kus_ResearchShip","kus_researchship",2.2)
+LoadModel(NewShipType, 1)
+
+StartShipHardPointConfig(NewShipType,"Research Module","ResearchShip","System","Innate","Damageable","kus_r","","","","","","","","");
+addShield(NewShipType,"EMP",220,20)
+NewShipType.battleScarCoverage=2
+NewShipType.battleScarBudgetLow = 400
+NewShipType.battleScarBudgetNext = 600
+NewShipType.sobDieTime=1.9
+NewShipType.sobSpecialDieTime=2
+NewShipType.specialDeathSpeed=40
+NewShipType.chanceOfSpecialDeath=0
+NewShipType.deadSobFadeTime=1
+NewShipType.trailLinger=2
+setEngineBurn(NewShipType,6,3,3,4,0.1,0.1,0.1,15);
+setEngineGlow(NewShipType,1,1,1.02,20,300,50,1.5,{0.27, 0.47, .69, 0.25});
+loadShipPatchList(NewShipType,"data:sound/sfx/ship/Hiigaran/NonMilitary/"
+                             ,0,"Engines/HResourcerEng",""
+                             ,1,"Ambience/HResourcerAmb","");
+														 NewShipType.minFalloffDamageDist=0
+NewShipType.maxFalloffDamageDist=400
+NewShipType.maxFalloffDamage=400

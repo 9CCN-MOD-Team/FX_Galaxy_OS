@@ -1,0 +1,8 @@
+MusicList["The_Deal"] = 
+{
+	name = "The_Deal-Future_World_Music",
+	path = musicpath.."The_Deal",
+	minute = 1,
+	second = 45,
+	func = MP_NoCombat,
+}

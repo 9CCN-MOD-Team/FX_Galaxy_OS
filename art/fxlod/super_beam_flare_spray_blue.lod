@@ -1,0 +1,13 @@
+lods = 
+{
+	lod0 = 
+	{
+		fx = "super_beam_flare_spray_blue",
+		distance = 2000,
+	},
+	lod1 = 
+	{
+		fx = "super_beam_flare_spray_blue_lod",
+		distance = 100000,
+	},	
+}

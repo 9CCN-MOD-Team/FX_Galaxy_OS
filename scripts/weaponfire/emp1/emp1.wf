@@ -1,0 +1,14 @@
+hitfx = "emp_pulse_combo1"
+blowthroughfx = "emp_pulse_combo1"
+bulletfx = "emp_pulse_combo1"
+nopenetratefx = "dmg_cloud_torpedo_combo"
+deathtype = "deathCannon"
+hit_clamp = {
+  1,
+  1,
+}
+scartype = "Bullet/Bullet"
+hit_sfx = "Weapon/Fighter/Impact/WEAPON_FIGHTER_Kinetic_Autogun_Hit"
+nopenetrate_sfx = "WEAPON/FRIGATE/IMPACT/WEAPON_FRIGATE_FLAK_CANNON_HIT"
+
+

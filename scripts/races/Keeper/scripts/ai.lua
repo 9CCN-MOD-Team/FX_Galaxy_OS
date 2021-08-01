@@ -1,0 +1,418 @@
+--该文件是不同种族AI的数据文件，各族的path_ai_special参数应为该文件所在的路径（不同种族应设置不同的数据文件）
+
+--全局变量设置
+function Override_Init()
+	sg_dobuild = 1--该族AI是否建造单位
+	sg_dosubsystems = 0--该族AI是否建造子系统
+	sg_doresearch = 1--该族AI是否研究科技
+	sg_doupgrades = 1--该族AI是否研究升级科技
+	sg_domilitary = 1--该族AI是否采取军事行动
+	sg_fightersize=1--该族战机单个编队的实力系数（重制版HW1种族为5）
+	sg_corvettesize=1--该族护航艇单个编队的实力系数（重制版HW1种族为3）
+	sg_frigatesize=1--该族护卫舰单个编队的实力系数（重制版HW1种族为1）
+	sg_kDemandResetValue = 4--该族AI对建造的投入是对研究投入的多少倍
+	sg_kCollector = KPR_RESOURCECOLLECTOR
+	sg_classPersonalityDemand[ eFighter ] = 0.25--该族对战机单位的基础需求
+	sg_classPersonalityDemand[ eCorvette ] = 0.5--该族对护航艇单位的基础需求
+	sg_classPersonalityDemand[ eFrigate ] = 0.25--该族对护航艇单位的基础需求
+	sg_classPersonalityDemand[ ePlatform ] = -0.5--该族对平台单位的基础需求
+	SetResourceDockFamily("Utility")--设置该族采集船DockFamily
+	sg_numCollectorPerChannel=4
+	sg_RUsPerChannel=500
+	sg_ForceBuilderRU=2000
+	sg_militaryDemand = 1
+	sg_subSystemDemand = 0
+	sg_shipDemand = 4
+	sg_militaryToBuildPerCollector = 1
+	sg_subSystemOverflowDemand = 0
+	sg_debug=0
+end
+
+--该文件主要用于建立一个种族专属的信息档案供AI脚本作为参考，主要内容应包括各种单位、科技、子系统的类别，其前置单位、科技、子系统等
+--下面分别以希格拉战列巡洋舰、战列巡洋舰科技和主力舰生产设施为例，展示信息录入格式
+
+ai_data={}
+ai_data[KPR_SCOUT]=
+	{
+		Name="KPR_SCOUT",
+		Type="Ship",
+		Require={},
+		Upgrades={KPR_AIRWEAPONUPGRADE1,KPR_AIRWEAPONUPGRADE2,KPR_AIRWEAPONUPGRADE3,KPR_AIHEALTHUPGRADE1,KPR_AIHEALTHUPGRADE2,KPR_AIHEALTHUPGRADE3},
+		UpgradeDemand=1,
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=-1,
+		UnitCap="scout",
+	}
+ai_data[KPR_SCOUT1]=
+	{
+		Name="KPR_SCOUT1",
+		Type="Ship",
+		Require={},
+		Upgrades={KPR_AIRWEAPONUPGRADE1,KPR_AIRWEAPONUPGRADE2,KPR_AIRWEAPONUPGRADE3,KPR_AIHEALTHUPGRADE1,KPR_AIHEALTHUPGRADE2,KPR_AIHEALTHUPGRADE3},
+		UpgradeDemand=1,
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=0,
+		UnitCap="scout",
+	}
+ai_data[KPR_BOMBER]=
+	{
+		Name="KPR_BOMBER",
+		Type="Ship",
+		Require={KPR_ENERGY_PHOTONBOMB},
+		Upgrades={KPR_AIRWEAPONUPGRADE1,KPR_AIRWEAPONUPGRADE2,KPR_AIRWEAPONUPGRADE3,KPR_AIHEALTHUPGRADE1,KPR_AIHEALTHUPGRADE2,KPR_AIHEALTHUPGRADE3},
+		UpgradeDemand=1,
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=0,
+		UnitCap="Fighter",
+	}
+ai_data[KPR_MOVERS]=
+	{
+		Name="KPR_MOVERS",
+		Type="Ship",
+		Require={KPR_ENERGY_PHOTONBOMB},
+		Upgrades={KPR_AIRWEAPONUPGRADE1,KPR_AIRWEAPONUPGRADE2,KPR_AIRWEAPONUPGRADE3,KPR_AIHEALTHUPGRADE1,KPR_AIHEALTHUPGRADE2,KPR_AIHEALTHUPGRADE3},
+		UpgradeDemand=1,
+		SizeControl={eCorvette,0.7},
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=0,
+		UnitCap="Corvette",
+	}
+ai_data[KPR_MOVER1]=
+	{
+		Name="KPR_MOVER1",
+		Type="Ship",
+		Require={KPR_RESEARCHSHIP_1},
+		Upgrades={KPR_AIRWEAPONUPGRADE1,KPR_AIRWEAPONUPGRADE2,KPR_AIRWEAPONUPGRADE3,KPR_AIHEALTHUPGRADE1,KPR_AIHEALTHUPGRADE2,KPR_AIHEALTHUPGRADE3},
+		UpgradeDemand=1,
+		SizeControl={eCorvette,0.7},
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=0,
+		UnitCap="Corvette",
+	}
+ai_data[KPR_HEAVYMOVER]=
+	{
+		Name="KPR_HEAVYMOVER",
+		Type="Ship",
+		Require={KPR_ENERGY_PHOTONCANNON},
+		Upgrades={KPR_AIRWEAPONUPGRADE1,KPR_AIRWEAPONUPGRADE2,KPR_AIRWEAPONUPGRADE3,KPR_AIHEALTHUPGRADE1,KPR_AIHEALTHUPGRADE2,KPR_AIHEALTHUPGRADE3},
+		UpgradeDemand=1,
+		SizeControl={eCorvette,0.7},
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=0,
+		UnitCap="Corvette",
+	}
+ai_data[KPR_CAPTUREMOVER]=
+	{
+		Name="KPR_CAPTUREMOVER",
+		Type="Ship",
+		Require={KPR_RESEARCHSHIP_2},
+		Upgrades={KPR_AIHEALTHUPGRADE1,KPR_AIHEALTHUPGRADE2,KPR_AIHEALTHUPGRADE3},
+		UpgradeDemand=1,
+		SizeControl={eCorvette,0.4},
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=0,
+		UnitCap="Corvette",
+	}
+ai_data[KPR_ASSAULTFRIGATE]=
+	{
+		Name="KPR_ASSAULTFRIGATE",
+		Type="Ship",
+		Require={KPR_ENERGY_PHOTONCANNON},
+		Upgrades={KPR_FRIGATEWEAPONUPGRADE1,KPR_FRIGATEWEAPONUPGRADE2,KPR_FRIGATEWEAPONUPGRADE3,KPR_AIHEALTHUPGRADE1,KPR_AIHEALTHUPGRADE2,KPR_AIHEALTHUPGRADE3},
+		UpgradeDemand=1,
+		SizeControl={eFrigate,0.7},
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=0,
+		UnitCap="Frigate",
+	}
+ai_data[KPR_IONCANNONFRIGATE]=
+	{
+		Name="KPR_IONCANNONFRIGATE",
+		Type="Ship",
+		Require={KPR_ENERGY_PULSAR},
+		Upgrades={KPR_FRIGATEWEAPONUPGRADE1,KPR_FRIGATEWEAPONUPGRADE2,KPR_FRIGATEWEAPONUPGRADE3,KPR_AIHEALTHUPGRADE1,KPR_AIHEALTHUPGRADE2,KPR_AIHEALTHUPGRADE3},
+		UpgradeDemand=1,
+		SizeControl={eFrigate,0.7},
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=0,
+		UnitCap="Frigate",
+	}
+ai_data[KPR_DESTROYERFRIGATE]=
+	{
+		Name="KPR_DESTROYERFRIGATE",
+		Type="Ship",
+		Require={KPR_ENERGY_IONCANNON},
+		Upgrades={KPR_FRIGATEWEAPONUPGRADE1,KPR_FRIGATEWEAPONUPGRADE2,KPR_FRIGATEWEAPONUPGRADE3,KPR_AIHEALTHUPGRADE1,KPR_AIHEALTHUPGRADE2,KPR_AIHEALTHUPGRADE3},
+		UpgradeDemand=1,
+		SizeControl={eFrigate,0.7},
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=0,
+		UnitCap="Frigate",
+	}
+ai_data[KPR_DEFENSEFIELDFRIGATE]=
+	{
+		Name="KPR_DEFENSEFIELDFRIGATE",
+		Type="Ship",
+		Require={KPR_RESEARCHSHIP_2},
+		Upgrades={KPR_AIHEALTHUPGRADE1,KPR_AIHEALTHUPGRADE2,KPR_AIHEALTHUPGRADE3},
+		UpgradeDemand=1,
+		SizeControl={eFrigate,0.2},
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=0,
+		LODDemand={-2,-1,0,1},
+		UnitCap="EnergyFrigate",
+	}
+ai_data[KPR_DELIVER]=
+	{
+		Name="KPR_DELIVER",
+		Type="Ship",
+		Require={KPR_RESEARCHSHIP_1},
+		Upgrades={KPR_PLATFORMHEALTHUPGRADE1,KPR_PLATFORMHEALTHUPGRADE2,KPR_PLATFORMHEALTHUPGRADE3},
+		UpgradeDemand=1,
+		BuildShipChannel=1,
+		BuildSubsystemChannel=0,
+		BasicDemand=20,
+		UnitCap="Deliver",
+	}
+ai_data[KPR_CARRIER]=
+	{
+		Name="KPR_CARRIER",
+		Type="Ship",
+		Require={KPR_RESEARCHSHIP_2},
+		Upgrades={KPR_PLATFORMHEALTHUPGRADE1,KPR_PLATFORMHEALTHUPGRADE2,KPR_PLATFORMHEALTHUPGRADE3},
+		UpgradeDemand=1,
+		BuildShipChannel=1,
+		BuildSubsystemChannel=0,
+		BasicDemand=0,
+		UnitCap="kCarrier",
+	}
+ai_data[KPR_BALCORAGATE]=
+	{
+		Name="KPR_BALCORAGATE",
+		Type="Ship",
+		Require={},
+		Upgrades={KPR_PLATFORMHEALTHUPGRADE1,KPR_PLATFORMHEALTHUPGRADE2,KPR_PLATFORMHEALTHUPGRADE3},
+		UpgradeDemand=1,
+		SizeControl={eBuilder,0.1},
+		BuildShipChannel=1,
+		BuildSubsystemChannel=0,
+		BasicDemand=0,
+		UnitCap="balcoragate",
+	}
+ai_data[KPR_DESTROYER1]=
+	{
+		Name="KPR_DESTROYER1",
+		Type="Ship",
+		Require={KPR_ENERGY_IONCANNON,KPR_ENERGY_PULSAR},
+		Upgrades={KPR_FRIGATEWEAPONUPGRADE1,KPR_FRIGATEWEAPONUPGRADE2,KPR_FRIGATEWEAPONUPGRADE3,KPR_AIHEALTHUPGRADE1,KPR_AIHEALTHUPGRADE2,KPR_AIHEALTHUPGRADE3,},
+		UpgradeDemand=1,
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=0,
+		UnitCap="Keeper",
+	}
+ai_data[KPR_ARSENALSHIP]=
+	{
+		Name="KPR_ARSENALSHIP",
+		Type="Ship",
+		Require={KPR_ENERGY_PHASEDCANNON},
+		Upgrades={KPR_CAPITALWEAPONUPGRADE1,KPR_CAPITALWEAPONUPGRADE2,KPR_CAPITALWEAPONUPGRADE3,KPR_CAPITALHEALTHUPGRADE1,KPR_CAPITALHEALTHUPGRADE2,KPR_CAPITALHEALTHUPGRADE3,},
+		UpgradeDemand=1,
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=5,
+		UnitCap="Arsenal",
+	}
+ai_data[KPR_DREADNAUGHT]=
+	{
+		Name="KPR_DREADNAUGHT",
+		Type="Ship",
+		Require={KPR_ENERGY_PHASEDCANNON,KPR_RESEARCHSHIP_3},
+		Upgrades={KPR_CAPITALWEAPONUPGRADE1,KPR_CAPITALWEAPONUPGRADE2,KPR_CAPITALWEAPONUPGRADE3,KPR_CAPITALHEALTHUPGRADE1,KPR_CAPITALHEALTHUPGRADE2,KPR_CAPITALHEALTHUPGRADE3,},
+		UpgradeDemand=1,
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=0,
+		UnitCap="Dreadnaught",
+	}
+ai_data[KPR_SAJUUKS]=
+	{
+		Name="KPR_SAJUUKS",
+		Type="Ship",
+		Require={KPR_ENERGY_SUPERPULSAR},
+		Upgrades={KPR_CAPITALWEAPONUPGRADE1,KPR_CAPITALWEAPONUPGRADE2,KPR_CAPITALWEAPONUPGRADE3,KPR_CAPITALHEALTHUPGRADE1,KPR_CAPITALHEALTHUPGRADE2,KPR_CAPITALHEALTHUPGRADE3,},
+		UpgradeDemand=1,
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=0,
+		UnitCap="sajuuk",
+	}
+ai_data[KPR_ENERGY_PHOTONBOMB]=
+	{
+		Name="KPR_ENERGY_PHOTONBOMB",
+		Type="Ship",
+		Require={},
+		Upgrades={KPR_PLATFORMHEALTHUPGRADE1,KPR_PLATFORMHEALTHUPGRADE2,KPR_PLATFORMHEALTHUPGRADE3,},
+		UpgradeDemand=1,
+		SizeControl={eBuilder,0.1},
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=2,
+		UnitCap="photonBomb",
+	}
+ai_data[KPR_ENERGY_PHOTONCANNON]=
+	{
+		Name="KPR_ENERGY_PHOTONCANNON",
+		Type="Ship",
+		Require={KPR_RESEARCHSHIP_2,KPR_ENERGY_PHOTONBOMB},
+		Upgrades={KPR_PLATFORMHEALTHUPGRADE1,KPR_PLATFORMHEALTHUPGRADE2,KPR_PLATFORMHEALTHUPGRADE3,},
+		UpgradeDemand=1,
+		SizeControl={eBuilder,0.1},
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=0,
+		UnitCap="photoncannon",
+	}
+ai_data[KPR_ENERGY_IONCANNON]=
+	{
+		Name="KPR_ENERGY_IONCANNON",
+		Type="Ship",
+		Require={KPR_RESEARCHSHIP_2},
+		Upgrades={KPR_PLATFORMHEALTHUPGRADE1,KPR_PLATFORMHEALTHUPGRADE2,KPR_PLATFORMHEALTHUPGRADE3,},
+		UpgradeDemand=1,
+		SizeControl={eBuilder,0.1},
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=0,
+		UnitCap="ioncannon",
+	}
+ai_data[KPR_ENERGY_PHASEDCANNON]=
+	{
+		Name="KPR_ENERGY_PHASEDCANNON",
+		Type="Ship",
+		Require={KPR_ENERGY_PHOTONBOMB,KPR_ENERGY_IONCANNON},
+		Upgrades={KPR_PLATFORMHEALTHUPGRADE1,KPR_PLATFORMHEALTHUPGRADE2,KPR_PLATFORMHEALTHUPGRADE3,},
+		UpgradeDemand=1,
+		SizeControl={eBuilder,0.1},
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=0,
+		UnitCap="PhasedCannon",
+	}
+ai_data[KPR_ENERGY_PULSAR]=
+	{
+		Name="KPR_ENERGY_PULSAR",
+		Type="Ship",
+		Require={KPR_RESEARCHSHIP_2},
+		Upgrades={KPR_PLATFORMHEALTHUPGRADE1,KPR_PLATFORMHEALTHUPGRADE2,KPR_PLATFORMHEALTHUPGRADE3,},
+		UpgradeDemand=1,
+		SizeControl={eBuilder,0.1},
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=0,
+		UnitCap="Pulsar",
+	}
+ai_data[KPR_ENERGY_SUPERPULSAR]=
+	{
+		Name="KPR_ENERGY_SUPERPULSAR",
+		Type="Ship",
+		Require={KPR_RESEARCHSHIP_3,KPR_ENERGY_PULSAR},
+		Upgrades={KPR_PLATFORMHEALTHUPGRADE1,KPR_PLATFORMHEALTHUPGRADE2,KPR_PLATFORMHEALTHUPGRADE3,},
+		UpgradeDemand=1,
+		SizeControl={eBuilder,0.1},
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=0,
+		UnitCap="SuperPulsar",
+	}
+ai_data[KPR_RESOURCECOLLECTOR]=
+	{
+		Name="KPR_RESOURCECOLLECTOR",
+		Type="Ship",
+		Require={},
+		Upgrades={},
+		UpgradeDemand=0,
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=0,
+		UnitCap="ResourceCollector",
+	}
+ai_data[KPR_RESOURCECONTROLLER]=
+	{
+		Name="KPR_RESOURCECONTROLLER",
+		Type="Ship",
+		Require={KPR_RESEARCHSHIP_2},
+		Upgrades={},
+		UpgradeDemand=0,
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=0,
+		UnitCap="ResourceController",
+	}
+ai_data[KPR_RESEARCHSHIP_1]=
+	{
+		Name="KPR_RESEARCHSHIP_1",
+		Type="Ship",
+		Require={KPR_ENERGY_PHOTONBOMB},
+		Upgrades={KPR_PLATFORMHEALTHUPGRADE1,KPR_PLATFORMHEALTHUPGRADE2,KPR_PLATFORMHEALTHUPGRADE3,},
+		UpgradeDemand=0,
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=0,
+		UnitCap="Core1",
+	}
+ai_data[KPR_RESEARCHSHIP_2]=
+	{
+		Name="KPR_RESEARCHSHIP_2",
+		Type="Ship",
+		Require={KPR_RESEARCHSHIP_1},
+		Upgrades={KPR_PLATFORMHEALTHUPGRADE1,KPR_PLATFORMHEALTHUPGRADE2,KPR_PLATFORMHEALTHUPGRADE3,},
+		UpgradeDemand=0,
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=20,
+		UnitCap="Core2",
+	}
+ai_data[KPR_RESEARCHSHIP_3]=
+	{
+		Name="KPR_RESEARCHSHIP_3",
+		Type="Ship",
+		Require={KPR_RESEARCHSHIP_2,KPR_ENERGY_PHASEDCANNON},
+		Upgrades={KPR_PLATFORMHEALTHUPGRADE1,KPR_PLATFORMHEALTHUPGRADE2,KPR_PLATFORMHEALTHUPGRADE3,},
+		UpgradeDemand=0,
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=0,
+		UnitCap="Core3",
+	}
+	
+	
+function Proc_DetermineDemandWithNoCounterInfo()
+end
+
+function Proc_DetermineSpecialDemand()
+end
+
+function CpuBuildSS_DefaultSubSystemDemandRules()
+end
+
+function DoResearchTechDemand()
+end
+
+
+function Override_MilitaryInit()
+	if (sg_Delay==0) then
+		cp_attackPercent=0
+	end
+end

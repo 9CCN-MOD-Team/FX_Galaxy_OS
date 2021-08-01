@@ -1,0 +1,247 @@
+paradeSlot("tur_scout",{
+  1495,
+  -200,
+  2300,
+},{
+  0,
+  0,
+  1,
+},{
+  1,
+  0,
+  0,
+},0)
+paradeSlot("tur_fighter",{
+  1268,
+  -125,
+  1950,
+},{
+  0,
+  0,
+  1,
+},{
+  1,
+  0,
+  0,
+},0)
+paradeSlot("tur_attackbomber",{
+  1083,
+  -50,
+  1460,
+},{
+  0,
+  0,
+  1,
+},{
+  1,
+  0,
+  0,
+},0)
+paradeSlot("tur_standardcorvette",{
+  1687,
+  225,
+  1156,
+},{
+  0,
+  0,
+  1,
+},{
+  1,
+  0,
+  0,
+},0)
+paradeSlot("tur_missilecorvette",{
+  1513,
+  150,
+  894,
+},{
+  0,
+  0,
+  1,
+},{
+  1,
+  0,
+  0,
+},0)
+paradeSlot("tur_minelayercorvette",{
+  1372,
+  75,
+  602,
+},{
+  0,
+  0,
+  1,
+},{
+  1,
+  0,
+  0,
+},0)
+paradeSlot("tur_torpedoCorvette",{
+  1254,
+  0,
+  282,
+},{
+  0,
+  0,
+  1,
+},{
+  1,
+  0,
+  0,
+},0)
+paradeSlot("tur_vulcanfrigate",{
+  -1292,
+  -150,
+  2088,
+},{
+  0,
+  0,
+  1,
+},{
+  -1,
+  0,
+  0,
+},0)
+paradeSlot("tur_ionarrayfrigate",{
+  -1070,
+  0,
+  1715,
+},{
+  0,
+  0,
+  1,
+},{
+  -1,
+  0,
+  0,
+},0)
+paradeSlot("tur_SiegeDrillfrigate",{
+  -964,
+  150,
+  1344,
+},{
+  0,
+  0,
+  1,
+},{
+  -1,
+  0,
+  0,
+},0)
+paradeSlot("tur_Energyfrigate",{
+  -907,
+  300,
+  1011,
+},{
+  0,
+  0,
+  1,
+},{
+  -1,
+  0,
+  0,
+},0)
+paradeSlot("tur_cloakgenerator",{
+  -760,
+  -550,
+  1762,
+},{
+  0,
+  0,
+  1,
+},{
+  1,
+  0,
+  0,
+},0)
+paradeSlot("tur_resourcecollector",{
+  828,
+  -350,
+  2040,
+},{
+  0,
+  0,
+  1,
+},{
+  0,
+  0,
+  -1,
+},0)
+paradeSlot("tur_Garbage",{
+  1027,
+  -510,
+  462,
+},{
+  0,
+  0,
+  1,
+},{
+  0,
+  1,
+  0,
+},500)
+paradeSlot("tur_ResourceController",{
+  1500,
+  -300,
+  -1080,
+},{
+  0,
+  0,
+  1,
+},{
+  1,
+  0,
+  0,
+},1000)
+paradeSlot("tur_carrier",{
+  -1960,
+  0,
+  -20,
+},{
+  0,
+  0,
+  1,
+},{
+  -1,
+  0,
+  0,
+},1500)
+paradeSlot("tur_heavycruiser",{
+  500,
+  0,
+  2900,
+},{
+  0,
+  0,
+  1,
+},{
+  1,
+  0,
+  0,
+},1000)
+paradeSlot("tur_shipyard",{
+  -1311,
+  0,
+  -3200,
+},{
+  0,
+  0,
+  1,
+},{
+  1,
+  0,
+  0,
+},2500)
+paradeSlot("misc",{
+  1700,
+  600,
+  -650,
+},{
+  0,
+  0,
+  1,
+},{
+  1,
+  0,
+  0,
+},800)

@@ -1,0 +1,14 @@
+-- LuaDC version 0.9.19
+-- 2011-7-21 18:04:51
+-- LuaDC by Age2uN
+-- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
+--
+fps = 30
+startFrame = 0
+loopCount = 0
+texture = 
+    {"data:/art/fx/GreatExp/exp_02_1.tga", 
+"data:/art/fx/GreatExp/exp_02_2.tga",
+"data:/art/fx/GreatExp/exp_02_3.tga",
+
+}

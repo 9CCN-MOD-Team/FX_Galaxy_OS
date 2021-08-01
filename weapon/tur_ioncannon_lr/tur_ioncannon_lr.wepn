@@ -1,0 +1,18 @@
+StartWeaponConfig(NewWeaponType,"AnimatedTurret","InstantHit","ionbeam_tur","Special Attack",0,6600,0,2,0,0,20,0,1,6,0,0,0,0,120,120,0.1,"Normal",1,1,0)
+AddWeaponResult(NewWeaponType,"Hit","DamageHealth","Owner",3000,3000,"")
+setPenetration(NewWeaponType,30,1,{
+  PlanetKillerArmour = 0,
+},{
+  SubSystemArmour = 0.3,
+},{
+  ResArmour = 0.2,
+},{
+  lightarmour = 0.5,
+})
+setMissileKiller(NewWeaponType,1);setAccuracy(NewWeaponType,1,{
+  Fighter = 0.1,
+},{
+  Corvette = 0.1,
+})
+setAngles(NewWeaponType,0,-5,5,-5,5)
+setMiscValues(NewWeaponType,0,0)

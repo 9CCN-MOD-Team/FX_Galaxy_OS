@@ -1,0 +1,6 @@
+supplyLimit("Fighter",24)
+supplyLimit("Frigate",30)
+supplyLimit("Capital",8)
+supplyLimit("Utility",28)
+supplyLimit("ResourceController",4)
+supplyLimit("Platform",30)

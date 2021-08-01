@@ -1,0 +1,555 @@
+function Override_Init()
+	sg_dobuild = 1
+	sg_dosubsystems = 1
+	sg_doresearch = 1
+	sg_doupgrades = 1
+	sg_domilitary = 1
+	sg_fightersize=1
+	sg_corvettesize=1
+	sg_frigatesize=1
+	sg_kDemandResetValue = 4
+	sg_kCollector = KUS_RESOURCECOLLECTOR
+	sg_classPersonalityDemand[ eFighter ] = 0.25
+	sg_classPersonalityDemand[ eCorvette ] = 0.25
+	sg_classPersonalityDemand[ eFrigate ] = 0.5
+	sg_classPersonalityDemand[ ePlatform ] = -0.5
+	SetResourceDockFamily("Utility")
+	sg_numCollectorPerChannel=4
+	sg_RUsPerChannel=500
+	sg_ForceBuilderRU=3000
+	sg_militaryDemand = 1
+	sg_subSystemDemand = 0
+	sg_shipDemand = 4
+	sg_militaryToBuildPerCollector = 1
+	sg_debug=1
+end
+
+ai_data={}
+ai_data[KUS_PROBE]=
+	{
+		Name="KUS_PROBE",
+		Type="Ship",
+		Require={},
+		Upgrades={},
+		UpgradeDemand=0,
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=0,
+		UnitCap="Probe",
+	}
+ai_data[KUS_INTERCEPTOR]=
+	{
+		Name="KUS_INTERCEPTOR",
+		Type="Ship",
+		Require={RESEARCH},
+		Upgrades={KUS_AIRWEAPONUPGRADE1,KUS_AIRWEAPONUPGRADE2,KUS_AIRWEAPONUPGRADE3,KUS_AIRHEALTHUPGRADE1,KUS_AIRHEALTHUPGRADE2,KUS_AIRHEALTHUPGRADE3},
+		UpgradeDemand=1,
+		SizeControl={eFighter,0.7},
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=0,
+		UnitCap="Fighter",
+	}
+ai_data[KUS_ATTACKBOMBER]=
+	{
+		Name="KUS_ATTACKBOMBER",
+		Type="Ship",
+		Require={FIGHTERPRODUCTION},
+		Upgrades={KUS_AIRWEAPONUPGRADE1,KUS_AIRWEAPONUPGRADE2,KUS_AIRWEAPONUPGRADE3,KUS_AIRHEALTHUPGRADE1,KUS_AIRHEALTHUPGRADE2,KUS_AIRHEALTHUPGRADE3},
+		UpgradeDemand=1,
+		SizeControl={eFighter,0.7},
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=0,
+		UnitCap="Fighter",
+	}
+ai_data[KUS_CLOAKEDFIGHTER]=
+	{
+		Name="KUS_CLOAKEDFIGHTER",
+		Type="Ship",
+		Require={CLOAKFIGHTER},
+		Upgrades={KUS_AIRWEAPONUPGRADE1,KUS_AIRWEAPONUPGRADE2,KUS_AIRWEAPONUPGRADE3,KUS_AIRHEALTHUPGRADE1,KUS_AIRHEALTHUPGRADE2,KUS_AIRHEALTHUPGRADE3},
+		UpgradeDemand=1,
+		SizeControl={eFighter,0.5},
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=0.5,
+		LODDemand={-2,-1,0,1},
+		UnitCap="Fighter",
+	}
+ai_data[KUS_HEAVYCORVETTE]=
+	{
+		Name="KUS_HEAVYCORVETTE",
+		Type="Ship",
+		Require={HEAVTCORVETTE},
+		Upgrades={KUS_AIRWEAPONUPGRADE1,KUS_AIRWEAPONUPGRADE2,KUS_AIRWEAPONUPGRADE3,KUS_AIRHEALTHUPGRADE1,KUS_AIRHEALTHUPGRADE2,KUS_AIRHEALTHUPGRADE3},
+		UpgradeDemand=1,
+		SizeControl={eCorvette,0.7},
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=1,
+		UnitCap="Corvette",
+	}
+ai_data[KUS_SALVAGECORVETTE]=
+	{
+		Name="KUS_SALVAGECORVETTE",
+		Type="Ship",
+		Require={GRAVITYWELL},
+		Upgrades={KUS_AIRHEALTHUPGRADE1,KUS_AIRHEALTHUPGRADE2,KUS_AIRHEALTHUPGRADE3},
+		UpgradeDemand=1,
+		SizeControl={eCorvette,0.4},
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=1,
+		UnitCap="Corvette",
+	}
+ai_data[KUS_MULTIGUNCORVETTE]=
+	{
+		Name="KUS_MULTIGUNCORVETTE",
+		Type="Ship",
+		Require={RAPIDTURRET},
+		Upgrades={KUS_AIRWEAPONUPGRADE1,KUS_AIRWEAPONUPGRADE2,KUS_AIRWEAPONUPGRADE3,KUS_AIRHEALTHUPGRADE1,KUS_AIRHEALTHUPGRADE2,KUS_AIRHEALTHUPGRADE3},
+		UpgradeDemand=1,
+		SizeControl={eCorvette,0.7},
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=1,
+		UnitCap="Corvette",
+	}
+ai_data[KUS_COMMANDCORVETTE]=
+	{
+		Name="KUS_COMMANDCORVETTE",
+		Type="Ship",
+		Require={CORVETTEPRODUCTION},
+		Upgrades={KUS_AIRHEALTHUPGRADE1,KUS_AIRHEALTHUPGRADE2,KUS_AIRHEALTHUPGRADE3},
+		UpgradeDemand=1,
+		SizeControl={eCorvette,0.2},
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=0,
+		LODDemand={-2,-1,0,1},
+		UnitCap="Corvette",
+	}
+ai_data[KUS_MISSILEFRIGATE]=
+	{
+		Name="KUS_MISSILEFRIGATE",
+		Type="Ship",
+		Require={RA},
+		Upgrades={KUS_FRIGATEWEAPONUPGRADE1,KUS_FRIGATEWEAPONUPGRADE2,KUS_FRIGATEWEAPONUPGRADE3,KUS_FRIGATEHEALTHUPGRADE1,KUS_FRIGATEHEALTHUPGRADE2,KUS_FRIGATEHEALTHUPGRADE3},
+		UpgradeDemand=1,
+		SizeControl={eFrigate,0.7},
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=1,
+		UnitCap="Frigate",
+	}
+ai_data[KUS_ASSAULTFRIGATE]=
+	{
+		Name="KUS_ASSAULTFRIGATE",
+		Type="Ship",
+		Require={RA,FIGHTERPRODUCTION},
+		Upgrades={KUS_FRIGATEWEAPONUPGRADE1,KUS_FRIGATEWEAPONUPGRADE2,KUS_FRIGATEWEAPONUPGRADE3,KUS_FRIGATEHEALTHUPGRADE1,KUS_FRIGATEHEALTHUPGRADE2,KUS_FRIGATEHEALTHUPGRADE3},
+		UpgradeDemand=1,
+		SizeControl={eFrigate,0.7},
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=2,
+		UnitCap="Frigate",
+	}
+--ai_data[KUS_SUPPORTFRIGATE]=
+--	{
+--		Type="Ship",
+--		Require={KUS_RESEARCHSHIPADV},
+--		Upgrades={KUS_FRIGATEWEAPONUPGRADE1,KUS_FRIGATEWEAPONUPGRADE2,KUS_FRIGATEWEAPONUPGRADE3,KUS_FRIGATEHEALTHUPGRADE1,KUS_FRIGATEHEALTHUPGRADE2,KUS_FRIGATEHEALTHUPGRADE3},
+--		UpgradeDemand=1,
+--		BuildShipChannel=0,
+--		BuildSubsystemChannel=0,
+--		SizeControl={eFrigate,0.15},
+--		BasicDemand=3,
+--		LODDemand={-4,-2,-1,0},
+--		UnitCap="Frigate",
+--	}
+ai_data[KUS_IONCANNONFRIGATE]=
+	{
+		Name="KUS_IONCANNONFRIGATE",
+		Type="Ship",
+		Require={IONCANNON},
+		Upgrades={KUS_FRIGATEWEAPONUPGRADE1,KUS_FRIGATEWEAPONUPGRADE2,KUS_FRIGATEWEAPONUPGRADE3,KUS_FRIGATEHEALTHUPGRADE1,KUS_FRIGATEHEALTHUPGRADE2,KUS_FRIGATEHEALTHUPGRADE3},
+		UpgradeDemand=1,
+		SizeControl={eFrigate,0.7},
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=3,
+		UnitCap="Frigate",
+	}
+ai_data[KUS_CARRIER]=
+	{
+		Name="KUS_CARRIER",
+		Type="Ship",
+		Require={},
+		Upgrades={KUS_CAPITALHEALTHUPGRADE1,KUS_CAPITALHEALTHUPGRADE2,KUS_CAPITALHEALTHUPGRADE3},
+		UpgradeDemand=1,
+		BuildShipChannel=1,
+		BuildSubsystemChannel=0,
+		BasicDemand=0,
+		UnitCap="Carrier",
+	}
+ai_data[KUS_MOTHERSHIP]=
+	{
+		Name="KUS_MOTHERSHIP",
+		Type="Ship",
+		Require={RA},
+		Upgrades={KUS_CAPITALHEALTHUPGRADE1,KUS_CAPITALHEALTHUPGRADE2,KUS_CAPITALHEALTHUPGRADE3},
+		UpgradeDemand=1,
+		BuildShipChannel=1,
+		BuildSubsystemChannel=1,
+		BasicDemand=0,
+		UnitCap="TAIMothership",
+	}
+ai_data[KUS_DESTROYER]=
+	{
+		Name="KUS_DESTROYER",
+		Type="Ship",
+		Require={CAPSHIPPRODUCTION,IONCANNON},
+		Upgrades={KUS_CAPITALWEAPONUPGRADE1,KUS_CAPITALWEAPONUPGRADE2,KUS_CAPITALWEAPONUPGRADE3,KUS_CAPITALHEALTHUPGRADE1,KUS_CAPITALHEALTHUPGRADE2,KUS_CAPITALHEALTHUPGRADE3},
+		UpgradeDemand=1,
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=2,
+		UnitCap="Destroyer",
+	}
+ai_data[KUS_MISSILEDESTROYER]=
+	{
+		Name="KUS_MISSILEDESTROYER",
+		Type="Ship",
+		Require={MISSILE},
+		Upgrades={KUS_CAPITALWEAPONUPGRADE1,KUS_CAPITALWEAPONUPGRADE2,KUS_CAPITALWEAPONUPGRADE3,KUS_CAPITALHEALTHUPGRADE1,KUS_CAPITALHEALTHUPGRADE2,KUS_CAPITALHEALTHUPGRADE3},
+		UpgradeDemand=1,
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=2,
+		UnitCap="Destroyer",
+	}
+ai_data[KUS_HEAVYCRUISER]=
+	{
+		Name="KUS_HEAVYCRUISER",
+		Type="Ship",
+		Require={HEAVYGUN},
+		Upgrades={KUS_CAPITALWEAPONUPGRADE1,KUS_CAPITALWEAPONUPGRADE2,KUS_CAPITALWEAPONUPGRADE3,KUS_CAPITALHEALTHUPGRADE1,KUS_CAPITALHEALTHUPGRADE2,KUS_CAPITALHEALTHUPGRADE3},
+		UpgradeDemand=1,
+		BuildShipChannel=0,
+		BuildSubsystemChannel=1,
+		BasicDemand=3,
+		UnitCap="HeavyCruiser",
+	}
+ai_data[KUS_GRAVWELLGENERATOR]=
+	{
+		Name="KUS_GRAVWELLGENERATOR",
+		Type="Ship",
+		Require={RA,RA,RA,RA,-KUS_GRAVWELLGENERATOR,-KUS_GRAVWELLGENERATOR},
+		Upgrades={KUS_PLATFORMHEALTHUPGRADE1,KUS_PLATFORMHEALTHUPGRADE2,KUS_PLATFORMHEALTHUPGRADE3},
+		UpgradeDemand=0,
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		SizeControl={eMotherShip,1},
+		BasicDemand=1,
+		UnitCap="Platform",
+	}
+ai_data[KUS_RESOURCECOLLECTOR]=
+	{
+		Name="KUS_RESOURCECOLLECTOR",
+		Type="Ship",
+		Require={},
+		Upgrades={},
+		UpgradeDemand=0,
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=0,
+		UnitCap="ResourceCollector",
+	}
+ai_data[KUS_RESOURCEREFINERY]=
+	{
+		Name="KUS_RESOURCEREFINERY",
+		Type="Ship",
+		Require={RA},
+		Upgrades={},
+		UpgradeDemand=0,
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=0,
+		UnitCap="ResourceController",
+	}
+ai_data[KUS_REPAIRCARRIER]=
+	{
+		Name="KUS_REPAIRCARRIER",
+		Type="Ship",
+		Require={RA},
+		Upgrades={},
+		UpgradeDemand=0,
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		SizeControl={eFrigate,0.15},
+		BasicDemand=5,
+		LODDemand={-4,-2,-1,0},
+		UnitCap="ResourceController",
+	}
+ai_data[KUS_RESEARCHSHIP]=
+	{
+		Name="KUS_RESEARCHSHIP",
+		Type="Ship",
+		Require={},
+		Upgrades={KUS_PLATFORMHEALTHUPGRADE1,KUS_PLATFORMHEALTHUPGRADE2,KUS_PLATFORMHEALTHUPGRADE3},
+		UpgradeDemand=0,
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=0,
+		UnitCap="Researchship",
+	}
+ai_data[KUS_RESEARCHSHIP_1]=
+	{
+		Name="KUS_RESEARCHSHIP_1",
+		Type="Ship",
+		Require={},
+		Upgrades={},
+		UpgradeDemand=0,
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=0,
+		UnitCap="Researchship",
+	}
+ai_data[KUS_RESEARCHSHIP_2]=
+	{
+		Name="KUS_RESEARCHSHIP_2",
+		Type="Ship",
+		Require={},
+		Upgrades={},
+		UpgradeDemand=0,
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=0,
+		UnitCap="Researchship",
+	}
+ai_data[KUS_RESEARCHSHIP_3]=
+	{
+		Name="KUS_RESEARCHSHIP_3",
+		Type="Ship",
+		Require={},
+		Upgrades={},
+		UpgradeDemand=0,
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=0,
+		UnitCap="Researchship",
+	}
+ai_data[KUS_RESEARCHSHIP_4]=
+	{
+		Name="KUS_RESEARCHSHIP_4",
+		Type="Ship",
+		Require={},
+		Upgrades={},
+		UpgradeDemand=0,
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=0,
+		UnitCap="Researchship",
+	}
+ai_data[KUS_RESEARCHSHIP_5]=
+	{
+		Name="KUS_RESEARCHSHIP_5",
+		Type="Ship",
+		Require={},
+		Upgrades={},
+		UpgradeDemand=0,
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=0,
+		UnitCap="Researchship",
+	}
+ai_data[KUS_RESEARCHSHIPADV]=
+	{
+		Name="KUS_RESEARCHSHIPADV",
+		Type="Ship",
+		Require={},
+		Upgrades={KUS_PLATFORMHEALTHUPGRADE1,KUS_PLATFORMHEALTHUPGRADE2,KUS_PLATFORMHEALTHUPGRADE3},
+		UpgradeDemand=0,
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=0,
+		UnitCap="Researchship",
+	}
+ai_data[KUS_RESEARCHSHIPADV_1]=
+	{
+		Name="KUS_RESEARCHSHIPADV_1",
+		Type="Ship",
+		Require={},
+		Upgrades={},
+		UpgradeDemand=0,
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=0,
+		UnitCap="Researchship",
+	}
+ai_data[KUS_RESEARCHSHIPADV_2]=
+	{
+		Name="KUS_RESEARCHSHIPADV_2",
+		Type="Ship",
+		Require={},
+		Upgrades={},
+		UpgradeDemand=0,
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=0,
+		UnitCap="Researchship",
+	}
+ai_data[KUS_RESEARCHSHIPADV_3]=
+	{
+		Name="KUS_RESEARCHSHIPADV_3",
+		Type="Ship",
+		Require={},
+		Upgrades={},
+		UpgradeDemand=0,
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=0,
+		UnitCap="Researchship",
+	}
+ai_data[KUS_RESEARCHSHIPADV_4]=
+	{
+		Name="KUS_RESEARCHSHIPADV_4",
+		Type="Ship",
+		Require={},
+		Upgrades={},
+		UpgradeDemand=0,
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=0,
+		UnitCap="Researchship",
+	}
+ai_data[KUS_RESEARCHSHIPADV_5]=
+	{
+		Name="KUS_RESEARCHSHIPADV_5",
+		Type="Ship",
+		Require={},
+		Upgrades={},
+		UpgradeDemand=0,
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=0,
+		UnitCap="Researchship",
+	}
+ai_data[RESEARCH]=
+	{
+		Name="RESEARCH",
+		Type="Subsystem",
+		Require={},
+		IsForFleet=1,
+		BasicDemand=2,
+	}
+ai_data[FIGHTERPRODUCTION]=
+	{
+		Name="FIGHTERPRODUCTION",
+		Type="Subsystem",
+		Require={RESEARCH},
+		IsForFleet=1,
+		BasicDemand=2,
+	}
+ai_data[GRAVITYWELL]=
+	{
+		Name="GRAVITYWELL",
+		Type="Subsystem",
+		Require={CORVETTEPRODUCTION},
+		IsForFleet=1,
+		BasicDemand=2,
+	}
+ai_data[CORVETTEPRODUCTION]=
+	{
+		Name="CORVETTEPRODUCTION",
+		Type="Subsystem",
+		Require={RESEARCH},
+		IsForFleet=1,
+		BasicDemand=2,
+	}
+ai_data[HEAVYCORVETTE]=
+	{
+		Name="HEAVYCORVETTE",
+		Type="Subsystem",
+		Require={CORVETTEPRODUCTION},
+		IsForFleet=1,
+		BasicDemand=2,
+	}
+ai_data[RAPIDTURRET]=
+	{
+		Name="RAPIDTURRET",
+		Type="Subsystem",
+		Require={CORVETTEPRODUCTION},
+		IsForFleet=1,
+		BasicDemand=2,
+	}
+ai_data[RA]=
+	{
+		Name="RA",
+		Type="Subsystem",
+		Require={CORVETTEPRODUCTION},
+		IsForFleet=1,
+		BasicDemand=5,
+	}
+ai_data[CAPSHIPPRODUCTION]=
+	{
+		Name="CAPSHIPPRODUCTION",
+		Type="Subsystem",
+		Require={RA},
+		IsForFleet=1,
+		BasicDemand=5,
+	}
+ai_data[IONCANNON]=
+	{
+		Name="IONCANNON",
+		Type="Subsystem",
+		Require={RA},
+		IsForFleet=1,
+		BasicDemand=2,
+	}
+ai_data[HEAVYGUN]=
+	{
+		Name="HEAVYGUN",
+		Type="Subsystem",
+		Require={CAPSHIPPRODUCTION},
+		IsForFleet=1,
+		BasicDemand=5,
+	}
+ai_data[MISSILE]=
+	{
+		Name="MISSILE",
+		Type="Subsystem",
+		Require={CAPSHIPPRODUCTION,IONCANNON},
+		IsForFleet=1,
+		BasicDemand=4,
+	}
+ai_data[CLOAKFIGHTER]=
+	{
+		Name="CLOAKFIGHTER",
+		Type="Subsystem",
+		Require={RA},
+		IsForFleet=1,
+		BasicDemand=2,
+	}
+
+
+function Proc_DetermineDemandWithNoCounterInfo()
+end
+
+function Proc_DetermineSpecialDemand()
+end
+
+function CpuBuildSS_DefaultSubSystemDemandRules()
+end
+
+function DoResearchTechDemand()
+end
+
+
+function Override_MilitaryInit()
+	if (sg_Delay==0) then
+		cp_attackPercent=0
+	end
+end

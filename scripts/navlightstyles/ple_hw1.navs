@@ -1,0 +1,8 @@
+NAVS = {
+    climbTime = 0.00,
+    topWaitTime = 0.5, -- ramp delay at the top
+    decayTime = 0.05,
+    bottomWaitTime= 0.45, -- ramp delay at the bottom
+    illumSawHz = 0,
+    illumSinHz = 0,
+}

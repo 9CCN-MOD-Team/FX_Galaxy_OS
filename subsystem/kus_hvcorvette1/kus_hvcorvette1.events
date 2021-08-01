@@ -1,0 +1,47 @@
+effects =
+{
+    animations =
+    {
+        animation1 =
+        {
+            name = "Weapon_Gun",
+            length = 1.2,
+            loop = 0,
+            parent = "",
+            minimum = 0,
+            maximum = 0,
+            markers = {""}
+        },
+		animation2 =
+        {
+            name = "Weapon_Gun_Special",
+            length = 1.2,
+            loop = 0,
+            parent = "",
+            minimum = 0,
+            maximum = 0,
+            markers = {""}
+        },
+    },
+    events =
+    {
+		event1 =
+		{
+			{ "anim", "Weapon_Gun" },
+			{ "animtime", "0" },
+			{ "marker", "Weapon_Gun0_Muzzle" },
+			{ "fx", "muzzle_flash_combo_plasma" },
+			{ "sound", "WEAPON/FIGHTER/FIRE/WEAPON_FIGHTER_FLECHETTE_REPEATER_SHELL" },
+			{ "fx_nlips", "on" },
+		},
+		wpn1s =
+		{
+			{ "anim", "Weapon_Gun_Special" },
+			{ "animtime", "0" },
+			{ "marker", "Weapon_Gun0_Muzzle" },
+			{ "fx", "muzzle_flash_combo_plasma" },
+			{ "sound", "WEAPON/FIGHTER/FIRE/WEAPON_FIGHTER_FLECHETTE_REPEATER_SHELL" },
+			{ "fx_nlips", "on" },
+		},			
+	}
+}

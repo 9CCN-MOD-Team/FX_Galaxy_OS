@@ -1,0 +1,247 @@
+paradeSlot("tur_scout",{
+  -860,
+  -200,
+  1700,
+},{
+  0,
+  0,
+  1,
+},{
+  -1,
+  0,
+  0,
+},0)
+paradeSlot("tur_fighter",{
+  -716,
+  -125,
+  1350,
+},{
+  0,
+  0,
+  1,
+},{
+  -1,
+  0,
+  0,
+},0)
+paradeSlot("tur_attackbomber",{
+  -447,
+  -50,
+  855,
+},{
+  0,
+  0,
+  1,
+},{
+  -1,
+  0,
+  0,
+},0)
+paradeSlot("tur_standardcorvette",{
+  -934,
+  225,
+  663,
+},{
+  0,
+  0,
+  1,
+},{
+  -1,
+  0,
+  0,
+},0)
+paradeSlot("tur_missilecorvette",{
+  -759,
+  150,
+  400,
+},{
+  0,
+  0,
+  1,
+},{
+  -1,
+  0,
+  0,
+},0)
+paradeSlot("tur_minelayercorvette",{
+  -618,
+  75,
+  110,
+},{
+  0,
+  0,
+  1,
+},{
+  -1,
+  0,
+  0,
+},0)
+paradeSlot("tur_torpedoCorvette",{
+  -500,
+  0,
+  -210,
+},{
+  0,
+  0,
+  1,
+},{
+  -1,
+  0,
+  0,
+},0)
+paradeSlot("tur_vulcanfrigate",{
+  1150,
+  -150,
+  1181,
+},{
+  0,
+  0,
+  1,
+},{
+  1,
+  0,
+  0,
+},0)
+paradeSlot("tur_ionarrayfrigate",{
+  928,
+  0,
+  807,
+},{
+  0,
+  0,
+  1,
+},{
+  1,
+  0,
+  0,
+},0)
+paradeSlot("tur_SiegeDrillfrigate",{
+  822,
+  150,
+  437,
+},{
+  0,
+  0,
+  1,
+},{
+  1,
+  0,
+  0,
+},0)
+paradeSlot("tur_Energyfrigate",{
+  765,
+  300,
+  104,
+},{
+  0,
+  0,
+  1,
+},{
+  1,
+  0,
+  0,
+},0)
+paradeSlot("tur_cloakgenerator",{
+  0,
+  -450,
+  -1560,
+},{
+  0,
+  0,
+  1,
+},{
+  0,
+  1,
+  0,
+},0)
+paradeSlot("tur_resourcecollector",{
+  -583,
+  150,
+  -485,
+},{
+  0,
+  0,
+  1,
+},{
+  -1,
+  0,
+  0,
+},0)
+paradeSlot("tur_Garbage",{
+  717,
+  -323,
+  -488,
+},{
+  0,
+  0,
+  1,
+},{
+  0,
+  1,
+  0,
+},500)
+paradeSlot("tur_ResourceController",{
+  -812,
+  -517,
+  -900,
+},{
+  0,
+  0,
+  1,
+},{
+  -1,
+  0,
+  0,
+},1000)
+paradeSlot("tur_carrier",{
+  1440,
+  -600,
+  -150,
+},{
+  0,
+  0,
+  1,
+},{
+  1,
+  0,
+  0,
+},1000)
+paradeSlot("tur_heavycruiser",{
+  500,
+  0,
+  2270,
+},{
+  0,
+  0,
+  1,
+},{
+  1,
+  0,
+  0,
+},1000)
+paradeSlot("tur_shipyard",{
+  -1311,
+  0,
+  -3000,
+},{
+  0,
+  0,
+  1,
+},{
+  1,
+  0,
+  0,
+},2500)
+paradeSlot("misc",{
+  1700,
+  600,
+  -650,
+},{
+  0,
+  0,
+  1,
+},{
+  1,
+  0,
+  0,
+},800)

@@ -1,0 +1,84 @@
+effects = {
+  animations = {
+    animation1 = {
+      name = "Tur_as_heavygun1",
+      length = 2,
+      loop = 0,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+    animation9 = {
+      name = "Death",
+      length = 2,
+      loop = 0,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+  },
+  events = {
+    event1 = {
+      {
+        "anim",
+        "Tur_as_heavygun1",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "Weapon_TurretTop_Muzzle",
+      },
+       {
+        "fx",
+        "dmg_capital_mushroom_spray",
+      },
+      {
+        "sound",
+        "Weapon/Taiidan/Fire/heavy_gun",
+      },
+      {
+        "fx_scale",
+        "6",
+      },
+    },
+    event9 = {
+      {
+        "anim",
+        "Tur_as_heavygun1",
+      },
+      {
+        "animtime",
+        "0.2",
+      },
+      {
+        "marker",
+        "danke5",
+      },
+      {
+        "fx",
+        "muzzle_danke",
+      },
+      {
+        "sound",
+        "",
+      },
+      {
+        "fx_scale",
+        "0.8",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+  },
+}

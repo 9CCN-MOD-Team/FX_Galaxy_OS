@@ -1,0 +1,452 @@
+function Override_Init()
+	sg_dobuild = 1
+	sg_dosubsystems = 1
+	sg_doresearch = 1
+	sg_doupgrades = 1
+	sg_domilitary = 1
+	sg_fightersize=1
+	sg_corvettesize=1
+	sg_frigatesize=1
+	sg_kDemandResetValue = 4
+	sg_kCollector = TUR_RESOURCECOLLECTOR
+	sg_classPersonalityDemand[ eFighter ] = 0.25
+	sg_classPersonalityDemand[ eCorvette ] = 0.5
+	sg_classPersonalityDemand[ eFrigate ] = 0.25
+	sg_classPersonalityDemand[ ePlatform ] = 2.5
+	SetResourceDockFamily("Utility")
+	sg_numCollectorPerChannel=4
+	sg_RUsPerChannel=300
+	sg_ForceBuilderRU=2000
+	sg_militaryDemand = 1
+	sg_subSystemDemand = 0
+	sg_shipDemand = 4
+	sg_militaryToBuildPerCollector = 1
+	sg_debug=0
+end
+
+ai_data={}
+ai_data[TUR_SCOUT]=
+	{
+		Name="TUR_SCOUT",
+		Type="Ship",
+		Require={},
+		Upgrades={},
+		UpgradeDemand=0,
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=0,
+		UnitCap="scout",
+	}
+ai_data[TUR_FIGHTER]=
+	{
+		Name="TUR_FIGHTER",
+		Type="Ship",
+		Require={FIGHTERPRODUCTION},
+		Upgrades={TUR_LIGHTWEAPONUPGRADE1,TUR_LIGHTWEAPONUPGRADE2,TUR_LIGHTWEAPONUPGRADE3,TUR_AIRHEALTHUPGRADE1,TUR_AIRHEALTHUPGRADE2,TUR_AIRHEALTHUPGRADE3},
+		UpgradeDemand=1,
+		SizeControl={eFighter,0.7},
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=0,
+		UnitCap="Fighter",
+	}
+ai_data[TUR_ATTACKBOMBER]=
+	{
+		Name="TUR_ATTACKBOMBER",
+		Type="Ship",
+		Require={FIGHTERPRODUCTION,HEAVYWEAPON},
+		Upgrades={TUR_HEAVYWEAPONUPGRADE1,TUR_HEAVYWEAPONUPGRADE2,TUR_HEAVYWEAPONUPGRADE3,TUR_AIRHEALTHUPGRADE1,TUR_AIRHEALTHUPGRADE2,TUR_AIRHEALTHUPGRADE3},
+		UpgradeDemand=1,
+		SizeControl={eFighter,0.7},
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=0,
+		UnitCap="Fighter",
+	}
+ai_data[TUR_STANDARDCORVETTE]=
+	{
+		Name="TUR_STANDARDCORVETTE",
+		Type="Ship",
+		Require={FIGHTERPRODUCTION,LIGHTWEAPON},
+		Upgrades={TUR_LIGHTWEAPONUPGRADE1,TUR_LIGHTWEAPONUPGRADE2,TUR_LIGHTWEAPONUPGRADE3,TUR_AIRHEALTHUPGRADE1,TUR_AIRHEALTHUPGRADE2,TUR_AIRHEALTHUPGRADE3},
+		UpgradeDemand=1,
+		SizeControl={eCorvette,0.7},
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=0,
+		UnitCap="Corvette",
+	}
+ai_data[TUR_MISSILECORVETTE]=
+	{
+		Name="TUR_MISSILECORVETTE",
+		Type="Ship",
+		Require={FIGHTERPRODUCTION,LIGHTWEAPON},
+		Upgrades={TUR_LIGHTWEAPONUPGRADE1,TUR_LIGHTWEAPONUPGRADE2,TUR_LIGHTWEAPONUPGRADE3,TUR_AIRHEALTHUPGRADE1,TUR_AIRHEALTHUPGRADE2,TUR_AIRHEALTHUPGRADE3},
+		UpgradeDemand=1,
+		SizeControl={eCorvette,0.7},
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=0,
+		UnitCap="Corvette",
+	}
+ai_data[TUR_MINELAYERCORVETTE]=
+	{
+		Name="TUR_MINELAYERCORVETTE",
+		Type="Ship",
+		Require={FIGHTERPRODUCTION,HEAVYWEAPON},
+		Upgrades={TUR_HEAVYWEAPONUPGRADE1,TUR_HEAVYWEAPONUPGRADE2,TUR_HEAVYWEAPONUPGRADE3,TUR_AIRHEALTHUPGRADE1,TUR_AIRHEALTHUPGRADE2,TUR_AIRHEALTHUPGRADE3},
+		UpgradeDemand=1,
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		SizeControl={eCollector,0.2},
+		BasicDemand=0,
+		AddDemand=
+		{
+			{TUR_RESOURCECOLLECTOR,1},
+		},
+		UnitCap="MinelayerCorvette",
+	}
+ai_data[TUR_TORPEDOCORVETTE]=
+	{
+		Name="TUR_TORPEDOCORVETTE",
+		Type="Ship",
+		Require={FIGHTERPRODUCTION,FRIGATEADVANCED},
+		Upgrades={TUR_HEAVYWEAPONUPGRADE1,TUR_HEAVYWEAPONUPGRADE2,TUR_HEAVYWEAPONUPGRADE3,TUR_AIRHEALTHUPGRADE1,TUR_AIRHEALTHUPGRADE2,TUR_AIRHEALTHUPGRADE3},
+		UpgradeDemand=1,
+		SizeControl={eCorvette,0.4},
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=0,
+		LODDemand={-4,-2,-1,0},
+		UnitCap="Corvette",
+	}
+ai_data[TUR_VULCANFRIGATE]=
+	{
+		Name="TUR_VULCANFRIGATE",
+		Type="Ship",
+		Require={TUR_RESOURCECONTROLLER,LIGHTWEAPON,TUR_CARRIER},
+		Upgrades={TUR_LIGHTWEAPONUPGRADE1,TUR_LIGHTWEAPONUPGRADE2,TUR_LIGHTWEAPONUPGRADE3,TUR_FRIGATEHEALTHUPGRADE1,TUR_FRIGATEHEALTHUPGRADE2,TUR_FRIGATEHEALTHUPGRADE3},
+		UpgradeDemand=1,
+		SizeControl={eFrigate,0.7},
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=0,
+		UnitCap="Frigate",
+	}
+ai_data[TUR_IONARRAYFRIGATE]=
+	{
+		Name="TUR_IONARRAYFRIGATE",
+		Type="Ship",
+		Require={TUR_RESOURCECONTROLLER,HEAVYWEAPON,TUR_CARRIER},
+		Upgrades={TUR_HEAVYWEAPONUPGRADE1,TUR_HEAVYWEAPONUPGRADE2,TUR_HEAVYWEAPONUPGRADE3,TUR_FRIGATEHEALTHUPGRADE1,TUR_FRIGATEHEALTHUPGRADE2,TUR_FRIGATEHEALTHUPGRADE3},
+		UpgradeDemand=1,
+		SizeControl={eFrigate,0.7},
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=-5,
+		AddDemand=
+		{
+			{TUR_CARRIER,10},
+		},
+		UnitCap="Frigate",
+	}
+ai_data[TUR_ENERGYFRIGATE]=
+	{
+		Name="TUR_ENERGYFRIGATE",
+		Type="Ship",
+		Require={FRIGATECAPTURE,FRIGATECAPTURE,FRIGATECAPTURE},
+		Upgrades={TUR_FRIGATEHEALTHUPGRADE1,TUR_FRIGATEHEALTHUPGRADE2,TUR_FRIGATEHEALTHUPGRADE3},
+		UpgradeDemand=1,
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		SizeControl={eFrigate,0.1},
+		BasicDemand=2,
+		LODDemand={-2,-1,0,1},
+		UnitCap="EnergyInterference",
+	}
+ai_data[TUR_SIEGEDRILLFRIGATE]=
+	{
+		Name="TUR_SIEGEDRILLFRIGATE",
+		Type="Ship",
+		Require={FRIGATECAPTURE,FRIGATECAPTURE,FRIGATECAPTURE},
+		Upgrades={TUR_FRIGATEHEALTHUPGRADE1,TUR_FRIGATEHEALTHUPGRADE2,TUR_FRIGATEHEALTHUPGRADE3},
+		UpgradeDemand=1,
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		SizeControl={eFrigate,0.4},
+		BasicDemand=1,
+		UnitCap="CaptureFrigate",
+	}
+ai_data[TUR_CARRIER]=
+	{
+		Name="TUR_CARRIER",
+		Type="Ship",
+		Require={CAPSHIPPRODUCTION,CAPSHIPPRODUCTION,CAPSHIPPRODUCTION,CAPSHIPPRODUCTION,CAPSHIPPRODUCTION},
+		Upgrades={TUR_CAPITALWEAPONUPGRADE1,TUR_CAPITALWEAPONUPGRADE2,TUR_CAPITALWEAPONUPGRADE3,TUR_FRIGATEHEALTHUPGRADE1,TUR_FRIGATEHEALTHUPGRADE2,TUR_FRIGATEHEALTHUPGRADE3},
+		UpgradeDemand=1,
+		UpgradeSubsystem=
+		{
+			{1,HEAVYMISSILE,FRIGATEPRODUCTION},
+			{1,HYPERSPACE},
+			{1,RAID},
+			{1,ATTACKCARRIERWEAPON},
+		},
+		BuildShipChannel=1,
+		BuildSubsystemChannel=1,
+		BasicDemand=5,
+		UnitCap="turcruiser",
+	}
+ai_data[TUR_SHIPYARD]=
+	{
+		Name="TUR_SHIPYARD",
+		Type="Ship",
+		Require={HYPERSPACE},
+		Upgrades={TUR_CAPITALWEAPONUPGRADE1,TUR_CAPITALWEAPONUPGRADE2,TUR_CAPITALWEAPONUPGRADE3,TUR_FRIGATEHEALTHUPGRADE1,TUR_FRIGATEHEALTHUPGRADE2,TUR_FRIGATEHEALTHUPGRADE3},
+		UpgradeDemand=1,
+		UpgradeSubsystem=
+		{
+			{1,TURRETARRAY,HEAVYGUNARRAY},
+		},
+		BuildShipChannel=1,
+		BuildSubsystemChannel=1,
+		BasicDemand=0,
+		LODDemand={-5000,-2500,0,0},
+		UnitCap="turShipyard",
+	}
+ai_data[TUR_HEAVYCRUISER]=
+	{
+		Name="TUR_HEAVYCRUISER",
+		Type="Ship",
+		Require={CAPSHIPADVANCED,CAPSHIPADVANCED,CAPSHIPADVANCED,CAPSHIPADVANCED},
+		Upgrades={TUR_CAPITALWEAPONUPGRADE1,TUR_CAPITALWEAPONUPGRADE2,TUR_CAPITALWEAPONUPGRADE3,TUR_FRIGATEHEALTHUPGRADE1,TUR_FRIGATEHEALTHUPGRADE2,TUR_FRIGATEHEALTHUPGRADE3},
+		UpgradeDemand=1,
+		--UpgradeSubsystem=
+		--{
+			--{1,BCIONBEAMTURRET},
+			--{1,HYPERSPACE},
+		--},
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=50,
+		UnitCap="TurHeavyCruiser",
+	}
+ai_data[TUR_RESOURCECOLLECTOR]=
+	{
+		Name="TUR_RESOURCECOLLECTOR",
+		Type="Ship",
+		Require={},
+		Upgrades={},
+		UpgradeDemand=0,
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=0,
+		UnitCap="ResourceCollector",
+	}
+ai_data[TUR_RESOURCECONTROLLER]=
+	{
+		Name="TUR_RESOURCECONTROLLER",
+		Type="Ship",
+		Require={LIGHTWEAPON,HEAVYWEAPON},
+		Upgrades={},
+		UpgradeDemand=0,
+		UpgradeSubsystem=
+		{
+			{1,HEAVYFUSIONMISSILELAUNCHERBC,BCIONBEAMTURRET},
+		},
+		BuildShipChannel=1,
+		BuildSubsystemChannel=1,
+		BasicDemand=100,
+		UnitCap="RecycleStation",
+	}
+ai_data[TUR_CLOAKGENERATOR]=
+	{
+		Name="TUR_CLOAKGENERATOR",
+		Type="Ship",
+		Require={FRIGATEADVANCED},
+		Upgrades={TUR_UTILITYHEALTHUPGRADE1,TUR_UTILITYHEALTHUPGRADE2,TUR_UTILITYHEALTHUPGRADE3},
+		UpgradeDemand=1,
+		BuildShipChannel=0,
+		BuildSubsystemChannel=1,
+		SizeControl={eMotherShip,2},
+		BasicDemand=5,
+		UnitCap="Platform",
+	}
+ai_data[TUR_GARBAGE]=
+	{
+		Name="TUR_GARBAGE",
+		Type="Ship",
+		Require={TUR_RESOURCECONTROLLER},
+		Upgrades={},
+		UpgradeDemand=0,
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		SizeControl={eCollector, 0.1},
+		BasicDemand=10,
+		UnitCap="ResourceController",
+	}
+ai_data[FIGHTERPRODUCTION]=
+	{
+		Name="FIGHTERPRODUCTION",
+		Type="Subsystem",
+		Require={},
+		IsForFleet=1,
+		BasicDemand=10,
+	}
+ai_data[FRIGATEADVANCED]=
+	{
+		Name="FRIGATEADVANCED",
+		Type="Subsystem",
+		Require={TUR_RESOURCECONTROLLER},
+		IsForFleet=1,
+		BasicDemand=0,
+	}
+ai_data[FRIGATECAPTURE]=
+	{
+		Name="FRIGATECAPTURE",
+		Type="Subsystem",
+		Require={TUR_RESOURCECONTROLLER},
+		IsForFleet=1,
+		BasicDemand=0,
+	}
+ai_data[FRIGATEPRODUCTION]=
+	{
+		Name="FRIGATEPRODUCTION",
+		Type="Subsystem",
+		Require={TUR_RESOURCECONTROLLER},
+		IsForFleet=0,
+		BasicDemand=0,
+	}
+ai_data[HEAVYMISSILE]=
+	{
+		Name="HEAVYMISSILE",
+		Type="Subsystem",
+		Require={ATTACKCARRIERWEAPON,CAPSHIPADVANCED},
+		IsForFleet=0,
+		BasicDemand=0,
+		AddDemand=
+		{
+			{TUR_VULCANFRIGATE,5},
+			{TUR_IONARRAYFRIGATE,10},
+		},
+	}
+ai_data[HEAVYFUSIONMISSILELAUNCHERBC]=
+	{
+		Name="HEAVYFUSIONMISSILELAUNCHERBC",
+		Type="Subsystem",
+		Require={LIGHTWEAPON},
+		IsForFleet=0,
+		BasicDemand=0,
+	}
+ai_data[BCIONBEAMTURRET]=
+	{
+		Name="BCIONBEAMTURRET",
+		Type="Subsystem",
+		Require={HEAVYWEAPON},
+		IsForFleet=0,
+		BasicDemand=0,
+	}
+ai_data[CAPSHIPPRODUCTION]=
+	{
+		Name="CAPSHIPPRODUCTION",
+		Type="Subsystem",
+		Require={TUR_RESOURCECONTROLLER},
+		IsForFleet=0,
+		BasicDemand=0,
+	}
+ai_data[CAPSHIPADVANCED]=
+	{
+		Name="CAPSHIPADVANCED",
+		Type="Subsystem",
+		Require={CAPSHIPPRODUCTION},
+		IsForFleet=0,
+		BasicDemand=0,
+	}
+ai_data[HEAVYGUNARRAY]=
+	{
+		Name="HEAVYGUNARRAY",
+		Type="Subsystem",
+		Require={CAPSHIPPRODUCTION,HEAVYWEAPON},
+		IsForFleet=0,
+		BasicDemand=0,
+	}
+ai_data[TURRETARRAY]=
+	{
+		Name="TURRETARRAY",
+		Type="Subsystem",
+		Require={CAPSHIPPRODUCTION,LIGHTWEAPON},
+		IsForFleet=0,
+		BasicDemand=0,
+	}
+ai_data[HYPERSPACE]=
+	{
+		Name="HYPERSPACE",
+		Type="Subsystem",
+		Require={LIGHTWEAPON,HEAVYWEAPON},
+		IsForFleet=0,
+		BasicDemand=0,
+		Slot="Module",
+	}
+ai_data[LIGHTWEAPON]=
+	{
+		Name="LIGHTWEAPON",
+		Type="Subsystem",
+		Require={FIGHTERPRODUCTION},
+		IsForFleet=1,
+		BasicDemand=10,
+	}
+ai_data[HEAVYWEAPON]=
+	{
+		Name="HEAVYWEAPON",
+		Type="Subsystem",
+		Require={FIGHTERPRODUCTION},
+		IsForFleet=1,
+		BasicDemand=10,
+	}
+ai_data[ATTACKCARRIERWEAPON]=
+	{
+		Name="ATTACKCARRIERWEAPON",
+		Type="Subsystem",
+		Require={LIGHTWEAPON,HEAVYWEAPON,CAPSHIPPRODUCTION},
+		IsForFleet=0,
+		BasicDemand=0,
+	}
+ai_data[REPAIR]=
+	{
+		Name="REPAIR",
+		Type="Subsystem",
+		Require={},
+		IsForFleet=0,
+		BasicDemand=-1000,
+	}
+ai_data[RAID]=
+	{
+		Name="RAID",
+		Type="Subsystem",
+		Require={CAPSHIPADVANCED},
+		IsForFleet=0,
+		BasicDemand=10,
+	}
+
+
+function Proc_DetermineDemandWithNoCounterInfo()
+end
+
+function Proc_DetermineSpecialDemand()
+	local numRUs = GetRU()
+	if (sg_ForceBuilderRU	< numRUs) then
+		ShipDemandAdd( TUR_CARRIER, 10000 );
+	end
+end
+
+function CpuBuildSS_DefaultSubSystemDemandRules()
+end
+
+function DoResearchTechDemand()
+end
+
+
+function Override_MilitaryInit()
+	if (sg_Delay==0) then
+		cp_attackPercent=0
+	end
+end

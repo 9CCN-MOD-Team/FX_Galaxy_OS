@@ -1,0 +1,17 @@
+levelDesc = "$90003"
+maxPlayers = "2"
+player = {} 
+player[0] = { 
+    resources = 0,
+    startPos = 1,
+    raceID = 1,
+    id = 0,
+    name = "",}
+player[1] = { 
+    resources = 0,
+    startPos = 1,
+    raceID = 1,
+    id = 1,
+    name = "",}
+
+dofilepath("data:leveldata/multiplayer/fxdefense/2p_attacking.lua")

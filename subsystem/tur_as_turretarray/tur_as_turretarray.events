@@ -1,0 +1,585 @@
+effects = {
+  animations = {
+    animation1 = {
+      name = "Tur_as_heavygun1",
+      length = 2,
+      loop = 0,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+    animation2 = {
+      name = "Tur_as_heavygun2",
+      length = 2,
+      loop = 0,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+    animation3 = {
+      name = "Tur_as_heavygun3",
+      length = 2,
+      loop = 0,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+    animation4 = {
+      name = "Tur_as_heavygun4",
+      length = 2,
+      loop = 0,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+   animation5 = {
+      name = "Tur_as_heavygun5",
+      length = 2,
+      loop = 0,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+    animation6 = {
+      name = "Tur_as_heavygun6",
+      length = 2,
+      loop = 0,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+    animation7 = {
+      name = "Tur_as_heavygun7",
+      length = 2,
+      loop = 0,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+    animation8 = {
+      name = "Tur_as_heavygun8",
+      length = 2,
+      loop = 0,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+    animation9 = {
+      name = "Death",
+      length = 2,
+      loop = 0,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+  },
+  events = {
+    event1 = {
+      {
+        "anim",
+        "Tur_as_heavygun1",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "Weapon_TurretTop_Muzzle",
+      },
+      {
+        "fx",
+        "muzzle_flash_combo_small_capital",
+      },
+      {
+        "sound",
+        "weapon/fighter/fire/WEAPON_FIGHTER_KINETIC_AUTOGUN_SHELL",
+      },
+      {
+        "fx_scale",
+        "3",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event2 = {
+      {
+        "anim",
+        "Tur_as_heavygun2",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "Weapon_TurretTop1_Muzzle",
+      },
+      {
+        "fx",
+        "muzzle_flash_combo_small_capital",
+      },
+      {
+        "sound",
+        "weapon/fighter/fire/WEAPON_FIGHTER_KINETIC_AUTOGUN_SHELL",
+      },
+      {
+        "fx_scale",
+        "3",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event3 = {
+      {
+        "anim",
+        "Tur_as_heavygun3",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "Weapon_TurretTop2_Muzzle",
+      },
+      {
+        "fx",
+        "muzzle_flash_combo_small_capital",
+      },
+      {
+        "sound",
+        "weapon/fighter/fire/WEAPON_FIGHTER_KINETIC_AUTOGUN_SHELL",
+      },
+      {
+        "fx_scale",
+        "3",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event4 = {
+      {
+        "anim",
+        "Tur_as_heavygun4",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "Weapon_TurretTop3_Muzzle",
+      },
+      {
+        "fx",
+        "muzzle_flash_combo_small_capital",
+      },
+      {
+        "sound",
+        "weapon/fighter/fire/WEAPON_FIGHTER_KINETIC_AUTOGUN_SHELL",
+      },
+      {
+        "fx_scale",
+        "3",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event5 = {
+      {
+        "anim",
+        "Tur_as_heavygun5",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "Weapon_TurretTop4_Muzzle",
+      },
+      {
+        "fx",
+        "muzzle_flash_combo_small_capital",
+      },
+      {
+        "sound",
+        "weapon/fighter/fire/WEAPON_FIGHTER_KINETIC_AUTOGUN_SHELL",
+      },
+      {
+        "fx_scale",
+        "3",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event6 = {
+      {
+        "anim",
+        "Tur_as_heavygun6",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "Weapon_TurretTop5_Muzzle",
+      },
+      {
+        "fx",
+        "muzzle_flash_combo_small_capital",
+      },
+      {
+        "sound",
+        "weapon/fighter/fire/WEAPON_FIGHTER_KINETIC_AUTOGUN_SHELL",
+      },
+      {
+        "fx_scale",
+        "3",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event7 = {
+      {
+        "anim",
+        "Tur_as_heavygun7",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "Weapon_TurretTop6_Muzzle",
+      },
+      {
+        "fx",
+        "muzzle_flash_combo_small_capital",
+      },
+      {
+        "sound",
+        "weapon/fighter/fire/WEAPON_FIGHTER_KINETIC_AUTOGUN_SHELL",
+      },
+      {
+        "fx_scale",
+        "3",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event8 = {
+      {
+        "anim",
+        "Tur_as_heavygun8",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "Weapon_TurretTop7_Muzzle",
+      },
+      {
+        "fx",
+        "muzzle_flash_combo_small_capital",
+      },
+      {
+        "sound",
+        "weapon/fighter/fire/WEAPON_FIGHTER_KINETIC_AUTOGUN_SHELL",
+      },
+      {
+        "fx_scale",
+        "3",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event9 = {
+      {
+        "anim",
+        "Tur_as_heavygun1",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "danke01",
+      },
+      {
+        "fx",
+        "small_danke_COMBO",
+      },
+      {
+        "sound",
+        "",
+      },
+      {
+        "fx_scale",
+        "0.2",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event10 = {
+      {
+        "anim",
+        "Tur_as_heavygun2",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "danke03",
+      },
+      {
+        "fx",
+        "small_danke_COMBO",
+      },
+      {
+        "sound",
+        "",
+      },
+      {
+        "fx_scale",
+        "0.2",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event11 = {
+      {
+        "anim",
+        "Tur_as_heavygun3",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "danke05",
+      },
+      {
+        "fx",
+        "small_danke_COMBO",
+      },
+      {
+        "sound",
+        "",
+      },
+      {
+        "fx_scale",
+        "0.2",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event12 = {
+      {
+        "anim",
+        "Tur_as_heavygun4",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "danke07",
+      },
+      {
+        "fx",
+        "small_danke_COMBO",
+      },
+      {
+        "sound",
+        "",
+      },
+      {
+        "fx_scale",
+        "0.2",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event13 = {
+      {
+        "anim",
+        "Tur_as_heavygun5",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "danke09",
+      },
+      {
+        "fx",
+        "small_danke_COMBO",
+      },
+      {
+        "sound",
+        "",
+      },
+      {
+        "fx_scale",
+        "0.2",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event14 = {
+      {
+        "anim",
+        "Tur_as_heavygun6",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "danke11",
+      },
+      {
+        "fx",
+        "small_danke_COMBO",
+      },
+      {
+        "sound",
+        "",
+      },
+      {
+        "fx_scale",
+        "0.2",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event15 = {
+      {
+        "anim",
+        "Tur_as_heavygun7",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "danke13",
+      },
+      {
+        "fx",
+        "small_danke_COMBO",
+      },
+      {
+        "sound",
+        "",
+      },
+      {
+        "fx_scale",
+        "0.2",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event16 = {
+      {
+        "anim",
+        "Tur_as_heavygun8",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "danke15",
+      },
+      {
+        "fx",
+        "small_danke_COMBO",
+      },
+      {
+        "sound",
+        "",
+      },
+      {
+        "fx_scale",
+        "0.2",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+  },
+}

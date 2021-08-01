@@ -1,0 +1,452 @@
+function Override_Init()
+	sg_dobuild = 1
+	sg_dosubsystems = 1
+	sg_doresearch = 1
+	sg_doupgrades = 1
+	sg_domilitary = 1
+	sg_fightersize=1
+	sg_corvettesize=1
+	sg_frigatesize=1
+	sg_kDemandResetValue = 4
+	sg_kCollector = HGN_RESOURCECOLLECTOR
+	sg_classPersonalityDemand[ eFighter ] = 0.25
+	sg_classPersonalityDemand[ eCorvette ] = 0.25
+	sg_classPersonalityDemand[ eFrigate ] = 0.25
+	sg_classPersonalityDemand[ ePlatform ] = -0.5
+	SetResourceDockFamily("Utility")
+	sg_numCollectorPerChannel=4
+	sg_RUsPerChannel=300
+	sg_ForceBuilderRU=3000
+	sg_militaryDemand = 1
+	sg_subSystemDemand = 0
+	sg_shipDemand = 4
+	sg_militaryToBuildPerCollector = 1
+	sg_debug=0
+end
+
+ai_data={}
+ai_data[HGN_SCOUT]=
+	{
+		Name="HGN_SCOUT",
+		Type="Ship",
+		Require={},
+		Upgrades={HGN_AIRWEAPONUPGRADE1,HGN_AIRWEAPONUPGRADE2,HGN_AIRWEAPONUPGRADE3,HGN_AIRHEALTHUPGRADE1,HGN_AIRHEALTHUPGRADE2,HGN_AIRHEALTHUPGRADE3},
+		UpgradeDemand=1,
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=0,
+		UnitCap="scout",
+	}
+ai_data[HGN_INTERCEPTOR]=
+	{
+		Name="HGN_INTERCEPTOR",
+		Type="Ship",
+		Require={FIGHTERPRODUCTION},
+		Upgrades={HGN_AIRWEAPONUPGRADE1,HGN_AIRWEAPONUPGRADE2,HGN_AIRWEAPONUPGRADE3,HGN_AIRHEALTHUPGRADE1,HGN_AIRHEALTHUPGRADE2,HGN_AIRHEALTHUPGRADE3},
+		UpgradeDemand=1,
+		SizeControl={eFighter,0.7},
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=0,
+		UnitCap="Fighter",
+	}
+ai_data[HGN_ATTACKBOMBER]=
+	{
+		Name="HGN_ATTACKBOMBER",
+		Type="Ship",
+		Require={FIGHTERPRODUCTION},
+		Upgrades={HGN_AIRWEAPONUPGRADE1,HGN_AIRWEAPONUPGRADE2,HGN_AIRWEAPONUPGRADE3,HGN_AIRHEALTHUPGRADE1,HGN_AIRHEALTHUPGRADE2,HGN_AIRHEALTHUPGRADE3},
+		UpgradeDemand=1,
+		SizeControl={eFighter,0.7},
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=0,
+		UnitCap="Fighter",
+	}
+ai_data[HGN_PULSARCORVETTE]=
+	{
+		Name="HGN_PULSARCORVETTE",
+		Type="Ship",
+		Require={CORVETTEPRODUCTION},
+		Upgrades={HGN_AIRWEAPONUPGRADE1,HGN_AIRWEAPONUPGRADE2,HGN_AIRWEAPONUPGRADE3,HGN_AIRHEALTHUPGRADE1,HGN_AIRHEALTHUPGRADE2,HGN_AIRHEALTHUPGRADE3},
+		UpgradeDemand=1,
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=0,
+		UnitCap="Corvette",
+	}
+ai_data[HGN_MULTIGUNCORVETTE]=
+	{
+		Name="HGN_MULTIGUNCORVETTE",
+		Type="Ship",
+		Require={CORVETTEPRODUCTION,RESEARCH},
+		Upgrades={HGN_AIRWEAPONUPGRADE1,HGN_AIRWEAPONUPGRADE2,HGN_AIRWEAPONUPGRADE3,HGN_AIRHEALTHUPGRADE1,HGN_AIRHEALTHUPGRADE2,HGN_AIRHEALTHUPGRADE3},
+		UpgradeDemand=1,
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=0,
+		UnitCap="Corvette",
+	}
+ai_data[HGN_ASSAULTFRIGATE]=
+	{
+		Name="HGN_ASSAULTFRIGATE",
+		Type="Ship",
+		Require={FRIGATEPRODUCTION,RESEARCH},
+		Upgrades={HGN_SHIPWEAPONUPGRADE1,HGN_SHIPWEAPONUPGRADE2,HGN_SHIPWEAPONUPGRADE3,HGN_SHIPHEALTHUPGRADE1,HGN_SHIPHEALTHUPGRADE2,HGN_SHIPHEALTHUPGRADE3},
+		UpgradeDemand=1,
+		SizeControl={eFrigate,0.7},
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=0,
+		UnitCap="Frigate",
+	}
+ai_data[HGN_TORPEDOFRIGATE]=
+	{
+		Name="HGN_TORPEDOFRIGATE",
+		Type="Ship",
+		Require={FRIGATEPRODUCTION},
+		Upgrades={HGN_SHIPWEAPONUPGRADE1,HGN_SHIPWEAPONUPGRADE2,HGN_SHIPWEAPONUPGRADE3,HGN_SHIPHEALTHUPGRADE1,HGN_SHIPHEALTHUPGRADE2,HGN_SHIPHEALTHUPGRADE3},
+		UpgradeDemand=1,
+		SizeControl={eFrigate,0.7},
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=0,
+		UnitCap="Frigate",
+	}
+ai_data[HGN_IONCANNONFRIGATE]=
+	{
+		Name="HGN_IONCANNONFRIGATE",
+		Type="Ship",
+		Require={FRIGATEPRODUCTION,RESEARCH},
+		Upgrades={HGN_SHIPWEAPONUPGRADE1,HGN_SHIPWEAPONUPGRADE2,HGN_SHIPWEAPONUPGRADE3,HGN_SHIPHEALTHUPGRADE1,HGN_SHIPHEALTHUPGRADE2,HGN_SHIPHEALTHUPGRADE3},
+		UpgradeDemand=1,
+		SizeControl={eFrigate,0.7},
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=2,
+		UnitCap="Frigate",
+	}
+ai_data[HGN_DEFENSEFIELDFRIGATE]=
+	{
+		Name="HGN_DEFENSEFIELDFRIGATE",
+		Type="Ship",
+		Require={FRIGATEPRODUCTION,ADVANCEDRESEARCH},
+		Upgrades={HGN_SHIPWEAPONUPGRADE1,HGN_SHIPWEAPONUPGRADE2,HGN_SHIPWEAPONUPGRADE3,HGN_SHIPHEALTHUPGRADE1,HGN_SHIPHEALTHUPGRADE2,HGN_SHIPHEALTHUPGRADE3},
+		UpgradeDemand=1,
+		SizeControl={eFrigate,0.2},
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=-5,
+		LODDemand={-10,-5,0,5},
+		AddDemand=
+		{
+			{HGN_ASSAULTFRIGATE,1},
+			{HGN_TORPEDOFRIGATE,1},
+			{HGN_IONCANNONFRIGATE,1},
+			{HGN_DESTROYER,1},
+		},
+		UnitCap="DefenseFieldFrigate",
+	}
+ai_data[HGN_MARINEFRIGATE]=
+	{
+		Name="HGN_MARINEFRIGATE",
+		Type="Ship",
+		Require={FRIGATEPRODUCTION,ADVANCEDRESEARCH},
+		Upgrades={HGN_SHIPWEAPONUPGRADE1,HGN_SHIPWEAPONUPGRADE2,HGN_SHIPWEAPONUPGRADE3,HGN_SHIPHEALTHUPGRADE1,HGN_SHIPHEALTHUPGRADE2,HGN_SHIPHEALTHUPGRADE3},
+		UpgradeDemand=1,
+		SizeControl={eFrigate,0.4},
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=0,
+		UnitCap="CaptureFrigate",
+	}
+ai_data[HGN_CARRIER]=
+	{
+		Name="HGN_CARRIER",
+		Type="Ship",
+		Require={},
+		Upgrades={HGN_CAPITALHEALTHUPGRADE1,HGN_CAPITALHEALTHUPGRADE2,HGN_CAPITALHEALTHUPGRADE3},
+		UpgradeDemand=1,
+		UpgradeSubsystem=
+		{
+			{2,HYPERSPACEINHIBITOR,HYPERSPACE},
+			{1,CLOAKSENSOR},
+		},
+		BuildShipChannel=1,
+		BuildSubsystemChannel=1,
+		BasicDemand=0,
+		UnitCap="Carrier",
+	}
+ai_data[HGN_MOTHERSHIP]=
+	{
+		Name="HGN_MOTHERSHIP",
+		Type="Ship",
+		Require={},
+		Upgrades={HGN_CAPITALHEALTHUPGRADE1,HGN_CAPITALHEALTHUPGRADE2,HGN_CAPITALHEALTHUPGRADE3},
+		UpgradeDemand=1,
+		UpgradeSubsystem=
+		{
+			{2,HYPERSPACEINHIBITOR,HYPERSPACE,},
+			{1,CLOAKSENSOR},
+		},
+		BuildShipChannel=1,
+		BuildSubsystemChannel=1,
+		BasicDemand=0,
+		UnitCap="Mothership",
+	}
+ai_data[HGN_SHIPYARD]=
+	{
+		Name="HGN_SHIPYARD",
+		Type="Ship",
+		Require={HYPERSPACE,CAPSHIPPRODUCTION},
+		Upgrades={HGN_CAPITALHEALTHUPGRADE1,HGN_CAPITALHEALTHUPGRADE2,HGN_CAPITALHEALTHUPGRADE3},
+		UpgradeDemand=1,
+		UpgradeSubsystem=
+		{
+			{4,HYPERSPACEINHIBITOR,HYPERSPACE,ADVANCEDRESEARCH,RESEARCH,},
+			{1,CLOAKSENSOR},
+		},
+		SizeControl={eBuilder,0.3},
+		BuildShipChannel=1,
+		BuildSubsystemChannel=1,
+		BasicDemand=0,
+		UnitCap="Shipyard",
+	}
+ai_data[HGN_DESTROYER]=
+	{
+		Name="HGN_DESTROYER",
+		Type="Ship",
+		Require={CAPSHIPPRODUCTION,ADVANCEDCAPSHIPPRODUCTION},
+		Upgrades={HGN_CAPITALHEALTHUPGRADE1,HGN_CAPITALHEALTHUPGRADE2,HGN_CAPITALHEALTHUPGRADE3},
+		UpgradeDemand=1,
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=0,
+		UnitCap="Destroyer",
+	}
+ai_data[HGN_LIGHTCRUISER]=
+	{
+		Name="HGN_LIGHTCRUISER",
+		Type="Ship",
+		Require={CAPSHIPPRODUCTION,ADVANCEDCAPSHIPPRODUCTION,ADVANCEDRESEARCH},
+		Upgrades={HGN_CAPITALHEALTHUPGRADE1,HGN_CAPITALHEALTHUPGRADE2,HGN_CAPITALHEALTHUPGRADE3},
+		UpgradeDemand=1,
+		UpgradeSubsystem=
+		{
+			{1,HEAVYTURRETF,TURRETF},
+			{1,HYPERSPACE,HYPERSPACEINHIBITOR},
+			{1,UTILITYENGINE},
+		},
+		BuildShipChannel=0,
+		BuildSubsystemChannel=1,
+		BasicDemand=0,
+		UnitCap="Battlecruiser",
+	}
+ai_data[HGN_BATTLECRUISER]=
+	{
+		Name="HGN_BATTLECRUISER",
+		Type="Ship",
+		Require={ADVANCEDCAPSHIPPRODUCTION,HGN_SHIPYARD,HGN_SHIPYARD,HGN_SHIPYARD},
+		Upgrades={HGN_CAPITALHEALTHUPGRADE1,HGN_CAPITALHEALTHUPGRADE2,HGN_CAPITALHEALTHUPGRADE3},
+		UpgradeDemand=1,
+		UpgradeSubsystem=
+		{
+			{1,HYPERSPACE,HYPERSPACEINHIBITOR},
+		},
+		BuildShipChannel=0,
+		BuildSubsystemChannel=1,
+		BasicDemand=0,
+		UnitCap="Battlecruiser",
+	}
+ai_data[HGN_GUNTURRET]=
+	{
+		Name="HGN_GUNTURRET",
+		Type="Ship",
+		Require={RESEARCH},
+		Upgrades={HGN_PLATFORMWEAPONUPGRADE1,HGN_PLATFORMWEAPONUPGRADE2,HGN_PLATFORMWEAPONUPGRADE3,HGN_PLATFORMHEALTHUPGRADE1,HGN_PLATFORMHEALTHUPGRADE2,HGN_PLATFORMHEALTHUPGRADE3,},
+		UpgradeDemand=1,
+		SizeControl={eCollector,0.2},
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=-20,
+		AddDemand=
+		{
+			{HGN_RESOURCECOLLECTOR,1},
+		},
+		UnitCap="Platform",
+	}
+ai_data[HGN_IONTURRET]=
+	{
+		Name="HGN_IONTURRET",
+		Type="Ship",
+		Require={ADVANCEDRESEARCH},
+		Upgrades={HGN_PLATFORMWEAPONUPGRADE1,HGN_PLATFORMWEAPONUPGRADE2,HGN_PLATFORMWEAPONUPGRADE3,HGN_PLATFORMHEALTHUPGRADE1,HGN_PLATFORMHEALTHUPGRADE2,HGN_PLATFORMHEALTHUPGRADE3,},
+		UpgradeDemand=1,
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=-5,
+		LODDemand={5,0,-5,-100},
+		UnitCap="Platform",
+	}
+ai_data[HGN_RESOURCECOLLECTOR]=
+	{
+		Name="HGN_RESOURCECOLLECTOR",
+		Type="Ship",
+		Require={},
+		Upgrades={},
+		UpgradeDemand=0,
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=0,
+		UnitCap="ResourceCollector",
+	}
+ai_data[HGN_RESOURCECONTROLLER]=
+	{
+		Name="HGN_RESOURCECONTROLLER",
+		Type="Ship",
+		Require={FRIGATEPRODUCTION},
+		Upgrades={},
+		UpgradeDemand=0,
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=0,
+		UnitCap="ResourceController",
+	}
+ai_data[UTILITYENGINE]=
+	{
+		Name="UTILITYENGINE",
+		Type="Subsystem",
+		Require={ADVANCEDCAPSHIPPRODUCTION},
+		IsForFleet=0,
+		BasicDemand=1,
+	}
+ai_data[FIGHTERPRODUCTION]=
+	{
+		Name="FIGHTERPRODUCTION",
+		Type="Subsystem",
+		Require={},
+		IsForFleet=0,
+		BasicDemand=2,
+	}
+ai_data[CORVETTEPRODUCTION]=
+	{
+		Name="CORVETTEPRODUCTION",
+		Type="Subsystem",
+		Require={FIGHTERPRODUCTION},
+		IsForFleet=1,
+		BasicDemand=0,
+	}
+ai_data[FRIGATEPRODUCTION]=
+	{
+		Name="FRIGATEPRODUCTION",
+		Type="Subsystem",
+		Require={CORVETTEPRODUCTION},
+		IsForFleet=0,
+		BasicDemand=1,
+	}
+ai_data[CAPSHIPPRODUCTION]=
+	{
+		Name="CAPSHIPPRODUCTION",
+		Type="Subsystem",
+		Require={FRIGATEPRODUCTION},
+		IsForFleet=0,
+		BasicDemand=0,
+	}
+ai_data[ADVANCEDCAPSHIPPRODUCTION]=
+	{
+		Name="ADVANCEDCAPSHIPPRODUCTION",
+		Type="Subsystem",
+		Require={ADVANCEDRESEARCH},
+		IsForFleet=0,
+		BasicDemand=1,
+	}
+ai_data[RESEARCH]=
+	{
+		Name="RESEARCH",
+		Type="Subsystem",
+		Require={FIGHTERPRODUCTION},
+		IsForFleet=1,
+		BasicDemand=0,
+	}
+ai_data[ADVANCEDRESEARCH]=
+	{
+		Name="ADVANCEDRESEARCH",
+		Type="Subsystem",
+		Require={FRIGATEPRODUCTION,RESEARCH},
+		IsForFleet=1,
+		BasicDemand=0,
+	}
+ai_data[HYPERSPACE]=
+	{
+		Name="HYPERSPACE",
+		Type="Subsystem",
+		Require={FRIGATEPRODUCTION},
+		IsForFleet=0,
+		BasicDemand=1,
+	}
+ai_data[HYPERSPACEINHIBITOR]=
+	{
+		Name="HYPERSPACEINHIBITOR",
+		Type="Subsystem",
+		Require={CAPSHIPPRODUCTION},
+		IsForFleet=0,
+		BasicDemand=1,
+	}
+ai_data[CLOAKSENSOR]=
+	{
+		Name="CLOAKSENSOR",
+		Type="Subsystem",
+		Require={CAPSHIPPRODUCTION},
+		IsForFleet=0,
+		BasicDemand=1,
+	}
+ai_data[HEAVYTURRETF]=
+	{
+		Name="HEAVYTURRETF",
+		Type="Subsystem",
+		Require={},
+		IsForFleet=0,
+		BasicDemand=10,
+	}
+ai_data[TURRETF]=
+	{
+		Name="TURRETF",
+		Type="Subsystem",
+		Require={},
+		IsForFleet=0,
+		BasicDemand=0,
+	}
+ai_data[HEAVYTURRET]=
+	{
+		Name="HEAVYTURRET",
+		Type="Subsystem",
+		Require={},
+		IsForFleet=0,
+		BasicDemand=10,
+	}
+ai_data[TURRET]=
+	{
+		Name="TURRET",
+		Type="Subsystem",
+		Require={},
+		IsForFleet=0,
+		BasicDemand=0,
+	}
+
+function Proc_DetermineDemandWithNoCounterInfo()
+end
+
+function Proc_DetermineSpecialDemand()
+end
+
+function CpuBuildSS_DefaultSubSystemDemandRules()
+end
+
+function DoResearchTechDemand()
+end
+
+function Override_MilitaryInit()
+	if (sg_Delay==0) then
+		cp_attackPercent=0
+	end
+end

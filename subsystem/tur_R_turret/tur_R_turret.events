@@ -1,0 +1,89 @@
+effects = {
+  animations = {
+    animation1 = {
+      name = "Death",
+      length = 1,
+      loop = 0,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+    animation2 = {
+      name = "Weapon_TurretTop",
+      length = 0.25,
+      loop = 0,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+ },
+  events = {
+    event1 = {
+      {
+        "anim",
+        "Weapon_TurretTop",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "Weapon_TurretTop_Muzzle",
+      },
+      {
+        "fx",
+        "muzzle_flash_combo_small_capital",
+      },
+      {
+        "sound",
+        "weapon/fighter/fire/WEAPON_FIGHTER_KINETIC_AUTOGUN_SHELL",
+      },
+      {
+        "fx_scale",
+        "3",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event2 = {
+      {
+        "anim",
+        "Weapon_TurretTop",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "danke01",
+      },
+      {
+        "fx",
+        "small_danke_COMBO",
+      },
+      {
+        "sound",
+        "",
+      },
+      {
+        "fx_scale",
+        "0.2",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+
+  },
+}

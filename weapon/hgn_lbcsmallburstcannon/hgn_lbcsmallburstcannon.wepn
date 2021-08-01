@@ -1,0 +1,17 @@
+StartWeaponConfig(NewWeaponType,"AnimatedTurret","Bullet","Kinetic_Large","Normal",10000,4500,0,0,0,0,1,1,1,2,0,0,1,1,80,40,0.1,"Normal",1,1,0)
+AddWeaponResult(NewWeaponType,"Hit","DamageHealth","Target",100,100,"")
+setPenetration(NewWeaponType,5,1,{
+  PlanetKillerArmour = 0,
+},{
+  LightArmour = 1,
+})
+setMissileKiller(NewWeaponType,1);setAccuracy(NewWeaponType,0,{
+  Fighter = 0.8,
+},{
+  Corvette = 0.4,
+},{
+  Missile = 1,
+})
+setAngles(NewWeaponType,5,-180,180,-5,90)
+setMiscValues(NewWeaponType,2.5,0)
+addAnimTurretSound(NewWeaponType,"Data:Sound/SFX/ETG/SPECIAL/SPECIAL_ABILITIES_TURRET_ON")

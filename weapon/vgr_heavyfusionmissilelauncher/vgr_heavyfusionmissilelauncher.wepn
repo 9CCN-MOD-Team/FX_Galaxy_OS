@@ -1,0 +1,20 @@
+StartWeaponConfig(NewWeaponType,"Fixed","Missile","Vgr_HeavyMissile_burst","Normal",40,4000,0,0,0,2,1,0,1,8,0,0,0,0,0,0,0.1,"Normal",0,1,0)
+AddWeaponResult(NewWeaponType,"Hit","DamageHealth","Target",1400,1400,"")
+setPenetration(NewWeaponType,30,1,{
+  PlanetKillerArmour = 0,
+},{
+  SubSystemArmour = 0.2,
+},{
+  lightarmour = 0.2,
+},{
+  resarmour = 0.2,
+})
+setMissileKiller(NewWeaponType,1);setAccuracy(NewWeaponType,1,{
+  Fighter = 0,
+},{
+  Corvette = 0,
+},{
+  munition = 0,
+})
+setAngles(NewWeaponType,180,0,0,0,0)
+setMiscValues(NewWeaponType,0,2)

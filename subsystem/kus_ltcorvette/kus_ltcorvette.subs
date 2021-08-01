@@ -1,0 +1,8 @@
+NewSubSystemType = StartSubSystemConfig()
+NewSubSystemType.selectionLimit=1
+NewSubSystemType.type="Weapon"
+NewSubSystemType.hasIcon=0
+LoadHODFile(NewSubSystemType,1); 
+NewSubSystemType.AttackFamily="Corvette"
+NewSubSystemType.ArmourFamily="LightArmour"
+StartSubSystemWeaponConfig(NewSubSystemType,"kus_repairgunheal","Weapon_Gun0","");

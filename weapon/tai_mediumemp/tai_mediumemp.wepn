@@ -1,0 +1,12 @@
+StartWeaponConfig(NewWeaponType,"Fixed","Bullet","Plasma_Bomb","Special Attack",1500,2000,0,0,0,0,1,0,0,60,0,0,0,0,0,0,0.1,"Normal",1,0,0)
+AddWeaponResult(NewWeaponType,"Hit","SpawnWeaponFire","Target",0,0,"Hgn_SmallEMPBurst")
+AddWeaponResult(NewWeaponType,"Miss","SpawnWeaponFire","Target",0,0,"Hgn_SmallEMPBurst")
+setPenetration(NewWeaponType,5,1)
+setMissileKiller(NewWeaponType,1);setAccuracy(NewWeaponType,1,{
+  Fighter = 1,
+},{
+  Corvette = 1,
+},{
+  munition = 0.2,
+})
+setAngles(NewWeaponType,25,0,0,0,0)

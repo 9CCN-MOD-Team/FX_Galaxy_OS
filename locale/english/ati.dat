@@ -1,0 +1,12 @@
+filerange 6000 6050
+rangestart 6000 6050
+
+// Subtitles
+6000	%d RUs
+6001	总计： %d RUs
+6002	跳跃需要： %d RUs
+6003	?? RUs
+6004	总计： ?? RUs
+6050	%d RUs
+
+rangeend

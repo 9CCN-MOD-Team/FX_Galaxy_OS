@@ -1,0 +1,188 @@
+-- LuaDC version 0.9.19
+-- 2009-1-16 16:57:02
+-- LuaDC by Age2uN
+-- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
+--
+NewShipType = StartShipConfig()
+NewShipType.displayedName = "$101043"
+NewShipType.sobDescription = "$101041"
+NewShipType.maxhealth = 500000
+NewShipType.regentime = 1200
+NewShipType.minRegenTime = 450
+NewShipType.sideArmourDamage = 0.9
+NewShipType.rearArmourDamage = 1.2
+NewShipType.isTransferable = 1
+NewShipType.useEngagementRanges = 1
+NewShipType.unitCapsNumber = 1
+NewShipType.addedUnitCaps = 101
+NewShipType.paradeData = "hgn_carrier_parade"
+NewShipType.SquadronSize = 1
+NewShipType.formationSpacing = 250
+NewShipType.passiveFormation = "Spear"
+NewShipType.defensiveFormation = "x"
+NewShipType.aggressiveFormation = "Claw"
+NewShipType.mass = 10000
+NewShipType.collisionMultiplier = 10
+
+
+NewShipType.thrusterMaxSpeed = 109
+NewShipType.mainEngineMaxSpeed = 109
+NewShipType.rotationMaxSpeed = 6
+NewShipType.thrusterAccelTime = 6
+NewShipType.thrusterBrakeTime = 2
+NewShipType.mainEngineAccelTime = 6
+NewShipType.mainEngineBrakeTime = 2
+NewShipType.rotationAccelTime = 0.7
+NewShipType.rotationBrakeTime = 0.4
+NewShipType.thrusterUsage = 1
+NewShipType.accelerationAngle = 30
+NewShipType.mirrorAngle = 0
+NewShipType.secondaryTurnAngle = 0
+NewShipType.maxBankingAmount = 20
+NewShipType.descendPitch = 20
+NewShipType.goalReachEpsilon = 30
+NewShipType.slideMoveRange = 100
+NewShipType.controllerType = "Ship"
+NewShipType.tumbleStaticX = 10
+NewShipType.tumbleStaticY = 20
+NewShipType.tumbleStaticZ = 5
+NewShipType.tumbleDynamicX = 2
+NewShipType.tumbleDynamicY = 10
+NewShipType.tumbleDynamicZ = 5
+NewShipType.tumbleSpecialDynamicX = 2
+NewShipType.tumbleSpecialDynamicY = 10
+NewShipType.tumbleSpecialDynamicZ = 5
+NewShipType.relativeMoveFactor = 3
+NewShipType.useTargetRandom = 1
+NewShipType.targetRandomPointXMin = -0.07
+NewShipType.targetRandomPointXMax = 0.05
+NewShipType.targetRandomPointYMin = -0.06
+NewShipType.targetRandomPointYMax = 0.05
+NewShipType.targetRandomPointZMin = -0.11
+NewShipType.targetRandomPointZMax = 0.1
+NewShipType.dustCloudDamageTime = 160
+NewShipType.nebulaDamageTime = 200
+NewShipType.MinimalFamilyToFindPathAround = "MotherShip"
+NewShipType.BuildFamily = "Battlecruiser_Hgn"
+NewShipType.AttackFamily = "BigCapitalShip"
+NewShipType.DockFamily = "BattleCruiser"
+NewShipType.AvoidanceFamily = "BattleCruiser"
+NewShipType.DisplayFamily = "Capital"
+NewShipType.AutoFormationFamily = "CapShip"
+NewShipType.CollisionFamily = "Big"
+NewShipType.ArmourFamily = "HeavyArmour"
+NewShipType.UnitCapsFamily = "Capital"
+NewShipType.UnitCapsShipType = "Battlecruiser"
+NewShipType.fighterValue = 0
+NewShipType.corvetteValue = 0
+NewShipType.frigateValue = 40
+NewShipType.neutralValue = 15
+NewShipType.antiFighterValue = 50
+NewShipType.antiCorvetteValue = 50
+NewShipType.antiFrigateValue = 50
+NewShipType.totalValue = 100
+NewShipType.buildCost = 18000
+NewShipType.buildTime = 200
+NewShipType.buildPriorityOrder = 10
+NewShipType.retaliationRange = 5500
+NewShipType.retaliationDistanceFromGoal = 160
+NewShipType.visualRange = 1000
+NewShipType.prmSensorRange = 8000
+NewShipType.secSensorRange = 9000
+NewShipType.detectionStrength = 1
+NewShipType.TOScale = 1
+NewShipType.TODistanceFade0 = 9000
+NewShipType.TODistanceDisappear0 = 7000
+NewShipType.TODistanceFade1 = 4500
+NewShipType.TODistanceDisappear1 = 3500
+NewShipType.TODistanceFade2 = 12000
+NewShipType.TODistanceDisappear2 = 35000
+NewShipType.TOGroupScale = 1
+NewShipType.TOGroupMergeSize = 0
+NewShipType.healthBarStyle = 1
+NewShipType.nlips = 0
+NewShipType.nlipsRange = 75000
+NewShipType.nlipsFar = 0
+NewShipType.nlipsFarRange = 0
+NewShipType.SMRepresentation = "Mesh"
+NewShipType.alwaysInRenderList = 0
+NewShipType.meshRenderLimit = 32500
+NewShipType.dotRenderLimit = 10
+NewShipType.visibleInSecondary = 1
+NewShipType.minLOD = 1
+NewShipType.goblinsStartFade = 10000
+NewShipType.goblinsOff = 10000
+NewShipType.upLOD = 140000
+NewShipType.downLOD = 140150
+NewShipType.minimumZoomFactor = 0.25
+NewShipType.preciseATILimit = 7176.37507192516
+NewShipType.selectionPriority = 65
+NewShipType.militaryUnit = 1
+
+addAbility(NewShipType, "CanDock", 1, 0)
+NewShipType.dockTimeBetweenTwoFormations = 1
+NewShipType.dockTimeBeforeStart = 2
+NewShipType.dockNrOfShipsInDockFormation = 1
+NewShipType.dockFormation = "delta"
+NewShipType.queueFormation = "dockline"
+NewShipType.dontDockWithOtherRaceShips = 1
+NewShipType.ignoreRaceWhenDocking = 0
+
+
+
+
+addAbility(NewShipType, "CanLaunch")
+NewShipType.launchTimeBetweenTwoFormations = 1
+NewShipType.launchTimeBeforeStart = 2
+NewShipType.launchNrOfShipsInDockFormation = 1
+NewShipType.launchFormation = "delta"
+addAbility(NewShipType, "ShipHold", 1, 40, 10, "rallypoint", "Fighter, Corvette", 105, {Fighter = "12"}, {Corvette = "75",})
+
+
+
+
+LoadSharedModel(NewShipType, "CoJ_Battleshipnoshield")
+
+NewShipType.battleScarMaxTriBase = 1000
+NewShipType.battleScarMaxTriInc = 3000
+NewShipType.sobDieTime = 1
+NewShipType.sobSpecialDieTime = 1
+NewShipType.specialDeathSpeed = 40
+NewShipType.chanceOfSpecialDeath = 0
+NewShipType.deadSobFadeTime = 1
+NewShipType.trailLinger = 3
+NewShipType.controllerType = "Ship"
+addAbility(NewShipType, "MoveCommand", 1, 0)
+addAbility(NewShipType, "HyperSpaceCommand", 1, 1, 0, 8, 0, 3)
+
+addAbility(NewShipType, "CanAttack", 1, 1, 0, 0, 0.35, 1.2, "BigCapitalShip, SmallCapitalShip,Capturer,Frigate,Mothership,Fighter,Corvette,   Utility", "Frontal", 
+{SubSystem = "Frontal",},
+{Corvette = "MovetotargetandShoot",},
+{ Fighter = "MovetotargetandShoot",})
+
+
+
+addAbility(NewShipType,"DefenseFieldAbility",1,0,0,1499,1499,0,10,0,"")
+
+--addAbility(NewShipType, "CanBuildShips", 1, "SubSystem_Hgn", "SubSystemModule")
+
+StartShipWeaponConfig(NewShipType, "CoJ_AbsolutionIII", "Weapon_Ion1", "Weapon_Ion1")
+StartShipWeaponConfig(NewShipType, "CoJ_AbsolutionIII", "Weapon_Ion2", "Weapon_Ion2")
+StartShipWeaponConfig(NewShipType, "CoJ_AbsolutionIII", "Weapon_Ion3", "Weapon_Ion3")
+StartShipWeaponConfig(NewShipType, "CoJ_AbsolutionIII", "Weapon_Ion4", "Weapon_Ion4")
+StartShipWeaponConfig(NewShipType, "CoJ_AbsolutionIII", "Weapon_Ion5", "Weapon_Ion5")
+StartShipWeaponConfig(NewShipType, "CoJ_AbsolutionIII", "Weapon_Ion6", "Weapon_Ion6")
+
+StartShipWeaponConfig(NewShipType, "CoJ_SalvationII-b", "Weapon_FrontLS", "Weapon_FrontLS")
+
+StartShipWeaponConfig(NewShipType, "CoJ_DestroyerI", "Weapon_Heavybeam", "Hyperbeam_Charge")
+
+
+
+
+
+
+addAbility(NewShipType, "RetireAbility", 1, 0)
+
+setEngineBurn(NewShipType, 4, 1, 1.5, 60, 1.1, 0.1, 0.25, 100)
+setEngineGlow(NewShipType, 1, 1, 1.02, 20, 300, 50, 1.5,{ 0.745, 0.133, 0.99, 0.125, })

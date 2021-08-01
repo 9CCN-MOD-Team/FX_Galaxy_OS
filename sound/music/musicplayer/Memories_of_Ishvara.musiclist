@@ -1,0 +1,8 @@
+MusicList["Memories_of_Ishvara"] = 
+{
+	name = "Memories_of_Ishvara-Paul_Ruskay",
+	path = musicpath.."Memories_of_Ishvara",
+	minute = 2,
+	second = 9,
+	func = MP_NoCombat,
+}

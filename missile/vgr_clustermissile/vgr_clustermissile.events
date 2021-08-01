@@ -1,0 +1,45 @@
+effects = 
+{
+	animations = 
+	{
+		animation1 = 
+		{
+			name = "Death",
+			length = 2,
+			loop = 0,
+			parent = "",
+			minimum = 0,
+			maximum = 0,
+			markers = 
+			{
+				"",
+			},
+		},
+	},
+	events = 
+	{
+		event1 = 
+		{
+			{
+				"anim",
+				"Death",
+			},
+			{
+				"animtime",
+				"0",
+			},
+			{
+				"marker",
+				"Root",
+			},
+			{
+				"sound",
+				"SPECIAL/SPECIAL_ABILITIES_MISSLE_STEAM",
+			},
+			{
+				"fx_transform",
+				"None",
+			},
+		},
+	},
+}

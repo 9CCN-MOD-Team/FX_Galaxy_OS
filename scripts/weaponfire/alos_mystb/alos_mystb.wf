@@ -1,0 +1,8 @@
+bulletfx = ""
+nopenetratefx = ""
+deathtype = ""
+hit_clamp = 
+    { 1, 1, }
+scartype = "Bullet/Bullet"
+bullet_sfx = "EXPLOSION\LARGE\ETG_EXPLODE_TORPEDO_HIT"
+nopenetrate_sfx = "EXPLOSION\LARGE\ETG_EXPLODE_TORPEDO_HIT"

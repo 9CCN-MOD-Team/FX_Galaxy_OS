@@ -1,0 +1,5 @@
+hitfx = "none"
+bulletfx = "none"
+nopenetratefx = "none"
+blowthroughfx = "none"
+deathtype = "none"

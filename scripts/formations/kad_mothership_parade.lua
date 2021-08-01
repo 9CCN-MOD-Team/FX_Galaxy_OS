@@ -1,0 +1,314 @@
+paradeSlot("kad_swarmer",{
+  1200,
+  -150,
+  1800,
+},{
+  0,
+  0,
+  1,
+},{
+  1,
+  0,
+  0.1,
+},0)
+paradeSlot("KAD_SuperswarmerA",{
+  300,
+  0,
+  0,
+},{
+  1,
+  0,
+  0,
+},{
+  1,
+  0,
+  0.1,
+},0)
+paradeSlot("KAD_SuperswarmerB",{
+  -300,
+  0,
+  0,
+},{
+  -1,
+  0,
+  0,
+},{
+  1,
+  0,
+  0.1,
+},0)
+paradeSlot("KAD_SuperswarmerC",{
+  0,
+  300,
+  0,
+},{
+  0,
+  1,
+  0,
+},{
+  1,
+  0,
+  0.1,
+},0)
+paradeSlot("KAD_SuperswarmerD",{
+  0,
+  -300,
+  0,
+},{
+  0,
+  -1,
+  0,
+},{
+  1,
+  0,
+  0.1,
+},0)
+paradeSlot("KAD_SuperswarmerE",{
+  0,
+  0,
+  300,
+},{
+  0,
+  0,
+  1,
+},{
+  1,
+  0,
+  0.1,
+},0)
+paradeSlot("KAD_SuperswarmerF",{
+  0,
+  0,
+  -300,
+},{
+  0,
+  0,
+  -1,
+},{
+  1,
+  0,
+  0.1,
+},0)
+paradeSlot("Kad_AssaultSwarmer",{
+  1100,
+  150,
+  1400,
+},{
+  0,
+  0,
+  1,
+},{
+  1,
+  0,
+  0.1,
+},0)
+paradeSlot("Kad_LanceSwarmer",{
+  1000,
+  0,
+  1000,
+},{
+  0,
+  0,
+  1,
+},{
+  1,
+  0,
+  0.1,
+},0)
+paradeSlot("kad_advancedswarmer",{
+  -954,
+  -150,
+  1300,
+},{
+  0,
+  0,
+  1,
+},{
+  -1,
+  -0.5,
+  0.1,
+},0)
+paradeSlot("Kad_AdvancedAssaultSwarmer",{
+  -954,
+  150,
+  900,
+},{
+  0,
+  0,
+  1,
+},{
+  -1,
+  0.5,
+  0.1,
+},0)
+paradeSlot("kad_Variationswarmer",{
+  -954,
+  0,
+  500,
+},{
+  0,
+  0,
+  1,
+},{
+  -1,
+  0,
+  0.1,
+},0)
+paradeSlot("kad_fuelpod",{
+  1334,
+  -436,
+  605,
+},{
+  0,
+  0,
+  1,
+},{
+  1,
+  0,
+  0.1,
+},0)
+paradeSlot("kad_multibeamfrigate",{
+  1334,
+  -636,
+  1605,
+},{
+  0,
+  0,
+  1,
+},{
+  1,
+  0,
+  0.1,
+},0)
+paradeSlot("kad_militaryfuelpod",{
+  1334,
+  -536,
+  1105,
+},{
+  0,
+  0,
+  1,
+},{
+  1,
+  0,
+  0.1,
+},0)
+paradeSlot("Kad_Araneid",{
+  -925,
+  0,
+  -1100,
+},{
+  0,
+  0,
+  1,
+},{
+  -1,
+  0,
+  0.1,
+},150)
+paradeSlot("kad_salvager",{
+  -927,
+  -86,
+  -500,
+},{
+  0,
+  0,
+  1,
+},{
+  -1,
+  0,
+  0.1,
+},150)
+paradeSlot("kad_resourcefuelpod",{
+  -927,
+  0,
+  -800,
+},{
+  0,
+  0,
+  1,
+},{
+  -1,
+  0,
+  0.1,
+},0)
+paradeSlot("kad_mothership",{
+  -1300,
+  2252,
+  -2000,
+},{
+  0,
+  0,
+  1,
+},{
+  1,
+  0,
+  0,
+},2600)
+paradeSlot("kad_mothershipDark",{
+  -2000,
+  0,
+  0,
+},{
+  0,
+  0,
+  1,
+},{
+  -1,
+  0,
+  0,
+},1700)
+paradeSlot("kad_mothershipLight", {0, 0, 0}, {0, 0, 1}, {1, 0, 0}, 0)
+paradeSlot("Kad_Carrier",{-1500,-300, -2000,},{0,0,1,},{1,0,0.1,},750)
+paradeSlot("Kad_GuardianSpirit",{
+  1350,
+  -250,
+  -250,
+},{
+  0,
+  0,
+  1,
+},{
+  1,
+  0,
+  0.1,
+},750)
+paradeSlot("kad_probe",{
+  900,
+  0,
+  -1000,
+},{
+  0,
+  0,
+  1,
+},{
+  1,
+  0,
+  0.1,
+},0)
+paradeSlot("kad_gunturret",{
+  -200,
+  0,
+  0,
+},{
+  0,
+  0,
+  1,
+},{
+  -1,
+  0,
+  0.1,
+},0)
+paradeSlot("misc",{
+  -1500,
+  -800,
+  0,
+},{
+  0,
+  0,
+  1,
+},{
+  -1,
+  0,
+  0.1,
+},1000)

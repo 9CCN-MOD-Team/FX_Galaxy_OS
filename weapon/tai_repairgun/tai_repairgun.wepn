@@ -1,0 +1,12 @@
+StartWeaponConfig(NewWeaponType,"Fixed","Bullet","Kinetic_Rapid","Normal",750,1000,0,0,0,0,1,1,0,1.4,0,0,1,0,0,0,0.1,"Normal",0,0,0);
+AddWeaponResult(NewWeaponType,"Hit","DamageHealth","Target",20,20,"");
+setPenetration(NewWeaponType,5,1,{PlanetKillerArmour=0},{ResArmour=0.8});
+setMissileKiller(NewWeaponType,1);setAccuracy(NewWeaponType,1,
+{Fighter=0.12},
+{Corvette=0.13},
+{munition=0.2},
+{Frigate=0.8,damage=1},
+{SmallCapitalShip=0.6,damage=1},
+{BigCapitalShip=0.6,damage=1},
+{ResourceLarge=0.6,damage=1});
+setAngles(NewWeaponType,60,0,0,0,0);

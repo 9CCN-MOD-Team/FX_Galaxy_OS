@@ -1,0 +1,443 @@
+effects = {
+  animations = {
+    animation1 = {
+      name = "Death",
+      length = 1,
+      loop = 0,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+    animation2 = {
+      name = "Weapon_Turret1",
+      length = 1.6,
+      loop = 0,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+   animation3 = {
+      name = "Weapon_Turret2",
+      length = 1.6,
+      loop = 0,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+    animation4 = {
+      name = "Weapon_Turret3",
+      length = 1.6,
+      loop = 0,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+   animation5 = {
+      name = "Weapon_Turret4",
+      length = 1.6,
+      loop = 0,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+    animation6 = {
+      name = "Weapon_Turret5",
+      length = 1.6,
+      loop = 0,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+    animation7 = {
+      name = "Weapon_Turret6",
+      length = 1.6,
+      loop = 0,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+ },
+  events = {
+    event1 = {
+      {
+        "anim",
+        "Weapon_Turret1",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "Weapon_Turret1_Muzzle",
+      },
+      {
+        "fx",
+        "muzzle_flash_combo_small_capital",
+      },
+      {
+        "sound",
+        "WEAPON/CARRIER/FIRE/WEAPON_CARRIER_KINETIC_BURST_CANNON_SHELL",
+      },
+      {
+        "fx_scale",
+        "2.5",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event2 = {
+      {
+        "anim",
+        "Weapon_Turret1",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "Weapon_Turret1Slave_Muzzle",
+      },
+      {
+        "fx",
+        "muzzle_flash_combo_small_capital",
+      },
+      {
+        "sound",
+        "WEAPON/CARRIER/FIRE/WEAPON_CARRIER_KINETIC_BURST_CANNON_SHELL",
+      },
+      {
+        "fx_scale",
+        "2.5",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event3 = {
+      {
+        "anim",
+        "Weapon_Turret2",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "Weapon_Turret2_Muzzle",
+      },
+      {
+        "fx",
+        "muzzle_flash_combo_small_capital",
+      },
+      {
+        "sound",
+        "WEAPON/CARRIER/FIRE/WEAPON_CARRIER_KINETIC_BURST_CANNON_SHELL",
+      },
+      {
+        "fx_scale",
+        "2.5",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event4 = {
+      {
+        "anim",
+        "Weapon_Turret2",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "Weapon_Turret2Slave_Muzzle",
+      },
+      {
+        "fx",
+        "muzzle_flash_combo_small_capital",
+      },
+      {
+        "sound",
+        "WEAPON/CARRIER/FIRE/WEAPON_CARRIER_KINETIC_BURST_CANNON_SHELL",
+      },
+      {
+        "fx_scale",
+        "2.5",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event5 = {
+      {
+        "anim",
+        "Weapon_Turret3",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "Weapon_Turret3_Muzzle",
+      },
+      {
+        "fx",
+        "muzzle_flash_combo_small_capital",
+      },
+      {
+        "sound",
+        "WEAPON/CARRIER/FIRE/WEAPON_CARRIER_KINETIC_BURST_CANNON_SHELL",
+      },
+      {
+        "fx_scale",
+        "2.5",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event6 = {
+      {
+        "anim",
+        "Weapon_Turret3",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "Weapon_Turret3Slave_Muzzle",
+      },
+      {
+        "fx",
+        "muzzle_flash_combo_small_capital",
+      },
+      {
+        "sound",
+        "WEAPON/CARRIER/FIRE/WEAPON_CARRIER_KINETIC_BURST_CANNON_SHELL",
+      },
+      {
+        "fx_scale",
+        "2.5",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event7 = {
+      {
+        "anim",
+        "Weapon_Turret4",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "Weapon_Turret4_Muzzle",
+      },
+      {
+        "fx",
+        "muzzle_flash_combo_small_capital",
+      },
+      {
+        "sound",
+        "WEAPON/CARRIER/FIRE/WEAPON_CARRIER_KINETIC_BURST_CANNON_SHELL",
+      },
+      {
+        "fx_scale",
+        "2.5",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event8 = {
+      {
+        "anim",
+        "Weapon_Turret4",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "Weapon_Turret4Slave_Muzzle",
+      },
+      {
+        "fx",
+        "muzzle_flash_combo_small_capital",
+      },
+      {
+        "sound",
+        "WEAPON/CARRIER/FIRE/WEAPON_CARRIER_KINETIC_BURST_CANNON_SHELL",
+      },
+      {
+        "fx_scale",
+        "2.5",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event9 = {
+      {
+        "anim",
+        "Weapon_Turret5",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "Weapon_Turret5_Muzzle",
+      },
+      {
+        "fx",
+        "muzzle_flash_combo_small_capital",
+      },
+      {
+        "sound",
+        "WEAPON/CARRIER/FIRE/WEAPON_CARRIER_KINETIC_BURST_CANNON_SHELL",
+      },
+      {
+        "fx_scale",
+        "2.5",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event10 = {
+      {
+        "anim",
+        "Weapon_Turret5",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "Weapon_Turret5Slave_Muzzle",
+      },
+      {
+        "fx",
+        "muzzle_flash_combo_small_capital",
+      },
+      {
+        "sound",
+        "WEAPON/CARRIER/FIRE/WEAPON_CARRIER_KINETIC_BURST_CANNON_SHELL",
+      },
+      {
+        "fx_scale",
+        "2.5",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event11 = {
+      {
+        "anim",
+        "Weapon_Turret6",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "Weapon_Turret6_Muzzle",
+      },
+      {
+        "fx",
+        "muzzle_flash_combo_small_capital",
+      },
+      {
+        "sound",
+        "WEAPON/CARRIER/FIRE/WEAPON_CARRIER_KINETIC_BURST_CANNON_SHELL",
+      },
+      {
+        "fx_scale",
+        "2.5",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event12 = {
+      {
+        "anim",
+        "Weapon_Turret6",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "Weapon_Turret6Slave_Muzzle",
+      },
+      {
+        "fx",
+        "muzzle_flash_combo_small_capital",
+      },
+      {
+        "sound",
+        "WEAPON/CARRIER/FIRE/WEAPON_CARRIER_KINETIC_BURST_CANNON_SHELL",
+      },
+      {
+        "fx_scale",
+        "2.5",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+  },
+}

@@ -1,0 +1,39 @@
+fps = 30
+startFrame = 0
+loopCount = 99999
+texture = 
+  { "data:/art/fx/hyperspace fx/warpmap_00.tga", 
+    "data:/art/fx/hyperspace fx/warpmap_01.tga", 
+    "data:/art/fx/hyperspace fx/warpmap_02.tga", 
+    "data:/art/fx/hyperspace fx/warpmap_03.tga",
+    "data:/art/fx/hyperspace fx/warpmap_04.tga", 
+    "data:/art/fx/hyperspace fx/warpmap_05.tga", 
+    "data:/art/fx/hyperspace fx/warpmap_06.tga", 
+    "data:/art/fx/hyperspace fx/warpmap_07.tga", 
+    "data:/art/fx/hyperspace fx/warpmap_08.tga", 
+    "data:/art/fx/hyperspace fx/warpmap_09.tga",
+    "data:/art/fx/hyperspace fx/warpmap_10.tga", 
+    "data:/art/fx/hyperspace fx/warpmap_11.tga",
+    "data:/art/fx/hyperspace fx/warpmap_12.tga", 
+    "data:/art/fx/hyperspace fx/warpmap_13.tga", 
+    "data:/art/fx/hyperspace fx/warpmap_14.tga",
+    "data:/art/fx/hyperspace fx/warpmap_15.tga",
+    "data:/art/fx/hyperspace fx/warpmap_16.tga",
+    "data:/art/fx/hyperspace fx/warpmap_17.tga",
+    "data:/art/fx/hyperspace fx/warpmap_18.tga",
+    "data:/art/fx/hyperspace fx/warpmap_19.tga",
+    "data:/art/fx/hyperspace fx/warpmap_20.tga",
+    "data:/art/fx/hyperspace fx/warpmap_21.tga",
+    "data:/art/fx/hyperspace fx/warpmap_22.tga",
+    "data:/art/fx/hyperspace fx/warpmap_23.tga",
+    "data:/art/fx/hyperspace fx/warpmap_24.tga",
+    "data:/art/fx/hyperspace fx/warpmap_25.tga",
+    "data:/art/fx/hyperspace fx/warpmap_26.tga",
+    "data:/art/fx/hyperspace fx/warpmap_27.tga",
+    "data:/art/fx/hyperspace fx/warpmap_28.tga",
+    "data:/art/fx/hyperspace fx/warpmap_29.tga",}
+
+
+
+
+

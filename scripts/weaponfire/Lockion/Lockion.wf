@@ -1,0 +1,10 @@
+hitfx = ""
+bulletfx = ""
+nopenetratefx = ""
+blowthroughfx = ""
+deathtype = "deathBeam"
+scartype = "iontrail"
+hit_sfx = ""
+nopentrate_sfx = ""
+hit_clamp = 
+    { 0.5, 1.25, }

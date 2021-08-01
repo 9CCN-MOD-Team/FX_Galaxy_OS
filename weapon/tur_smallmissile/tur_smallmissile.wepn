@@ -1,0 +1,9 @@
+StartWeaponConfig(NewWeaponType,"Fixed","Missile","tur_smallmissile","Normal",60,2000,0,0,0,0,1,0,0,4,0,0,0,0,0,0,0.1,"Normal",0,0,0)
+AddWeaponResult(NewWeaponType,"Hit","SpawnWeaponFire","Target",0,0,"tur_SmallMissileBurst")
+AddWeaponResult(NewWeaponType,"Miss","SpawnWeaponFire","Target",0,0,"tur_SmallMissileBurst")
+setPenetration(NewWeaponType,5,1,{
+  PlanetKillerArmour = 0,
+})
+setMissileKiller(NewWeaponType,1);setAccuracy(NewWeaponType,1)
+setAngles(NewWeaponType,179,0,0,0,0)
+setMiscValues(NewWeaponType,5,0)

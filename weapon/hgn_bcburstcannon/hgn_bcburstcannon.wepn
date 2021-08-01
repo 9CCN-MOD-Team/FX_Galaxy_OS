@@ -1,0 +1,29 @@
+StartWeaponConfig(NewWeaponType,"AnimatedTurret","Bullet","dread_bomb_advanced","Normal",3500,6000,0,0,0,0,1,1,1,2,0,0,1,1,60,25,0.1,"Normal",1,0,0)
+AddWeaponResult(NewWeaponType,"Hit","DamageHealth","Target",1250,1250,"")
+setPenetration(NewWeaponType,50,1,{
+  PlanetKillerArmour = 0,
+},{
+  SubSystemArmour = 0.3,
+},{
+  heavyarmour = 2,
+})
+setMissileKiller(NewWeaponType,1);setAccuracy(NewWeaponType,1,{
+  Fighter = 0,
+},{
+  Corvette = 0,
+},{
+  munition = 0,
+},{
+  Frigate = 1,
+  damage = 1,
+},{
+  SmallCapitalShip = 1,
+  damage = 1,
+},{
+  BigCapitalShip = 1,
+  damage = 1,
+},{
+  Missile = 0,
+})
+setAngles(NewWeaponType,3,-170,170,-10,20)
+setMiscValues(NewWeaponType,5,0)

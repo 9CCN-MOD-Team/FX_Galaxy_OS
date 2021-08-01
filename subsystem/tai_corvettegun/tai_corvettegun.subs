@@ -1,0 +1,11 @@
+
+NewSubSystemType = StartSubSystemConfig()
+NewSubSystemType.selectionLimit=1
+NewSubSystemType.type="Weapon"
+NewSubSystemType.hasIcon=0
+LoadHODFile(NewSubSystemType,1); 
+NewSubSystemType.AttackFamily="Corvette"
+NewSubSystemType.ArmourFamily="LightArmour"
+--StartSubSystemWeaponConfig(NewSubSystemType,"Tai_HvCorvette1","Weapon_Top","Weapon_Top");
+--StartSubSystemWeaponConfig(NewSubSystemType,"Tai_HvCorvette_Special1","Weapon_Top","Weapon_Top_Special");
+StartSubSystemWeaponConfig(NewSubSystemType,"TAI_heavykineticturret","Weapon_Top","Weapon_Top")

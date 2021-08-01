@@ -1,0 +1,24 @@
+-- LuaDC version 0.9.19
+-- 2010-10-4 20:04:51
+-- LuaDC by Age2uN
+-- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
+--
+fps = 25
+startFrame = 0
+loopCount = 1
+layout = 
+    { 4, 2, }
+textureLayout = 
+    { 
+        { "data:/ART/FX/GreenLaser/GreenLaser_TP.tga", 0, 0, }, 
+        { "data:/ART/FX/GreenLaser/GreenLaser_TP.tga", 0, 1, }, 
+        { "data:/ART/FX/GreenLaser/GreenLaser_TP.tga", 1, 0, }, 
+        { "data:/ART/FX/GreenLaser/GreenLaser_TP.tga", 1, 1, }, 
+        { "data:/ART/FX/GreenLaser/GreenLaser_TP.tga", 2, 0, }, 
+        { "data:/ART/FX/GreenLaser/GreenLaser_TP.tga", 2, 1, }, 
+        { "data:/ART/FX/GreenLaser/GreenLaser_TP.tga", 2, 0, }, 
+        { "data:/ART/FX/GreenLaser/GreenLaser_TP.tga", 1, 1, }, 
+        { "data:/ART/FX/GreenLaser/GreenLaser_TP.tga", 1, 0, }, 
+        { "data:/ART/FX/GreenLaser/GreenLaser_TP.tga", 0, 1, }, 
+        { "data:/ART/FX/GreenLaser/GreenLaser_TP.tga", 0, 0, }, 
+    }

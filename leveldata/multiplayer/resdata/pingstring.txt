@@ -1,0 +1,41 @@
+--"¡Ö¡Ô¡Ù£½¡Ü¡Ý£¼£¾¡Ú¡Û¡Ë¡À£­£«¡Á¡Â£¯¡Ò¡Ó¡Ø¡Þ¡Ä¡Å¡Æ¡Ç¡È¡É¡Ê¡ß¡à¡Í¡Î¡Ï¡Ð¡Ñ¡Õ¡×¡Ì"
+--"¡ì¡í¡î¡ï¡ð¡ñ¡ò¡ó¡ô¡õ¡ö¡÷¡ø¡ù¡ú¡û¡ü¡ý¡þ£££¦£À£Ü£Þ£ß£þ¨D¡á¡â"
+
+--SPingStringVersion = "CS"
+
+SShieldBlueString1 = "_"
+SShieldBlueString2 = " "
+SShieldRedString1 = " "
+SShieldRedString2 = "_"
+
+SArmorCrociString1 = "_"
+SArmorCrociString2 = " "
+
+SShieldOverString = "¡Ñ"
+
+SArmorOverString = "¡Ô"
+
+SFuelOverString = "¡ø"
+
+SLevelString1 = "¡ï"
+SLevelString2 = "¡î"
+
+SThereIsNothing = "--"
+
+--SPingStringVersion = "EN"
+
+SSShieldBlueString1 = "_"
+SSShieldBlueString2 = "   "
+SSShieldRedString1 = "   "
+SSShieldRedString2 = "_"
+
+SSArmorCrociString1 = "_"
+SSArmorCrociString2 = "   "
+
+SSShieldOverString = "S:"
+
+SSArmorOverString = "A:"
+
+SSFuelOverString = "F:"
+
+SLevelTitle = "Lv."

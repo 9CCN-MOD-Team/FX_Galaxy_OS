@@ -1,0 +1,5 @@
+VGR_EWFIGHTER_Launched_OnSet = function(ship)
+  --startEffect(ship, "guang")
+    startAnim(ship, "Zhuan")
+    setLoopCount(ship, "Zhuan", 10000000)
+end

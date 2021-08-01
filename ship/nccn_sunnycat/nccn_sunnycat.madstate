@@ -1,0 +1,67 @@
+
+
+NCCN_SUNNYCAT_CodeRed_OnSet = function(ship)
+    startAnim(ship, "red")
+    setLoopCount(ship, "red", 100000)
+    if(isAnimRunning(ship,"Mad_Open") == 0) then
+	setState(ship, "CodeRed", 0)
+        startTime = 0
+        if(isAnimRunning(ship,"Mad_Close") ~= 0) then
+            startTime = getAnimLength(ship, "Mad_Close") - getTime(ship, "Mad_Close")
+            stopAnim(ship, "Mad_Close")
+            --endEffect(ship, "Mad_Close")
+        end
+        startAnim(ship, "Mad_Open")
+        startEffect(ship, "Fire_FX")
+        setTime(ship,"Mad_Open",startTime)
+        setPauseTime(ship, "Mad_Open", 1000)
+    end
+end
+
+NCCN_SUNNYCAT_CodeRed_OnPause = function(ship)
+    setState(ship, "CodeRed", 1)
+end
+
+NCCN_SUNNYCAT_CodeGreen_OnSet = function(ship)
+    if(isAnimRunning(ship,"Mad_Close") == 0) then
+        startTime = 0
+        if(isAnimRunning(ship,"Mad_Open") ~= 0) then
+            startTime = getAnimLength(ship, "Mad_Open") - getTime(ship, "Mad_Open")
+            stopAnim(ship, "Mad_Open")
+            endEffect(ship, "Fire_FX")
+        end
+        startAnim(ship, "Mad_Close")
+        --startEffect(ship, "Mad_Close")
+        setTime(ship,"Mad_Close",startTime)
+        setPauseTime(ship, "Mad_Close", 1000)
+        setLoopCount(ship, "red", 0)
+    end
+end
+
+NCCN_SUNNYCAT_ResourceStart_OnSet = function(ship)
+	setState(ship, "ResourceStart", 0)
+	stopAnim(ship, "Mad_Close")
+	stopAnim(ship, "Mad_Shock")
+	 --endEffect(ship, "E_Shocking")
+	startAnim(ship, "Mad_Open")
+	 startEffect(ship, "E_Open")
+	setPauseTime(ship, "Mad_Open", 1000)
+end
+NCCN_SUNNYCAT_ResourceDo_OnSet = function(ship)
+	stopAnim(ship, "Mad_Open")
+	stopAnim(ship, "Mad_Close")
+	startAnim(ship,"Mad_Shock")
+	 --startEffect(ship, "E_Shocking")
+	setLoopCount(ship, "Mad_Shock", 999999)
+	setState(ship, "ResourceDo", 1)
+end
+
+NCCN_SUNNYCAT_ResourceEnd_OnSet = function(ship)
+	stopAnim(ship, "Mad_Open")
+	stopAnim(ship, "Mad_Shock")
+	 --endEffect(ship, "Weapon_Triton")
+	startAnim(ship, "Mad_Close")
+	 startEffect(ship, "E_Close")
+	setState(ship, "ResourceEnd", 1)
+	setPauseTime(ship, "Mad_Close", 1000)
+end

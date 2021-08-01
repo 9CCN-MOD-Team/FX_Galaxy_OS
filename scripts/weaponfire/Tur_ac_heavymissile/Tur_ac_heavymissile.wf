@@ -1,0 +1,11 @@
+hitfx = "tur_torpedo_explotion"
+bulletfx = "dmg_cloud_torpedo_combo"
+nopenetratefx = "tur_torpedo_explotion_miss"
+deathtype = "deathCannon"
+scartype = "Hgn_Torpedo/Torpedo"
+hit_sfx = "EXPLOSION/LARGE/ETG_EXPLODE_LARGE_PLASMA"
+nopenetrate_sfx = "WEAPON/FRIGATE/IMPACT/WEAPON_FRIGATE_TORPEDO_HIT"
+hit_clamp = {
+  5,
+  5,
+}

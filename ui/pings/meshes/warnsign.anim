@@ -1,0 +1,9 @@
+fps = 2;
+startFrame = 0;
+loopCount =100000
+;
+texture = 
+{
+    "data:UI/Pings/Meshes/WarnSign.tga",
+    "data:UI/Pings/Meshes/Nothing.tga",
+}

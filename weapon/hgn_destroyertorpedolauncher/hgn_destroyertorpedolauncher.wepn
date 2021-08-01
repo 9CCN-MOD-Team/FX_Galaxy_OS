@@ -1,0 +1,24 @@
+StartWeaponConfig(NewWeaponType,"Fixed","Missile","Hgn_HeavyTorpedo","Normal",120,4500,0,0,0,0,1,0,1,15,0,0,1,1,0,0,0.1,"Normal",0,0,0)
+AddWeaponResult(NewWeaponType,"Hit","DamageHealth","Target",3000,3000,"")
+setPenetration(NewWeaponType,5,1,{
+  PlanetKillerArmour = 0,
+},{
+  MediumArmour = 1,
+},{
+  SubSystemArmour = 0.3,
+},{
+  ResArmour = 0.4,
+},{
+  lightarmour = 0.5,
+},{
+  MoverArmour = 2,
+})
+setMissileKiller(NewWeaponType,1);setAccuracy(NewWeaponType,1,{
+  Fighter = 0,
+},{
+  Corvette = 0,
+},{
+  munition = 0,
+})
+setAngles(NewWeaponType,179,0,0,0,0)
+setMiscValues(NewWeaponType,0,4)

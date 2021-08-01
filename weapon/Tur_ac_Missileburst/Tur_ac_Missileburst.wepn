@@ -1,0 +1,10 @@
+StartWeaponConfig(NewWeaponType,"Fixed","SphereBurst","TAI_SmallMissile","Normal",0,0,60,2,0,0,20,0,0,0,0,0,0,0,0,0,0.1,"Normal",1,0,0)
+AddWeaponResult(NewWeaponType,"Hit","DamageHealth","Owner",2000,2000,"")
+setPenetration(NewWeaponType,5,1,{
+  lightarmour = 0.5,
+},{
+  PlanetKillerArmour = 0,
+},{
+  ResArmour = 0.25,
+})
+setAngles(NewWeaponType,180,0,0,0,0)

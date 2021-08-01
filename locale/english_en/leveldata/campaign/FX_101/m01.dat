@@ -1,0 +1,74 @@
+filerange 40901 41000
+rangestart 40901 41000
+
+40901	FX:Galaxy Tutorial
+40902	Welcome to the FX:Galaxy tutorial.
+40903	In this tutorial we will go over some of the key differences between the FXmod and the base game, as well as some of its features.
+40904	This tutorial assumes you are familiar with the basics of Homeworld. If you are not, please launch the game without mods and complete the regular tutorial first. 
+40905	Click [OK] to continue and start the FX:Galaxy tutorial.#+
+40906	FX:Galaxy adds 4 new playable factions to the base game. In this tutorial we will be playing as one of them, the Progenitors.
+40907	Pitting the 8 races against each other in Deathmatch is one option. But besides that there also is a lot of other new content to explore. Our Achievements system can help you on your way.
+40908	Locate and click on the [Achievements] button at the top of your screen.
+40909	Good job.
+40910	This is the Achievements window. Each type of content in the FXmod has at least one achievement associated with it. There are achievements for the new SP content, game modes, and so on.
+40911	The Achievements system functions as a roadmap to all available content in the FXmod, and helps you keep track of your feats.
+40912	Achievements can be accessed both in-game and from the main menu. Close the achievements tab when you are ready to continue.
+40913	We will now look at unit production and abilities.
+40914	In the FXmod all 8 races have their own playing styles and ways in which they unlock units. Unit abilities also play a bigger role than in the base game.
+40915	We will first test unit production. To begin, build some [Partner] units from the Phase Prism located here.
+40916	As you may have seen in the Partner's description, this unit has the ability clear enemy mines and missiles. All that a unit does is listed in its build menu entry - reading these pays off.
+40917	A Minelayer Corvette has deployed a minefield here. Select your Partners, and drag a selection-box around the mines while holding down CTRL + SHIFT to force-attack them. Do this now.
+40918	The minefield has disappeared. Well done.
+40919	The next trial will look at production systems and research. Click [OK] to continue.#+
+40920	In the FXmod units are mostly unlocked via subsystems, or units fulfilling such a purpose. Chassis research has been abolished, and research itself streamlined.
+40921	Each race unlocks units differently. The Progenitors, for example, rely on utility vessels known as 'Pyramids'.
+40922	Pyramids are essentially mobile subsystems. There is one for each weapon type used by the Progenitors. Having these vessels up anywhere on the field unlocks the units using that weaponry.
+40923	The allied AI just transferred his Pyramid - Photon Bomb to you. [Wasps] are now available for construction. Build a few, and click [OK] to continue when ready.#+
+40924	Additional Pyramids are unlocked via the Progenitors' flagship unit, Balcora Gate. Balcora Gate houses three subsystems known as 'Cores', which in turn unlock more Pyramids and several unit abilities.
+40925	Balcora Gate was just transferred to you. Explore its build options, and construct the [Core - Hyperspace Force] subsystem.
+40926	The subsystems are now building. In offline mode, you can use time compression to make waiting periods go by faster. Press SHIFT + | to accelerate the gamespeed. Try this now.
+40927	The effect of time compression can be stacked, but this takes an increased toll on your machine. Press the | button to return to the default game speed.
+40928	The Core - Hyperspace Force has been constructed. 
+40929	When you are ready to proceed, click [OK] to continue.#+
+40930	We will now take a closer look at unit abilities in the FXmod.
+40931	A Capture Mover has just emerged from hyperspace here.
+40932	Use the Capture Mover to capture the enemy Heavy Missile Frigate located here.
+40933	Some units can disable other units' abilities. This Vaygr EW Frigate is one of them. It needs to be disposed of.
+40934	The Phase Prism's [Hyperspace Delivery] ability will help us out here. This ability is used to quickly transport smaller units across large distances.
+40935	Order your Wasps to stay docked with your Phase Prism nearby via the [Launch] manager, and then activate its ability.
+40936	Next, activate the [Hyperspace Delivery] ability on the second Phase Prism that is located here.
+40937	You are most clever.
+40938	Some unit abilities focus on utility instead of combat. The Phase Prism's ability is one such example.
+40939	Use your Wasps to destroy the enemy EW Frigate, and then retry capturing the Heavy Missile Frigate with your Capture Mover.
+40940	Excellent.
+40941	Passive abilities, like the EW Frigate's, can range from detecting cloaked ships to aiding friendlies and/or crippling enemies. Again: the unit descriptions are your friend.#+
+40942	We will now try out one more unit ability, using this Keeper.
+40943	Use the Keeper's [Energy Shield] ability at the right moment to block the incoming Battlecruiser's attack.
+40944	Well done.
+40945	Proper usage of unit abilities can help turn the battle in your favor. As you explore and play the FXmod you'll automatically get the hang of unit abilities and other systems, such as research.#+
+40946	This concludes the FX Tutorial. To further hone your skills and get used to the mod we recommend continuing in our Skirmish Campaign: The Shimmering Path. Good luck!
+40947	(You have completed the FX:Galaxy tutorial. A small Vaygr fleet will arrive soon in case you want to further try out the Progenitors and their units. If not, press the [Hyperspace] button at anytime to return to the main menu.)
+40948	Trial failed. Let's try again.
+40949	Select the Keeper, and press its ability button (or hotkey [T]) at the right moment to block the incoming attack. The attack will start immediately after you press [OK].#+
+40950	Explore the Achievements System
+40951	Click on the [Achievements] button atop your screen to bring up the achievement system. 
+40952	Unit Abilities - Basics
+40953	1. Build a Partner from your Phase Prism.\n2. Use the Partner to clear the enemy mines ahead via force-attack (Hold CTRL + SHIFT and drag a selection box around the mines).\n\nIf you can't see the mines, press the TAB button repeatedly.
+40954	Unit Production
+40955	1. Build one or more Wasps from your Phase Prism. \n2.Construct Core-Hyperspace Force on Balcora Gate.\n(Optional) Use the time compression feature.
+40956	Capture the Frigate
+40957	Unit Abilities - Intermediate
+40958	1. Bring your Capture Mover to the location indicated in the Sensors Manager. \n2. Use the Phase Prism's Hyperspace Delivery ability ["Stay Docked">Ability on Prism1 > Ability on Prism2] \n3. Destroy the EW Frigate.\n4. Capture the Heavy Missile Frigate.
+40959	Unit Abilities - Advanced
+40960	Use the Keeper's Energy Shield ability at the right time.\n\n TIP: Watch for when the Vaygr Battlecruiser starts firing, and then quickly activate it.
+40961	(Optional) Defeat the Vaygr fleet
+40962	Explore the Progenitors some more; build units, and defeat the small Vaygr fleet that will arrive soon.
+40963	Tutorial Staging Force
+40964	A friendly Keeper has just hyperspaced in.
+40965	The EW Frigate was destroyed. Now try capturing the Heavy Missile Frigate again.
+40966	The tutorial will continue once the Hyperspace Force Core has been built. Remember you can check the [OBJECTIVES] and [RECALL] buttons if you need a recap.
+
+rangeend
+
+
+

@@ -1,0 +1,10 @@
+NewSubSystemType = StartSubSystemConfig()
+NewSubSystemType.selectionLimit=1
+NewSubSystemType.hasIcon=0
+NewSubSystemType.type = "System"
+NewSubSystemType.typeString = "FrigateProduction"
+NewSubSystemType.visible = 1
+LoadHODFile(NewSubSystemType,1)
+NewSubSystemType.AttackFamily = "SubSystem"
+NewSubSystemType.ArmourFamily = "SubSystemArmour"
+loadShipPatchList(NewSubSystemType,"data:sound/sfx/ship/Hiigaran/Subsystems/",1,"HPSubsystemCapShipAmb")

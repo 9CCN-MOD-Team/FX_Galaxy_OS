@@ -1,0 +1,11 @@
+hitfx = "plasma_hit_spray_dread"
+bulletfx = "kad_energycannon_med_combo" 
+nopenetratefx = "plasma_hit_spray_dread"
+deathtype = "deathPlasma"
+scartype = "Plasma_Bomb/Plasma_Bomb"
+hit_sfx = "weapon/fighter/impact/WEAPON_FIGHTER_Pea_shooter_Hit"
+nopenetrate_sfx = "WEAPON/FIGHTER/IMPACT/WEAPON_FIGHTER_PLASMA_LANCE_BEAM_HIT"
+hit_clamp = {
+  1,
+  1,
+}

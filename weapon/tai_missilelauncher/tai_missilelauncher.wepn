@@ -1,0 +1,9 @@
+StartWeaponConfig(NewWeaponType,"Fixed","Missile","TAI_smallmissile","Normal",120,6000,0,0,0,0,1,0,0,1,0,0,1,1,0,0,0.1,"Normal",0,0,0)
+AddWeaponResult(NewWeaponType,"Hit","SpawnWeaponFire","Target",0,0,"tai_SmallMissileBurst")
+AddWeaponResult(NewWeaponType,"Miss","SpawnWeaponFire","Target",0,0,"tai_SmallMissileBurst")
+setPenetration(NewWeaponType,5,1,{
+  PlanetKillerArmour = 0,
+})
+setMissileKiller(NewWeaponType,1);setAccuracy(NewWeaponType,1)
+setAngles(NewWeaponType,180,0,0,0,0)
+setMiscValues(NewWeaponType,10,0)

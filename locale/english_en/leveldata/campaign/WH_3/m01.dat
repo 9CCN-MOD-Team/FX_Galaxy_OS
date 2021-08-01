@@ -1,0 +1,130 @@
+filerange 41001 41150
+rangestart 41001 41150
+41001	Vishari Corridor
+41002	Approach is clear, all fleet maintain fire and proceed to E-12.
+41003	Detecting Vaygr units massing ahead. A blockade is forming.
+41004	Our rear fleet will deal with their fleeing forces. Direct all focus to breaking the blockade ahead.
+41005	Enemy blockade neutralized. 
+41006	Approaching vanishing point, T-5 to contact.
+41007	Check to confirm, all fleet stop. 
+41008	Data confirms these are the last co-ordinates our scouting fleet relayed before it disappeared. There are no signs of debris.
+41009	We have no intel beyond this point. Advanced sensors are operating at full capacity, but local interference is higher than expected. Long-distance comms are offline. 
+41010	Short-range scans however have returned readings from these 3 locations. Possibly sources of the interference. Send out smaller crafts to investigate while we recalibrate the sensors. 
+41011	An enemy lookout post would have intel on the region. We recommend securing it. Our vanguard carrier has prepared a rapid response detachment to assist.
+41012	Perimeter secured. Dock a strikecraft with the base.
+41013	We're in. Uplink established. 
+41014	Patching into relay node now ... standby for update.
+41015	From the base, we have learned our advance has left the enemy in disarray. Emergency evacuations are underway across the sector. 
+41016	The retreating Vaygr forces are massing here. Their capabilities are unknown.
+41017	We cannot navigate the corridor blind. Recommend capturing the marked outposts for intel while the enemy is disorganized.
+41018	Details have been sent to [OBJECTIVES]. Our carrier will assist you in the operation. It has been placed under your command.
+41019	Intercepted transmissions indicate that a major enemy reinforcement fleet is en-route. Projections indicate we must begin our assault in 20 minutes. Finish any ongoing operations before then. 
+41020	Enemy patrols and ECM Probes litter the corridor. Advice caution. Frigates and Capital Ships should stay clear of Detection Zone indicated in the Sensors Manager. 
+41021	T-0, all fleet standby for operation start.
+41022	Flight control engaged, assuming position. Uplink commencing. 
+41023	Enemy contacts approaching Site A. Please assist.
+41024	Uplink at 50%.
+41025	Uplink at 80%.
+41026	Mission accomplished, we're in. We have loaded what RUs we could onto containers present in the complex and jettisoned them. They are ready for retrieval.
+41027	Resource Collectors be advised: container locations marked on sensors. 
+41028	Objective A Complete.
+41029	Frigate destroyed, uplink lost. Additional enemy contacts inbound, abort mission and retreat.
+41030	Abort code received and confirmed. Abort mission, repeat abort mission.
+41031	Objective A Failed.
+41032	We're in. It appears to be an enemy control center of some kind. Standby for update.
+41033	Self-destruct sequence confirmed. The enemy Sensor Distortion Probes in the region have been destroyed. Additional data forwarded to command.
+41034	Objective B Complete.
+41035	Interference in the region is diminishing. Long-distance communications re-established. Updating rear fleet on the current situation.
+41036	Our rear fleet reports they have sent up several units to assist. A Sensors Array is among them. However, in this environment its range is limited to a 25km radius around the vessel.
+41037	We must capture at least one Frigate at Site C for the base access codes. Salvage Corvettes will be neccessary.
+41038	Recommend engaging the garrison fleet before we send our salvage crews in.
+41039	Warning, Frigate-class vessels or higher are approaching the corridor. They will be detected and risk an enemy counter-offensive unless they adjust course immediately.
+41040	There are no enemy Frigates left to acquire the base access codes from. Crew extraction has to be postponed until the corridor has been secured.
+41041	Objective C Failed.
+41042	Garrison eliminated. Site C is secured. Disengaging outer locks, combat teams standby for entry. 
+41043	Assuming position.
+41044	Standby for acquisition and transfer.
+41045	Mission accomplished.
+41046	Thanks for breaking us out fleet. We were scouting the area when our sensors suddenly went haywire. Moments later they were all over us. 
+41047	Our crews are returning to their ships. We don't know more on the corridor than you do, but you can count on our firepower when you begin your assault.
+41048	Our scouting fleet will remain on standby. They will keep weapons and engines in offline until we attack to avoid raising suspicion.
+41049	Objective C Complete.
+41050	All objectives in the region have been completed. Marshalling the fleet, all teams return and standby for mission start. 
+41051	Roger that Control. All units retreat, repeat all units retreat.
+41052	Forward teams be advised, 6 minutes to assault. Begin to wrap up any ongoing operations and standby for return.
+41053	T-3 to mission start. Ensure all fleet assets are ready.
+41054	Enemy reinforcements emerging from hyperspace.
+41055	We have been detected.
+41056	Short-range sensors have identified a Vaygr outpost and Shipyard at the mouth of the Corridor. Without them, the enemy's resistance will crumble. 
+41057	Targets destroyed. The corridor is secure. 
+41058	You have done well here, soldier. From this day on, the name of the Taiidani will once again be known throughout this galaxy. 
+41059	We will hold position here and assist our main fleet with establishing a safe perimeter. But I heard you have been called to duty elsewhere, and will be returning ahead. 
+41060	Our fates are intertwined. I don't know where you will go next, but I have a feeling this galaxy will be seeing more of you. Until we meet again...
+41061	MISSION COMPLETE
+41062	Advance the Battleship
+41063	We are out of time.
+41064	Enemy main fleet arrival imminent.
+41065	Vaygr Blockade
+41066	Investigate
+41067	The Vaygr have rigged local asteroids with Hyperspace Inhibitors. These alone cannot cause this level of interference.
+41068	Some of these asteroids have been refurbished for other purposes. This one has been abandoned recently..the entry way has been destroyed.
+41069	Readings increasing, enemy signatures detected. 
+41070	It appears to be an enemy lookout post. Signals indicate ongoing evacuations. Awaiting orders.
+41071	Destroy the Garrison
+41072	Site A - Resource Deposit
+41073	Site B - ???
+41074	Site C - Prison Complex
+41075	[A] Seize the Resource Deposit
+41076	Escort a Frigate to Site A, and protect it.\n[Briefing]This base appears to be an unmanned resource deposit. A Frigate has enough processing power to hack into and override security.
+41077	[B] Secure the Unidentified Base
+41078	Find a way to dock a strikecraft unit with the asteroid at Site B.\n[Briefing] Data identified this outpost as "AUX_FLD_CTR". There is no way to tell what it is, but it is heavily defended. 
+41079	[C] Rescue Captured Allies
+41080	Use Salvage Corvettes to capture at least 1 enemy Frigate at Site C, then destroy the rest.\n[Briefing]We located ships belonging to our missing scout fleet. The base they are being held at is tighly sealed, but a nearby Vaygr Frigate would have the access codes.
+41081	%d Corridor Infiltration Begins
+41082	%d Attack on the Vaygr 
+41083	Investigate the Area
+41084	Use Scouts to investigate the marked locations.
+41085	Secure the Base
+41086	Short range sensors have identified an enemy lookout post. Destroy its garrison before the enemy can evacuate it, then dock a strikecraft with the base.
+41087	Prepare the Assault
+41088	Complete side-objectives and/or gather resources to build up the fleet.\nThe attack will begin in 20 minutes, or whenever a Frigate or Capital Ship enters the Detection Zone indicated in the Sensors Manager.
+41089	To Victory
+41090	Advance the fleet, destroy the Vaygr, and restore the Vishari Corridor to Imperial rule.
+41091	Uplink Complete In: %1MINUTES%:%2SECONDS% 
+41092	We have the advantage. It's now or never. 
+41093	We do not have the advantage, but now that we have been detected there is no other choice. We must push through and secure the corridor before the enemy's reinforcement fleet arrives.
+41094	Advance the fleet, and make sure the Vaygr will never invade Taiidan space again.
+41095	Our scouting fleet has transferred control over their elite units to us. They are en-route to assist.
+41096	Projections indicate the enemy main fleet will arrive in 15 minutes. We must push through and secure the corridor before that time.
+41097	Enemy Main Fleet Arrival: %1MINUTES%:%2SECONDS% 
+41098	Destroy the Blockade
+41099	Use the Battleship to break through the Vaygr blockade
+41100	RU Containers
+41101	Dock a strikecraft with the base
+41102	Security Level: Low
+41103	Escort Mission
+41104	Security Level: High
+41105	Combat Mission
+41106	Security Level: Medium
+41107	Capture Mission
+41108	Destroy the Station
+41109	Destroy the Shipyard
+41110	VFS Tarkrit
+41111	VFS Agranah
+41112	Vaygr Defense Fleet
+41113	Fleeing Vaygr Forces
+41114	Vishari Assault Force
+41115	Captured Scouting Fleet
+41116	Hethlim Armada
+41117	Destroy Vaygr forces
+41118	MISSION FAILED
+41119	Enemy contact at 30 degrees.
+41120	Engaging...
+41121	Roger that trailer, I see him.
+41122	Stay on top of them.
+41123	Let's make this quick and painless.
+41124	The enemy is failing...
+41133	DETECTION ZONE
+41134	(Communication Chatter)
+
+rangeend

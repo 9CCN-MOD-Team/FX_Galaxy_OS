@@ -1,0 +1,24 @@
+function carriersonly_init()
+		--local playerIndex = 0
+		--for playerIndex = 0,Universe_PlayerCount()-1,1 do
+				--if Player_IsAlive(playerIndex) == 1 then
+						--if Player_HasShipWithBuildQueue(playerIndex) == 1 then
+								--if Player_GetRace(playerIndex) == 1 then
+										--Player_RestrictBuildOption(playerIndex, "hgn_shipyard")
+										--Player_RestrictResearchOption(playerIndex, "MothershipHealthUpgrade1")
+										--Player_RestrictResearchOption(playerIndex, "MothershipMAXSPEEDUpgrade1")
+										--Player_RestrictResearchOption(playerIndex, "MothershipBUILDSPEEDUpgrade1")
+										--Player_RestrictResearchOption(playerIndex, "ShipyardHealthUpgrade1")
+										--Player_RestrictResearchOption(playerIndex, "ShipyardMAXSPEEDUpgrade1")
+										--Player_RestrictResearchOption(playerIndex, "ShipyardBUILDSPEEDUpgrade1")
+								--elseif Player_GetRace(playerIndex) == 2 then
+										--Player_RestrictBuildOption(playerIndex, "vgr_shipyard")		
+										--Player_RestrictResearchOption(playerIndex, "MothershipBUILDSPEEDUpgrade1")										
+								--else
+										--Player_RestrictResearchOption(playerIndex, "SuperCapitalShipDrive")
+								--end	
+						--end
+				--end
+		--end	
+		--Rule_Remove("carriersonly_init")
+end

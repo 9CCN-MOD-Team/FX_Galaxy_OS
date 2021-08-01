@@ -1,0 +1,21 @@
+NewSubSystemType = StartSubSystemConfig()
+NewSubSystemType.hasIcon=0
+NewSubSystemType.maxhealth = 10000
+NewSubSystemType.regentime = 0
+NewSubSystemType.selectionLimit = 1
+NewSubSystemType.type = "System"
+NewSubSystemType.typeString = "CloakGenerator"
+NewSubSystemType.costToBuild = 0
+NewSubSystemType.timeToBuild = 50
+NewSubSystemType.isResearch = 0
+NewSubSystemType.visible = 0
+LoadHODFile(NewSubSystemType,1)
+NewSubSystemType.BuildFamily = "SubSystem_Kad"
+NewSubSystemType.AttackFamily = "SubSystem"
+NewSubSystemType.DockFamily = "CantDock"
+NewSubSystemType.DisplayFamily = "SubSystemModule"
+NewSubSystemType.ArmourFamily = "SubSystemArmour"
+
+--AddSubSystemAbility(NewSubSystemType,"UseSpecialWeaponsInNormalAttack",1,"OwnShipsWithinRadius",3000)
+AddSubSystemMultiplier(NewSubSystemType,"WeaponDamage","ThisShipOnly","Linear",1,1,2000)
+AddSubSystemAbility(NewSubSystemType,"Custom",1,"ThisShipOnly",0)

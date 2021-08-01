@@ -1,0 +1,26 @@
+KPR_DELIVER_Launched_OnSet = function(ship)
+    startTime = 0
+    if(isAnimRunning(ship, "close") ~= 0) then
+        startTime = getAnimLength(ship, "close") - getTime(ship, "close")
+        stopAnim(ship, "close")
+        endEffect(ship, "Powerdown")
+    end
+    startAnim(ship, "open")
+    startEffect(ship, "Powerup")
+    setTime(ship,"open",startTime)
+    setPauseTime(ship, "open", 1000)
+end
+
+KPR_DELIVER_Docked_OnSet = function(ship)
+    startTime = 0
+    if(isAnimRunning(ship, "open") ~= 0) then
+        startTime = getAnimLength(ship, "open") - getTime(ship, "open")
+        stopAnim(ship, "open")
+        endEffect(ship, "Powerup")
+    end
+    startAnim(ship, "close")
+    startEffect(ship, "Powerdown")
+    --endEffect(ship, "Powerup")
+    setTime(ship,"Close",startTime)
+    setPauseTime(ship, "close", 1000)
+end

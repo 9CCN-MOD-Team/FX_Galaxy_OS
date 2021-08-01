@@ -1,0 +1,378 @@
+paradeSlot("kpr_Drone",{
+  1031,
+  -150,
+  1150,
+},{
+  0,
+  0,
+  1,
+},{
+  1,
+  0,
+  0,
+},0)
+paradeSlot("kpr_scout",{
+  940,
+  -100,
+  1730,
+},{
+  0,
+  0,
+  1,
+},{
+  1,
+  0,
+  0,
+},0)
+paradeSlot("kpr_bomber",{
+  865,
+  -50,
+  1375,
+},{
+  0,
+  0,
+  1,
+},{
+  1,
+  0,
+  0,
+},0)
+paradeSlot("kpr_movers",{
+  845,
+  150,
+  1075,
+},{
+  0,
+  0,
+  1,
+},{
+  1,
+  0,
+  0,
+},0)
+paradeSlot("kpr_mover1",{
+  785,
+  100,
+  725,
+},{
+  0,
+  0,
+  1,
+},{
+  1,
+  0,
+  0,
+},0)
+paradeSlot("kpr_HeavyMover",{
+  745,
+  50,
+  475,
+},{
+  0,
+  0,
+  1,
+},{
+  1,
+  0,
+  0,
+},0)
+paradeSlot("kpr_capturemover",{
+  700,
+  0,
+  225,
+},{
+  0,
+  0,
+  1,
+},{
+  1,
+  0,
+  0,
+},0)
+paradeSlot("kpr_assaultfrigate",{
+  -850,
+  0,
+  500,
+},{
+  0,
+  0,
+  1,
+},{
+  -1,
+  0,
+  0,
+},0)
+paradeSlot("kpr_IonCannonFrigate",{
+  -900,
+  -100,
+  1000,
+},{
+  0,
+  0,
+  1,
+},{
+  -1,
+  0,
+  0,
+},0)
+paradeSlot("kpr_Destroyerfrigate",{
+  -1000,
+  -200,
+  1500,
+},{
+  0,
+  0,
+  1,
+},{
+  -1,
+  0,
+  0,
+},0)
+paradeSlot("kpr_defensefieldfrigate",{
+  -800,
+  150,
+  0,
+},{
+  0,
+  0,
+  1,
+},{
+  -1,
+  0,
+  0,
+},0)
+paradeSlot("kpr_balcoragate",{
+  2500,
+  0,
+  -3500,
+},{
+  0,
+  0,
+  1,
+},{
+  1,
+  0,
+  0,
+},2000)
+paradeSlot("kpr_fakebalcoragate",{
+  0,
+  0,
+  -3000,
+},{
+  0,
+  0,
+  1,
+},{
+  1,
+  0,
+  0,
+},2000)
+paradeSlot("kpr_Deliver",{
+  0,
+  0,
+  3000,
+},{
+  0,
+  0,
+  1,
+},{
+  0,
+  1,
+  0,
+},800)
+paradeSlot("kpr_carrier",{
+  2000,
+  -1500,
+  0,
+},{
+  0,
+  0,
+  1,
+},{
+  1,
+  0,
+  0,
+},2500)
+paradeSlot("kpr_destroyer1",{
+  0,
+  200,
+  2100,
+},{
+  0,
+  0,
+  1,
+},{
+  0,
+  1,
+  0,
+},400)
+paradeSlot("kpr_ArsenalShip",{
+  0,
+  600,
+  950,
+},{
+  0,
+  0,
+  1,
+},{
+  0,
+  1,
+  0,
+},600)
+paradeSlot("kpr_dreadnaught",{
+  800,
+  0,
+  3000,
+},{
+  0,
+  0,
+  1,
+},{
+  1,
+  0,
+  0,
+},1200)
+paradeSlot("kpr_sajuuks",{
+  -2500,
+  0,
+  -4000,
+},{
+  0,
+  0,
+  1,
+},{
+  -1,
+  0,
+  0,
+},1500)
+paradeSlot("kpr_ResourceCollector",{
+  900,
+  133,
+  -618,
+},{
+  0,
+  0,
+  1,
+},{
+  1,
+  0,
+  0,
+},0)
+paradeSlot("kpr_ResourceController",{
+  900,
+  133,
+  -939,
+},{
+  0,
+  0,
+  1,
+},{
+  1,
+  0,
+  0,
+},0)
+paradeSlot("kpr_Probe",{
+  800,
+  0,
+  -320,
+},{
+  0,
+  0,
+  1,
+},{
+  1,
+  0,
+  0,
+},0)
+paradeSlot("kpr_energy_ioncannon",{
+  -1000,
+  0,
+  -800,
+},{
+  0,
+  0,
+  1,
+},{
+  0,
+  0,
+  1,
+},0)
+paradeSlot("kpr_energy_PhasedCannon",{
+  -600,
+  0,
+  -1200,
+},{
+  0,
+  0,
+  1,
+},{
+  0,
+  0,
+  1,
+},0)
+paradeSlot("kpr_energy_photonBomb",{
+  -1400,
+  0,
+  -1200,
+},{
+  0,
+  0,
+  1,
+},{
+  0,
+  0,
+  1,
+},0)
+paradeSlot("kpr_energy_photoncannon",{
+  -1000,
+  400,
+  -1200,
+},{
+  0,
+  0,
+  1,
+},{
+  0,
+  0,
+  1,
+},0)
+paradeSlot("kpr_energy_Pulsar",{
+  -1000,
+  0,
+  -1600,
+},{
+  0,
+  0,
+  1,
+},{
+  0,
+  0,
+  1,
+},0)
+paradeSlot("kpr_energy_SuperPulsar",{
+  -1000,
+  -400,
+  -1200,
+},{
+  0,
+  0,
+  1,
+},{
+  0,
+  0,
+  1,
+},0)
+paradeSlot("misc",{
+  1700,
+  600,
+  -650,
+},{
+  0,
+  0,
+  1,
+},{
+  1,
+  0,
+  0,
+},800)
+

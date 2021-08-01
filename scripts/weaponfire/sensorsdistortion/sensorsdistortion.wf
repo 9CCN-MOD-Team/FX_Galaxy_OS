@@ -1,0 +1,9 @@
+hitfx = "hit_generic"
+bulletfx = "bullet_generic"
+nopenetratefx = "nopen_generic"
+deathtype = "deathCannon"
+component = "SensorsDistortion"
+hit_clamp = {
+  1,
+  1,
+}

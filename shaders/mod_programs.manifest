@@ -1,0 +1,7 @@
+// Greetings Mod Authors!
+
+// program for shipAnim
+load program sob_xuvanim
+load program ux_shield
+load program sob_xmetal
+load program sob_xflash4

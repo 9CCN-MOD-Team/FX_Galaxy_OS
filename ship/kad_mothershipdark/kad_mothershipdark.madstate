@@ -1,0 +1,33 @@
+--打开出港路径
+KAD_MOTHERSHIPDARK_DockPathOpen_OnSet = function(ship)
+	setState(ship, "DockPathOpen", 0)
+	startTime = 0
+	if(isAnimRunning(ship, "Restore") ~= 0) then
+		startTime = getAnimLength(ship, "Restore") - getTime(ship, "Restore")
+		stopAnim(ship, "Restore")
+	end
+	startAnim(ship, "Depart")
+	setTime(ship,"Depart",startTime)
+	setPauseTime(ship, "Depart", 1000)
+end
+
+KAD_MOTHERSHIPDARK_DockPathOpen_OnPause = function(ship)
+	setState(ship, "DockPathOpen", 1)
+end
+
+--关闭出港路径
+KAD_MOTHERSHIPDARK_DockPathClosed_OnSet = function(ship)
+	setState(ship, "DockPathClosed", 0)
+	startTime = 0
+	if(isAnimRunning(ship, "Depart") ~= 0) then
+		startTime = getAnimLength(ship, "Depart") - getTime(ship, "Depart")
+		stopAnim(ship, "Depart")
+	end
+	startAnim(ship, "Restore")
+	setTime(ship,"Restore",startTime)
+	setPauseTime(ship, "Restore", 1000)
+end
+
+KAD_MOTHERSHIPDARK_DockPathClosed_OnPause = function(ship)
+	setState(ship, "DockPathClosed", 1)
+end

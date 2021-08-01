@@ -1,0 +1,2 @@
+supplyLimit("Capital",140)
+

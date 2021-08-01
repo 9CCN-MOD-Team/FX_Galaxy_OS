@@ -1,0 +1,238 @@
+effects = {
+  animations = {
+   animation1 = {
+      name = "Fire_Missle",
+      length = 3,
+      loop = 0,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    }, 
+    animation2 = {
+      name = "Weapon_HullDefense",
+      length = 0.5,
+      loop = 0,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+  },
+  events = {
+  event1 = {
+      {
+        "anim",
+        "Fire_Missle",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "Weapon_Missile_Muzzle",
+      },
+      {
+        "fx",
+        "torpedo_steam_spray",
+      },
+      {
+        "sound",
+        "WEAPON/CARRIER/FIRE/WEAPON_DESTROYER_MISSLE_LAUNCH",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event2 = {
+      {
+        "anim",
+        "Fire_Missle",
+      },
+      {
+        "animtime",
+        "0.2",
+      },
+      {
+        "marker",
+        "Weapon_MissileSlave_Muzzle",
+      },
+      {
+        "fx",
+        "torpedo_steam_spray",
+      },
+      {
+        "sound",
+        "WEAPON/CARRIER/FIRE/WEAPON_DESTROYER_MISSLE_LAUNCH",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event3 = {
+      {
+        "anim",
+        "Fire_Missle",
+      },
+      {
+        "animtime",
+        "0.4",
+      },
+      {
+        "marker",
+        "Weapon_MissileSlave1_Muzzle",
+      },
+      {
+        "fx",
+        "torpedo_steam_spray",
+      },
+      {
+        "sound",
+        "WEAPON/CARRIER/FIRE/WEAPON_DESTROYER_MISSLE_LAUNCH",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event4 = {
+      {
+        "anim",
+        "Fire_Missle",
+      },
+      {
+        "animtime",
+        "0.6",
+      },
+      {
+        "marker",
+        "Weapon_MissileSlave2_Muzzle",
+      },
+      {
+        "fx",
+        "torpedo_steam_spray",
+      },
+      {
+        "sound",
+        "WEAPON/CARRIER/FIRE/WEAPON_DESTROYER_MISSLE_LAUNCH",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event5 = {
+      {
+        "anim",
+        "Fire_Missle",
+      },
+      {
+        "animtime",
+        "0.8",
+      },
+      {
+        "marker",
+        "Weapon_MissileSlave3_Muzzle",
+      },
+      {
+        "fx",
+        "torpedo_steam_spray",
+      },
+      {
+        "sound",
+        "WEAPON/CARRIER/FIRE/WEAPON_DESTROYER_MISSLE_LAUNCH",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+  event6 = {
+      {
+        "anim",
+        "Fire_Missle",
+      },
+      {
+        "animtime",
+        "1",
+      },
+      {
+        "marker",
+        "Weapon_MissileSlave4_Muzzle",
+      },
+      {
+        "fx",
+        "torpedo_steam_spray",
+      },
+      {
+        "sound",
+        "WEAPON/CARRIER/FIRE/WEAPON_DESTROYER_MISSLE_LAUNCH",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event7 = {
+      {
+        "anim",
+        "Weapon_HullDefense",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "Weapon_HullDefense_Position",
+      },
+      {
+        "fx",
+        "ion_beam_charge_combo",
+      },
+      {
+        "sound",
+         "WEAPON/CORVETTE/FIRE/WEAPON_CORVETTE_VULCAN_KINETIC_TURRET_SHELL",
+      },
+      {
+        "fx_scale",
+        "0.5",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+  },
+}

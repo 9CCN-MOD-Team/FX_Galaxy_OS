@@ -1,0 +1,17 @@
+-- LuaDC version 0.9.19
+-- 2011-1-1 22:59:32
+-- LuaDC by Age2uN
+-- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
+--
+fps = 30
+startFrame = 0
+loopCount = 1
+texture = 
+    { "data:/ART/FX/BentusiFX/hit/hit_0.tga", 
+"data:/ART/FX/BentusiFX/hit/hit_1.tga", 
+"data:/ART/FX/BentusiFX/hit/hit_2.tga", 
+"data:/ART/FX/BentusiFX/hit/hit_3.tga", 
+"data:/ART/FX/BentusiFX/hit/hit_4.tga", 
+"data:/ART/FX/BentusiFX/hit/hit_5.tga", 
+"data:/ART/FX/BentusiFX/hit/hit_6.tga", 
+"data:/ART/FX/BentusiFX/hit/hit_7.tga", }

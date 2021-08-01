@@ -1,0 +1,12 @@
+StartWeaponConfig(NewWeaponType,"Gimble","Bullet","Kinetic_Small","Normal",2800,3000,0,0,0,0,1,1,0,1.9,0,0,0,0,0,0,0.1,"Normal",0,0,0)
+AddWeaponResult(NewWeaponType,"Hit","DamageHealth","Target",100,200,"")
+setPenetration(NewWeaponType,5,1,{
+  PlanetKillerArmour = 0,
+})
+setMissileKiller(NewWeaponType,1);setAccuracy(NewWeaponType,1,{
+  Fighter = 1,
+},{
+  Corvette = 1,
+})
+setAngles(NewWeaponType,25,0,0,0,0)
+setMiscValues(NewWeaponType,1.5,0.5)

@@ -1,0 +1,1011 @@
+effects = {
+  animations = {
+    animation1 = {
+      name = "Death",
+      length = 2,
+      loop = 0,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+    animation2 = {
+      name = "Damage",
+      length = 1,
+      loop = 1,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+    animation3 = {
+      name = "dmg01",
+      length = 1,
+      loop = 1,
+      parent = "Damage",
+      minimum = 0.25,
+      maximum = 1,
+      markers = {
+        "",
+      },
+    },
+    animation4 = {
+      name = "dmg02",
+      length = 1,
+      loop = 1,
+      parent = "Damage",
+      minimum = 0.5,
+      maximum = 1,
+      markers = {
+        "",
+      },
+    },
+    animation5 = {
+      name = "dmg03",
+      length = 1,
+      loop = 1,
+      parent = "Damage",
+      minimum = 0.75,
+      maximum = 1,
+      markers = {
+        "",
+      },
+    },
+    animation6 = {
+      name = "open",--停泊
+      length = 12,
+      loop = 0,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+    animation7 = {
+      name = "Powerup",--传送
+      length = 8,
+      loop = 1,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+    animation8 = {
+      name = "Powerdown",--关闭传送
+      length = 4,
+      loop = 0,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+  },
+  events = {
+    event1 = {
+      {
+        "anim",
+        "Death",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "marker2",
+      },
+      {
+        "fx",
+        "dmg_cloud_explosion_large",
+      },
+      {
+        "sound",
+        "Explosion/Small/ETG_Explode_Small_Plasma",
+      },
+      {
+        "fx_scale",
+        "1.5",
+      },
+    },
+    event2 = {
+      {
+        "anim",
+        "Death",
+      },
+      {
+        "animtime",
+        "0.2",
+      },
+      {
+        "marker",
+        "marker6",
+      },
+      {
+        "fx",
+        "dmg_cloud_explosion_large",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+    },
+    event3 = {
+      {
+        "anim",
+        "Death",
+      },
+      {
+        "animtime",
+        "0.1",
+      },
+      {
+        "marker",
+        "marker4",
+      },
+      {
+        "fx",
+        "dmg_cloud_explosion_large",
+      },
+      {
+        "sound",
+        "EXPLOSION/MEDIUM/ETG_EXPLODE_MEDIUM_PLASMA",
+      },
+      {
+        "fx_scale",
+        "1.5",
+      },
+    },
+    event4 = {
+      {
+        "anim",
+        "Death",
+      },
+      {
+        "animtime",
+        "0.3",
+      },
+      {
+        "marker",
+        "marker8",
+      },
+      {
+        "fx",
+        "dmg_cloud_explosion_large",
+      },
+      {
+        "fx_scale",
+        "2.5",
+      },
+    },
+    event5 = {
+      {
+        "anim",
+        "Death",
+      },
+      {
+        "animtime",
+        "0.4",
+      },
+      {
+        "marker",
+        "Root",
+      },
+      {
+        "fx",
+        "dmg_cloud_main_explosion_combo",
+      },
+      {
+        "sound",
+        "EXPLOSION/MEDIUM/ETG_EXPLODE_MEDIUM_PLASMA",
+      },
+      {
+        "fx_scale",
+        "15",
+      },
+    },
+    event6 = {
+      {
+        "anim",
+        "Death",
+      },
+      {
+        "animtime",
+        "0.05",
+      },
+      {
+        "marker",
+        "marker1",
+      },
+      {
+        "fx",
+        "dmg_cloud_explosion_large",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+    },
+    event7 = {
+      {
+        "anim",
+        "Death",
+      },
+      {
+        "animtime",
+        "0.1",
+      },
+      {
+        "marker",
+        "root",
+      },
+      {
+        "fx",
+        "dmg_cloud_explosion_large",
+      },
+      {
+        "sound",
+        "Explosion/Small/ETG_Explode_Small_Plasma",
+      },
+      {
+        "fx_scale",
+        "2.5",
+      },
+    },
+    event8 = {
+      {
+        "anim",
+        "Death",
+      },
+      {
+        "animtime",
+        "0.25",
+      },
+      {
+        "marker",
+        "marker7",
+      },
+      {
+        "fx",
+        "dmg_cloud_explosion_large",
+      },
+      {
+        "fx_scale",
+        "2",
+      },
+    },
+    event9 = {
+      {
+        "anim",
+        "Death",
+      },
+      {
+        "animtime",
+        "0.2",
+      },
+      {
+        "marker",
+        "marker3",
+      },
+      {
+        "fx",
+        "dmg_cloud_explosion_large",
+      },
+      {
+        "sound",
+        "Explosion/Large/ETG_Explode_Large_Firey",
+      },
+      {
+        "fx_scale",
+        "0.75",
+      },
+    },
+    event10 = {
+      {
+        "anim",
+        "dmg01",
+      },
+      {
+        "animtime",
+        "-1",
+      },
+      {
+        "marker",
+        "marker1,marker2",
+      },
+      {
+        "fx",
+        "dmg_damage_puff_combo_frigate,dmg_damage_cloud_puff_spray",
+      },
+      {
+        "sound",
+        "DAMAGE/SMOKE/DAMAGE_SMOKE_EXHAUST_HEAVY",
+      },
+      {
+        "fx_scale",
+        "5",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event11 = {
+      {
+        "anim",
+        "dmg02",
+      },
+      {
+        "animtime",
+        "-1",
+      },
+      {
+        "marker",
+        "marker3,marker4",
+      },
+      {
+        "fx",
+        "dmg_damage_puff_combo_frigate,dmg_damage_cloud_puff_spray",
+      },
+      {
+        "sound",
+        "DAMAGE/SMOKE/DAMAGE_SMOKE_EXHAUST_HEAVY",
+      },
+      {
+        "fx_scale",
+        "7.5",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event12 = {
+      {
+        "anim",
+        "dmg03",
+      },
+      {
+        "animtime",
+        "-1",
+      },
+      {
+        "marker",
+        "root",
+      },
+      {
+        "fx",
+        "dmg_damage_puff_combo_frigate,dmg_damage_cloud_puff_spray",
+      },
+      {
+        "sound",
+        "DAMAGE/SMOKE/DAMAGE_SMOKE_EXHAUST_HEAVY",
+      },
+      {
+        "fx_scale",
+        "10",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event13 = {--------停泊
+      {
+        "anim",
+        "open",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "glow1",
+      },
+      {
+        "fx",
+        "kpr_Deliver_hyperspace_combo",--停泊
+      },
+      {
+        "fx_scale",
+        "20",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event14 = {
+      {
+        "anim",
+        "open",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "glow1",
+      },
+      {
+        "fx",
+        "",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event15 = {-------开启传送
+      {
+        "anim",
+        "Powerup",
+      },
+      {
+        "animtime",
+        "0.5",
+      },
+      {
+        "marker",
+        "glow5",
+      },
+      {
+        "fx",
+        "kpr_Deliver_xx1",--对称体1
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event16 = {
+      {
+        "anim",
+        "Powerup",
+      },
+      {
+        "animtime",
+        "0.625",
+      },
+      {
+        "marker",
+        "glow5",
+      },
+      {
+        "fx",
+        "kpr_Deliver_xx2",--对称体2
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event17 = {
+      {
+        "anim",
+        "Powerup",
+      },
+      {
+        "animtime",
+        "0.625",
+      },
+      {
+        "marker",
+        "glow2",
+      },
+      {
+        "fx",
+        "arsenalship_gate_Yellow_combo",--小光球
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event18 = {
+      {
+        "anim",
+        "Powerup",
+      },
+      {
+        "animtime",
+        "0.625",
+      },
+      {
+        "marker",
+        "glow3",
+      },
+      {
+        "fx",
+        "arsenalship_gate_Yellow_combo",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event19 = {
+      {
+        "anim",
+        "Powerup",
+      },
+      {
+        "animtime",
+        "0.625",
+      },
+      {
+        "marker",
+        "glow2_1",
+      },
+      {
+        "fx",
+        "arsenalship_gate_Yellow_combo",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event20 = {
+      {
+        "anim",
+        "Powerup",
+      },
+      {
+        "animtime",
+        "0.625",
+      },
+      {
+        "marker",
+        "glow3_1",
+      },
+      {
+        "fx",
+        "arsenalship_gate_Yellow_combo",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event21 = {
+      {
+        "anim",
+        "Powerup",
+      },
+      {
+        "animtime",
+        "0.6875",
+      },
+      {
+        "marker",
+        "glow4",
+      },
+      {
+        "fx",
+        "fuelpod_power_light",--光环
+      },
+      {
+        "fx_scale",
+        "3",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event22 = {
+      {
+        "anim",
+        "Powerup",
+      },
+      {
+        "animtime",
+        "0.6875",
+      },
+      {
+        "marker",
+        "glow4_1",
+      },
+      {
+        "fx",
+        "fuelpod_power_light",
+      },
+      {
+        "fx_scale",
+        "3",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event23 = {
+      {
+        "anim",
+        "Powerup",
+      },
+      {
+        "animtime",
+        "0.6875",
+      },
+      {
+        "marker",
+        "glow4",
+      },
+      {
+        "fx",
+        "kpr_Deliver_beam_combo1",--光束1
+      },
+      {
+        "fx_scale",
+        "2",
+      },
+      { "fx_nlips", "on" },
+    },
+    event24 = {
+      {
+        "anim",
+        "Powerup",
+      },
+      {
+        "animtime",
+        "0.6875",
+      },
+      {
+        "marker",
+        "glow4_1",
+      },
+      {
+        "fx",
+        "kpr_Deliver_beam_combo1",
+      },
+      {
+        "fx_scale",
+        "2",
+      },
+      { "fx_nlips", "on" },
+    },
+    event25 = {
+      {
+        "anim",
+        "Powerup",
+      },
+      {
+        "animtime",
+        "0.6875",
+      },
+      {
+        "marker",
+        "glow1",
+      },
+      {
+        "fx",
+        "kpr_Deliver_power_light1",--中心的闪光灯1
+      },
+      {
+        "fx_scale",
+        "25",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event26 = {
+      {
+        "anim",
+        "Powerup",
+      },
+      {
+        "animtime",
+        "0.875",
+      },
+      {
+        "marker",
+        "glow4",
+      },
+      {
+        "fx",
+        "kpr_Deliver_beam_combo2",--光束2
+      },
+      {
+        "fx_scale",
+        "2",
+      },
+      { "fx_nlips", "on" },
+    },
+    event27 = {
+      {
+        "anim",
+        "Powerup",
+      },
+      {
+        "animtime",
+        "0.875",
+      },
+      {
+        "marker",
+        "glow4_1",
+      },
+      {
+        "fx",
+        "kpr_Deliver_beam_combo2",
+      },
+      {
+        "fx_scale",
+        "2",
+      },
+      { "fx_nlips", "on" },
+    },
+    event28 = {
+      {
+        "anim",
+        "Powerup",
+      },
+      {
+        "animtime",
+        "0.875",
+      },
+      {
+        "marker",
+        "glow1",
+      },
+      {
+        "fx",
+        "kpr_Deliver_power_light2",--中心的闪光灯2
+      },
+      {
+        "fx_scale",
+        "30",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event29 = {
+      {
+        "anim",
+        "Powerup",
+      },
+      {
+        "animtime",
+        "0.875",
+      },
+      {
+        "marker",
+        "glow1",
+      },
+      {
+        "fx",
+        "kpr_Deliver_pro_tech_beam_burn_ring_loop",--传送光球
+      },
+      {
+        "fx_scale",
+        "3",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event30 = {
+      {
+        "anim",
+        "Powerup",
+      },
+      {
+        "animtime",
+        "0.875",
+      },
+      {
+        "marker",
+        "glow1",
+      },
+      {
+        "fx",
+        "pro_tech_flare_spray",--四散的粒子
+      },
+      {
+        "fx_scale",
+        "2",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event31 = {
+      {
+        "anim",
+        "Powerup",
+      },
+      {
+        "animtime",
+        "0.875",
+      },
+      {
+        "marker",
+        "glow6",
+      },
+      {
+        "fx",
+        "kpr_Deliver_Lightning_flash",--传送闪电
+      },
+      {
+        "fx_scale",
+        "30",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event32 = {------关闭传送
+      {
+        "anim",
+        "Powerdown",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "glow4",
+      },
+      {
+        "fx",
+        "kpr_Deliver_beam_combo1",--光束1
+      },
+      {
+        "fx_scale",
+        "2",
+      },
+      { "fx_nlips", "on" },
+    },
+    event33 = {
+      {
+        "anim",
+        "Powerdown",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "glow4_1",
+      },
+      {
+        "fx",
+        "",
+      },
+      {
+        "fx_scale",
+        "2",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event34 = {
+      {
+        "anim",
+        "Powerdown",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "glow1",
+      },
+      {
+        "fx",
+        "kpr_Deliver_power_light1",--中心的闪光灯1
+      },
+      {
+        "fx_scale",
+        "25",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event35 = {
+      {
+        "anim",
+        "Powerdown",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "glow1",
+      },
+      {
+        "fx",
+        "pro_tech_flare_spray",--四散的粒子
+      },
+      {
+        "fx_scale",
+        "2",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event36 = {
+      {
+        "anim",
+        "Powerdown",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "glow6",
+      },
+      {
+        "fx",
+        "kpr_Deliver_Lightning_flash",--传送闪电
+      },
+      {
+        "fx_scale",
+        "30",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+  },
+}

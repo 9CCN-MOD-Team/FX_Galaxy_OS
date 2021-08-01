@@ -1,0 +1,5 @@
+PersistantData = {
+  StrikeGroups = {},
+  Squadrons = {},
+  Research = {},
+}

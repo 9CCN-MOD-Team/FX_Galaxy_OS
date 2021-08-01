@@ -1,0 +1,54 @@
+--NCCN_IKUY_Launched_OnSet = function(ship)
+    --startEffect(ship, "dg")
+--end
+
+
+NCCN_IKUY_Normal_OnSet = function(ship)
+    startAnim(ship, "zhuan")
+    setLoopCount(ship, "zhuan", 100000)
+end
+
+NCCN_IKUY_Launched_OnSet = function(ship)
+    startAnim(ship, "zhuan")
+    setLoopCount(ship, "zhuan", 100000)
+end
+
+NCCN_IKUY_DockPathOpen_OnSet = function(ship)
+
+    if getTime(ship, "dong") ~= 12 then
+        startEffect(ship, "open")
+        stopAnim(ship,"dong")
+        startAnim(ship,"dong")
+        setPauseTime(ship, "dong", 20)
+        --开始入港
+    end
+
+    if getTime(ship, "dong") == 12 then
+        endEffect(ship, "Repairing")
+        startEffect(ship, "open")
+        setTime(ship,"dong",14)     
+        pauseAnim(ship,"dong")    
+        --开始出港 
+    end
+
+end
+
+NCCN_IKUY_DockPathOpen_OnPause = function(ship)
+    if getTime(ship, "dong") ~= 14 then
+       startEffect(ship, "Repairing")
+       --dong动画结束且为入港状态
+    end
+end
+
+
+NCCN_IKUY_DockPathClosed_OnSet = function(ship)	
+     if  getTime(ship, "dong") > 16  then
+         endEffect(ship, "open")
+         setTime(ship,"dong",12)
+         pauseAnim(ship,"dong")
+       --入港结束，停泊完成
+     else
+         endEffect(ship, "open")
+       --出港结束
+     end
+end

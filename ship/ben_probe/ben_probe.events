@@ -1,0 +1,46 @@
+effects = 
+{ 
+	animations = 
+	{ 
+		animation1 = 
+		{ 
+			name = "Shield", 
+			length = 2, 
+			loop = 1, 
+			parent = "", 
+			minimum = 0, 
+			maximum = 0, 
+			markers = { "" }, 
+		}, 
+		animation2 = 
+		{ 
+			name = "Death", 
+			length = 1, 
+			loop = 0, 
+			parent = "", 
+			minimum = 0, 
+			maximum = 0, 
+			markers = { "" }, 
+		}, 
+	},
+	events = 
+	{ 
+		event1 = 
+		{ 
+			{ "anim", "Shield", }, 
+ 			{ "animtime", "0", }, 
+			{ "marker", "Weapon_Top_latitude", }, 
+			{ "fx", "Shield_Sphere", }, 
+			{ "fx_scale", "10", }, 
+		},
+		event2 = 
+		{ 
+			{ "anim", "Death", }, 
+ 			{ "animtime", "0", }, 
+			{ "marker", "Weapon_Top_latitude", }, 
+			{ "fx", "death_generic_fighter", }, 
+			{ "sound", "EXPLOSION/MEDIUM/ETG_EXPLODE_MEDIUM_FIREY", },
+			{ "fx_scale", "entity", }, 
+		},
+	},
+}

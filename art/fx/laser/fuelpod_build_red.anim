@@ -1,0 +1,14 @@
+fps = 30
+startFrame = 0
+loopCount = 99999
+texture = 
+        { "data:/ART/FX/laser/bl2_01.tga", 
+          "data:/ART/FX/laser/bl2_02.tga",
+          "data:/ART/FX/laser/bl2_03.tga", 
+          "data:/ART/FX/laser/bl2_04.tga",
+          "data:/ART/FX/laser/bl2_05.tga", 
+          "data:/ART/FX/laser/bl2_06.tga",
+          "data:/ART/FX/laser/bl2_07.tga", 
+          "data:/ART/FX/laser/bl2_08.tga",
+          "data:/ART/FX/laser/bl2_09.tga", 
+          "data:/ART/FX/laser/bl2_10.tga", }

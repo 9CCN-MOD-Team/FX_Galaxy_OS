@@ -1,0 +1,391 @@
+effects = {
+  animations = {
+    animation1 = {
+      name = "Weapon_KineticDriver1",
+      length = 1,
+      loop = 0,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+    animation2 = {
+      name = "Weapon_KineticDriver2",
+      length = 1,
+      loop = 0,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+    animation3 = {
+      name = "Weapon_KineticDriver3",
+      length = 1,
+      loop = 0,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+    animation4 = {
+      name = "Weapon_KineticDriver4",
+      length = 1,
+      loop = 0,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+    animation5 = {
+      name = "Weapon_KineticDriver5",
+      length = 1,
+      loop = 0,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+    animation6 = {
+      name = "Weapon_KineticDriver6",
+      length = 1,
+      loop = 0,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+    animation7 = {
+      name = "Weapon_KineticDriver7",
+      length = 1,
+      loop = 0,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+    animation8 = {
+      name = "Weapon_KineticDriver8",
+      length = 1,
+      loop = 0,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+    animation9 = {
+      name = "Death",
+      length = 2,
+      loop = 0,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+    animation10 = {
+      name = "Weapon_TorpedoLauncher1",
+      length = 1,
+      loop = 0,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+    animation11 = {
+      name = "Weapon_TorpedoLauncher2",
+      length = 1,
+      loop = 0,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+    
+  },
+  events = {
+    event1 = {
+      {
+        "anim",
+        "Weapon_KineticDriver1",
+      },
+      {
+        "marker",
+        "Weapon_KineticDriver1_Muzzle",
+      },
+      {
+        "fx",
+        "muzzle_flash_combo_small_capital",
+      },
+      {
+        "sound",
+        "WEAPON/CARRIER/FIRE/WEAPON_CARRIER_FOCUSED_SHIELD_GENERATOR_SHELL",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event2 = {
+      {
+        "anim",
+        "Weapon_KineticDriver2",
+      },
+      {
+        "marker",
+        "Weapon_KineticDriver2_Muzzle",
+      },
+      {
+        "fx",
+        "muzzle_flash_combo_small_capital",
+      },
+      {
+        "sound",
+        "WEAPON/CARRIER/FIRE/WEAPON_CARRIER_FOCUSED_SHIELD_GENERATOR_SHELL",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event3 = {
+      {
+        "anim",
+        "Weapon_KineticDriver3",
+      },
+      {
+        "marker",
+        "Weapon_KineticDriver3_Muzzle",
+      },
+      {
+        "fx",
+        "muzzle_flash_combo_small_capital",
+      },
+      {
+        "sound",
+        "WEAPON/CARRIER/FIRE/WEAPON_CARRIER_FOCUSED_SHIELD_GENERATOR_SHELL",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event4 = {
+      {
+        "anim",
+        "Weapon_KineticDriver4",
+      },
+      {
+        "marker",
+        "Weapon_KineticDriver4_Muzzle",
+      },
+      {
+        "fx",
+        "muzzle_flash_combo_small_capital",
+      },
+      {
+        "sound",
+        "WEAPON/CARRIER/FIRE/WEAPON_CARRIER_FOCUSED_SHIELD_GENERATOR_SHELL",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event5 = {
+      {
+        "anim",
+        "Weapon_KineticDriver5",
+      },
+      {
+        "marker",
+        "root",
+      },
+      {
+        "fx",
+        "muzzle_flash_combo_small_capital",
+      },
+      {
+        "sound",
+        "WEAPON/CARRIER/FIRE/WEAPON_CARRIER_FOCUSED_SHIELD_GENERATOR_SHELL",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event6 = {
+      {
+        "anim",
+        "Weapon_KineticDriver6",
+      },
+      {
+        "marker",
+        "Weapon_KineticDriver6_Muzzle",
+      },
+      {
+        "fx",
+        "muzzle_flash_combo_small_capital",
+      },
+      {
+        "sound",
+        "WEAPON/CARRIER/FIRE/WEAPON_CARRIER_FOCUSED_SHIELD_GENERATOR_SHELL",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event7 = {
+      {
+        "anim",
+        "Weapon_KineticDriver7",
+      },
+      {
+        "marker",
+        "Weapon_KineticDriver7_Muzzle",
+      },
+      {
+        "fx",
+        "muzzle_flash_combo_small_capital",
+      },
+      {
+        "sound",
+        "WEAPON/CARRIER/FIRE/WEAPON_CARRIER_FOCUSED_SHIELD_GENERATOR_SHELL",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event8 = {
+      {
+        "anim",
+        "Weapon_KineticDriver8",
+      },
+      {
+        "marker",
+        "Weapon_KineticDriver8_Muzzle",
+      },
+      {
+        "fx",
+        "muzzle_flash_combo_small_capital",
+      },
+      {
+        "sound",
+        "WEAPON/CARRIER/FIRE/WEAPON_CARRIER_FOCUSED_SHIELD_GENERATOR_SHELL",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    
+    event18 = {
+      {
+        "anim",
+        "Weapon_TorpedoLauncher1",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "Weapon_TorpedoLauncher1_Muzzle",
+      },
+      {
+        "fx",
+        "ion_beam_charge_combo",
+      },
+      {
+        "sound",
+        "WEAPON/CORVETTE/FIRE/WEAPON_CORVETTE_VULCAN_KINETIC_TURRET_SHELL",
+      },
+      {
+        "fx_scale",
+        "0.5",
+      },
+    },
+    event19 = {
+      {
+        "anim",
+        "Weapon_TorpedoLauncher2",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "Weapon_TorpedoLauncher2_Muzzle",
+      },
+      {
+        "fx",
+        "ion_beam_charge_combo",
+      },
+      {
+        "sound",
+        "WEAPON/CORVETTE/FIRE/WEAPON_CORVETTE_VULCAN_KINETIC_TURRET_SHELL",
+      },
+      {
+        "fx_scale",
+        "0.5",
+      },
+    },
+    
+    
+  },
+}

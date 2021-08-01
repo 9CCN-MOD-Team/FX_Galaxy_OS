@@ -1,0 +1,8 @@
+StartWeaponConfig(NewWeaponType,"Fixed","SphereBurst","Vgr_SmallMissile","Normal",0,0,32,2,0,0,7,0,0,0,0,0,0,0,0,0,0.1,"Normal",1,0,0);
+AddWeaponResult(NewWeaponType,"Hit","DamageHealth","Target",15,15,"");
+setPenetration(NewWeaponType,15,1,
+{PlanetKillerArmour=0});
+setAngles(NewWeaponType,180,0,0,0,0);
+
+
+setFireMultFactor(NewWeaponType, 1.0);

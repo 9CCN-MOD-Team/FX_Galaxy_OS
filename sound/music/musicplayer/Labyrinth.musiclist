@@ -1,0 +1,8 @@
+MusicList["Labyrinth"] = 
+{
+	name = "Labyrinth-Immediate_Music",
+	path = musicpath.."Labyrinth",
+	minute = 1,
+	second = 14,
+	func = MP_NoCombat,
+}

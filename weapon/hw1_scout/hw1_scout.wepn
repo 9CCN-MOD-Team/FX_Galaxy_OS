@@ -1,0 +1,15 @@
+StartWeaponConfig(NewWeaponType,"Gimble","Bullet","Kinetic_Small","Normal",1100,1250*1.1,0,0,0,0,1,1,0,1.2*0.8,0,0,0,0,0,0,0.1,"Normal",0,0,0);
+AddWeaponResult(NewWeaponType,"Hit","DamageHealth","Target",7.7,8.3,"");
+setPenetration(NewWeaponType,5,1,
+{unarmoured=0.945},
+{LightArmour=0.98},
+{PlanetKillerArmour=0});
+setMissileKiller(NewWeaponType,1);setAccuracy(NewWeaponType,1,
+{Fighter=0.09},
+{Corvette=0.35},
+{munition=0.2},
+{Frigate=0.6,damage=1},
+{SmallCapitalShip=0.6,damage=1},
+{BigCapitalShip=0.6,damage=1},
+{ResourceLarge=0.6,damage=1});
+setAngles(NewWeaponType,15,0,0,0,0);

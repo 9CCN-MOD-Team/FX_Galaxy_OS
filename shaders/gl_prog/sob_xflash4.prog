@@ -1,0 +1,29 @@
+debugReload 1
+#def SHIP_Team
+#import sob_share_xflash4.imp
+
+// Locals
+local	tex			inTexDiff		0
+local	tex			inTexGlow		1
+local	tex			inTexTeam		2
+local	tex			inTexNorm		3
+local	tex			inTexEnv0		6
+local	tex			inTexEnv1		7
+local	tex			inTexShadow		8
+local   tex                     inTexMeta               9
+local   tex                     inTexGloA               10
+local   tex                     inTexGloB               11
+local   tex                     inTexGloC               12
+local   tex                     inTexGloD               13
+
+
+local	float4		inColTeam		0.26	0.47	0.64	1
+local	float4		inColStripe		0.9		0.85	0.3		1
+local	float4		inColEffect		0		0		0		0
+
+local   float4          inFlashParams           2.0                0.1                   1.0                 1.0         
+local   float4          inFlashAddParams        2.0                0.0                   1.0                 1.0
+
+#import sob_share_format.imp
+#import sob_share_materials.imp
+#import sob_share_globals.imp

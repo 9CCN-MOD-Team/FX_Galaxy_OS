@@ -1,0 +1,12 @@
+bulletfx = "mine_clear_ring_combo_yellow"
+nopenetratefx = "dmg_cloud_spray_large"
+deathtype = "deathCannon"
+hit_clamp = 
+{
+	1,
+	1,
+}
+
+scartype = "Bullet/Bullet"
+bullet_sfx = "WEAPON/FRIGATE/IMPACT/WEAPON_FRIGATE_FLAK_CANNON_HIT"
+nopenetrate_sfx = "WEAPON/FRIGATE/IMPACT/WEAPON_FRIGATE_FLAK_CANNON_HIT"

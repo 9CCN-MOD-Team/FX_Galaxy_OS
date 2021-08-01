@@ -1,0 +1,43 @@
+NewSubSystemType = StartSubSystemConfig()
+NewSubSystemType.displayedName = "$2048"
+NewSubSystemType.sobDescription = "$2049"
+NewSubSystemType.tacticalIcon = "hexagon"
+NewSubSystemType.tacticalIconMinSize = 0.0035
+NewSubSystemType.tacticalIconMinFadeSize = 0.0045
+NewSubSystemType.tacticalIconMaxFadeSize = 0.008
+NewSubSystemType.groupMergeSize = 0.001
+NewSubSystemType.mouseOverMinFadeSize = 0.045
+NewSubSystemType.mouseOverMaxFadeSize = 0.1
+NewSubSystemType.maxhealth = 60000
+NewSubSystemType.regentime = 250
+NewSubSystemType.nlips = 0
+NewSubSystemType.nlipsRange = 0
+NewSubSystemType.nlipsFar = 0
+NewSubSystemType.nlipsFarRange = 0
+NewSubSystemType.meshRenderLimit = 0.004
+NewSubSystemType.minimumZoomFactor = 0.6800000000000001
+NewSubSystemType.selectionLimit = 0
+NewSubSystemType.preciseATILimit = 0
+NewSubSystemType.selectionPriority = 0
+NewSubSystemType.type = "Weapon"
+NewSubSystemType.typeString = "vgr_Missile"
+NewSubSystemType.collateralDamage = 100
+NewSubSystemType.inactiveTimeAfterDamage = 80
+NewSubSystemType.activateHealthPercentage = 0.1
+NewSubSystemType.costToBuild = 500
+NewSubSystemType.timeToBuild = 35
+NewSubSystemType.isResearch = 0
+NewSubSystemType.visible = 1
+NewSubSystemType.innate = 1
+LoadHODFile(NewSubSystemType,1)
+NewSubSystemType.BuildFamily = "SubSystem_vgr"
+NewSubSystemType.AttackFamily = "SubSystem"
+NewSubSystemType.DockFamily = "CantDock"
+NewSubSystemType.DisplayFamily = "SubSystemModule"
+NewSubSystemType.ArmourFamily = "SubSystemArmour"
+StartSubSystemWeaponConfig(NewSubSystemType,"vgr_dc_heavyfusionmissilelauncher","Weapon_Missile","Fire_Missle")
+
+
+
+
+

@@ -1,0 +1,46 @@
+-- LuaDC version 0.9.19
+-- 2010-11-24 22:46:55
+-- LuaDC by Age2uN
+-- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
+--
+StartWeaponConfig(NewWeaponType, "AnimatedTurret", "Bullet", "vgr_laser", "Normal", 6500, 12200, 0, 0, 0, 0, 1, 1, 1, 16, 0, 0, 1, 1, 25, 25, 0.1, "Normal", 1, 0, 0)
+AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 10000, 10000, "")
+AddWeaponResult(NewWeaponType, "Hit", "SpawnWeaponFire", "Target", 0, 0, "hugegunburst")
+AddWeaponResult(NewWeaponType, "Hit", "SpawnWeaponFire", "Target", 0, 0, "hugegunburstb")
+setPenetration(NewWeaponType, 5, 1, 
+{ 
+    unarmoured = 0.5, 
+}, 
+{ 
+    lightarmour = 0.5, 
+}, 
+{ 
+    mediumarmour = 1, 
+}, 
+{ 
+    heavyarmour = 1, 
+}, 
+{ 
+    PlanetKillerArmour = 0, })
+
+setMissileKiller(NewWeaponType,1);setAccuracy(NewWeaponType, 1, 
+{ 
+    Fighter = 0, 
+}, 
+{
+  Corvette = 0,
+},{
+  Frigate = 0.4,
+},{
+  SmallCapitalShip = 0.6,
+},{
+  BigCapitalShip = 0.6,
+},{
+  Mothership = 0.6,
+},{
+  ResourceLarge = 0.6,
+},{
+  munition = 0.3,
+})
+setAngles(NewWeaponType, 0, -120, 120, -5, 20)
+setMiscValues(NewWeaponType, 0, 0.3)

@@ -1,0 +1,533 @@
+--ExtFilter = "campaign_notforpublic"
+displayName = "$5501"
+contentType = 2
+contentName = "FX_Path"
+dofilepath("Locale:PathDesc.lua")
+contentChooseText =  Path_Text.T1
+contentThumbName = Path_Text.T2
+contentThumbDesc = Path_Text.T3
+contentSort = 0.2	-- Default is 1.0, so 0.5 will appear _before_ others.
+contentRules = "FXsingleplayer"	-- A DEFAULT that actually reads from SinglePlayerOptions.lua
+contentOrdered = 1
+
+Mission = {}
+
+Mission[1] = 
+{
+	postload = function()	
+		--playAnimatic("data:animatics/B00.lua", 0, 0)
+	end,
+	directory = "M01",
+	level = "M01.level",
+	postlevel = function(bWin)	
+		postLevelComplete()
+	end,
+	displayName = Path_Text.N1,
+	description = Path_Text.D1,
+	forcesubtitles = 1,
+}
+Mission[2] = 
+{
+	postload = function()	
+		--playAnimatic("data:animatics/B00.lua", 0, 0)
+	end,
+	directory = "M02",
+	level = "M02.level",
+	postlevel = function(bWin)	
+		postLevelComplete()
+	end,
+	displayName = Path_Text.N2,
+	description = Path_Text.D2,
+	forcesubtitles = 1,
+}
+Mission[3] = 
+{
+	postload = function()	
+		--playAnimatic("data:animatics/B00.lua", 0, 0)
+	end,
+	directory = "M03",
+	level = "M03.level",
+	postlevel = function(bWin)	
+		postLevelComplete()
+	end,
+	displayName = Path_Text.N3,
+	description = Path_Text.D3,
+	forcesubtitles = 1,
+}
+Mission[4] = 
+{
+	postload = function()	
+		--playAnimatic("data:animatics/B00.lua", 0, 0)
+	end,
+	directory = "M04",
+	level = "M04.level",
+	postlevel = function(bWin)	
+		postLevelComplete()
+	end,
+	displayName = Path_Text.N4,
+	description = Path_Text.D4,
+	forcesubtitles = 1,
+}
+Mission[5] = 
+{
+	postload = function()	
+		--playAnimatic("data:animatics/B00.lua", 0, 0)
+	end,
+	directory = "M05",
+	level = "M05.level",
+	postlevel = function(bWin)	
+		postLevelComplete()
+	end,
+	displayName = Path_Text.N5,
+	description = Path_Text.D5,
+	forcesubtitles = 1,
+}
+Mission[6] = 
+{
+	postload = function()	
+		--playAnimatic("data:animatics/B00.lua", 0, 0)
+	end,
+	directory = "M06",
+	level = "M06.level",
+	postlevel = function(bWin)	
+		postLevelComplete()
+	end,
+	displayName = Path_Text.N6,
+	description = Path_Text.D6,
+	forcesubtitles = 1,
+}
+Mission[7] = 
+{
+	postload = function()	
+		--playAnimatic("data:animatics/B00.lua", 0, 0)
+	end,
+	directory = "M07",
+	level = "M07.level",
+	postlevel = function(bWin)	
+		postLevelComplete()
+	end,
+	displayName = Path_Text.N7,
+	description = Path_Text.D7,
+	forcesubtitles = 1,
+}
+Mission[8] = 
+{
+	postload = function()	
+		--playAnimatic("data:animatics/B00.lua", 0, 0)
+	end,
+	directory = "M08",
+	level = "M08.level",
+	postlevel = function(bWin)	
+		postLevelComplete()
+	end,
+	displayName = Path_Text.N8,
+	description = Path_Text.D8,
+	forcesubtitles = 1,
+}
+Mission[9] = 
+{
+	postload = function()	
+		--playAnimatic("data:animatics/B00.lua", 0, 0)
+	end,
+	directory = "M09",
+	level = "M09.level",
+	postlevel = function(bWin)	
+		postLevelComplete()
+	end,
+	displayName = Path_Text.N9,
+	description = Path_Text.D9,
+	forcesubtitles = 1,
+}
+Mission[10] = 
+{
+	postload = function()	
+		--playAnimatic("data:animatics/B00.lua", 0, 0)
+	end,
+	directory = "M10",
+	level = "M10.level",
+	postlevel = function(bWin)	
+		postLevelComplete()
+	end,
+	displayName = Path_Text.N10,
+	description = Path_Text.D10,
+	forcesubtitles = 1,
+}
+Mission[11] = 
+{
+	postload = function()	
+		--playAnimatic("data:animatics/B00.lua", 0, 0)
+	end,
+	directory = "M11",
+	level = "M11.level",
+	postlevel = function(bWin)	
+		postLevelComplete()
+	end,
+	displayName = Path_Text.N11,
+	description = Path_Text.D11,
+	forcesubtitles = 1,
+}
+Mission[12] = 
+{
+	postload = function()	
+		--playAnimatic("data:animatics/B00.lua", 0, 0)
+	end,
+	directory = "M12",
+	level = "M12.level",
+	postlevel = function(bWin)	
+		postLevelComplete()
+	end,
+	displayName = Path_Text.N12,
+	description = Path_Text.D12,
+	forcesubtitles = 1,
+}
+Mission[13] = 
+{
+	postload = function()	
+		--playAnimatic("data:animatics/B00.lua", 0, 0)
+	end,
+	directory = "M13",
+	level = "M13.level",
+	postlevel = function(bWin)	
+		postLevelComplete()
+	end,
+	displayName = Path_Text.N13,
+	description = Path_Text.D13,
+	forcesubtitles = 1,
+}
+Mission[14] = 
+{
+	postload = function()	
+		--playAnimatic("data:animatics/B00.lua", 0, 0)
+	end,
+	directory = "M14",
+	level = "M14.level",
+	postlevel = function(bWin)	
+		postLevelComplete()
+	end,
+	displayName = Path_Text.N14,
+	description = Path_Text.D14,
+	forcesubtitles = 1,
+}
+Mission[15] = 
+{
+	postload = function()	
+		--playAnimatic("data:animatics/B00.lua", 0, 0)
+	end,
+	directory = "M15",
+	level = "M15.level",
+	postlevel = function(bWin)	
+		postLevelComplete()
+	end,
+	displayName = Path_Text.N15,
+	description = Path_Text.D15,
+	forcesubtitles = 1,
+}
+Mission[16] = 
+{
+	postload = function()	
+		--playAnimatic("data:animatics/B00.lua", 0, 0)
+	end,
+	directory = "M16",
+	level = "M16.level",
+	postlevel = function(bWin)	
+		postLevelComplete()
+	end,
+	displayName = Path_Text.N16,
+	description = Path_Text.D16,
+	forcesubtitles = 1,
+}
+Mission[17] = 
+{
+	postload = function()	
+		--playAnimatic("data:animatics/B00.lua", 0, 0)
+	end,
+	directory = "M17",
+	level = "M17.level",
+	postlevel = function(bWin)	
+		postLevelComplete()
+	end,
+	displayName = Path_Text.N17,
+	description = Path_Text.D17,
+	forcesubtitles = 1,
+}
+Mission[18] = 
+{
+	postload = function()	
+		--playAnimatic("data:animatics/B00.lua", 0, 0)
+	end,
+	directory = "M18",
+	level = "M18.level",
+	postlevel = function(bWin)	
+		postLevelComplete()
+	end,
+	displayName = Path_Text.N18,
+	description = Path_Text.D18,
+	forcesubtitles = 1,
+}
+Mission[19] = 
+{
+	postload = function()	
+		--playAnimatic("data:animatics/B00.lua", 0, 0)
+	end,
+	directory = "M19",
+	level = "M19.level",
+	postlevel = function(bWin)	
+		postLevelComplete()
+	end,
+	displayName = Path_Text.N19,
+	description = Path_Text.D19,
+	forcesubtitles = 1,
+}
+Mission[20] = 
+{
+	postload = function()	
+		--playAnimatic("data:animatics/B00.lua", 0, 0)
+	end,
+	directory = "M20",
+	level = "M20.level",
+	postlevel = function(bWin)	
+		postLevelComplete()
+	end,
+	displayName = Path_Text.N20,
+	description = Path_Text.D20,
+	forcesubtitles = 1,
+}
+Mission[21] = 
+{
+	postload = function()	
+		--playAnimatic("data:animatics/B00.lua", 0, 0)
+	end,
+	directory = "M21",
+	level = "M21.level",
+	postlevel = function(bWin)	
+		postLevelComplete()
+	end,
+	displayName = Path_Text.N21,
+	description = Path_Text.D21,
+	forcesubtitles = 1,
+}
+Mission[22] = 
+{
+	postload = function()	
+		--playAnimatic("data:animatics/B00.lua", 0, 0)
+	end,
+	directory = "M22",
+	level = "M22.level",
+	postlevel = function(bWin)	
+		postLevelComplete()
+	end,
+	displayName = Path_Text.N22,
+	description = Path_Text.D22,
+	forcesubtitles = 1,
+}
+Mission[23] = 
+{
+	postload = function()	
+		--playAnimatic("data:animatics/B00.lua", 0, 0)
+	end,
+	directory = "M23",
+	level = "M23.level",
+	postlevel = function(bWin)	
+		postLevelComplete()
+	end,
+	displayName = Path_Text.N23,
+	description = Path_Text.D23,
+	forcesubtitles = 1,
+}
+Mission[24] = 
+{
+	postload = function()	
+		--playAnimatic("data:animatics/B00.lua", 0, 0)
+	end,
+	directory = "M24",
+	level = "M24.level",
+	postlevel = function(bWin)	
+		postLevelComplete()
+	end,
+	displayName = Path_Text.N24,
+	description = Path_Text.D24,
+	forcesubtitles = 1,
+}
+Mission[25] = 
+{
+	postload = function()	
+		--playAnimatic("data:animatics/B00.lua", 0, 0)
+	end,
+	directory = "M25",
+	level = "M25.level",
+	postlevel = function(bWin)	
+		postLevelComplete()
+	end,
+	displayName = Path_Text.N25,
+	description = Path_Text.D25,
+	forcesubtitles = 1,
+}
+Mission[26] = 
+{
+	postload = function()	
+		--playAnimatic("data:animatics/B00.lua", 0, 0)
+	end,
+	directory = "M26",
+	level = "M26.level",
+	postlevel = function(bWin)	
+		postLevelComplete()
+	end,
+	displayName = Path_Text.N26,
+	description = Path_Text.D26,
+	forcesubtitles = 1,
+}
+Mission[27] = 
+{
+	postload = function()	
+		--playAnimatic("data:animatics/B00.lua", 0, 0)
+	end,
+	directory = "M27",
+	level = "M27.level",
+	postlevel = function(bWin)	
+		postLevelComplete()
+	end,
+	displayName = Path_Text.N27,
+	description = Path_Text.D27,
+	forcesubtitles = 1,
+}
+Mission[28] = 
+{
+	postload = function()	
+		--playAnimatic("data:animatics/B00.lua", 0, 0)
+	end,
+	directory = "M28",
+	level = "M28.level",
+	postlevel = function(bWin)	
+		postLevelComplete()
+	end,
+	displayName = Path_Text.N28,
+	description = Path_Text.D28,
+	forcesubtitles = 1,
+}
+Mission[29] = 
+{
+	postload = function()	
+		--playAnimatic("data:animatics/B00.lua", 0, 0)
+	end,
+	directory = "M29",
+	level = "M29.level",
+	postlevel = function(bWin)	
+		postLevelComplete()
+	end,
+	displayName = Path_Text.N29,
+	description = Path_Text.D29,
+	forcesubtitles = 1,
+}
+Mission[30] = 
+{
+	postload = function()	
+		--playAnimatic("data:animatics/B00.lua", 0, 0)
+	end,
+	directory = "M30",
+	level = "M30.level",
+	postlevel = function(bWin)	
+		postLevelComplete()
+	end,
+	displayName = Path_Text.N30,
+	description = Path_Text.D30,
+	forcesubtitles = 1,
+}
+Mission[31] = 
+{
+	postload = function()	
+		--playAnimatic("data:animatics/B00.lua", 0, 0)
+	end,
+	directory = "M31",
+	level = "M31.level",
+	postlevel = function(bWin)	
+		postLevelComplete()
+	end,
+	displayName = Path_Text.N31,
+	description = Path_Text.D31,
+	forcesubtitles = 1,
+}
+Mission[32] = 
+{
+	postload = function()	
+		--playAnimatic("data:animatics/B00.lua", 0, 0)
+	end,
+	directory = "M32",
+	level = "M32.level",
+	postlevel = function(bWin)	
+		postLevelComplete()
+	end,
+	displayName = Path_Text.N32,
+	description = Path_Text.D32,
+	forcesubtitles = 1,
+}
+Mission[33] = 
+{
+	postload = function()	
+		--playAnimatic("data:animatics/B00.lua", 0, 0)
+	end,
+	directory = "M33",
+	level = "M33.level",
+	postlevel = function(bWin)	
+		postLevelComplete()
+	end,
+	displayName = Path_Text.N33,
+	description = Path_Text.D33,
+	forcesubtitles = 1,
+}
+Mission[34] = 
+{
+	postload = function()	
+		--playAnimatic("data:animatics/B00.lua", 0, 0)
+	end,
+	directory = "M34",
+	level = "M34.level",
+	postlevel = function(bWin)	
+		postLevelComplete()
+	end,
+	displayName = Path_Text.N34,
+	description = Path_Text.D34,
+	forcesubtitles = 1,
+}
+Mission[35] = 
+{
+	postload = function()	
+		--playAnimatic("data:animatics/B00.lua", 0, 0)
+	end,
+	directory = "M35",
+	level = "M35.level",
+	postlevel = function(bWin)	
+		postLevelComplete()
+	end,
+	displayName = Path_Text.N35,
+	description = Path_Text.D35,
+	forcesubtitles = 1,
+}
+Mission[36] = 
+{
+	postload = function()	
+		--playAnimatic("data:animatics/B00.lua", 0, 0)
+	end,
+	directory = "M36",
+	level = "M36.level",
+	postlevel = function(bWin)	
+		postLevelComplete()
+	end,
+	displayName = Path_Text.N36,
+	description = Path_Text.D36,
+	forcesubtitles = 1,
+}
+Path37=random(1,4)
+Mission[37] = 
+{
+	postload = function()	
+		--playAnimatic("data:animatics/B00.lua", 0, 0)
+	end,
+	directory = "M37_"..Path37,
+	level = "M37.level",
+	postlevel = function(bWin)	
+		postLevelComplete()
+	end,
+	displayName = Path_Text.N37,
+	description = Path_Text.D37,
+	forcesubtitles = 1,
+}

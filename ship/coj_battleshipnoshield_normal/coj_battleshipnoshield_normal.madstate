@@ -1,0 +1,46 @@
+
+COJ_BATTLESHIPNOSHIELD_NORMAL_DefenseFieldActivate_OnSet = function(ship)
+    -- unset the state, we'll set it when the animation is fully complete
+    setState(ship, "DefenseFieldActivate", 0)
+    -- if we're not already doing the animation
+    if(isAnimRunning(ship, "Maingunon") == 0) then
+--        setState(ship, "CodeRed", 0)
+        startTime = 0
+        if(isAnimRunning(ship, "Maingunoff") ~= 0) then
+            startTime = getAnimLength(ship, "Maingunoff") - getTime(ship, "Maingunoff")
+            stopAnim(ship, "Maingunoff")
+        end
+        startAnim(ship, "Maingunon")
+        startEffect(ship, "Shieldstart")
+        setTime(ship,"Maingunon",startTime)
+        setPauseTime(ship, "Maingunon", 1000)
+    else
+        setState(ship, "DefenseFieldActivate", 1)
+    end
+end
+
+COJ_BATTLESHIPNOSHIELD_NORMAL_DefenseFieldActivate_OnPause = function(ship)
+    -- the Maingunon animation has finished, now we can set the state to active
+    setState(ship, "DefenseFieldActivate", 1)
+--    setState(ship, "CodeRed", 1)
+end
+
+COJ_BATTLESHIPNOSHIELD_NORMAL_DefenseFieldDeActivate_OnSet = function(ship)
+--        setState(ship, "CodeRed", 0)
+    -- stop the Maingunon and work animations, they may be running
+    if(isAnimRunning(ship,"Maingunoff") == 0) then
+        startTime = 0
+        if(isAnimRunning(ship, "Maingunon") ~= 0) then
+            startTime = getAnimLength(ship, "Maingunon") - getTime(ship, "Maingunon")
+            stopAnim(ship, "Maingunon")
+        end
+        startAnim(ship, "Maingunoff")
+        endEffect(ship, "Shieldstart")
+         startEffect(ship, "Shieldend")
+        setTime(ship,"Maingunoff",startTime)
+        setPauseTime(ship, "Maingunoff", 1000)
+    end
+    setState(ship, "DefenseFieldDeActivate", 1)
+
+end
+

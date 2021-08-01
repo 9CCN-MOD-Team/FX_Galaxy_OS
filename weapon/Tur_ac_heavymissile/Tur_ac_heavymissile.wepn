@@ -1,0 +1,22 @@
+StartWeaponConfig(NewWeaponType,"Fixed","Missile","Tur_ac_heavymissile","Normal",120,6000,0,0,0,0,1,0,0,15,0,0,0,0,0,0,0.1,"Normal",0,0,0)
+AddWeaponResult(NewWeaponType,"Hit","DamageHealth","Owner",6000,6000,"")
+setPenetration(NewWeaponType,0,1,{
+  PlanetKillerArmour = 0,
+},{
+  SubSystemArmour = 0.3,
+},{
+  resarmour = 0.2,
+})
+setMissileKiller(NewWeaponType,1);setAccuracy(NewWeaponType,1,{
+  Fighter = 0,
+},{
+  Corvette = 0,
+},{
+  Frigate = 0,
+},{
+  Resource = 0,
+},{
+  Utility = 0,
+})
+setAngles(NewWeaponType,60,0,0,0,0)
+setMiscValues(NewWeaponType,8,0)

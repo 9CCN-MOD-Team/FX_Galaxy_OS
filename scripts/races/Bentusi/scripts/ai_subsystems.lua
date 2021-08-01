@@ -1,0 +1,4 @@
+function DoSubSystemDemand_Bentusi()
+end
+
+CpuBuildSS_DefaultSubSystemDemandRules = DoSubSystemDemand_Bentusi

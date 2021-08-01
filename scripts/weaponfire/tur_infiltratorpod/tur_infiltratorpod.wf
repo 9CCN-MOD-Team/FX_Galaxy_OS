@@ -1,0 +1,11 @@
+hitfx = ""
+bulletfx = ""
+nopenetratefx = "dmg_missle_explode_combo"
+deathtype = "fiery_trail_lines_spray"
+scartype = "Vgr_HeavyMissile/Vgr_HeavyMissile"
+hit_sfx = "WEAPON/FRIGATE/IMPACT/WEAPON_FRIGATE_TORPEDO_HIT"
+nopenetrate_sfx = "WEAPON/FRIGATE/IMPACT/WEAPON_FRIGATE_TORPEDO_HIT"
+hit_clamp = {
+  1,
+  1,
+}

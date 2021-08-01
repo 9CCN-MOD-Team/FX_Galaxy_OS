@@ -1,0 +1,4 @@
+TUR_AS_CAPSHIP_Normal_OnSet = function(SubSystem)
+    startAnim(SubSystem, "zhuan")
+    setLoopCount(SubSystem, "zhuan", 100000)
+end

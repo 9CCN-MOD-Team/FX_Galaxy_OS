@@ -1,0 +1,8 @@
+KPR_ENERGY_PULSAR_Launched_OnSet = function(ship)
+	startEffect(ship, "energy")
+	--startEffect(ship, "dmg01")
+  startAnim(ship, "Zhuan")
+  setLoopCount(ship, "Zhuan", 100000)
+  startAnim(ship, "Open")
+  setPauseTime(ship, "Open", 1000)
+end

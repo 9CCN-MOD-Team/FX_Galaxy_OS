@@ -1,0 +1,26 @@
+TUR_ENERGYFRIGATE_Launched_OnSet = function(ship)
+    startTime = 0
+    if(isAnimRunning(ship, "close") ~= 0) then
+        startTime = getAnimLength(ship, "close") - getTime(ship, "close")
+        stopAnim(ship, "close")
+        endEffect(ship, "close")
+    end
+    startAnim(ship, "open")
+    startEffect(ship, "open")
+    setTime(ship,"open",startTime)
+    setPauseTime(ship, "open", 1000)
+end
+
+TUR_ENERGYFRIGATE_Docked_OnSet = function(ship)
+    startTime = 0
+    if(isAnimRunning(ship, "open") ~= 0) then
+        startTime = getAnimLength(ship, "open") - getTime(ship, "open")
+        stopAnim(ship, "open")
+        endEffect(ship, "open")
+    end
+    startAnim(ship, "close")
+    startEffect(ship, "close")
+    endEffect(ship, "open")
+    setTime(ship,"Close",startTime)
+    setPauseTime(ship, "close", 1000)
+end

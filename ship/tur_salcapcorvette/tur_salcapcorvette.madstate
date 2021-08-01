@@ -1,0 +1,37 @@
+TUR_SALCAPCORVETTE_CaptureActive_OnSet = function(ship)
+    setState(ship, "CaptureActive", 0)
+    if(isAnimRunning(ship,"Launch") == 0) then
+        startTime = 0
+        if(isAnimRunning(ship,"Retract") ~= 0) then
+            startTime = getAnimLength(ship, "Retract") - getTime(ship, "Retract")
+            stopAnim(ship, "Retract")
+            endEffect(ship, "Retract")
+        end
+        startAnim(ship, "Launch")
+        startEffect(ship, "Launch")
+        setTime(ship,"Launch",startTime)
+        setPauseTime(ship, "Launch", 1000)
+    end
+end
+
+TUR_SALCAPCORVETTE_CaptureActive_OnPause = function(ship)
+end
+
+TUR_SALCAPCORVETTE_CaptureInActive_OnSet = function(ship)
+    if(isAnimRunning(ship,"Retract") == 0) then
+        startTime = 0
+        if(isAnimRunning(ship,"Launch") ~= 0) then
+            startTime = getAnimLength(ship, "Launch") - getTime(ship, "Launch")
+            stopAnim(ship, "Launch")
+            endEffect(ship, "Launch")
+        end
+        startAnim(ship, "Retract")
+        startEffect(ship, "Retract")
+        setTime(ship,"Retract",startTime)
+        setPauseTime(ship, "Retract", 1000)
+    end
+end
+
+TUR_SALCAPCORVETTE_CaptureInActive_OnPause = function(ship)
+    TUR_SALCAPCORVETTE_CaptureActive_OnPause(ship)
+end

@@ -1,0 +1,251 @@
+-------------------------------------------------------------
+------hgn_multiguncorvette.ship-------2016年6月9日--------------------
+--由 9CCNMOD组 破天者-孤狼 编写
+--FXMOD的希格拉多炮护航艇
+-------------------------------------------------------------
+-------------------------------------------------------------
+
+NewShipType = StartShipConfig()
+NewShipType.agileFlight = 1
+NewShipType.displayedName="$1913"
+NewShipType.sobDescription="$1914"
+NewShipType.maxhealth=3000
+NewShipType.regentime=0
+NewShipType.minRegenTime=0
+NewShipType.sideArmourDamage = 1
+NewShipType.rearArmourDamage = 1
+NewShipType.isTransferable=1
+NewShipType.formationSpacing=70
+NewShipType.useEngagementRanges = 0
+
+--出生时默认战术(Rules of Engagement) = Offensive/Defensive/Passive
+NewShipType.defaultROE="Defensive"
+--出生时默认姿态(Stance) = Aggressive/Evasive/Neutral
+NewShipType.defaultStance="Neutral"
+--停泊至航母和母舰时占据多少停泊槽位
+NewShipType.holdSlots=5
+
+NewShipType.mass=15
+NewShipType.collisionMultiplier=1
+NewShipType.thrusterMaxSpeed=245
+NewShipType.mainEngineMaxSpeed=275
+NewShipType.rotationMaxSpeed=175
+NewShipType.thrusterAccelTime=2
+NewShipType.thrusterBrakeTime=1
+NewShipType.mainEngineAccelTime=2
+NewShipType.mainEngineBrakeTime=1
+NewShipType.rotationAccelTime=0.6
+NewShipType.rotationBrakeTime=0.3
+NewShipType.thrusterUsage=0.5
+NewShipType.accelerationAngle=170
+NewShipType.mirrorAngle=30
+NewShipType.secondaryTurnAngle=0
+NewShipType.maxBankingAmount=85
+NewShipType.descendPitch=0
+NewShipType.goalReachEpsilon=5
+NewShipType.slideMoveRange=0
+NewShipType.controllerType="Ship"
+NewShipType.tumbleStaticX=10
+NewShipType.tumbleStaticY=20
+NewShipType.tumbleStaticZ=5
+NewShipType.tumbleDynamicX=2
+NewShipType.tumbleDynamicY=10
+NewShipType.tumbleDynamicZ=5
+NewShipType.tumbleSpecialDynamicX=2
+NewShipType.tumbleSpecialDynamicY=10
+NewShipType.tumbleSpecialDynamicZ=5
+NewShipType.relativeMoveFactor=6
+NewShipType.swayUpdateTime=3
+NewShipType.swayOffsetRandomX=10
+NewShipType.swayOffsetRandomY=10
+NewShipType.swayOffsetRandomZ=10
+NewShipType.swayBobbingFactor=0.025
+NewShipType.swayRotateFactor=0
+NewShipType.dustCloudDamageTime=160
+NewShipType.nebulaDamageTime=35
+NewShipType.MinimalFamilyToFindPathAround="SuperCap"
+NewShipType.mirrorAboveManeuver="ImmelMann"
+NewShipType.mirrorBelowManeuver="Split_S"
+NewShipType.BuildFamily="Corvette_Hgn"
+NewShipType.AttackFamily="Corvette"
+NewShipType.DockFamily="Mover"
+NewShipType.AvoidanceFamily="Strikecraft"
+NewShipType.DisplayFamily="Corvette"
+NewShipType.AutoFormationFamily="Corvette"
+NewShipType.CollisionFamily="Small"
+NewShipType.ArmourFamily="LightArmour"
+--新的人口设置函数，第三个参数的数字决定了一个小队的该单位占多少个人口
+--（比如希格拉轰炸机的第三个参数应该都是5）
+setSupplyValue(NewShipType, "Corvette", 1.0)
+if (getShipNum(NewShipType, "CustomCommand", 0) == 1) then
+setSupplyValue(NewShipType, "multiguncorvette", 1.0)
+end
+--下面这一个人口项不是用来限制玩家拥有舰船数目的，而是限制单个阵型的容纳量的
+--必须要有，不然单位无法加入阵形
+setSupplyValue(NewShipType, "LayoutCorvette", 1.0)		
+NewShipType.fighterValue=0
+NewShipType.corvetteValue=10
+NewShipType.frigateValue=0
+NewShipType.neutralValue=0
+NewShipType.antiFighterValue=15
+NewShipType.antiCorvetteValue=0
+NewShipType.antiFrigateValue=0
+NewShipType.totalValue=10
+NewShipType.buildCost=550
+NewShipType.buildTime=30
+NewShipType.buildPriorityOrder=30
+NewShipType.retaliationRange=5500
+NewShipType.retaliationDistanceFromGoal=160
+NewShipType.visualRange=1000
+NewShipType.prmSensorRange=3500
+NewShipType.secSensorRange=3500
+NewShipType.detectionStrength=1
+NewShipType.TOIcon="Square"
+NewShipType.TOScale=1
+NewShipType.TODistanceFade0=7000
+NewShipType.TODistanceDisappear0=5000
+NewShipType.TODistanceFade1=2500
+NewShipType.TODistanceDisappear1=2000
+NewShipType.TODistanceFade2=12000
+NewShipType.TODistanceDisappear2=35000
+NewShipType.TOGroupScale=1
+NewShipType.TOGroupMergeSize=0
+NewShipType.mouseOverMinFadeSize=0.045
+NewShipType.mouseOverMaxFadeSize=0.1
+NewShipType.healthBarStyle=1
+NewShipType.nlips=0.00025
+NewShipType.nlipsRange=10000
+NewShipType.nlipsFar=0
+NewShipType.nlipsFarRange=20000
+NewShipType.SMRepresentation="HardDot"
+NewShipType.meshRenderLimit=10400
+NewShipType.dotRenderLimit=10
+NewShipType.visibleInSecondary=1
+NewShipType.minLOD=0.3
+NewShipType.upLOD = 1250
+NewShipType.upLOD = 2700
+NewShipType.downLOD = 1265
+NewShipType.downLOD = 2715
+NewShipType.upLOD = 3500
+NewShipType.downLOD = 3515
+NewShipType.goblinsStartFade=400
+NewShipType.goblinsOff=400
+NewShipType.minimumZoomFactor=0.75
+NewShipType.selectionLimit=150000
+NewShipType.preciseATILimit=0
+NewShipType.selectionPriority=75
+NewShipType.militaryUnit=1
+addAbility(NewShipType,"MoveCommand",1,0);
+addAbility(NewShipType,"CanDock",1,1);
+NewShipType.dockTimeBetweenTwoFormations=0.5
+NewShipType.dockTimeBeforeStart=0.5
+NewShipType.dockNrOfShipsInDockFormation=1
+NewShipType.dockFormation="n_delta"
+NewShipType.queueFormation="n_delta"
+NewShipType.ignoreRaceWhenDocking=0
+addAbility(NewShipType,"CanLaunch");
+NewShipType.launchTimeBetweenTwoFormations=0.5
+NewShipType.launchTimeBeforeStart=0.5
+NewShipType.launchNrOfShipsInDockFormation=1
+NewShipType.launchFormation="n_delta"
+addAbility(NewShipType,"ParadeCommand",1);
+addAbility(NewShipType,"WaypointMove");
+
+
+addAbility(NewShipType,"CanAttack",1,3,1,0,0.35,1,"Fighter, Corvette, Frigate, Utility, SmallCapitalShip, BigCapitalShip","FlyRound_Corvette_vs_Frigate",{
+  Fighter = "FlyRound_Corvette_vs_Fighter",
+},{
+  Mothership = "flyround_Corvette_vs_Mothership",
+},{
+  SmallCapitalShip = "FlyRound_Corvette_vs_CapShip",
+},{
+  BigCapitalShip = "FlyRound_Corvette_vs_CapShip",
+},{
+  SubSystem = "FrontalVsSubSystem_Corvette",
+},{
+  Corvette = "FlyBy_Corvette_vs_Corvette",
+})
+
+
+addAbility(NewShipType,"GuardCommand",1,3000,500);
+addAbility(NewShipType,"HyperspaceViaGateCommand",1,3,1,0.3);
+addAbility(NewShipType,"RetireAbility",1,0);
+--addAbility(NewShipType,"MinelayerAbility",1,3.5);
+LoadModel(NewShipType,1)
+StartShipHardPointConfig(NewShipType,"Weapon_TurretBottom","Hardpoint_TurretBottom","Weapon","Innate","Ship","hgn_multigun","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"Weapon_TurretTop","Hardpoint_TurretTop","Weapon","Innate","Ship","hgn_multigun","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"Weapon_TurretLeft","Hardpoint_TurretLeft","Weapon","Innate","Ship","hgn_multigun","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"Weapon_TurretRight","Hardpoint_TurretRight","Weapon","Innate","Ship","hgn_multigun","","","","","","","","");
+--StartShipWeaponConfig(NewShipType,"Hgn_MineLayer","Weapon_Mine","");
+addShield(NewShipType,"EMP",75,20);
+NewShipType.battleScarCoverage=1
+NewShipType.battleScarBudgetLow = 400
+NewShipType.battleScarBudgetNext = 600
+NewShipType.sobDieTime=1
+NewShipType.sobSpecialDieTime=1
+NewShipType.specialDeathSpeed=40
+NewShipType.chanceOfSpecialDeath=0
+NewShipType.deadSobFadeTime=1
+setEngineTrail(NewShipType,0,5,"trail_ribbon.tga",0.01,0.2,0.025,2);
+setEngineTrail(NewShipType,1,5,"trail_ribbon.tga",0.01,0.2,0.025,2);
+setEngineBurn(NewShipType,10,0.5,1,15,0,0.7,0.15,30);
+loadShipPatchList(NewShipType,"data:sound/sfx/ship/Hiigaran/Corvette/",0,"Engines/HCorvetteEng","",1,"Ambience/HCorvetteAmb","");
+NewShipType.minFalloffDamageDist=25	--starting distance for scuttle/death damage
+NewShipType.maxFalloffDamageDist=25*3	--ending distance for scuttle/death damage (linear falloff)
+NewShipType.maxFalloffScuttleDamageDist=25*4	--ending distance for scuttle/death damage (linear falloff)
+NewShipType.explosiveScuttleDamageOnDeath=95	--damage dealt when scuttling
+--NewShipType.maxFalloffDamage= maximum damage to do at zero falloff distance
+NewShipType.maxFalloffForce=25*10	--force applied on explosion
+NewShipType.explosiveDamageOnDeath=19	--damage dealt when killed
+NewShipType.radiusDamageEvadeMod=1.1 --multiplier to how far friendly ships will evade an explosion
+--NewShipType.hideNormalAttackUICooldown= Boolean. Whether to show weapon refire timer in the UI
+NewShipType.agileFlight=1 --linked to new movement and evasive code
+--NewShipType.canSurround= Boolean. Whether the ship can be surrounded by a Sphere formation
+NewShipType.homingDistance=2000		
+NewShipType.homingDelay=0.5								 
+NewShipType.strikeGroupSpeed=5000 --The slowest ship is the leader of a formation. 
+	--This allows a ship to falsely report a faster or slower speed to influence 
+	--whether it should be a leader. Set to a high number like 5000 for ships that 
+	--are poor formation leaders.
+
+
+
+--NewShipType.useLayoutBounds= When fighters guard a battlecruiser in sphere formation, 
+--the layout bounds below can specify a box to form around. If disabled, ships will just 
+--use sphere bounds instead.
+--NewShipType.layoutBoundX=
+--NewShipType.layoutBoundY=
+--NewShipType.layoutBoundZ=
+--NewShipType.layoutCenterX=
+--NewShipType.layoutCenterY=
+--NewShipType.layoutCenterZ=
+
+--NewShipType.canJoinStrikeGroup= enable/disable joining strike groups
+--NewShipType.AttackPriorityMultiplier= Influences a ship's position up or down in the target priority list.
+--NewShipType.noCombatGrouping= ?? assume related to formations
+--NewShipType.buildBatch=getShipNum(NewShipType, "buildBatch", 5) allows building in squadrons
+
+--setSpeedvsAccuracyApplied(NewShipType, Speed, Mult) 
+--Accuracy adjustments against this ship based on its speed. Maximum of 8 ranges supported.
+--Note that this is not a straight mult above 1.0, ie 1.2 is not 1.2x more likely to hit. Example tables:
+--Accuracy| Mult| Adjusted Accuracy
+--0.8	1.2	0.83
+--0.5	1.2	0.583
+--0.25	1.2	0.375
+--0.15	1.2	0.291
+--0.05	1.2	0.208
+
+--0.8	5.0	0.96
+--0.5	5.0	0.90
+--0.25	5.0	0.85
+--0.15	5.0	0.83
+--0.05	5.0	0.81
+
+--At 1.0 and below it's a straight mult:
+--0.8	0.9	0.72
+--0.5	0.9	0.45
+--0.25	0.9	0.225
+--0.15	0.9	0.135
+--0.05	0.9	0.045
+
+--使用举例：setSpeedvsAccuracyApplied(NewShipType, 10.0, 1.5, 120, 1.0, 250, 1.0, 388, 0.58, 535, 0.40)

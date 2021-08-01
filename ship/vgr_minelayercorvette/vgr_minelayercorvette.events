@@ -1,0 +1,202 @@
+effects =
+{
+    animations =
+    {
+        animation1 =
+        {
+            name = "Death",
+            length = 2,
+            loop = 0,
+            parent = "",
+            minimum = 0,
+            maximum = 0,
+            markers = {""}
+        },
+        animation2 =
+        {
+            name = "Weapon_Mine",
+            length = 2,
+            loop = 0,
+            parent = "",
+            minimum = 0,
+            maximum = 0,
+            markers = {""}
+        },
+				animation3 =
+        {
+            name = "PowerOff",
+            length = 2,
+            loop = 0,
+            parent = "",
+            minimum = 0,
+            maximum = 0,
+            markers = {""}
+        },
+				animation4 =
+        {
+            name = "Damage",
+            length = 1,
+            loop = 1,
+            parent = "",
+            minimum = 0,
+            maximum = 0,
+            markers = {""}
+        },
+				animation5 =
+        {
+            name = "dmg01",
+            length = 1,
+            loop = 1,
+            parent = "Damage",
+            minimum = 0.5,
+            maximum = 1,
+            markers = {""}
+        },
+        animation6 =
+        {
+            name = "dmg02",
+            length = 1,
+            loop = 1,
+            parent = "Damage",
+            minimum = 0.75,
+            maximum = 1,
+            markers = {""}
+        },        
+    },
+    events =
+    {
+    death1 = {
+      {
+        "anim",
+        "Death",
+      },
+      {
+        "animtime",
+        "0.2",
+      },
+      {
+        "marker",
+        "Root",
+      },
+      {
+        "fx",
+        "dmg_cloud_explosion_large",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+    },
+    death2 = {
+      {
+        "anim",
+        "Death",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "Root",
+      },
+      {
+        "fx",
+        "dmg_cloud_explosion_large",
+      },
+      {
+        "sound",
+        "EXPLOSION/SMALL/ETG_EXPLODE_SMALL_PLASMA_FAR",
+      },
+      {
+        "fx_scale",
+        "0.6",
+      },
+    },
+    death3 = {
+      {
+        "anim",
+        "Death",
+      },
+      {
+        "animtime",
+        "0.5",
+      },
+      {
+        "marker",
+        "Root",
+      },
+      {
+        "fx",
+        "dmg_cloud_main_explosion_combo",
+      },
+      {
+        "fx_scale",
+        "5",
+      },
+    },
+    death4 = {
+      {
+        "anim",
+        "Death",
+      },
+      {
+        "animtime",
+        "0.1",
+      },
+      {
+        "marker",
+        "Root",
+      },
+      {
+        "fx",
+        "dmg_cloud_explosion_large",
+      },
+      {
+        "sound",
+        "EXPLOSION/MEDIUM/ETG_EXPLODE_MEDIUM_FIREY",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+    },
+				wpn1 =
+        {
+            { "anim", "Weapon_Mine" },
+            { "animtime", "0" },
+            { "marker", "Weapon_Mine_Muzzle" },
+            { "fx", "torpedo_steam_spray" },
+            { "fx_scale", "1" },
+        },
+        dmg1 =
+        {
+            { "anim", "dmg01" },
+            { "animtime", "-1" },
+            { "marker", "marker1,marker2" },
+            { "fx", "dmg_damage_puff_combo,dmg_damage_steam_combo" },
+            { "sound", "DAMAGE/SMOKE/DAMAGE_SMOKE_EXHAUST_HEAVY" },
+            { "fx_scale", "2" },
+            { "fx_nlips", "on" },
+        },
+        dmg2 =
+        {
+            { "anim", "dmg02" },
+            { "animtime", "-1" },
+            { "marker", "marker3,marker4,marker5" },
+            { "fx", "dmg_damage_puff_combo,dmg_damage_steam_combo" },
+            { "sound", "DAMAGE/SMOKE/DAMAGE_SMOKE_EXHAUST_HEAVY" },
+            { "fx_scale", "2.5" },
+            { "fx_nlips", "on" },
+        },        
+				eventPowerOff = 
+				{ 
+						{ "anim", "PowerOff", }, 
+						{ "animtime", "0", }, 
+						{ "marker", "Root", }, 
+						{ "fx", "plasma_ball_spray", }, 
+						{ "sound", "SPECIAL/SPECIAL_ABILITIES_PHASE_OFF", }, 
+						{ "fx_scale", "7", },
+				},
+    }
+}

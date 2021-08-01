@@ -1,0 +1,94 @@
+displayName = "$5501"
+contentType = 2
+contentName = "mini"
+contentOrdered = 0
+contentChooseText = "$90089" -- CHOOSE TUTORIAL//
+contentThumbName = "$90084"
+contentThumbDesc = "$90085"
+contentSort = 0.3	-- Default is 1.0, so 0.5 will appear _before_ others.
+contentRules = "DTsingleplayer"	-- A DEFAULT that actually reads from SinglePlayerOptions.lua
+Mission = {}
+
+
+
+Mission[1] = 
+{
+	postload = function()	
+		playAnimatic("data:animatics/taimini.lua", 0, 0)
+	end,
+	directory = "WH_3",
+	level = "WH_3.level",
+	postlevel = function(bWin)	
+		postLevelComplete()
+	end,
+	displayName = "$90130",
+	description = "$90131",
+	forcesubtitles = 1,
+}
+
+Mission[2] = 
+{
+	postload = function()	
+		playAnimatic("data:animatics/kadmini.lua", 0, 0)
+	end,
+	directory = "WH_2",
+	level = "WH_2.level",
+	postlevel = function(bWin)	
+		postLevelComplete()
+	end,
+	displayName = "$90082",
+	description = "$90083",
+	forcesubtitles = 1,
+	usepersist = "data:leveldata\\campaign\\mini\\WH_2\\startingplayerfleet.lua",
+}
+
+Mission[3] = 
+{
+	postload = function()	
+		--playAnimatic("data:animatics/B00.lua", 0, 0)
+	end,
+	directory = "WH_1",
+	level = "WH_1.level",
+	postlevel = function(bWin)	
+		postLevelComplete()
+	end,
+	displayName = "$90047",
+	description = "$90048",
+	forcesubtitles = 1,
+}
+
+Mission[4] = 
+{ 
+	postload = function ()
+	end, 
+	directory = "Eden",
+	level = "Eden.level",
+	postlevel = function (bWin)
+		--if bWin == 1 then
+			--playAnimatic("data:animatics/A02.lua", 1, 0)
+			--postLevelComplete()
+		--else
+			--playAnimatic("data:animatics/A02.lua.lua", 1, 0)
+			postLevelComplete()
+		--end
+	end, 
+	displayName = "$90001",
+	description = "$90002", 
+	usedefaultpersist = 1,
+	forcesubtitles = 1,
+}
+
+Mission[5] = 
+{
+	postload = function()	
+		--playAnimatic("data:animatics/B00.lua", 0, 0)
+	end,
+	directory = "DT_1",
+	level = "DT_1.level",
+	postlevel = function(bWin)	
+		postLevelComplete()
+	end,
+	displayName = "$90015",
+	description = "$90016",
+	forcesubtitles = 1,
+}

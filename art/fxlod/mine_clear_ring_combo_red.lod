@@ -1,0 +1,13 @@
+lods = 
+{
+	lod0 = 
+	{
+		fx = "mine_clear_ring_combo_red",
+		distance = 2000,
+	},
+	lod1 = 
+	{
+		fx = "mine_clear_ring_combo_red_lod",
+		distance = 100000,
+	},	
+}

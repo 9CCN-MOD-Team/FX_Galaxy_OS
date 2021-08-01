@@ -1,0 +1,14 @@
+-- LuaDC version 0.9.19
+-- 2010-8-18 23:34:34
+-- LuaDC by Age2uN
+-- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
+--
+hitfx = "ben_lm_dmg_combo"
+bulletfx = "bullet_generic"
+nopenetratefx = "ben_lm_dmg_combo"
+deathtype = "deathCannon"
+scartype = "Plasma_Bomb/Plasma_Bomb"
+hit_sfx = "WEAPON/CORVETTE/IMPACT/HWEAPON_CORVETTE_PULASAR_CANNON_BEAM_HIT"
+nopenetrate_sfx = "WEAPON/CORVETTE/IMPACT/HWEAPON_CORVETTE_PULASAR_CANNON_BEAM_HIT"
+hit_clamp = 
+    { 1, 1, }

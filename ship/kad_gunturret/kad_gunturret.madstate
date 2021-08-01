@@ -1,0 +1,99 @@
+--进入战斗状态，停止其他所有动画，转为红眼
+KAD_GUNTURRET_CodeRed_OnSet = function(ship)
+		KAD_GUNTURRET_StopAllAnim(ship)
+		startAnim(ship, "Red")
+		setTime(ship,"Red",0)
+		setPauseTime(ship, "Red", 1000)
+end
+
+--离开战斗状态。注意如果Open或Close已经在播放，证明单位已经转换到蓝眼，不需再次播放
+KAD_GUNTURRET_CodeGreen_OnSet = function(ship)   
+	if isAnimRunning(ship, "Open") == 0 and isAnimRunning(ship, "Close") == 0 then
+		KAD_GUNTURRET_StopAllAnim(ship)
+		startAnim(ship, "Blue")
+		setTime(ship,"Blue",0)
+		setPauseTime(ship, "Blue", 1000)
+	end
+end
+
+--CodeGreen播放完成后将动画从Blue切换为Close，这样之后才能正确播放那个转眼睛的动作
+--切换到Close的时候要跳过Close前面的闭眼的那部分
+--但是如果Close本来就在运行了那么我们需要的是再重新循环一遍Close
+KAD_GUNTURRET_CodeGreen_OnPause = function(ship)   
+	if isAnimRunning(ship, "Close") == 0 then
+		KAD_GUNTURRET_StopAllAnim(ship)
+		startAnim(ship, "Close")
+		setTime(ship,"Close",10)
+		setPauseTime(ship, "Close", 1000)
+	else
+		startAnim(ship, "Close")
+		setTime(ship,"Close",0)
+		setPauseTime(ship, "Close", 1000)
+	end
+end
+
+--进入Deployed状态，播放Close动画
+--但是如果已经在放Close或者Blue的话就不要重复播放了
+KAD_GUNTURRET_Open_OnSet = function(ship)   
+	if isAnimRunning(ship, "Close") == 0 and isAnimRunning(ship, "Blue") == 0 then
+		KAD_GUNTURRET_StopAllAnim(ship)
+		startAnim(ship, "Close")
+		setTime(ship,"Close",0)
+		setPauseTime(ship, "Close", 1000)
+	end
+end
+
+--Close暂停的时候从头再放，进行循环
+KAD_GUNTURRET_Open_OnPause = function(ship)   
+		startAnim(ship, "Close")
+		setTime(ship,"Close",0)
+		setPauseTime(ship, "Close", 1000)
+end
+
+--进入移动状态，播放Open动画
+--但是如果当前正在播放Red动画，那么需要先播放Blue换成蓝眼
+KAD_GUNTURRET_Closed_OnSet = function(ship)   
+	if isAnimRunning(ship, "Red") ~= 0 then
+		KAD_GUNTURRET_StopAllAnim(ship)
+		startAnim(ship, "Blue")
+		setTime(ship,"Blue",0)
+		setPauseTime(ship, "Blue", 1000)
+	else
+		KAD_GUNTURRET_StopAllAnim(ship)
+		startAnim(ship, "Open")
+		setTime(ship,"Open",0)
+		setPauseTime(ship, "Open", 1000)
+	end
+end
+
+--如果是从Blue状态Pause过来的，意味着还没放Open，得补上
+KAD_GUNTURRET_Closed_OnPause = function(ship)   
+	if isAnimRunning(ship, "Blue") ~= 0 then
+		KAD_GUNTURRET_StopAllAnim(ship)
+		startAnim(ship, "Open")
+		setTime(ship,"Open",0)
+		setPauseTime(ship, "Open", 1000)
+	end
+end
+
+--出生的时候默认为Close状态
+KAD_GUNTURRET_Normal_OnSet = function(ship)   
+		startAnim(ship, "Close")
+		setTime(ship,"Close",0)
+		setPauseTime(ship, "Close", 1000)
+end
+
+--出生之后啥都没干过时也要循环Close动画
+KAD_GUNTURRET_Normal_OnPause = function(ship)   
+		startAnim(ship, "Close")
+		setTime(ship,"Close",0)
+		setPauseTime(ship, "Close", 1000)
+end
+
+--停掉所有动画的函数
+function KAD_GUNTURRET_StopAllAnim(ship)
+		stopAnim(ship, "Red")
+		stopAnim(ship, "Blue")
+		stopAnim(ship, "Close")
+		stopAnim(ship, "Open")
+end

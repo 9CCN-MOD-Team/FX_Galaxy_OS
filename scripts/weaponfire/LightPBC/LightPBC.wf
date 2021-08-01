@@ -1,0 +1,16 @@
+-- LuaDC version 0.9.19
+-- 2011-8-22 17:01:48
+-- LuaDC by Age2uN
+-- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
+--
+hitfx = "lightpbc_hit"
+firefx = "lightpbc_ring"
+bulletfx = "lightpbc_beam"
+nopenetratefx = "lightpbc_hit"
+deathtype = "deathPlasma"
+scartype = "Plasma_Bomb/Plasma_Bomb"
+fire_sfx = "weapon/foss/light_pbc/light_pbc"
+hit_sfx = "weapon/foss/light_pbc/impact"
+nopenetrate_sfx = "weapon/foss/light_pbc/impact"
+hit_clamp = 
+    { 1, 1, }

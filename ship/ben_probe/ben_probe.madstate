@@ -1,0 +1,4 @@
+BEN_PROBE_CodeRed_OnSet = function(ship)
+	endEffect(ship,  "Shield")
+	startEffect(ship, "Shield")
+end

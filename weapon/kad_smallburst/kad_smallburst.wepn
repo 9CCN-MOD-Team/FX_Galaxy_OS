@@ -1,0 +1,17 @@
+StartWeaponConfig(NewWeaponType,"Fixed","SphereBurst","Hgn_Minesweep1","Normal",0,0,120,1,0,0,1,0,0,0,0,0,0,0,0,0,0.1,"Normal",1,0,0)
+AddWeaponResult(NewWeaponType,"Hit","DamageHealth","Target",500,500,"")
+setPenetration(NewWeaponType,5,1,{
+  unarmoured = 0.02,
+},{
+  lightarmour = 0.2,
+},{
+  mediumarmour = 1,
+},{
+  heavyarmour = 1,
+},{
+  PlanetKillerArmour = 0,
+},{
+  DroneArmour = 0.07,
+},{
+  SubSystemArmour = 1,
+})

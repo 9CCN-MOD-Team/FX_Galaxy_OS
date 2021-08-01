@@ -1,0 +1,5 @@
+at frame 12
+    loadBackground("m15")
+
+at frame 13
+    nisOut(4)

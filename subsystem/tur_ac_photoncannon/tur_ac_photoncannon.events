@@ -1,0 +1,127 @@
+effects = {
+  animations = {
+    animation1 = {
+      name = "Weapon_TurretLeft",
+      length = 1,
+      loop = 0,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+    animation2 = {
+      name = "Weapon_TurretRight",
+      length = 1,
+      loop = 0,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+    animation9 = {
+      name = "Death",
+      length = 2,
+      loop = 0,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+  },
+  events = {
+    event1 = {
+      {
+        "anim",
+        "Weapon_TurretLeft",
+      },
+      {
+        "marker",
+        "Weapon_TurretLeft_Muzzle",
+      },
+      {
+        "fx",
+        "muzzle_flash_combo_plasma_kpr_new",
+      },
+      {
+        "sound",
+        "WEAPON/CORVETTE/FIRE/WEAPON_CORVETTE_VULCAN_KINETIC_TURRET_SHELL",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event2 = {
+      {
+        "anim",
+        "Weapon_TurretLeft",
+      },
+      {
+        "marker",
+        "Weapon_TurretLeftSlave_Muzzle",
+      },
+      {
+        "fx",
+        "muzzle_flash_combo_plasma_kpr_new",
+      },
+      {
+        "sound",
+        "WEAPON/CORVETTE/FIRE/WEAPON_CORVETTE_VULCAN_KINETIC_TURRET_SHELL",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event3 = {
+      {
+        "anim",
+        "Weapon_TurretRight",
+      },
+      {
+        "marker",
+        "Weapon_TurretRight_Muzzle",
+      },
+      {
+        "fx",
+        "muzzle_flash_combo_plasma_kpr_new",
+      },
+      {
+        "sound",
+        "WEAPON/CORVETTE/FIRE/WEAPON_CORVETTE_VULCAN_KINETIC_TURRET_SHELL",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event4 = {
+      {
+        "anim",
+        "Weapon_TurretRight",
+      },
+      {
+        "marker",
+        "Weapon_TurretRightSlave_Muzzle",
+      },
+      {
+        "fx",
+        "muzzle_flash_combo_plasma_kpr_new",
+      },
+      {
+        "sound",
+        "WEAPON/CORVETTE/FIRE/WEAPON_CORVETTE_VULCAN_KINETIC_TURRET_SHELL",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+  },
+}

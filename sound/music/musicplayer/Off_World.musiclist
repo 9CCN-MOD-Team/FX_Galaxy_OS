@@ -1,0 +1,8 @@
+MusicList["Off_World"] = 
+{
+	name = "Off_World-Paul_Ruskay",
+	path = musicpath.."Off_World",
+	minute = 3,
+	second = 7,
+	func = MP_NoCombat,
+}

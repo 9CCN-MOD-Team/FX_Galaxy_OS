@@ -1,0 +1,8 @@
+NewSubSystemType = StartSubSystemConfig()
+NewSubSystemType.selectionLimit = 1
+NewSubSystemType.type = "Weapon"
+NewSubSystemType.hasIcon = 0
+LoadSharedModel(NewSubSystemType,"hgn_minelayerkineticturret"); 
+NewSubSystemType.AttackFamily = "Corvette"
+NewSubSystemType.ArmourFamily = "LightArmour"
+StartSubSystemWeaponConfig(NewSubSystemType,"hgn_multigun","Weapon_TurretBottom","Weapon_TurretBottom");

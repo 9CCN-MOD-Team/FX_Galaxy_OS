@@ -1,0 +1,30 @@
+KPR_IONCANNONFRIGATE_Launched_OnSet = function(ship)
+    startEffect(ship, "E_Open")
+end
+
+
+KPR_IONCANNONFRIGATE_Closed_OnSet = function(ship)
+    startTime = 0
+    if(isAnimRunning(ship, "Mad_Close") ~= 0) then
+        startTime = getAnimLength(ship, "Mad_Close") - getTime(ship, "Mad_Close")
+        stopAnim(ship, "Mad_Close")
+        --endEffect(ship, "E_Close")
+    end
+    startAnim(ship, "Mad_Open")
+    --startEffect(ship, "E_Open")
+    setTime(ship,"Mad_Open",startTime)
+    setPauseTime(ship, "Mad_Open", 1000)
+end
+
+KPR_IONCANNONFRIGATE_Open_OnSet = function(ship)
+    startTime = 0
+    if(isAnimRunning(ship, "Mad_Open") ~= 0) then
+        startTime = getAnimLength(ship, "Mad_Open") - getTime(ship, "Mad_Open")
+        stopAnim(ship, "Mad_Open")
+        --endEffect(ship, "E_Open")
+    end
+    startAnim(ship, "Mad_Close")
+    --startEffect(ship, "E_Close")
+    setTime(ship,"Mad_Close",startTime)
+    setPauseTime(ship, "Mad_Close", 1000)
+end

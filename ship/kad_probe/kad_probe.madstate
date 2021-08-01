@@ -1,0 +1,6 @@
+
+KAD_PROBE_Open_OnSet = function(ship)
+    startAnim(ship, "Open")
+    setTime(ship,"Open",0)
+    setPauseTime(ship, "Open", 1000)
+end

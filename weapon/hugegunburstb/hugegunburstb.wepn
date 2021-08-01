@@ -1,0 +1,22 @@
+-- LuaDC version 0.9.19
+-- 2011-1-2 21:22:09
+-- LuaDC by Age2uN
+-- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
+--
+StartWeaponConfig(NewWeaponType, "Fixed", "SphereBurst", "alos_mystb", "Normal", 0, 0, 200, 2, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.1, "Normal", 1, 0, 0)
+AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 5, 5, "")
+setPenetration(NewWeaponType, 5, 1, 
+{ 
+    unarmoured = 1, 
+}, 
+{ 
+    lightarmour = 1, 
+}, 
+{ 
+    mediumarmour = 1, 
+}, 
+{ 
+    heavyarmour = 1, 
+}, 
+{ 
+    PlanetKillerArmour = 0, })

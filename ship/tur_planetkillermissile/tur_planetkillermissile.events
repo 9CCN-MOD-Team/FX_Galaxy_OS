@@ -1,0 +1,238 @@
+effects = {
+  animations = {
+    animation1 = {
+      name = "Death",
+      length = 1,
+      loop = 0,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+    animation2 = {
+      name = "Bomes",
+      length = 1,
+      loop = 0,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+  },
+  events = {
+    event1 = {
+      {
+        "anim",
+        "Bomes",
+      },
+      {
+        "animtime",
+        "0.29",
+      },
+      {
+        "marker",
+        "marker45",
+      },
+      {
+        "fx",
+        "dmg_capital_explosion_large",
+      },
+      {
+        "sound",
+        "EXPLOSION/LARGE/ETG_EXPLODE_LARGE_PLASMA",
+      },
+      {
+        "fx_scale",
+        "110",
+      },
+    },
+    event2 = {
+      {
+        "anim",
+        "Bomes",
+      },
+      {
+        "animtime",
+        "0.25",
+      },
+      {
+        "marker",
+        "marker43",
+      },
+      {
+        "fx",
+        "dmg_capital_explosion_large_mushroom",
+      },
+      {
+        "sound",
+        "Explosion/Large/ETG_Explode_Large_Firey",
+      },
+      {
+        "fx_scale",
+        "40",
+      },
+    },
+    event3 = {
+      {
+        "anim",
+        "Bomes",
+      },
+      {
+        "animtime",
+        "0.2",
+      },
+      {
+        "marker",
+        "marker39",
+      },
+      {
+        "fx",
+        "dmg_capital_explosion_large",
+      },
+      {
+        "sound",
+        "Explosion/Small/ETG_Explode_Small_Plasma",
+      },
+      {
+        "fx_scale",
+        "20",
+      },
+    },
+    event4 = {
+      {
+        "anim",
+        "Bomes",
+      },
+      {
+        "animtime",
+        "0.28",
+      },
+      {
+        "marker",
+        "marker45",
+      },
+      {
+        "fx",
+        "dmg_capital_explosion_large",
+      },
+      {
+        "sound",
+        "EXPLOSION/LARGE/ETG_EXPLODE_LARGE_PLASMA",
+      },
+      {
+        "fx_scale",
+        "80",
+      },
+    },
+    event5 = {
+      {
+        "anim",
+        "Bomes",
+      },
+      {
+        "animtime",
+        "0.115",
+      },
+      {
+        "marker",
+        "root",
+      },
+      {
+        "fx",
+        "death_generic_fighter",
+      },
+      {
+        "sound",
+        "EXPLOSION/MEDIUM/ETG_EXPLODE_MEDIUM_FIREY",
+      },
+      {
+        "fx_scale",
+        "65",
+      },
+    },
+    event6 = {
+      {
+        "anim",
+        "Bomes",
+      },
+      {
+        "animtime",
+        "0.32",
+      },
+      {
+        "marker",
+        "Root",
+      },
+      {
+        "fx",
+        "dmg_cloud_main_explosion_combo",
+      },
+      {
+        "sound",
+        "EXPLOSION/MEDIUM/ETG_EXPLODE_MEDIUM_PLASMA",
+      },
+      {
+        "fx_scale",
+        "180",
+      },
+    },
+    event7 = {
+      {
+        "anim",
+        "death",
+      },
+      {
+        "animtime",
+        "0.125",
+      },
+      {
+        "marker",
+        "marker37",
+      },
+      {
+        "fx",
+        "dmg_capital_explosion_large_mushroom",
+      },
+      {
+        "sound",
+        "Explosion/Large/ETG_Explode_Large_Firey",
+      },
+      {
+        "fx_scale",
+        "10",
+      },
+    },
+    event8 = {
+      {
+        "anim",
+        "Death",
+      },
+      {
+        "animtime",
+        "0.075",
+      },
+      {
+        "marker",
+        "root",
+      },
+      {
+        "fx",
+        "death_generic_fighter",
+      },
+      {
+        "sound",
+        "EXPLOSION/MEDIUM/ETG_EXPLODE_MEDIUM_FIREY",
+      },
+      {
+        "fx_scale",
+        "35",
+      },
+    },
+    
+    
+  },
+}

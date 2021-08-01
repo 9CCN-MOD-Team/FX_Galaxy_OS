@@ -1,0 +1,13 @@
+hitfx = "ion_dmg_ring_spray"
+bulletfx = "beam_generic_tbb"
+nopenetratefx = "ion_dmg_ring_spray"
+blowthroughfx = "super_beam_dmg_combo_blue"
+deathtype = "deathBeam"
+scartype = "Hgn_Torpedo/Torpedo"
+firefx = "boarding_beam_combo_tbb"
+hit_sfx = "WEAPON/FRIGATE/IMPACT/WEAPON_FRIGATE_ION_CANNON_BEAM_HIT"
+nopentrate_sfx = "WEAPON/FRIGATE/IMPACT/WEAPON_FRIGATE_ION_CANNON_BEAM_HIT"
+hit_clamp = {
+  0.5,
+  1.25,
+}

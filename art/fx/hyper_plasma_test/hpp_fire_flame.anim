@@ -1,0 +1,19 @@
+-- LuaDC version 0.9.20
+-- 2006/10/20 ¤U¤È 09:06:29
+-- LuaDC by Age2uN
+-- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
+--
+fps = 16
+startFrame = 0
+loopCount = 1
+texture = 
+    { 
+      "data:/ART/FX/Hyper_Plasma_Test/HPP_fire_01.tga", 
+      "data:/ART/FX/Hyper_Plasma_Test/HPP_fire_02.tga", 
+      "data:/ART/FX/Hyper_Plasma_Test/HPP_fire_03.tga", 
+      "data:/ART/FX/Hyper_Plasma_Test/HPP_fire_04.tga", 
+      "data:/ART/FX/Hyper_Plasma_Test/HPP_fire_05.tga", 
+      "data:/ART/FX/Hyper_Plasma_Test/HPP_fire_06.tga", 
+      "data:/ART/FX/Hyper_Plasma_Test/HPP_fire_07.tga", 
+      "data:/ART/FX/Hyper_Plasma_Test/HPP_fire_08.tga", 
+    }

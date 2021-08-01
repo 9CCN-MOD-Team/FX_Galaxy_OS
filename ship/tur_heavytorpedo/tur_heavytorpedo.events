@@ -1,0 +1,102 @@
+effects = {
+  animations = {
+    animation1 = {
+      name = "MissileTrail",
+      length = 10,
+      loop = 0,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+    animation2 = {
+      name = "Death",
+      length = 1,
+      loop = 0,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+  },
+  events = {
+    event1 = {
+      {
+        "anim",
+        "MissileTrail",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "EngineNozzle1",
+      },
+      {
+        "fx",
+        "torpedo_ignite_combo",
+      },
+      {
+        "sound",
+        "SPECIAL/SPECIAL_ABILITIES_MISSLE_STEAM",
+      },
+    },
+    event2 = {
+      {
+        "anim",
+        "Death",
+      },
+      {
+        "animtime",
+        "0.5",
+      },
+      {
+        "marker",
+        "root",
+      },
+      {
+        "fx",
+        "dmg_capital_explosion_combo",
+      },
+      {
+        "sound",
+        "EXPLOSION/LARGE/ETG_EXPLODE_LARGE_PLASMA",
+      },
+      {
+        "fx_scale",
+        "20",
+      },
+    },
+    event3 = {
+      {
+        "anim",
+        "Death",
+      },
+      {
+        "animtime",
+        "0.5",
+      },
+      {
+        "marker",
+        "root",
+      },
+      {
+        "fx",
+        "DMG_MASSIVE_MESH_SPHERE_RING",
+      },
+      {
+        "sound",
+        "",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+    },
+  },
+}

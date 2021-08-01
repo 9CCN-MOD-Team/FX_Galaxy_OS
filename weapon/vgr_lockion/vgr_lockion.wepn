@@ -1,0 +1,13 @@
+StartWeaponConfig(NewWeaponType,"Gimble","InstantHit","vgr_ionbeam_green","Normal",0,6000,0,4,0,0,20,0,1,16,0,0,0,0,0,0,0.1,"Normal",0,0,0)
+AddWeaponResult(NewWeaponType,"Hit","DamageHealth","Target",0,0,"")
+setPenetration(NewWeaponType,0,1,{
+  PlanetKillerArmour = 0,
+})
+setMissileKiller(NewWeaponType,1);setAccuracy(NewWeaponType,1,{
+  Fighter = 0,
+},{
+  Corvette = 0,
+})
+setAngles(NewWeaponType,9,0,0,0,0)
+setMiscValues(NewWeaponType,0,0)
+addAnimTurretSound(NewWeaponType,"Data:Sound/SFX/ETG/SPECIAL/SPECIAL_ABILITIES_TURRET_ON")

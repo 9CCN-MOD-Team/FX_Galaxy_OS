@@ -1,0 +1,14 @@
+KUS_LIGHTCORVETTE_RepairStart_OnSet = function(ship)
+	endEffect(ship, "Repairing")		
+end
+
+KUS_LIGHTCORVETTE_RepairStart_OnPause = function(ship)   
+end
+
+KUS_LIGHTCORVETTE_RepairDo_OnSet = function(ship)	
+	startEffect(ship, "Repairing")	
+end
+
+KUS_LIGHTCORVETTE_RepairEnd_OnSet = function(ship)	
+	endEffect(ship, "Repairing")	
+end

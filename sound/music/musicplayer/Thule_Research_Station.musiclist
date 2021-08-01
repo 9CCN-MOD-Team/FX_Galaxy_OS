@@ -1,0 +1,8 @@
+MusicList["Thule_Research_Station"] = 
+{
+	name = "Thule_Research_Station-Paul_Ruskay",
+	path = musicpath.."Thule_Research_Station",
+	minute = 1,
+	second = 34,
+	func = MP_NoCombat,
+}

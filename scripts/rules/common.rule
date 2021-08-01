@@ -1,0 +1,231 @@
+--加载LW库
+dofilepath("data:scripts/LW_functions.lua")
+dofilepath("data:scripts/ShipNaming.lua")
+--镜头晃动函数
+camerashake = {0,0,0,0,0,0,0,0}
+dofilepath("data:scripts/camerashake.lua")
+--战术统计库
+dofilepath("data:scripts/FX_TacticalReport.lua")
+dofilepath("data:scripts/councilor.lua")
+dofilepath("data:scripts/observer.lua")
+--AI脚本
+dofilepath("data:ai/ai_scripts.lua")
+--数据读取
+--dofilepath("data:ai/data_reader.lua")
+--AI外交
+dofilepath("data:scripts/AIContact.lua")
+--镜头函数
+dofilepath("data:scripts/camerafunctions.lua")
+
+FX_RaceShipToDefend=
+{
+	Hiigaran=
+	{
+		{"hgn_resourcecollector",50},
+		{"hgn_marinefrigate",50},
+		{"hgn_carrier",50},
+		{"hgn_mothership",50},
+		{"hgn_shipyard",50},
+	},
+	Vaygr=
+	{
+		{"vgr_resourcecollector",50},
+		{"vgr_infiltratorfrigate",50},
+		{"vgr_carrier",50},
+		{"vgr_mothership",50},
+		{"vgr_shipyard",50},
+	},
+	Bentusi=
+	{
+	},
+	Kadesh=
+	{
+		{"kad_salvager",50},
+		{"kad_militaryfuelpod",50},
+		{"kad_mothership",50},
+		{"kad_resourcefuelpod",50},
+		{"kad_carrier",50},
+	},
+	Turanic=
+	{
+		{"tur_resourcecollector",50},
+		{"tur_siegedrillfrigate",50},
+		{"tur_resourcecontroller",50},
+		{"tur_shipyard",50},
+		{"tur_carrier",50},
+	},
+	Taiidan=
+	{
+		{"tai_resourcecollector",50},
+		{"tai_salcapcorvette",50},
+		{"tai_mothership",50},
+		{"tai_shipyard",50},
+		{"tai_carrier",50},
+		{"tai_researchstation",50},
+	},
+	Keeper=
+	{
+		{"kpr_resourcecollector",50},
+		{"kpr_capturemover",50},
+		{"kpr_deliver",50},
+		{"kpr_balcoragate",50},
+		{"kpr_carrier",50},
+	},
+	Kushan=
+	{
+		{"kus_resourcecollector",50},
+		{"kus_salvagecorvette",50},
+		{"kus_mothership",50},
+		{"kus_carrier",50},
+	},
+	Observer=
+	{
+	},
+}
+
+function FX_PlayDeliverFX(Sob1,Sob2)
+	if(SobGroup_AreAnyOfTheseTypes(Sob2, "Kpr_Deliver")==1)then
+		SobGroup_FilterExclude(Sob1, Sob1, "CurrentCommand", "COMMAND_Resource")
+		if(SobGroup_Empty(Sob1)==0)then
+			FX_StopEvent(Sob2, "open")
+			FX_StartEvent(Sob2, "open")
+		end
+	end
+end
+
+function FX_UnitAddToCPU()
+	if(SobGroup_Empty("AITempAddGroup")==0)then
+		CPU_AddSobGroup(SobGroup_OwnedBy("AITempAddGroup"), "AITempAddGroup")
+		SobGroup_Clear("AITempAddGroup")
+	end
+end
+function FX_UnitRemoveFromCPU()
+	if(SobGroup_Empty("AITempRemoveGroup")==0)then
+		CPU_RemoveSobGroup(SobGroup_OwnedBy("AITempRemoveGroup"), "AITempRemoveGroup")
+		SobGroup_Clear("AITempRemoveGroup")
+	end
+end
+
+function FX_AddDefendGroupToCPU()
+	for iPlayer=0,Universe_PlayerCount()-1 do
+		if(SobGroup_Empty("AITempDefendGroup"..iPlayer)==0)then
+			CPU_AddDefendSobGroup(iPlayer, "AITempDefendGroup"..iPlayer, 50)
+			SobGroup_Clear("AITempDefendGroup"..iPlayer)
+		end
+		if (Player_GetLevelOfDifficulty(iPlayer)>0) then
+			for iIndex,iInfo in FX_RaceShipToDefend[Race_GetName(Player_GetRace(iPlayer))] do
+				Player_FillShipsByType("AITempDefendGroup"..iPlayer, iPlayer, iInfo[1])
+				if(SobGroup_Empty("AITempDefendGroup"..iPlayer)==0)then
+					CPU_AddDefendSobGroup(iPlayer, "AITempDefendGroup"..iPlayer, iInfo[2])
+					SobGroup_Clear("AITempDefendGroup"..iPlayer)
+				end
+			end
+		end
+	end
+end
+
+function FX_Protect()
+	for i=0,Universe_PlayerCount()-1 do
+		if GameEvent_IsListening(6011+i)~="" then
+			if (Universe_GameTime()>tonumber(GameEvent_IsListening(6011+i))) then
+				CPU_Enable(i, 1)
+				GameEvent_UnListen(6011+i)
+			else
+				CPU_Enable(i, 0)
+			end
+		end
+	end
+end
+
+function FX_Common_Rule_OnInit()
+	GameEvent_Listen(GE_ShipDocked,"FX_PlayDeliverFX")
+	GameEvent_Listen(GE_ShipLaunched,"FX_PlayDeliverFX")
+	SobGroup_CreateIfNotExist("camera")
+	SobGroup_CreateIfNotExist("AITempRemoveGroup")
+	SobGroup_CreateIfNotExist("AITempAddGroup")
+	SobGroup_CreateIfNotExist("FXProtectGroup"..AB_Move)
+	SobGroup_CreateIfNotExist("FXProtectGroup"..AB_Attack)
+	SobGroup_SetSwitchOwnerFlag("FXProtectGroup"..AB_Move, 0)
+	SobGroup_SetSwitchOwnerFlag("FXProtectGroup"..AB_Attack, 0)
+	SobGroup_CreateIfNotExist("CameraTrackTempGroup")
+	SobGroup_CreateIfNotExist("TempDockGroup")
+	SobGroup_CreateIfNotExist("TempDockGroup2")
+	for iPlayer=0,Universe_PlayerCount()-1 do
+		SobGroup_CreateIfNotExist("AITempDefendGroup"..iPlayer)
+	end
+	--Rule_AddInterval("FX_Protect",0.1)
+	Rule_AddInterval("Fix_DockBug",1)
+	Rule_AddInterval("FX_UnitAddToCPU",1)
+	Rule_AddInterval("FX_UnitRemoveFromCPU",1)
+	Rule_AddInterval("FX_AddDefendGroupToCPU",1)
+	if GetGameSettingAsString("aiclone")=="on" then
+		--Rule_AddInterval("FX_AICloneControlInit",0.1)
+	end
+	CameraShakeInit()
+	CouncilorOninit()
+	NameSelectedShipOninit()
+	OBInfoOninit()
+	Player_SetGlobalROE(Universe_CurrentPlayer(),1)
+	for iPlayer=0,Universe_PlayerCount() do
+		Volume_AddSphere("MineField"..iPlayer, {0,100,0}, 0)
+	end
+	FX_TacticalReport_Prepare()
+	FX_AI_Init(0,0)
+end
+
+function Player_GetLOD(iPlayer)
+	if (Player_GetLevelOfDifficulty(iPlayer)==0) then
+		return 0
+	else
+		return CPU_GetVar(iPlayer,"g_LOD")+1
+	end
+end
+
+function Fix_DockBug()
+	for iPlayer=0,Universe_PlayerCount()-1 do
+		if (Player_GetLOD(iPlayer)~=nil)and(Player_GetLOD(iPlayer)>2) then
+			SobGroup_Clear("TempDockGroup")
+			SobGroup_Clear("TempDockGroup2")
+			SobGroup_FilterInclude("TempDockGroup", "Player_Ships"..iPlayer, "Ability", "CanDock")
+			local iShip=0
+			SobGroup_FillShipsByIndexRange("TempDockGroup2", "TempDockGroup", iShip, 1) 
+			while (SobGroup_Empty("TempDockGroup2")==0) do
+				local SquadronSize=SobGroup_GetStaticF(SobGroup_GetShipType("TempDockGroup2"), "buildBatch")
+				if ((SobGroup_Count("TempDockGroup2")<0.8*SquadronSize)and(SquadronSize>1))or((SquadronSize==1)and(SobGroup_HealthPercentage("TempDockGroup2")<0.5)) then
+					if (SobGroup_UnderAttack("TempDockGroup2")==0)and(SobGroup_CanDoAbility("TempDockGroup2",AB_Dock)==1)and(SobGroup_AreAllInRealSpace("TempDockGroup2")==1) then
+						SobGroup_DockSobGroupWithAny("TempDockGroup2")
+					end
+				end
+				SobGroup_Clear("TempDockGroup2")
+				iShip=iShip+1
+				SobGroup_FillShipsByIndexRange("TempDockGroup2", "TempDockGroup", iShip, 1) 
+			end
+		end
+		SobGroup_Clear("TempDockGroup")
+		SobGroup_Clear("TempDockGroup2")
+		SobGroup_FilterInclude("TempDockGroup", "Player_Ships"..iPlayer, "CurrentCommandState", "DOCKSTATE_FlyToDockShip")
+		SobGroup_FilterExclude("TempDockGroup2", "TempDockGroup", "CurrentCommandState", "RESOURCESTATE_DOCKING")
+		local iShip=0
+		SobGroup_FillShipsByIndexRange("TempDockGroup", "TempDockGroup2", iShip, 1) 
+		while (SobGroup_Empty("TempDockGroup")==0) do
+			if SobGroup_UnderAttack("TempDockGroup")==1 then
+				SobGroup_DockSobGroupWithAny("TempDockGroup")
+			end
+			SobGroup_Clear("TempDockGroup")
+			iShip=iShip+1
+			SobGroup_FillShipsByIndexRange("TempDockGroup", "TempDockGroup2", iShip, 1) 
+		end
+	end
+end
+
+function FX_Common_Rule_OnStartOrLoad()
+	LW_SpeechRaceHelper()
+	dofilepath("data:scripts/XTR_Output.lua")
+	dofilepath("data:scripts/LW_PinYinIMEControl.lua")
+	dofilepath("data:/scripts/councilor_data.lua")
+	NameSelectedShipOnStartOrLoad()
+	if (Rule_Exists("Play_Music")==1) then
+		UI_SetElementVisible("NewTaskbar", "btnMP", 1)
+	end
+end
+

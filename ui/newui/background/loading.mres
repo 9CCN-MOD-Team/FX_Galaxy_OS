@@ -1,0 +1,9 @@
+dofilepath("player:DTM4State.lua")
+baseRes = 800
+if(DTM4_State==nil)then
+	res1600 = "DATA:/UI/NewUI/Background/loading.dds"
+elseif(DTM4_State=="")then
+	res1600 = "DATA:/UI/NewUI/Background/loading.dds"
+else
+	res1600 = "DATA:/leveldata/campaign/tutorial/RPG/LoadingBG/"..DTM4_State..".dds"
+end

@@ -1,0 +1,33 @@
+debugReload 1
+
+// Construct and build the program
+add		vert_text		#version 330
+#if gte CFG_DepthBias_FX 1
+add		vert_text		#define DEPTH_BIAS
+#fi
+add		vert_script		ux_shield.vert
+add		frag_text		#version 330
+#if gte CFG_DepthBias_FX 1
+add		frag_text		#define DEPTH_BIAS
+#fi
+add		frag_script		ux_shield.frag
+compile
+
+// Vertex Buffer input mappings
+input	pos uv0
+
+local	tex			inTexDiff		0
+local   tex                     inTexGlow               1
+local	tex			inTexDepth		7
+
+local	vec4		inAlphaMode		1	1	0	0
+//ux's shield parameters
+local float4 		inShieldInfo            10      100     1       0.05
+
+global	fxInfo		inFXInfo
+global	depthInfo	inDepth
+
+// Matrix stack uniform mappings
+matrix	modelview	inMatM
+matrix	camera		inMatV
+matrix	projection	inMatP

@@ -1,0 +1,11 @@
+StartWeaponConfig(NewWeaponType,"Gimble","InstantHit","lightplasmalance_Adv","Special Attack",0,1800,0,0.6,0,0,1,0,0,4,0,0,0,0,0,0,0.1,"Enhanced",0,0,10000000)
+AddWeaponResult(NewWeaponType,"Hit","DamageHealth","Owner",150,150,"")
+setPenetration(NewWeaponType,100,1,{
+  ResArmour = 0.3,
+},{
+  PlanetKillerArmour = 0,
+})
+setMissileKiller(NewWeaponType,1);setAccuracy(NewWeaponType,1,{
+  Fighter = 0.05,
+})
+setAngles(NewWeaponType,15,0,0,0,0)

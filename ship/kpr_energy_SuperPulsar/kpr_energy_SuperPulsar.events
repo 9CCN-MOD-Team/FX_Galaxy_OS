@@ -1,0 +1,998 @@
+effects = {
+  animations = {
+    animation1 = {
+      name = "Death",
+      length = 2,
+      loop = 0,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+    animation2 = {
+      name = "Damage",
+      length = 1,
+      loop = 1,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+    animation3 = {
+      name = "dmg01",
+      length = 1,
+      loop = 1,
+      parent = "Damage",
+      minimum = 0.25,
+      maximum = 1,
+      markers = {
+        "",
+      },
+    },
+    animation4 = {
+      name = "dmg02",
+      length = 1,
+      loop = 1,
+      parent = "Damage",
+      minimum = 0.5,
+      maximum = 1,
+      markers = {
+        "",
+      },
+    },
+    animation5 = {
+      name = "dmg03",
+      length = 1,
+      loop = 1,
+      parent = "Damage",
+      minimum = 0.75,
+      maximum = 1,
+      markers = {
+        "",
+      },
+    },
+    animation6 = {
+      name = "energy",
+      length = 8,
+      loop = 1,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+    animation7 = {
+      name = "energyoff",
+      length = 3,
+      loop = 0,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+    animation8 = {
+      name = "energyon",
+      length = 3,
+      loop = 0,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+  },
+  events = {
+    event1 = {
+      {
+        "anim",
+        "Weapon_TurretTop1",
+      },
+      {
+        "marker",
+        "root",
+      },
+      {
+        "fx",
+        "muzzle_flash_combo_small_capital_dread",
+      },
+       {
+        "sound",
+         "WEAPON/MEGASHIP/FIRE/DWEAPON_MOVER_KINETIC_AUTOGUN_SHELL",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+      event2 = {
+      {
+        "anim",
+        "Death",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "marker2",
+      },
+      {
+        "fx",
+        "dmg_cloud_explosion_large",
+      },
+      {
+        "sound",
+        "Explosion/Small/ETG_Explode_Small_Plasma",
+      },
+      {
+        "fx_scale",
+        "1.5",
+      },
+    },
+    event3 = {
+      {
+        "anim",
+        "Death",
+      },
+      {
+        "animtime",
+        "0.2",
+      },
+      {
+        "marker",
+        "marker6",
+      },
+      {
+        "fx",
+        "dmg_cloud_explosion_large",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+    },
+    event4 = {
+      {
+        "anim",
+        "Death",
+      },
+      {
+        "animtime",
+        "0.1",
+      },
+      {
+        "marker",
+        "marker4",
+      },
+      {
+        "fx",
+        "dmg_cloud_explosion_large",
+      },
+      {
+        "sound",
+        "EXPLOSION/MEDIUM/ETG_EXPLODE_MEDIUM_PLASMA",
+      },
+      {
+        "fx_scale",
+        "1.5",
+      },
+    },
+    event5 = {
+      {
+        "anim",
+        "Death",
+      },
+      {
+        "animtime",
+        "0.3",
+      },
+      {
+        "marker",
+        "marker8",
+      },
+      {
+        "fx",
+        "dmg_cloud_explosion_large",
+      },
+      {
+        "fx_scale",
+        "2.5",
+      },
+    },
+    event6 = {
+      {
+        "anim",
+        "Death",
+      },
+      {
+        "animtime",
+        "0.4",
+      },
+      {
+        "marker",
+        "Root",
+      },
+      {
+        "fx",
+        "dmg_cloud_main_explosion_combo",
+      },
+      {
+        "sound",
+        "EXPLOSION/MEDIUM/ETG_EXPLODE_MEDIUM_PLASMA",
+      },
+      {
+        "fx_scale",
+        "15",
+      },
+    },
+    event7 = {
+      {
+        "anim",
+        "Death",
+      },
+      {
+        "animtime",
+        "0.05",
+      },
+      {
+        "marker",
+        "marker1",
+      },
+      {
+        "fx",
+        "dmg_cloud_explosion_large",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+    },
+    event8 = {
+      {
+        "anim",
+        "Death",
+      },
+      {
+        "animtime",
+        "0.1",
+      },
+      {
+        "marker",
+        "root",
+      },
+      {
+        "fx",
+        "dmg_cloud_explosion_large",
+      },
+      {
+        "sound",
+        "Explosion/Small/ETG_Explode_Small_Plasma",
+      },
+      {
+        "fx_scale",
+        "2.5",
+      },
+    },
+    event9 = {
+      {
+        "anim",
+        "Death",
+      },
+      {
+        "animtime",
+        "0.25",
+      },
+      {
+        "marker",
+        "marker7",
+      },
+      {
+        "fx",
+        "dmg_cloud_explosion_large",
+      },
+      {
+        "fx_scale",
+        "2",
+      },
+    },
+    event10 = {
+      {
+        "anim",
+        "Death",
+      },
+      {
+        "animtime",
+        "0.2",
+      },
+      {
+        "marker",
+        "marker3",
+      },
+      {
+        "fx",
+        "dmg_cloud_explosion_large",
+      },
+      {
+        "sound",
+        "Explosion/Large/ETG_Explode_Large_Firey",
+      },
+      {
+        "fx_scale",
+        "0.75",
+      },
+    },
+    event11 = {
+      {
+        "anim",
+        "dmg01",
+      },
+      {
+        "animtime",
+        "-1",
+      },
+      {
+        "marker",
+        "marker1,marker2",
+      },
+      {
+        "fx",
+        "dmg_damage_puff_combo_frigate,dmg_damage_cloud_puff_spray",
+      },
+      {
+        "sound",
+        "DAMAGE/SMOKE/DAMAGE_SMOKE_EXHAUST_HEAVY",
+      },
+      {
+        "fx_scale",
+        "5",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event12 = {
+      {
+        "anim",
+        "dmg02",
+      },
+      {
+        "animtime",
+        "-1",
+      },
+      {
+        "marker",
+        "marker3,marker4",
+      },
+      {
+        "fx",
+        "dmg_damage_puff_combo_frigate,dmg_damage_cloud_puff_spray",
+      },
+      {
+        "sound",
+        "DAMAGE/SMOKE/DAMAGE_SMOKE_EXHAUST_HEAVY",
+      },
+      {
+        "fx_scale",
+        "7.5",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event13 = {
+      {
+        "anim",
+        "dmg03",
+      },
+      {
+        "animtime",
+        "-1",
+      },
+      {
+        "marker",
+        "root",
+      },
+      {
+        "fx",
+        "dmg_damage_puff_combo_frigate,dmg_damage_cloud_puff_spray",
+      },
+      {
+        "sound",
+        "DAMAGE/SMOKE/DAMAGE_SMOKE_EXHAUST_HEAVY",
+      },
+      {
+        "fx_scale",
+        "10",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+     event14 = {
+      {
+        "anim",
+        "Death",
+      },
+      {
+        "animtime",
+        "0.05",
+      },
+      {
+        "marker",
+        "marker10",
+      },
+      {
+        "fx",
+        "dmg_cloud_explosion_large",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+    },
+    event15 = {
+      {
+        "anim",
+        "energy",
+      },
+      {
+        "animtime",
+        "0.3",
+      },
+      {
+        "marker",
+        "marker21",
+      },
+      {
+        "fx",
+        "kpr_energy_SuperPulsar_beam_combo", --光束
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+    },
+    event16 = {
+      {
+        "anim",
+        "energy",
+      },
+      {
+        "animtime",
+        "0.5",
+      },
+      {
+        "marker",
+        "marker22",
+      },
+      {
+        "fx",
+        "kpr_energy_SuperPulsar_beam_combo",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+    },
+    event17 = {
+      {
+        "anim",
+        "energy",
+      },
+      {
+        "animtime",
+        "0.7",
+      },
+      {
+        "marker",
+        "marker23",
+      },
+      {
+        "fx",
+        "kpr_energy_SuperPulsar_beam_combo",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+    },
+    event18 = {
+      {
+        "anim",
+        "energy",
+      },
+      {
+        "animtime",
+        "0.3",
+      },
+      {
+        "marker",
+        "marker24",
+      },
+      {
+        "fx",
+        "kpr_energy_SuperPulsar_beam_combo",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+    },
+    event19 = {
+      {
+        "anim",
+        "energy",
+      },
+      {
+        "animtime",
+        "0.5",
+      },
+      {
+        "marker",
+        "marker25",
+      },
+      {
+        "fx",
+        "kpr_energy_SuperPulsar_beam_combo",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+    },
+    event20 = {
+      {
+        "anim",
+        "energy",
+      },
+      {
+        "animtime",
+        "0.7",
+      },
+      {
+        "marker",
+        "marker26",
+      },
+      {
+        "fx",
+        "kpr_energy_SuperPulsar_beam_combo",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+    },
+    event21 = {
+      {
+        "anim",
+        "energyoff",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "marker27",
+      },
+      {
+        "fx",
+        "kpr_energy_SuperPulsar_Lightning_flash_44",  --关闭时的闪电
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+    },
+    event22 = {
+      {
+        "anim",
+        "energyoff",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "marker28",
+      },
+      {
+        "fx",
+        "kpr_energy_SuperPulsar_Lightning_flash_44",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+    },
+    event23 = {
+      {
+        "anim",
+        "energyoff",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "marker29",
+      },
+      {
+        "fx",
+        "kpr_energy_SuperPulsar_Lightning_flash_44",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+    },
+    event24 = {
+      {
+        "anim",
+        "energyoff",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "marker30",
+      },
+      {
+        "fx",
+        "kpr_energy_SuperPulsar_Lightning_flash_44",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+    },
+    event25 = {
+      {
+        "anim",
+        "energy",
+      },
+      {
+        "animtime",
+        "0.375",
+      },
+      {
+        "marker",
+        "marker31",
+      },
+      {
+        "fx",
+        "kpr_energy_SuperPulsar_Lightning_flash_48",  --开启时的闪电
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+    },
+    event26 = {
+      {
+        "anim",
+        "energy",
+      },
+      {
+        "animtime",
+        "0.375",
+      },
+      {
+        "marker",
+        "marker32",
+      },
+      {
+        "fx",
+        "kpr_energy_SuperPulsar_Lightning_flash_67",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+    },
+    event27 = {
+      {
+        "anim",
+        "energy",
+      },
+      {
+        "animtime",
+        "0.375",
+      },
+      {
+        "marker",
+        "marker33",
+      },
+      {
+        "fx",
+        "kpr_energy_SuperPulsar_Lightning_flash_67",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+    },
+    event28 = {
+      {
+        "anim",
+        "energy",
+      },
+      {
+        "animtime",
+        "0.375",
+      },
+      {
+        "marker",
+        "marker34",
+      },
+      {
+        "fx",
+        "kpr_energy_SuperPulsar_Lightning_flash_48",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+    },
+    event29 = {
+      {
+        "anim",
+        "energyoff",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "marker41",
+      },
+     {
+        "fx",
+        "kad_turnStartflashcombo",
+      },
+      {
+        "sound",
+        "",
+      },
+      {
+        "fx_scale",
+        "2",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event30 = {
+      {
+        "anim",
+        "energyoff",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "marker42",
+      },
+     {
+        "fx",
+        "kad_turnStartflashcombo",
+      },
+      {
+        "sound",
+        "",
+      },
+      {
+        "fx_scale",
+        "2",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event31 = {
+      {
+        "anim",
+        "energyoff",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "marker43",
+      },
+     {
+        "fx",
+        "kad_turnStartflashcombo",
+      },
+      {
+        "sound",
+        "",
+      },
+      {
+        "fx_scale",
+        "2",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event32 = {
+      {
+        "anim",
+        "energyoff",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "marker44",
+      },
+     {
+        "fx",
+        "kad_turnStartflashcombo",
+      },
+      {
+        "sound",
+        "",
+      },
+      {
+        "fx_scale",
+        "2",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event33 = {
+      {
+        "anim",
+        "energyon",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "marker51",
+      },
+     {
+        "fx",
+        "kad_turnStartflashcombo",
+      },
+      {
+        "sound",
+        "",
+      },
+      {
+        "fx_scale",
+        "2",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event34 = {
+      {
+        "anim",
+        "energyon",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "marker52",
+      },
+     {
+        "fx",
+        "kad_turnStartflashcombo",
+      },
+      {
+        "sound",
+        "",
+      },
+      {
+        "fx_scale",
+        "2",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event35 = {
+      {
+        "anim",
+        "energyon",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "marker53",
+      },
+     {
+        "fx",
+        "kad_turnStartflashcombo",
+      },
+      {
+        "sound",
+        "",
+      },
+      {
+        "fx_scale",
+        "2",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event36 = {
+      {
+        "anim",
+        "energyon",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "marker54",
+      },
+     {
+        "fx",
+        "kad_turnStartflashcombo",
+      },
+      {
+        "sound",
+        "",
+      },
+      {
+        "fx_scale",
+        "2",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+  },
+}

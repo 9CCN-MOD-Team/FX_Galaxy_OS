@@ -1,0 +1,20 @@
+StartWeaponConfig(NewWeaponType,"AnimatedTurret","Bullet","FlakShell","Special Attack",1050,1500*1.1,0,0,0,0,1,1,0,37,0,0,0,0,50,50,0.1,"Normal",0,0,0);
+AddWeaponResult(NewWeaponType,"Hit","SpawnWeaponFire","Target",0,0,"Kus_HvCorvette_SpecialBurst");
+AddWeaponResult(NewWeaponType,"Miss","SpawnWeaponFire","Target",0,0,"Kus_HvCorvette_SpecialBurst");
+setPenetration(NewWeaponType,5,1,
+{Unarmoured=0.075},
+{LightArmour=0.15},
+{MediumArmour=0.88},
+{HeavyArmour=1.13},
+{ResArmour=0.12},
+{SubSystemArmour=0.35},
+{TurretArmour=0.4});
+setMissileKiller(NewWeaponType,1);setAccuracy(NewWeaponType,1,
+{Fighter=0.015},
+{Corvette=0.015},
+{munition=0},
+{Frigate=0.78,damage=1},
+{SmallCapitalShip=0.68,damage=1},
+{BigCapitalShip=0.68,damage=1},
+{ResourceLarge=0.5,damage=1});
+setAngles(NewWeaponType,0,-145,45,-10,30);

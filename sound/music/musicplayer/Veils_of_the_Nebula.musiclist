@@ -1,0 +1,8 @@
+MusicList["Veils_of_the_Nebula"] = 
+{
+	name = "Veils_of_the_Nebula-Paul_Ruskay",
+	path = musicpath.."Veils_of_the_Nebula",
+	minute = 1,
+	second = 43,
+	func = MP_NoCombat,
+}

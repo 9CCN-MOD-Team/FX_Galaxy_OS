@@ -1,0 +1,24 @@
+displayName = "$5501"
+contentType = 0
+contentName = "ascension"
+contentOrdered = 1
+contentChooseText = "$3451"  -- CHOOSE TUTORIAL//
+contentThumbName = "$90086"
+contentThumbDesc = "$90087"
+ExtFilter = "fx_101"
+contentRules = "DTsingleplayer"	-- A DEFAULT that actually reads from SinglePlayerOptions.lua
+
+Mission = { }   -- create a mission structure
+Mission[1] = 
+{
+	postload = function()	
+	end,
+	directory = "FX_101",
+	level = "FX_101.level",
+	postlevel = function(bWin)	
+		postLevelComplete()
+	end,
+	displayName = "$90086",
+	description = "$90087",
+	--forcesubtitles = 1,
+}

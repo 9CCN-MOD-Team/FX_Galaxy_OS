@@ -1,0 +1,13 @@
+hitfx = "plasma_hit_spray"
+bulletfx = "laser_white"
+nopenetratefx = "plasma_hit_spray"
+deathtype = "deathPlasma"
+firefx = "blueflashmedium"
+scartype = "Plasma_Bomb/Plasma_Bomb"
+fire_sfx = "WEAPON/FIGHTER/FIRE/WEAPON_FIGHTER_FLECHETTE_REPEATER_SHELL"
+hit_sfx = "WEAPON/CORVETTE/IMPACT/WEAPON_CORVETTE_PULASAR_CANNON_BEAM_HIT"
+nopenetrate = "WEAPON/CORVETTE/IMPACT/WEAPON_CORVETTE_PULASAR_CANNON_BEAM_HIT"
+hit_clamp = {
+  0.5,
+  2,
+}

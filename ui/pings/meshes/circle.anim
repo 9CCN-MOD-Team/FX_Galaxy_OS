@@ -1,0 +1,10 @@
+-- LuaDC version 0.9.20
+-- 2017/3/3 ÐÇÆÚÎå 22:54:51
+-- LuaDC by Age2uN
+-- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
+--
+fps = 19
+startFrame = 0
+loopCount = 100000
+texture = 
+    { "data:UI/Pings/Meshes/Circle.mtga", "data:UI/Pings/Meshes/CircleFlash.mtga", "data:UI/Pings/Meshes/CircleFlash.mtga", "data:UI/Pings/Meshes/Circle.mtga", "data:UI/Pings/Meshes/Circle.mtga", "data:UI/Pings/Meshes/Circle.mtga", "data:UI/Pings/Meshes/Circle.mtga", "data:UI/Pings/Meshes/Circle.mtga", "data:UI/Pings/Meshes/Circle.mtga", "data:UI/Pings/Meshes/Circle.mtga", "data:UI/Pings/Meshes/Circle.mtga", "data:UI/Pings/Meshes/Circle.mtga", "data:UI/Pings/Meshes/Circle.mtga", "data:UI/Pings/Meshes/Circle.mtga", "data:UI/Pings/Meshes/Circle.mtga", "data:UI/Pings/Meshes/Circle.mtga", "data:UI/Pings/Meshes/Circle.mtga", "data:UI/Pings/Meshes/Circle.mtga", "data:UI/Pings/Meshes/Circle.mtga", }

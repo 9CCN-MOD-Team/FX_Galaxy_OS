@@ -1,0 +1,9 @@
+StartWeaponConfig(NewWeaponType,"AnimatedTurret","Bullet","Hddread_kad_small","Normal Only",1600,1200,0,0,0,0,1,1,1,2,0,0,1,0,500,500,0.1,"Normal",0,0,0)
+AddWeaponResult(NewWeaponType,"Hit","DamageHealth","Target",40,40,"")
+setPenetration(NewWeaponType,5,1,{
+  SubSystemArmour = 3,
+})
+setMissileKiller(NewWeaponType,1);setAccuracy(NewWeaponType,1)
+setAngles(NewWeaponType,0,-20,20,-20,20)
+setMiscValues(NewWeaponType,0,0)
+

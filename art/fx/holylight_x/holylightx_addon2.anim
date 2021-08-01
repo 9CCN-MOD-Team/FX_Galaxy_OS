@@ -1,0 +1,10 @@
+-- LuaDC version 0.9.19
+-- 2011-1-1 22:59:32
+-- LuaDC by Age2uN
+-- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
+--
+fps = 15
+startFrame = 0
+loopCount = 1
+texture = 
+    { "data:/ART/FX/HolyLight_X/Addon_0.tga", "data:/ART/FX/HolyLight_X/Addon_1.tga", "data:/ART/FX/HolyLight_X/Addon_2.tga", "data:/ART/FX/HolyLight_X/Addon_3.tga", "data:/ART/FX/HolyLight_X/Addon_4.tga", "data:/ART/FX/HolyLight_X/Addon_5.tga", "data:/ART/FX/HolyLight_X/Addon_6.tga", "data:/ART/FX/HolyLight_X/Addon_6.tga", "data:/ART/FX/HolyLight_X/Addon_6.tga", "data:/ART/FX/HolyLight_X/Addon_6.tga", "data:/ART/FX/HolyLight_X/Addon_6.tga", "data:/ART/FX/HolyLight_X/Addon_6.tga", "data:/ART/FX/HolyLight_X/Addon_6.tga", "data:/ART/FX/HolyLight_X/Addon_6.tga", "data:/ART/FX/HolyLight_X/Addon_6.tga", "data:/ART/FX/HolyLight_X/Addon_6.tga", "data:/ART/FX/HolyLight_X/Addon_6.tga", "data:/ART/FX/HolyLight_X/Addon_6.tga", "data:/ART/FX/HolyLight_X/Addon_6.tga", "data:/ART/FX/HolyLight_X/Addon_6.tga", "data:/ART/FX/HolyLight_X/Addon_6.tga", "data:/ART/FX/HolyLight_X/Addon_6.tga", "data:/ART/FX/HolyLight_X/Addon_6.tga", "data:/ART/FX/HolyLight_X/Addon_6.tga", "data:/ART/FX/HolyLight_X/Addon_6.tga", "data:/ART/FX/HolyLight_X/Addon_6.tga", "data:/ART/FX/HolyLight_X/Addon_6.tga", "data:/ART/FX/HolyLight_X/Addon_6.tga", "data:/ART/FX/HolyLight_X/Addon_6.tga", "data:/ART/FX/HolyLight_X/Addon_6.tga", "data:/ART/FX/HolyLight_X/Addon_6.tga", "data:/ART/FX/HolyLight_X/Addon_6.tga", "data:/ART/FX/HolyLight_X/Addon_6.tga", "data:/ART/FX/HolyLight_X/Addon_6.tga", "data:/ART/FX/HolyLight_X/Addon_6.tga", "data:/ART/FX/HolyLight_X/Addon_6.tga", "data:/ART/FX/HolyLight_X/Addon_6.tga", }

@@ -1,0 +1,7 @@
+TUR_HEAVYCRUISER_Closed_OnSet = function(ship)
+		startEffect(ship, "E_Shock")
+end
+
+TUR_HEAVYCRUISER_Open_OnSet = function(ship)
+		endEffect(ship, "E_Shock")
+end

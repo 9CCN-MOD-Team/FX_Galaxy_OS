@@ -1,0 +1,339 @@
+effects = {
+  animations = {
+    animation1 = {
+      name = "Weapon_KineticDriver",
+      length = 0.5,
+      loop = 0,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+    animation2 = {
+      name = "Death",
+      length = 1,
+      loop = 0,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+    animation3 = {
+      name = "Damage",
+      length = 1,
+      loop = 1,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+},
+    animation4 = {
+      name = "Weapon_miss1",
+      length = 2,
+      loop = 0,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+},
+    animation5 = {
+      name = "Weapon_miss2",
+      length = 2,
+      loop = 0,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+  },
+  events = {
+    event1 = {
+      {
+        "anim",
+        "Weapon_KineticDriver",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "Weapon_KineticDriver_Position",
+      },
+      {
+        "fx",
+        "muzzle_flash_combo_plasma_kpr",
+      },
+      {
+        "sound",
+        "WEAPON/FIGHTER/FIRE/KWEAPON_MOVER_KINETIC_AUTOGUN_SHELL",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event2 = {
+      {
+        "anim",
+        "Fire",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "root",
+      },
+      {
+        "fx",
+        "muzzle_flash_combo_plasma_kpr",
+      },
+      {
+        "sound",
+        "WEAPON/FIGHTER/FIRE/KWEAPON_MOVER_KINETIC_AUTOGUN_SHELL",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event3 = {
+      {
+        "anim",
+        "Deathtrail",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "root",
+      },
+      {
+        "fx",
+        "FIERY_TRAIL_SPRAY",
+      },
+      {
+        "sound",
+        "EXPLOSION/DEATHTRAIL",
+      },
+      {
+        "fx_scale",
+        "5",
+      },
+    },
+    event4 = {
+      {
+        "anim",
+        "Deathtrail",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "root",
+      },
+      {
+        "fx",
+        "fiery_trail_spray_small",
+      },
+      {
+        "fx_scale",
+        "5",
+      },
+    },
+    event5 = {
+      {
+        "anim",
+        "Deathtrail",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "root",
+      },
+      {
+        "fx",
+        "fiery_flash_ring_long",
+      },
+      {
+        "fx_scale",
+        "30",
+      },
+    },
+    event6 = {
+      {
+        "anim",
+        "Death",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "root",
+      },
+      {
+        "fx",
+        "death_generic_fighter",
+      },
+      {
+        "sound",
+        "EXPLOSION/MEDIUM/ETG_EXPLODE_MEDIUM_FIREY",
+      },
+      {
+        "fx_scale",
+        "2",
+      },
+    },
+    event7 = {
+      {
+        "anim",
+        "Deathtrail",
+      },
+      {
+        "animtime",
+        "0.5",
+      },
+      {
+        "marker",
+        "root",
+      },
+      {
+        "fx",
+        "fiery_trail_lines_spray",
+      },
+      {
+        "fx_scale",
+        "entity",
+      },
+    },
+    event8 = {
+      {
+        "anim",
+        "Deathtrail",
+      },
+      {
+        "animtime",
+        "0.5",
+      },
+      {
+        "marker",
+        "root",
+      },
+      {
+        "fx",
+        "fiery_trail_death_combo",
+      },
+      {
+        "sound",
+        "EXPLOSION/MEDIUM/ETG_EXPLODE_MEDIUM_FIREY",
+      },
+      {
+        "fx_scale",
+        "20",
+      },
+    },
+    event9 = {
+      {
+        "anim",
+        "Deathtrail",
+      },
+      {
+        "animtime",
+        "1",
+      },
+      {
+        "marker",
+        "root",
+      },
+      {
+        "fx",
+        "fiery_trail_shockwave_small",
+      },
+      {
+        "fx_scale",
+        "entity",
+      },
+},
+    event10 = {
+      {
+        "anim",
+        "weapon_Miss1",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "Weapon_Miss1_Muzzle",
+      },
+      {
+        "fx",
+        "torpedo_steam_spray",
+      },
+      {
+        "sound",
+        "WEAPON/CARRIER/FIRE/WEAPON_DESTROYER_MISSLE_LAUNCH",
+      },
+      {
+        "fx_scale",
+        "0.5",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+},
+    event11 = {
+      {
+        "anim",
+        "weapon_Miss2",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "Weapon_Miss2_Muzzle",
+      },
+      {
+        "fx",
+        "torpedo_steam_spray",
+      },
+      {
+        "sound",
+        "WEAPON/CARRIER/FIRE/WEAPON_DESTROYER_MISSLE_LAUNCH",
+      },
+      {
+        "fx_scale",
+        "0.5",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+  },
+}

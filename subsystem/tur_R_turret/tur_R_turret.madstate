@@ -1,0 +1,8 @@
+TUR_R_TURRET_CodeRed_OnSet = function(ship)
+	startAnim(ship, "zhuan")
+	setLoopCount(ship, "zhuan", 100000)
+end
+
+TUR_R_TURRET_CodeGreen_OnSet = function(ship)
+	setLoopCount(ship, "zhuan", 0)
+end

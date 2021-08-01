@@ -1,0 +1,9 @@
+--unpacked
+--installer
+--installer_beta
+--workshop_entest
+--workshop_cntest
+--workshop_enbeta
+--workshop_en
+--workshop_cn
+FX_Galaxy_Pack_Version = "unpacked"

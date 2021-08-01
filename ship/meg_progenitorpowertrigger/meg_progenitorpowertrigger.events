@@ -1,0 +1,244 @@
+effects =
+{
+    animations =
+    {
+        animation1 =
+        {
+            name = "Activate",
+            length = 4,
+            loop = 0,
+            parent = "",
+            minimum = 0,
+            maximum = 0,
+            markers = {""}
+        },
+        animation2 =
+        {
+            name = "Trap",
+            length = 4,
+            loop = 0,
+            parent = "",
+            minimum = 0,
+            maximum = 0,
+            markers = {""}
+        },
+        animation3 =
+        {
+            name = "Pulse",
+            length = 1,
+            loop = 1,
+            parent = "",
+            minimum = 0,
+            maximum = 0,
+            markers = {""}
+        },
+        animation4 =
+        {
+            name = "Activate2",
+            length = 4,
+            loop = 0,
+            parent = "",
+            minimum = 0,
+            maximum = 0,
+            markers = {""}
+        },
+        animation5 =
+        {
+            name = "Pulse2",
+            length = 1,
+            loop = 1,
+            parent = "",
+            minimum = 0,
+            maximum = 0,
+            markers = {""}
+        },
+        animation6 =
+        {
+            name = "Death",
+            length = 2,
+            loop = 0,
+            parent = "",
+            minimum = 0,
+            maximum = 0,
+            markers = {""}
+        },
+    },
+    events =
+    {
+    death1 = {
+      {
+        "anim",
+        "Death",
+      },
+      {
+        "animtime",
+        "0.2",
+      },
+      {
+        "marker",
+        "Root",
+      },
+      {
+        "fx",
+        "dmg_cloud_explosion_large",
+      },
+      {
+        "fx_scale",
+        "4",
+      },
+    },
+    death2 = {
+      {
+        "anim",
+        "Death",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "Root",
+      },
+      {
+        "fx",
+        "dmg_cloud_explosion_large",
+      },
+      {
+        "sound",
+        "EXPLOSION/SMALL/ETG_EXPLODE_SMALL_PLASMA_FAR",
+      },
+      {
+        "fx_scale",
+        "2.5",
+      },
+    },
+    death3 = {
+      {
+        "anim",
+        "Death",
+      },
+      {
+        "animtime",
+        "0.5",
+      },
+      {
+        "marker",
+        "Root",
+      },
+      {
+        "fx",
+        "dmg_cloud_main_explosion_combo",
+      },
+      {
+        "fx_scale",
+        "20",
+      },
+    },
+    death4 = {
+      {
+        "anim",
+        "Death",
+      },
+      {
+        "animtime",
+        "0.1",
+      },
+      {
+        "marker",
+        "Root",
+      },
+      {
+        "fx",
+        "dmg_cloud_explosion_large",
+      },
+      {
+        "sound",
+        "EXPLOSION/MEDIUM/ETG_EXPLODE_MEDIUM_FIREY",
+      },
+      {
+        "fx_scale",
+        "4",
+      },
+    },
+        event1 =
+        {
+            { "anim", "Activate" },
+            { "animtime", "0" },
+            { "marker", "root" },
+            { "fx", "pro_tech_key_mesh" },
+            { "fx_scale", "1" },
+            { "fx_nlips", "off" },
+        },
+        event2 =
+        {
+            { "anim", "Pulse" },
+            { "animtime", "-1" },
+            { "marker", "root" },
+            { "fx", "pro_tech_key_mesh_loop" },
+            { "fx_scale", "1" },
+            { "fx_nlips", "off" },
+        },
+        event3 =
+        {
+            { "anim", "Activate" },
+            { "animtime", "0" },
+            { "marker", "root" },
+            { "fx", "pro_tech_key_flare" },
+            { "fx_scale", "1" },
+            { "fx_nlips", "off" },
+        },
+        event4 =
+        {
+            { "anim", "Activate2" },
+            { "animtime", "0" },
+            { "marker", "marker1" },
+            { "fx", "pro_tech_power_mesh" },
+            { "fx_scale", "0.59" },
+            { "fx_nlips", "off" },
+        },
+        event5 =
+        {
+            { "anim", "Pulse2" },
+            { "animtime", "-1" },
+            { "marker", "marker2" },
+            { "fx", "pro_tech_power_mesh_loop" },
+            { "fx_scale", "0.59" },
+            { "fx_nlips", "off" },
+        },
+        event6 =
+        {
+            { "anim", "Activate2" },
+            { "animtime", "0" },
+            { "marker", "marker1" },
+            { "fx", "pro_tech_key_mesh_left_loop" },
+            { "fx_scale", "0.59" },
+            { "fx_nlips", "off" },
+        },
+        event7 =
+        {
+            { "anim", "Activate2" },
+            { "animtime", "0" },
+            { "marker", "marker1" },
+            { "fx", "pro_tech_key_mesh_right_loop" },
+            { "fx_scale", "0.59" },
+            { "fx_nlips", "off" },
+        },
+        event8 =
+        {
+            { "anim", "Trap" },
+            { "animtime", "0" },
+            { "marker", "marker1" },
+            { "fx_scale", "1" },
+            { "fx_nlips", "on" },
+        },
+        event9 =
+        {
+            { "anim", "Trap" },
+            { "animtime", "-1" },
+            { "marker", "marker1" },
+            { "fx_scale", "1" },
+            { "fx_nlips", "on" },
+        },
+    }
+}

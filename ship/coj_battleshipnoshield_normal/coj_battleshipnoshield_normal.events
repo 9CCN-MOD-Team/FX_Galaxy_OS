@@ -1,0 +1,786 @@
+-- LuaDC version 0.9.19
+-- 2010-8-1 17:45:13
+-- LuaDC by Age2uN
+-- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
+--
+effects = 
+{ 
+    animations = 
+    { 
+        animation1 = 
+        { 
+            name = "Death", 
+            length = 5, 
+            loop = 0, 
+            parent = "", 
+            minimum = 0, 
+            maximum = 0, 
+            markers = 
+                { "", }, 
+        },
+        animation2 = 
+        { 
+            name = "Shield", 
+            length = 2, 
+            loop = 1, 
+            parent = "", 
+            minimum = 0, 
+            maximum = 0, 
+            markers = 
+                { "", }, 
+        },
+        animation3 = 
+        { 
+            name = "Shieldstart", 
+            length = 1, 
+            loop = 0, 
+            parent = "", 
+            minimum = 0, 
+            maximum = 0, 
+            markers = 
+                { "", }, 
+        },
+        animation4 = 
+        { 
+            name = "Shieldend", 
+            length = 1, 
+            loop = 0, 
+            parent = "", 
+            minimum = 0, 
+            maximum = 0, 
+            markers = 
+                { "", }, 
+        },
+
+        animation5 = 
+        { 
+            name = "Hyperbeam_Charge", 
+            length = 10, 
+            loop = 0, 
+            parent = "", 
+            minimum = 0, 
+            maximum = 0, 
+            markers = 
+                { "", }, 
+        },
+
+        animation6 = 
+        { 
+            name = "Weapon_Ion1", 
+            length = 4, 
+            loop = 0, 
+            parent = "", 
+            minimum = 0, 
+            maximum = 0, 
+            markers = 
+                { "", }, 
+        }, 
+        animation7 = 
+        { 
+            name = "Weapon_Ion2", 
+            length = 4, 
+            loop = 0, 
+            parent = "", 
+            minimum = 0, 
+            maximum = 0, 
+            markers = 
+                { "", }, 
+        }, 
+
+        animation8 = 
+        { 
+            name = "Weapon_Ion3", 
+            length = 4, 
+            loop = 0, 
+            parent = "", 
+            minimum = 0, 
+            maximum = 0, 
+            markers = 
+                { "", }, 
+        }, 
+
+        animation9 = 
+        { 
+            name = "Weapon_Ion4", 
+            length = 4, 
+            loop = 0, 
+            parent = "", 
+            minimum = 0, 
+            maximum = 0, 
+            markers = 
+                { "", }, 
+        }, 
+        animation10 = 
+        { 
+            name = "Weapon_Ion5", 
+            length = 4, 
+            loop = 0, 
+            parent = "", 
+            minimum = 0, 
+            maximum = 0, 
+            markers = 
+                { "", }, 
+        }, 
+        animation11 = 
+        { 
+            name = "Weapon_Ion6", 
+            length = 4, 
+            loop = 0, 
+            parent = "", 
+            minimum = 0, 
+            maximum = 0, 
+            markers = 
+                { "", }, 
+        }, 
+}, 
+    events = 
+    { 
+        event1 = 
+            { 
+                { "anim", "death", }, 
+                { "animtime", "0", }, 
+                { "marker", "marker1", }, 
+                { "fx", "dmg_cloud_explosion_large", }, 
+                { "sound", "Explosion/Small/ETG_Explode_Small_Firey", }, 
+                { "fx_scale", "10", }, 
+            }, 
+        event2 = 
+            { 
+                { "anim", "death", }, 
+                { "animtime", "0.1", }, 
+                { "marker", "marker2", }, 
+                { "fx", "dmg_cloud_explosion_large", }, 
+                { "sound", "Explosion/Small/ETG_Explode_Small_Plasma", }, 
+                { "fx_scale", "20", }, 
+            }, 
+        event3 = 
+            { 
+                { "anim", "death", }, 
+                { "animtime", "0.2", }, 
+                { "marker", "marker3", }, 
+                { "fx", "dmg_cloud_explosion_large", }, 
+                { "fx_scale", "10", }, 
+            }, 
+        event4 = 
+            { 
+                { "anim", "death", }, 
+                { "animtime", "0.3", }, 
+                { "marker", "marker4", }, 
+                { "fx", "dmg_cloud_explosion_large", }, 
+                { "sound", "EXPLOSION/SMALL/ETG_EXPLODE_SMALL_PLASMA_FAR", }, 
+                { "fx_scale", "30", }, 
+            }, 
+        event5 = 
+            { 
+                { "anim", "death", }, 
+                { "animtime", "0.4", }, 
+                { "marker", "marker5", }, 
+                { "fx", "dmg_cloud_explosion_large", }, 
+                { "sound", "EXPLOSION/SMALL/ETG_EXPLODE_SMALL_PLASMA_FAR", }, 
+                { "fx_scale", "30", }, 
+            }, 
+        event6 = 
+            { 
+                { "anim", "Death", }, 
+                { "animtime", "0.4", }, 
+                { "marker", "Root", }, 
+                { "fx", "dmg_cloud_main_explosion_combo", }, 
+                { "sound", "Explosion/Large/ETG_Explode_Large_Plasma", }, 
+                { "fx_scale", "60", }, 
+            }, 
+
+        event7 = 
+            { 
+                { "anim", "Shield", }, 
+                { "animtime", "0.5", }, 
+                { "marker", "Hardpoint_Shield_Position", }, 
+                { "fx", "coj_bbfieldcombo", }, 
+                { "fx_scale", "1", }, 
+            }, 
+
+
+        event8 = 
+            { 
+                { "anim", "Shieldstart", }, 
+                { "animtime", "0", }, 
+                { "marker", "Hardpoint_Shield_Position", }, 
+                { "fx", "coj_bbfieldstartcombo", }, 
+                { "fx_scale", "1", }, 
+                { "sound", "SP_ELEMENTS/HGN_DEFENSEFIELDFRIGATE_OPEN", }, 
+            }, 
+
+        event9 = 
+            { 
+                { "anim", "Shieldend", }, 
+                { "animtime", "0", }, 
+                { "marker", "Hardpoint_Shield_Position", }, 
+                { "fx", "coj_bbfieldendcombo", }, 
+                { "fx_scale", "1", }, 
+                { "sound", "SP_ELEMENTS/HGN_DEFENSEFIELDFRIGATE_CLOSE", }, 
+            }, 
+
+event10 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0", },
+{ "marker", "marker1", },
+{ "fx", "super_beam_charge_spray_purple", },
+                { "fx_scale", "1.2", },  
+},
+event11 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.03125", },
+{ "marker", "marker2", },
+{ "fx", "super_beam_charge_spray_purple", },
+                { "fx_scale", "1.2", },  
+},
+event12 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.0625", },
+{ "marker", "marker3", },
+{ "fx", "super_beam_charge_spray_purple", },
+                { "fx_scale", "1.2", },  
+},
+event13 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.09375", },
+{ "marker", "marker4", },
+{ "fx", "super_beam_charge_spray_purple", },
+                { "fx_scale", "1.2", },  
+},
+event14 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.125", },
+{ "marker", "marker5", },
+{ "fx", "super_beam_charge_spray_purple", },
+                { "fx_scale", "1.2", },  
+},
+event15 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.15625", },
+{ "marker", "marker6", },
+{ "fx", "super_beam_charge_spray_purple", },
+                { "fx_scale", "1.2", },  
+},
+event16 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.1875", },
+{ "marker", "marker7", },
+{ "fx", "super_beam_charge_spray_purple", },
+                { "fx_scale", "1.2", },  
+},
+event17 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.21875", },
+{ "marker", "marker8", },
+{ "fx", "super_beam_charge_spray_purple", },
+                { "fx_scale", "1.2", },  
+},
+event18 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.25", },
+{ "marker", "marker9", },
+{ "fx", "super_beam_charge_spray_purple", },
+                { "fx_scale", "1.2", },  
+},
+event19 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.28125", },
+{ "marker", "marker10", },
+{ "fx", "super_beam_charge_spray_purple", },
+                { "fx_scale", "1.2", },  
+},
+event20 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.3125", },
+{ "marker", "marker11", },
+{ "fx", "super_beam_charge_spray_purple", },
+                { "fx_scale", "1.2", },  
+},
+event21 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.34375", },
+{ "marker", "marker12", },
+{ "fx", "super_beam_charge_spray_purple", },
+                { "fx_scale", "1.2", },  
+},
+event22 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.375", },
+{ "marker", "marker13", },
+{ "fx", "super_beam_charge_spray_purple", },
+                { "fx_scale", "1.2", },  
+},
+event23 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.40625", },
+{ "marker", "marker14", },
+{ "fx", "super_beam_charge_spray_purple", },
+                { "fx_scale", "1.2", },  
+},
+event24 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.4375", },
+{ "marker", "marker15", },
+{ "fx", "super_beam_charge_spray_purple", },
+                { "fx_scale", "1.2", },  
+},
+event25 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.46875", },
+{ "marker", "marker16", },
+{ "fx", "super_beam_charge_spray_purple", },
+                { "fx_scale", "1.2", },  
+},
+
+
+event26 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.5", },
+{ "marker", "marker17", },
+{ "fx", "super_beam_charge_spray_purple", },
+                { "fx_scale", "1", },  
+},
+event27 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.5", },
+{ "marker", "marker18", },
+{ "fx", "super_beam_charge_spray_purple", },
+                { "fx_scale", "1", },  
+},
+event28 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.5", },
+{ "marker", "marker19", },
+{ "fx", "super_beam_charge_spray_purple", },
+                { "fx_scale", "1", },  
+},
+event29 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.5", },
+{ "marker", "marker20", },
+{ "fx", "super_beam_charge_spray_purple", },
+                { "fx_scale", "1", },  
+},
+event30 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.5", },
+{ "marker", "marker21", },
+{ "fx", "super_beam_charge_spray_purple", },
+                { "fx_scale", "1", },  
+},
+event31 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.5", },
+{ "marker", "marker22", },
+{ "fx", "super_beam_charge_spray_purple", },
+                { "fx_scale", "1", },  
+},
+event32 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.5", },
+{ "marker", "marker23", },
+{ "fx", "super_beam_charge_spray_purple", },
+                { "fx_scale", "1", },  
+},
+event33 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.5", },
+{ "marker", "marker24", },
+{ "fx", "super_beam_charge_spray_purple", },
+                { "fx_scale", "1", },  
+},
+event34 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.5", },
+{ "marker", "marker25", },
+{ "fx", "super_beam_charge_spray_purple", },
+                { "fx_scale", "1", },  
+},
+event35 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.7", },
+{ "marker", "marker17", },
+{ "fx", "super_beam_charge_spray_purple", },
+                { "fx_scale", "1", },  
+},
+event36 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.7", },
+{ "marker", "marker18", },
+{ "fx", "super_beam_charge_spray_purple", },
+                { "fx_scale", "1", },  
+},
+event37 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.7", },
+{ "marker", "marker19", },
+{ "fx", "super_beam_charge_spray_purple", },
+                { "fx_scale", "1", },  
+},
+event38 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.7", },
+{ "marker", "marker20", },
+{ "fx", "super_beam_charge_spray_purple", },
+                { "fx_scale", "1", },  
+},
+event39 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.7", },
+{ "marker", "marker21", },
+{ "fx", "super_beam_charge_spray_purple", },
+                { "fx_scale", "1", },  
+},
+event40 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.7", },
+{ "marker", "marker22", },
+{ "fx", "super_beam_charge_spray_purple", },
+                { "fx_scale", "1", },  
+},
+event41 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.7", },
+{ "marker", "marker23", },
+{ "fx", "super_beam_charge_spray_purple", },
+                { "fx_scale", "1", },  
+},
+event42 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.7", },
+{ "marker", "marker24", },
+{ "fx", "super_beam_charge_spray_purple", },
+                { "fx_scale", "1", },  
+},
+event43 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.7", },
+{ "marker", "marker25", },
+{ "fx", "super_beam_charge_spray_purple", },
+                { "fx_scale", "1", },  
+},
+event44 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.9", },
+{ "marker", "marker17", },
+{ "fx", "super_beam_charge_spray_purple", },
+                { "fx_scale", "1", },  
+},
+event45 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.9", },
+{ "marker", "marker18", },
+{ "fx", "super_beam_charge_spray_purple", },
+                { "fx_scale", "1", },  
+},
+event46 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.9", },
+{ "marker", "marker19", },
+{ "fx", "super_beam_charge_spray_purple", },
+                { "fx_scale", "1", },  
+},
+event47 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.9", },
+{ "marker", "marker20", },
+{ "fx", "super_beam_charge_spray_purple", },
+                { "fx_scale", "1", },  
+},
+event48 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.9", },
+{ "marker", "marker21", },
+{ "fx", "super_beam_charge_spray_purple", },
+                { "fx_scale", "1", },  
+},
+event49 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.9", },
+{ "marker", "marker22", },
+{ "fx", "super_beam_charge_spray_purple", },
+                { "fx_scale", "1", },  
+},
+event50 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.9", },
+{ "marker", "marker23", },
+{ "fx", "super_beam_charge_spray_purple", },
+                { "fx_scale", "1", },  
+},
+event51 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.9", },
+{ "marker", "marker24", },
+{ "fx", "super_beam_charge_spray_purple", },
+                { "fx_scale", "1", },  
+},
+event52 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.9", },
+{ "marker", "marker25", },
+{ "fx", "super_beam_charge_spray_purple", },
+                { "fx_scale", "1", },  
+},
+
+event53 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.5", },
+{ "marker", "Weapon_HeavyBeam_Position", },
+{ "sound", "WEAPON/MEGASHIP/FIRE/SAJUUK_HEAVY_ION_CANNON_BEAM", },
+},
+
+event54 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0", },
+{ "marker", "Weapon_HeavyBeam_Position", },
+{ "sound", "WEAPON/MEGASHIP/FIRE/DREADNAUGHT_FIRE_1", },
+},
+
+event55 =
+{
+{"anim","Shield", },
+{ "animtime", "-1", },
+{ "marker", "Hardpoint_Shield_Position", },
+{ "sound", "SP_ELEMENTS/HGN_DEFENSEFIELDFRIGATE_ON", }, 
+},
+
+        event56 = 
+            { 
+                { "anim", "Weapon_Ion1", }, 
+                { "animtime", "0", }, 
+                { "marker", "Weapon_Ion1_Position", }, 
+                { "fx", "ion_beam_purple_charge_combo", }, 
+                { "sound", "WEAPON/FRIGATE/FIRE/WEAPON_FRIGATE_ION_CANNON_BEAM",},
+            },
+
+        event57 = 
+            { 
+                { "anim", "Weapon_Ion2", }, 
+                { "animtime", "0", }, 
+                { "marker", "Weapon_Ion2_Position", }, 
+                { "fx", "ion_beam_purple_charge_combo", }, 
+                { "sound", "WEAPON/FRIGATE/FIRE/WEAPON_FRIGATE_ION_CANNON_BEAM",},
+            },
+
+        event58 = 
+            { 
+                { "anim", "Weapon_Ion3", }, 
+                { "animtime", "0", }, 
+                { "marker", "Weapon_Ion3_Position", }, 
+                { "fx", "ion_beam_purple_charge_combo", }, 
+                { "sound", "WEAPON/FRIGATE/FIRE/WEAPON_FRIGATE_ION_CANNON_BEAM",},
+            },
+        event59 = 
+            { 
+                { "anim", "Weapon_Ion4", }, 
+                { "animtime", "0", }, 
+                { "marker", "Weapon_Ion4_Position", }, 
+                { "fx", "ion_beam_purple_charge_combo", }, 
+                { "sound", "WEAPON/FRIGATE/FIRE/WEAPON_FRIGATE_ION_CANNON_BEAM",},
+            },
+
+        event60 = 
+            { 
+                { "anim", "Weapon_Ion5", }, 
+                { "animtime", "0", }, 
+                { "marker", "Weapon_Ion5_Position", }, 
+                { "fx", "ion_beam_purple_charge_combo", }, 
+                { "sound", "WEAPON/FRIGATE/FIRE/WEAPON_FRIGATE_ION_CANNON_BEAM",},
+            },
+
+        event61 = 
+            { 
+                { "anim", "Weapon_Ion6", }, 
+                { "animtime", "0", }, 
+                { "marker", "Weapon_Ion6_Position", }, 
+                { "fx", "ion_beam_purple_charge_combo", }, 
+                { "sound", "WEAPON/FRIGATE/FIRE/WEAPON_FRIGATE_ION_CANNON_BEAM",},
+            },
+
+        event62 = 
+            { 
+                { "anim", "death", }, 
+                { "animtime", "0.6", }, 
+                { "marker", "Root", }, 
+                { "fx", "great_explosion", }, 
+                { "sound", "Explosion/Small/ETG_Explode_Small_Plasma", }, 
+                { "fx_scale", "3", }, 
+            }, 
+
+        event63 = 
+            { 
+                { "anim", "death", }, 
+                { "animtime", "0.2", }, 
+                { "marker", "Weapon_Ion5_Position", }, 
+                { "fx", "dmg_cloud_explosion_large", }, 
+                { "fx_scale", "12", }, 
+            }, 
+
+
+        event64 = 
+            { 
+                { "anim", "death", }, 
+                { "animtime", "0.4", }, 
+                { "marker", "Weapon_Ion1_Position", }, 
+                { "fx", "dmg_cloud_explosion_large", }, 
+                { "fx_scale", "12", }, 
+            }, 
+
+        event65 = 
+            { 
+                { "anim", "death", }, 
+                { "animtime", "0.3", }, 
+                { "marker", "Weapon_Ion3_Position", }, 
+                { "fx", "dmg_cloud_explosion_large", }, 
+                { "fx_scale", "12", }, 
+            }, 
+
+        event66 = 
+            { 
+                { "anim", "death", }, 
+                { "animtime", "0.8", }, 
+                { "marker", "Weapon_Ion3_Position", }, 
+                { "fx", "dmg_cloud_explosion_large", }, 
+                { "fx_scale", "12", }, 
+            }, 
+
+        event67 = 
+            { 
+                { "anim", "death", }, 
+                { "animtime", "0.8", }, 
+                { "marker", "marker5", }, 
+                { "fx", "dmg_cloud_explosion_large", }, 
+                { "fx_scale", "6", }, 
+            }, 
+        event68 = 
+            { 
+                { "anim", "death", }, 
+                { "animtime", "0.8", }, 
+                { "marker", "marker7", }, 
+                { "fx", "dmg_cloud_explosion_large", }, 
+                { "fx_scale", "6", }, 
+            }, 
+
+        event69 = 
+            { 
+                { "anim", "death", }, 
+                { "animtime", "0.25", }, 
+                { "marker", "marker7", }, 
+                { "fx", "dmg_cloud_explosion_large", }, 
+                { "fx_scale", "6", }, 
+            }, 
+        event70 = 
+            { 
+                { "anim", "death", }, 
+                { "animtime", "0.2", }, 
+                { "marker", "marker6", }, 
+                { "fx", "dmg_cloud_explosion_large", }, 
+                { "fx_scale", "6", }, 
+            }, 
+
+        event71 = 
+            { 
+                { "anim", "death", }, 
+                { "animtime", "0.4", }, 
+                { "marker", "marker12", }, 
+                { "fx", "dmg_cloud_explosion_large", }, 
+                { "fx_scale", "6", }, 
+            }, 
+
+        event72 = 
+            { 
+                { "anim", "death", }, 
+                { "animtime", "0.45", }, 
+                { "marker", "marker15", }, 
+                { "fx", "dmg_cloud_explosion_large", }, 
+                { "fx_scale", "5", }, 
+            }, 
+
+        event73 = 
+            { 
+                { "anim", "death", }, 
+                { "animtime", "0.43", }, 
+                { "marker", "marker13", }, 
+                { "fx", "dmg_cloud_explosion_large", }, 
+                { "fx_scale", "7", }, 
+            }, 
+
+        event74 = 
+            { 
+                { "anim", "death", }, 
+                { "animtime", "0.65", }, 
+                { "marker", "marker21", }, 
+                { "fx", "dmg_cloud_explosion_large", }, 
+                { "fx_scale", "9", }, 
+            }, 
+
+        event75 = 
+            { 
+                { "anim", "death", }, 
+                { "animtime", "0.25", }, 
+                { "marker", "marker13", }, 
+                { "fx", "dmg_cloud_explosion_large", }, 
+                { "fx_scale", "4", }, 
+            }, 
+
+event76 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.5", },
+{ "marker", "Weapon_HeavyBeam_Position", },
+{ "fx", "super_beam_lensflare_purple", },
+{ "fx_scale", "0.75", }, 
+{ "gameEv", "playBgLightAnim,super_beam_background_ring", }, 
+},
+
+
+
+},
+
+}

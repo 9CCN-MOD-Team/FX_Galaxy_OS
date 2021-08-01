@@ -1,0 +1,187 @@
+effects = {
+  animations = {
+    animation1 = {
+      name = "Death",
+      length = 1,
+      loop = 0,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+    animation2 = {
+      name = "Weapon_Gun_L",
+      length = 1.2,
+      loop = 0,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+    animation3 = {
+      name = "Weapon_Gun_R",
+      length = 1.2,
+      loop = 0,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+    
+  },
+  events = {
+       event1 = {
+      {
+        "anim",
+        "Weapon_Gun_L",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "Weapon_Gun_L_Muzzle",
+      },
+      {
+        "fx",
+        "muzzle_flash_combo_small_capital_dread",
+      },
+       {
+        "sound",
+         "WEAPON/MEGASHIP/FIRE/DWEAPON_MOVER_KINETIC_AUTOGUN_SHELL",
+      },
+      {
+        "fx_scale",
+        "1.5",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event2 = {
+      {
+        "anim",
+        "Weapon_Gun_L",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "Weapon_Gun_LSlave_Muzzle",
+      },
+      {
+        "fx",
+       "muzzle_flash_combo_small_capital_dread",
+      },
+      {
+        "sound",
+         "WEAPON/MEGASHIP/FIRE/DWEAPON_MOVER_KINETIC_AUTOGUN_SHELL",
+      },
+      {
+        "fx_scale",
+        "1.5",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event3 = {
+      {
+        "anim",
+        "Weapon_Gun_R",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "Weapon_Gun_R_Muzzle",
+      },
+      {
+        "fx",
+        "muzzle_flash_combo_small_capital_dread",
+      },
+       {
+        "sound",
+         "WEAPON/MEGASHIP/FIRE/DWEAPON_MOVER_KINETIC_AUTOGUN_SHELL",
+      },
+      {
+        "fx_scale",
+        "1.5",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event4 = {
+      {
+        "anim",
+        "Weapon_Gun_R",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "Weapon_Gun_RSlave_Muzzle",
+      },
+      {
+        "fx",
+       "muzzle_flash_combo_small_capital_dread",
+      },
+      {
+        "sound",
+         "WEAPON/MEGASHIP/FIRE/DWEAPON_MOVER_KINETIC_AUTOGUN_SHELL",
+      },
+      {
+        "fx_scale",
+        "1.5",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event5 = {
+      {
+        "anim",
+        "death",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "marker1",
+      },
+      {
+        "fx",
+        "dmg_cloud_explosion_large",
+      },
+      {
+        "sound",
+        "Explosion/Small/ETG_Explode_Small_Firey",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+    },
+    
+  },
+}

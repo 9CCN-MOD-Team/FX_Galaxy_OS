@@ -1,0 +1,10 @@
+StartWeaponConfig(NewWeaponType,"Gimble","InstantHit","VgrBeam","Normal",0,2575,0,0.5,0,0,2,0,0,0.44,1.35,2.5,1,1,0,0,0.5,"Normal",1,0,0);
+AddWeaponResult(NewWeaponType,"Hit","DamageHealth","Target",22,23,"");
+setPenetration(NewWeaponType, 5, 0, 
+{ 
+    MineArmour = 1, 
+})
+setMissileKiller(NewWeaponType,1);setAccuracy(NewWeaponType, 0, 
+{ 
+    Munition = 0.678, })
+setAngles(NewWeaponType,83,0,0,0,0);

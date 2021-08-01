@@ -1,0 +1,48 @@
+
+--Local_Desc - Description of this package
+--Package_Sym - Shared name for packages with the same catagory
+--Package_Desc - Description - may move to a 'package' desc file...
+
+Root = "DATA:\\LevelData\\Multiplayer\\fxnewmap"
+
+ExtFilter = "levels_fx_dm"
+
+--Tags - Set single tags for all levels...
+Tags = ""--"fx_dm"
+
+--TagSets - Set groups of tags for all levels (defined in Scripts/Tags/*.tags) - makes bulk editing faster...
+--TagSets = "hw1"
+
+LevelList = 
+{
+	{
+		Tags = "2p",
+		Name = "DC",
+		Desc = "$96347",
+		MaxPlayers = 2,
+	},
+	{
+		Tags = "2p",
+		Name = "DY",
+		Desc = "$96348",
+		MaxPlayers = 2,
+	},
+	{
+		Tags = "6p",
+		Name = "mock_battle",
+		Desc = "$96349",
+		MaxPlayers = 6,
+	},
+	{
+		Tags = "4p",
+		Name = "givet_4p",
+		Desc = "$96350",
+		MaxPlayers = 4,
+	},
+	{
+		Tags = "2p",
+		Name = "bloody_fate",
+		Desc = "$96351",
+		MaxPlayers = 2,
+	},
+}

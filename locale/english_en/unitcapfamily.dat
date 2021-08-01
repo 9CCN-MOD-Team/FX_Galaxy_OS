@@ -1,0 +1,69 @@
+filerange 38000 38100
+rangestart 38000 38100
+
+38000	Scout
+38001	Fighter
+38002	Defense Fighter
+
+38010	Corvette
+38011	Minelayer Corvette
+38012	Salvage Corvette
+38013	Capture Mover
+38014	Variation Swarmer
+38015	Adv. Swarmer
+38016	Azrael Attacker
+
+38030	Frigate
+38031	Marine&Infiltrator Frigate
+38032	Defense Field Frigate
+38033	Energy Jam Frigate
+38034	Arbitrator
+38035	Fuel Pod
+38036	Infiltrator Pod
+
+38040	Capital Ship
+38041	Phase Prism
+38042	Carrier
+38043	Khar-Toba
+38044	The Hand That Shapes
+38045	Carrier
+38046	Recycle Station
+38047	Destroyer
+38048	Keeper
+38049	Nagual
+38050	Missile Destroyer
+38051	Attack Carrier
+38052	Sniper
+38053	Battlecruiser
+38054	Heavy Cruiser
+38055	Dreadnaught
+38056	Mothership
+38057	Combat Mothership
+38058	Flagship
+38059	Shipyard
+38060	Balcora Gate
+38061	Base
+38062	Research Station
+38063	Sajuuk
+38064	Light Cruiser
+38065	Battleship
+
+38070	Platform
+38071	Hyperspace Gate
+38072	Research Ship
+38073	Adv. Sensor Array
+38074	Defense Gun
+38075	Pyramid - Photon Bomb
+38076	Pyramid - Phased Cannon
+38077	Pyramid - Array Cannon
+38078	Pyramid - Ion Cannon
+38079	Pyramid - Pulsar
+38080	Pyramid - Super Pulsar
+38081	Core - Force
+
+38090	Utility
+38091	Resource Collector
+38092	Mobile Refinary
+38093	Probe
+
+rangeend

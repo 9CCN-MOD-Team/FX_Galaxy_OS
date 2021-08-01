@@ -1,0 +1,101 @@
+
+NCCN_WEIYI_CodeRed_OnSet = function(ship)
+    startAnim(ship, "red")
+    setLoopCount(ship, "red", 100000)
+    if(isAnimRunning(ship,"Mad_Open") == 0) then
+	setState(ship, "CodeRed", 0)
+        startTime = 0
+        if(isAnimRunning(ship,"Mad_Close") ~= 0) then
+            startTime = getAnimLength(ship, "Mad_Close") - getTime(ship, "Mad_Close")
+            stopAnim(ship, "Mad_Close")
+            --endEffect(ship, "Mad_Close")
+        end
+        startAnim(ship, "Mad_Open")
+        startEffect(ship, "Fire_FX")
+        setTime(ship,"Mad_Open",startTime)
+        setPauseTime(ship, "Mad_Open", 1000)
+    end
+end
+
+NCCN_WEIYI_CodeRed_OnPause = function(ship)
+    setState(ship, "CodeRed", 1)
+end
+
+NCCN_WEIYI_CodeGreen_OnSet = function(ship)
+    if(isAnimRunning(ship,"Mad_Close") == 0) then
+        startTime = 0
+        if(isAnimRunning(ship,"Mad_Open") ~= 0) then
+            startTime = getAnimLength(ship, "Mad_Open") - getTime(ship, "Mad_Open")
+            stopAnim(ship, "Mad_Open")
+            endEffect(ship, "Fire_FX")
+        end
+        startAnim(ship, "Mad_Close")
+        --startEffect(ship, "Mad_Close")
+        setTime(ship,"Mad_Close",startTime)
+        setPauseTime(ship, "Mad_Close", 1000)
+        setLoopCount(ship, "red", 0)
+    end
+end
+-----------------------------
+NCCN_WEIYI_Docked_OnSet = function(ship)
+    if(isAnimRunning(ship,"red") ~= 0) then
+    if(isAnimRunning(ship,"Mad_Close") == 0) then
+        startTime = 0
+        if(isAnimRunning(ship,"Mad_Open") ~= 0) then
+            startTime = getAnimLength(ship, "Mad_Open") - getTime(ship, "Mad_Open")
+            stopAnim(ship, "Mad_Open")
+            --endEffect(ship, "Mad_Open")
+        end
+        startAnim(ship, "Mad_Close")
+        --startEffect(ship, "Mad_Close")
+        setTime(ship,"Mad_Close",startTime)
+        setPauseTime(ship, "Mad_Close", 1000)
+        setLoopCount(ship, "red", 0)
+    end
+    end
+end
+-------------------------
+NCCN_WEIYI_DockPathMad_Open_OnSet = function(ship)
+		startEffect(ship, "Mad_Open")
+end
+----------------------------------------------------------------
+NCCN_WEIYI_ResourceStart_OnSet = function(ship)
+	setState(ship, "ResourceStart", 0)
+	stopAnim(ship, "Mad_Mad_Close")
+	stopAnim(ship, "Mad_Shock")
+	 --endEffect(ship, "E_Shocking")
+	startAnim(ship, "Mad_Mad_Open")
+	 startEffect(ship, "E_Mad_Open")
+	setPauseTime(ship, "Mad_Mad_Open", 1000)
+end
+NCCN_WEIYI_ResourceDo_OnSet = function(ship)
+	stopAnim(ship, "Mad_Mad_Open")
+	stopAnim(ship, "Mad_Mad_Close")
+	startAnim(ship,"Mad_Shock")
+	 --startEffect(ship, "E_Shocking")
+	setLoopCount(ship, "Mad_Shock", 999999)
+	setState(ship, "ResourceDo", 1)
+end
+
+NCCN_WEIYI_ResourceEnd_OnSet = function(ship)
+	stopAnim(ship, "Mad_Mad_Open")
+	stopAnim(ship, "Mad_Shock")
+	 --endEffect(ship, "Weapon_Triton")
+	startAnim(ship, "Mad_Mad_Close")
+	 startEffect(ship, "E_Mad_Close")
+	setState(ship, "ResourceEnd", 1)
+	setPauseTime(ship, "Mad_Mad_Close", 1000)
+end
+----------------------------------------------------------------
+NCCN_WEIYI_Launched_OnSet = function(ship)
+    startAnim(ship, "MAD_zhuan")
+    setLoopCount(ship, "MAD_zhuan", 100000)
+end
+----------------------------------------------------------------
+NCCN_WEIYI_Mad_Closed_OnSet = function(ship)
+		startEffect(ship, "E_Shock")
+end
+
+NCCN_WEIYI_Mad_Open_OnSet = function(ship)
+		endEffect(ship, "E_Shock")
+end

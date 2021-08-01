@@ -1,0 +1,63 @@
+-------停泊动画
+KAD_FUELPOD_DockPathOpen_OnSet = function(ship)
+    setState(ship, "DockPathOpen", 0)
+    if(isAnimRunning(ship, "Open") == 0) then
+        print("KAD_FUELPOD_DockPathOpen_OnSet")
+        startTime = 0
+        if(isAnimRunning(ship, "Close") ~= 0) then
+            startTime = getAnimLength(ship, "Close") - getTime(ship, "Close")-1
+            stopAnim(ship, "Close")
+            endEffect(ship, "Powerup")
+        end
+        startAnim(ship, "Open")
+        startEffect(ship, "Powerup")
+        setTime(ship,"Open",startTime)
+        setPauseTime(ship, "Open", 1000)
+    end
+end
+KAD_FUELPOD_DockPathOpen_OnPause = function(ship)
+    setState(ship, "DockPathOpen", 1)
+end
+KAD_FUELPOD_DockPathClosed_OnSet = function(ship)
+        startTime = 0
+	stopAnim(ship, "Open")
+	endEffect(ship, "Powerup")
+        startAnim(ship, "Close")
+        startEffect(ship, "Powerup")
+        setTime(ship,"Close",startTime)
+        setPauseTime(ship, "Close", 1000)
+end
+KAD_FUELPOD_DockPathClosed_OnPause = function(ship)	
+	print("KAD_FUELPOD_DockPathClose_OnPause")
+	setState(ship, "DockPathClose", 1)
+        endEffect(ship, "Powerup")
+end
+---------武器展开动画
+KAD_FUELPOD_ResourceStart_OnSet = function(ship)
+	setState(ship, "ResourceStart", 0)
+	stopAnim(ship, "Mad_Close")
+	stopAnim(ship, "Mad_Shock")
+	 --endEffect(ship, "E_Shocking")
+	startAnim(ship, "Mad_Open")
+	 startEffect(ship, "E_Open")
+	setPauseTime(ship, "Mad_Open", 1000)
+end
+
+KAD_FUELPOD_ResourceDo_OnSet = function(ship)
+	stopAnim(ship, "Mad_Open")
+	stopAnim(ship, "Mad_Close")
+	startAnim(ship,"Mad_Shock")
+	 --startEffect(ship, "E_Shocking")
+	setLoopCount(ship, "Mad_Shock", 999999)
+	setState(ship, "ResourceDo", 1)
+end
+
+KAD_FUELPOD_ResourceEnd_OnSet = function(ship)
+	stopAnim(ship, "Mad_Open")
+	stopAnim(ship, "Mad_Shock")
+	 --endEffect(ship, "E_Shocking")
+	startAnim(ship, "Mad_Close")
+	 startEffect(ship, "E_Close")
+	setState(ship, "ResourceEnd", 1)
+	setPauseTime(ship, "Mad_Close", 1000)
+end

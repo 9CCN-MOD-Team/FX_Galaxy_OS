@@ -1,0 +1,195 @@
+NewShipType = StartShipConfig()
+NewShipType.defaultROE="Defensive" --默认ROE
+NewShipType.defaultStance="Neutral" --默认Stance
+NewShipType.displayedName = "$2158"
+NewShipType.sobDescription = "$2159"
+NewShipType.maxhealth = 12000
+NewShipType.regentime = 800
+NewShipType.minRegenTime = 800
+NewShipType.sideArmourDamage = 1
+NewShipType.rearArmourDamage = 1
+NewShipType.isTransferable = 1
+NewShipType.useEngagementRanges = 1
+NewShipType.unitCapsNumber = 2
+NewShipType.buildBatch = 1
+NewShipType.paradeData = "kpr_carrier_parade"
+NewShipType.formationSpacing = 250
+--NewShipType.passiveFormation = "Spear"
+--NewShipType.defensiveFormation = "x"
+--NewShipType.aggressiveFormation = "Claw"
+NewShipType.mass = 100
+NewShipType.collisionMultiplier = 1
+NewShipType.thrusterMaxSpeed = 220
+NewShipType.mainEngineMaxSpeed = 220
+NewShipType.rotationMaxSpeed = 25
+NewShipType.thrusterAccelTime = 2
+NewShipType.thrusterBrakeTime = 2
+NewShipType.mainEngineAccelTime = 2
+NewShipType.mainEngineBrakeTime = 2
+NewShipType.rotationAccelTime = 0.2
+NewShipType.rotationBrakeTime = 0.2
+NewShipType.thrusterUsage = 1.35
+NewShipType.accelerationAngle = 40
+NewShipType.mirrorAngle = 0
+NewShipType.secondaryTurnAngle = 0
+NewShipType.maxBankingAmount = 20
+NewShipType.descendPitch = 20
+NewShipType.goalReachEpsilon = 30
+NewShipType.slideMoveRange = 100
+NewShipType.controllerType = "Ship"
+NewShipType.tumbleStaticX = 10
+NewShipType.tumbleStaticY = 20
+NewShipType.tumbleStaticZ = 5
+NewShipType.tumbleDynamicX = 2
+NewShipType.tumbleDynamicY = 10
+NewShipType.tumbleDynamicZ = 5
+NewShipType.tumbleSpecialDynamicX = 2
+NewShipType.tumbleSpecialDynamicY = 10
+NewShipType.tumbleSpecialDynamicZ = 5
+NewShipType.relativeMoveFactor = 3
+NewShipType.swayUpdateTime = 4
+NewShipType.swayOffsetRandomX = 10
+NewShipType.swayOffsetRandomY = 10
+NewShipType.swayOffsetRandomZ = 10
+NewShipType.swayBobbingFactor = 0.15
+NewShipType.swayRotateFactor = 0
+NewShipType.useTargetRandom = 1
+NewShipType.targetRandomPointXMin = -0.2
+NewShipType.targetRandomPointXMax = 0.2
+NewShipType.targetRandomPointYMin = -0.2
+NewShipType.targetRandomPointYMax = -0.18
+NewShipType.targetRandomPointZMin = -0.9
+NewShipType.targetRandomPointZMax = 0.8
+NewShipType.dustCloudDamageTime = 160
+NewShipType.nebulaDamageTime = 200
+NewShipType.MinimalFamilyToFindPathAround = "MotherShip"
+NewShipType.BuildFamily = "Frigate_kpr"
+NewShipType.AttackFamily = "Frigate"
+NewShipType.DockFamily = "Frigate"
+NewShipType.AvoidanceFamily = "Frigate"
+NewShipType.DisplayFamily = "Frigate"
+NewShipType.AutoFormationFamily = "Frigate"
+NewShipType.CollisionFamily = "Big"
+NewShipType.ArmourFamily = "MediumArmour"
+--NewShipType.UnitCapsFamily = "Frigate"
+setSupplyValue(NewShipType, "Frigate", 1)
+setSupplyValue(NewShipType, "LayoutFrigate", 1)
+NewShipType.fighterValue = 0
+NewShipType.corvetteValue = 0
+NewShipType.frigateValue = 12
+NewShipType.neutralValue = 0
+NewShipType.antiFighterValue = 12
+NewShipType.antiCorvetteValue = 0
+NewShipType.antiFrigateValue = 0
+NewShipType.totalValue = 12
+NewShipType.buildCost = 600
+NewShipType.buildTime = 30
+NewShipType.buildPriorityOrder = 10
+NewShipType.retaliationRange = 5500
+NewShipType.retaliationDistanceFromGoal = 160
+NewShipType.visualRange = 1000
+NewShipType.prmSensorRange = 5000
+NewShipType.secSensorRange = 5000
+NewShipType.detectionStrength = 1
+NewShipType.TOIcon = "Diamond"
+NewShipType.TOScale = 1
+NewShipType.TODistanceFade0 = 9000
+NewShipType.TODistanceDisappear0 = 7000
+NewShipType.TODistanceFade1 = 4500
+NewShipType.TODistanceDisappear1 = 3500
+NewShipType.TODistanceFade2 = 12000
+NewShipType.TODistanceDisappear2 = 35000
+NewShipType.TOGroupScale = 1
+NewShipType.TOGroupMergeSize = 0
+NewShipType.mouseOverMinFadeSize = 0.045
+NewShipType.mouseOverMaxFadeSize = 0.1
+NewShipType.healthBarStyle = 1
+NewShipType.nlips = 0.00015
+NewShipType.nlipsRange = 6000
+NewShipType.nlipsFar = 0.00015
+NewShipType.nlipsFarRange = 10000
+NewShipType.SMRepresentation = "HardDot"
+NewShipType.meshRenderLimit = 13000
+NewShipType.dotRenderLimit = 10
+NewShipType.visibleInSecondary = 1
+NewShipType.minLOD = 0.25
+NewShipType.goblinsStartFade = 1200
+NewShipType.goblinsOff = 1215
+NewShipType.upLOD = 2000
+NewShipType.upLOD = 2500
+NewShipType.downLOD = 2015
+NewShipType.downLOD = 2515
+NewShipType.minimumZoomFactor = 0.63
+NewShipType.selectionLimit = 150000
+NewShipType.preciseATILimit = 0
+NewShipType.selectionPriority = 75
+NewShipType.militaryUnit = 1
+NewShipType.alternativeHyperspaceV = "hyperspace_gate_kpr"
+NewShipType.alternativeHyperspaceA = "etg/special/SPECIAL_ABILITIES_HYPERSPACE_IN"
+addAbility(NewShipType,"MoveCommand",1,0)
+addAbility(NewShipType,"CanDock",1,0)
+NewShipType.holdSlots = 1 --占用槽位数
+NewShipType.dockTimeBetweenTwoFormations = 1
+NewShipType.dockTimeBeforeStart = 2
+NewShipType.dockNrOfShipsInDockFormation = 1
+NewShipType.dockFormation = "delta"
+NewShipType.queueFormation = "dockline"
+NewShipType.dontDockWithOtherRaceShips = 1
+NewShipType.ignoreRaceWhenDocking = 0
+addAbility(NewShipType,"CanLaunch")
+NewShipType.launchTimeBetweenTwoFormations = 1
+NewShipType.launchTimeBeforeStart = 2
+NewShipType.launchNrOfShipsInDockFormation = 1
+NewShipType.launchFormation = "delta"
+addAbility(NewShipType,"ParadeCommand",1)
+addAbility(NewShipType,"WaypointMove")
+addAbility(NewShipType,"HyperSpaceCommand",0,1,300,300,0,3)
+addAbility(NewShipType,"CanAttack",1,1,0,0,0.35,1.5,"Fighter, Capturer, Frigate, SmallCapitalShip, BigCapitalShip, Utility, Corvette","BroadSide",{
+  SubSystem = "BroadSideVsSubSystem",
+})
+addAbility(NewShipType,"GuardCommand",1,3000,600)
+addAbility(NewShipType,"HyperspaceViaGateCommand",1,3,1,0.3)
+addAbility(NewShipType,"CanBeCaptured",30,0.1)
+addAbility(NewShipType,"CanBeRepaired")
+addAbility(NewShipType,"RetireAbility",1,1)
+
+if (getShipNum(NewShipType, "CustomCommand", 0) == 1) then
+addAbility(NewShipType,"CustomCommand",1,"Missile",1,0,1, 1, 1, 1,1,"data:leveldata/multiplayer/resdata/Customcode_Switch.lua","Start_X_Switch","Do_X_Switch","Finish_X_Switch","kpr_assaultfrigate",1.5,1,1,0)
+addCustomCode(NewShipType,"data:leveldata/multiplayer/resdata/CustomCode.lua","","Create_X","Update_X","Destroy_X","kpr_assaultfrigate",1.15)
+else
+addCustomCode(NewShipType,"data:leveldata/multiplayer/resdata/CustomCode.lua","","Create_X","Update_X","Destroy_X","kpr_assaultfrigate",1.15)
+end
+
+LoadModel(NewShipType,1)
+
+
+--StartShipWeaponConfig(NewShipType,"Kpr_TurretCannon","Weapon_TurretTopA","Weapon_TurretTop_1")
+--StartShipWeaponConfig(NewShipType,"Kpr_TurretCannon","Weapon_TurretTop1A","Weapon_TurretTop_2")
+
+--StartShipWeaponConfig(NewShipType,"Kpr_TurretCannon_AC","Weapon_TurretTop","Weapon_TurretTop_L1")
+--StartShipWeaponConfig(NewShipType,"Kpr_TurretCannon_AC","Weapon_TurretTop1","Weapon_TurretTop_L2")
+StartShipWeaponConfig(NewShipType,"Kpr_TurretCannon_H","Weapon_TurretTop","Weapon_TurretTop_L1")
+StartShipWeaponConfig(NewShipType,"Kpr_TurretCannon_H","Weapon_TurretTop1","Weapon_TurretTop_L2")
+
+addShield(NewShipType,"EMP",220,20)
+NewShipType.battleScarMaxTriBase = 75
+NewShipType.battleScarMaxTriInc = 100
+NewShipType.battleScarCoverage=2
+NewShipType.battleScarBudgetLow = 400
+NewShipType.battleScarBudgetNext = 600
+NewShipType.sobDieTime = 1
+NewShipType.sobSpecialDieTime = 1
+NewShipType.specialDeathSpeed = 40
+NewShipType.chanceOfSpecialDeath = 0
+NewShipType.deadSobFadeTime = 0
+NewShipType.trailLinger = 4
+setEngineBurn(NewShipType,9,0.2,0.5,300,1.02,0.1,0.25,380)
+setEngineGlow(NewShipType,1,1,1.01,15,325,50,1.75,{
+  1,
+  0.47,
+  0,
+  0.2,
+})
+loadShipPatchList(NewShipType,"data:sound/sfx/ship/Hiigaran/Frigate/",0,"Engines/HFrigateEng","",1,"Ambience/HFrigateAmb","")
+
+NewShipType.canSurround=1

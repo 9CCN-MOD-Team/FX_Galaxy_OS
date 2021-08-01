@@ -1,0 +1,13 @@
+StartWeaponConfig(NewWeaponType,"Gimble","Bullet","plasma_bomb_small","Normal",2000,2500,0,0,0,0,1,1,0,0.25,0,0,0,0,0,0,0.1,"Normal",0,0,0)
+AddWeaponResult(NewWeaponType,"Hit","DamageHealth","Target",50,50,"")
+setPenetration(NewWeaponType,25,1,{
+  PlanetKillerArmour = 0,
+},{
+  ResArmour = 0.5,
+})
+setMissileKiller(NewWeaponType,1);setAccuracy(NewWeaponType,1,{
+  Fighter = 0.3,
+},{
+  Corvette = 0.5,
+})
+setAngles(NewWeaponType,25,0,0,0,0)

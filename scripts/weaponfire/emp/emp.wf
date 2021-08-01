@@ -1,0 +1,8 @@
+bulletfx = "emp_pulse_combo.lua"
+nopenetratefx = "nopen_generic"
+deathtype = "deathCannon"
+hit_sfx = "Weapon/Fighter/Impact/WEAPON_FIGHTER_Kinetic_Autogun_Hit"
+hit_clamp = {
+  1,
+  1,
+}

@@ -1,0 +1,7 @@
+StartWeaponConfig(NewWeaponType,"Fixed","Bullet","Plasma_Bomb","Normal",0,0,0,0,0,0,1,0,0,20,0,0,0,0,0,0,0.1,"Normal",0,0,0)
+AddWeaponResult(NewWeaponType,"Hit","DamageHealth","Target",0,0,"")
+setPenetration(NewWeaponType,5,0,{
+  PlanetKillerArmour = 0,
+})
+setMissileKiller(NewWeaponType,1);setAccuracy(NewWeaponType,1)
+setAngles(NewWeaponType,1,0,0,0,0)

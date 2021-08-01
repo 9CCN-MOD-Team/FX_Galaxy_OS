@@ -1,0 +1,16 @@
+StartWeaponConfig(NewWeaponType,"Fixed","Missile","Tai_Missile","Normal",155,4500,0,0,0,0,1,0,1,5.5,0,0,1,0,0,0,0.1,"Normal",0,0,0);
+AddWeaponResult(NewWeaponType,"Hit","DamageHealth","Target",1100,1100,"");
+setPenetration(NewWeaponType,5,0.5,
+{Unarmoured=0.235},
+{LightArmour=0.31},
+{MediumArmour=0.39},
+{HeavyArmour=0.47},
+{TurretArmour=0.37},
+{MineArmour=0.25},
+{ResArmour=0.28},
+{PlanetKillerArmour=0});
+setMissileKiller(NewWeaponType,1);setAccuracy(NewWeaponType,1,
+{Fighter=1.00},
+{Corvette=1.00},
+{munition=0});
+setAngles(NewWeaponType,155,0,0,0,0);

@@ -1,0 +1,22 @@
+StartWeaponConfig(NewWeaponType,"AnimatedTurret","Bullet","kad_energycannon_med","Normal",1200,1800,0,0,0,0,1,1,0,2.5,0,0,0,0,500,500,0.1,"Normal",0,0,0)
+AddWeaponResult(NewWeaponType,"Hit","DamageHealth","Target",110,110,"")
+setPenetration(NewWeaponType,5,1,{
+  TurretArmour = 0.4,
+},{
+  ResArmour = 0.2,
+},{
+  PlanetKillerArmour = 0,
+},{
+  SubSystemArmour = 2.5,
+})
+setMissileKiller(NewWeaponType,1);setAccuracy(NewWeaponType,1,{
+  Fighter = 0.04,
+},{
+  Corvette = 0.09,
+},{
+  munition = 0.05,
+},{
+  SubSystem = 0,
+})
+setAngles(NewWeaponType,0,-20,20,-20,20)
+setMiscValues(NewWeaponType,3,0.5)

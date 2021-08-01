@@ -1,0 +1,27 @@
+-------------------------------------------------------------
+-------------6p_random.level-----------2015年09月24日--------
+--由 9CCNMOD组 破天者-孤狼 编写
+--这个文件是为FXMOD编写的随机地图之一
+-------------------------------------------------------------
+-------------------------------------------------------------
+
+--加载Debug模块
+dofilepath("data:scripts/debug.lua")
+
+--定义地图列表
+DefaultLevels =
+{
+  "data:leveldata/multiplayer/fxdeathmatch/6p_battlecloud.level",
+  "data:leveldata/multiplayer/deathmatchhw2/6p_crimson_bond.level",
+  "data:leveldata/multiplayer/deathmatchhw2/6p_imposed_cosmos.level",
+  "data:leveldata/multiplayer/deathmatchhw2/6p_sarum.level",
+  "data:leveldata/multiplayer/deathmatchhw2/6p_terah.level",
+  "data:leveldata/multiplayer/deathmatchhw1/6p_fieldsofplaz.level",
+  "data:leveldata/multiplayer/deathmatchhw1/6p_hyperspacearena.level",
+  "data:leveldata/multiplayer/deathmatchhw1/6p_radialsymmetry.level",
+  "data:leveldata/multiplayer/deathmatchhw1/6p_talascrossroads.level",
+}
+
+playernumber = 6
+
+dofilepath("data:leveldata/multiplayer/fxrandom/randommap_template.lua")

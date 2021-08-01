@@ -1,0 +1,21 @@
+StartWeaponConfig(NewWeaponType,"AnimatedTurret","InstantHit","Ben_Ion","Normal",0,3000,0,4,0,0,20,0,1,2,0,0,1,1,60,60,0.1,"Normal",1,0,0)
+AddWeaponResult(NewWeaponType,"Hit","DamageHealth","Target",800,800,"")
+setPenetration(NewWeaponType,30,1,{
+  unarmoured = 0.01,
+},{
+  lightarmour = 0.04,
+},{
+  ResArmour = 0.2,
+},{
+  PlanetKillerArmour = 1,
+},{
+  SubSystemArmour = 0.25,
+})
+setMissileKiller(NewWeaponType,1);setAccuracy(NewWeaponType,1,{
+  Fighter = 0.1,
+},{
+  Corvette = 0.1,
+})
+setAngles(NewWeaponType,0,-75,75,-75,75)
+setMiscValues(NewWeaponType,0,0)
+addAnimTurretSound(NewWeaponType,"Data:Sound/SFX/ETG/SPECIAL/SPECIAL_ABILITIES_TURRET_ON")

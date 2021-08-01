@@ -1,0 +1,15 @@
+StartWeaponConfig(NewWeaponType,"Fixed","SphereBurst","ArtilleryBurst","Normal",0,0,60,2,0,0,10,0,0,0,0,0,0,0,0,0,0.1,"Normal",1,0,0)
+AddWeaponResult(NewWeaponType,"Hit","DamageHealth","Target",300,300,"")
+setPenetration(NewWeaponType,5,0.4,{
+  unarmoured = 0.13,
+},{
+  lightarmour = 0.1,
+},{
+  mediumarmour = 1,
+},{
+  heavyarmour = 1,
+},{
+  PlanetKillerArmour = 0,
+},{
+  DroneArmour = 0.1,
+})

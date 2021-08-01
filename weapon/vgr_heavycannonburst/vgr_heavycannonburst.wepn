@@ -1,0 +1,17 @@
+StartWeaponConfig(NewWeaponType,"Fixed","SphereBurst","vgr_heavycannonBurst","Normal",0,0,60,2,0,0,10,0,0,0,0,0,0,0,0,0,0.1,"Normal",1,0,0)
+AddWeaponResult(NewWeaponType,"Hit","DamageHealth","Target",1500,1500,"")
+setPenetration(NewWeaponType,5,1,{
+  ResArmour = 0.4,
+},{
+  unarmoured = 0.01,
+},{
+  lightarmour = 0.05,
+},{
+  PlanetKillerArmour = 0,
+},{
+  DroneArmour = 0.05,
+},{
+  SubSystemArmour = 0.4,
+},{
+  TurretArmour = 0.4,
+})

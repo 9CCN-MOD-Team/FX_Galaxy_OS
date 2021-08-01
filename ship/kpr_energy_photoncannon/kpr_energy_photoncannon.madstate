@@ -1,0 +1,14 @@
+KPR_ENERGY_PHOTONCANNON_Launched_OnSet = function(ship)
+    startEffect(ship, "E_Close")
+    startAnim(ship, "Mad_Close")
+    setLoopCount(ship, "Mad_Close", 100000)
+end
+
+
+KPR_ENERGY_PHOTONCANNON_Closed_OnSet = function(ship)
+    endEffect(ship, "E_Open")
+end
+
+KPR_ENERGY_PHOTONCANNON_Open_OnSet = function(ship)
+    startEffect(ship, "E_Open")
+end

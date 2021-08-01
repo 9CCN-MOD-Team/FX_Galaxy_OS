@@ -1,0 +1,82 @@
+function DetermChunk()	
+	addPoint("StartPos0", {-9000, 0, 12000}, {0, 180, 0})
+	addPoint("StartPos1", {-1000, 10000, -12000}, {0, 0, 0})
+	addPoint("StartPos2", {0, 30000, 0}, {0, 0, 0})
+
+
+
+	addAsteroid("Asteroid_3",	{200, 0, 0},		100, 0, 0, 0, 0)
+	addAsteroid("Asteroid_4",	{0, 0, 0},		100, 0, 0, 0, 0)
+	addAsteroid("Asteroid_3",	{-200, 0, 0},		100, 0, 0, 0, 0)
+
+	addAsteroid("Asteroid_3",	{200, 0, 10000},	100, 0, 0, 0, 0)
+	addAsteroid("Asteroid_4",	{0, 0, 10000},		100, 0, 0, 0, 0)
+	addAsteroid("Asteroid_3",	{-200, 0, 10000},	100, 0, 0, 0, 0)
+
+	addAsteroid("Asteroid_3",	{200, 0, -10000},	100, 0, 0, 0, 0)
+	addAsteroid("Asteroid_4",	{0, 0, -10000},		100, 0, 0, 0, 0)
+	addAsteroid("Asteroid_3",	{-200, 0, -10000},	100, 0, 0, 0, 0)
+
+	addAsteroid("Asteroid_3",	{10200, 0, 10000},	100, 0, 0, 0, 0)
+	addAsteroid("Asteroid_4",	{10000, 0, 10000},	100, 0, 0, 0, 0)
+	addAsteroid("Asteroid_3",	{10200, 0, 10000},	100, 0, 0, 0, 0)
+
+	addAsteroid("Asteroid_3",	{-10200, 0, 10000},	100, 0, 0, 0, 0)
+	addAsteroid("Asteroid_4",	{-10000, 0, 10000},	100, 0, 0, 0, 0)
+	addAsteroid("Asteroid_3",	{-10200, 0, 10000},	100, 0, 0, 0, 0)
+
+	addAsteroid("Asteroid_3",	{200, 10000, -10000},	100, 0, 0, 0, 0)
+	addAsteroid("Asteroid_4",	{0, 10000, -10000},	100, 0, 0, 0, 0)
+	addAsteroid("Asteroid_3",	{-200, 10000, -10000},	100, 0, 0, 0, 0)
+
+	addAsteroid("Asteroid_3",	{200, -10000, -10000},	100, 0, 0, 0, 0)
+	addAsteroid("Asteroid_4",	{0, -10000, -10000},	100, 0, 0, 0, 0)
+	addAsteroid("Asteroid_3",	{-200, -10000, -10000},	100, 0, 0, 0, 0)
+
+
+	setWorldBoundsInner({0.00, 0.00, 0.00}, {20000, 20000, 20000})
+end
+
+function NonDetermChunk()
+	-- Music
+	setDefaultMusic("data:sound/music/ambient/tutorial")
+	setBattleMusic("data:sound/music/battle/battle_04_alt")
+
+    fogSetActive(0)
+    setGlareIntensity(0)
+    setLevelShadowColour(0, 0, 0, 1)
+    loadBackground("m02")
+    setSensorsManagerCameraDistances(10000, 40000)
+end
+
+
+levelDesc = "$96351"
+maxPlayers = 3
+player = {}
+
+player[0] = 
+{
+	id = 0,
+	name = "",
+	resources = 1000,
+	raceID = 1,
+	startPos = 1,
+}
+
+player[1] = 
+{
+	id = 1,
+	name = "",
+	resources = 1000,
+	raceID = 1,
+	startPos = 1,
+}
+
+player[2] = 
+{
+	id = 2,
+	name = "",
+	resources = 1000,
+	raceID = 1,
+	startPos = 1,
+}

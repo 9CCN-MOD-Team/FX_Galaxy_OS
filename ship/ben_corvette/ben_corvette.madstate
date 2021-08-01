@@ -1,0 +1,35 @@
+BEN_CORVETTE_CodeRed_OnSet = function(ship)
+    if(isAnimRunning(ship,"open") == 0) then
+	setState(ship, "CodeRed", 0)
+        startTime = 0
+        if(isAnimRunning(ship,"close") ~= 0) then
+            startTime = getAnimLength(ship, "close") - getTime(ship, "close")
+            stopAnim(ship, "close")
+            endEffect(ship, "close")
+        end
+        startAnim(ship, "open")
+        startEffect(ship, "open")
+        setTime(ship,"open",startTime)
+        setPauseTime(ship, "open", 1000)
+    end
+end
+
+BEN_CORVETTE_CodeRed_OnPause = function(ship)
+    setState(ship, "CodeRed", 1)
+end
+
+BEN_CORVETTE_CodeGreen_OnSet = function(ship)
+    if(isAnimRunning(ship,"close") == 0) then
+        startTime = 0
+        if(isAnimRunning(ship,"open") ~= 0) then
+            startTime = getAnimLength(ship, "open") - getTime(ship, "open")
+            stopAnim(ship, "open")
+            endEffect(ship, "open")
+        end
+        startAnim(ship, "close")
+        startEffect(ship, "close")
+        setTime(ship,"close",startTime)
+        setPauseTime(ship, "close", 1000)
+    end
+end
+

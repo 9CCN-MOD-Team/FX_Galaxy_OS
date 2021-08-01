@@ -1,0 +1,33 @@
+-- LuaDC version 0.9.19
+-- 2010-10-4 11:18:44
+-- LuaDC by Age2uN
+-- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
+--
+StartWeaponConfig(NewWeaponType, "Gimble", "Bullet", "StormIb", "Normal Only", 4000, 9000, 0, 0, 0, 0, 1, 1, 1, 1.5, 6, 6, 0, 0, 260, 40, 0.1, "Normal", 0, 0, 0)
+--AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 17500, 17500, "")
+
+AddWeaponResult(NewWeaponType, "Hit", "SpawnWeaponFire", "Target", 0, 0, "StormIbBurst")
+
+setPenetration(NewWeaponType, 100, 1, 
+{ 
+    TurretArmour = 0.5, 
+}, 
+{ 
+    PlanetKillerArmour = 0, 
+}, 
+{ 
+    SubSystemArmour = 0.9, })
+setMissileKiller(NewWeaponType,1);setAccuracy(NewWeaponType, 1, 
+{ 
+    Fighter = 0, 
+}, 
+{ 
+    Corvette = 0, 
+}, 
+{ 
+    munition = 0, 
+}, 
+{ 
+    Frigate = 0.4, 
+    damage = 1, })
+setAngles(NewWeaponType, 6, 0, 0, 0, 0)

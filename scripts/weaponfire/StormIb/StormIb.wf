@@ -1,0 +1,16 @@
+-- LuaDC version 0.9.19
+-- 2011-1-1 15:31:22
+-- LuaDC by Age2uN
+-- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
+--
+hitfx = "emp_pulse_combo.lua"
+bulletfx = "stormIb_combo"
+nopenetratefx = "emp_pulse_combo.lua"
+deathtype = "deathBeam"
+firefx = "stormIb_squirt"
+fire_sfx = "weapon/foss/fire/immMaingun_Fire"
+scartype = "Plasma_Bomb/Plasma_Bomb"
+hit_sfx = "WEAPON/FIGHTER/IMPACT/WEAPON_FIGHTER_PLASMA_LANCE_BEAM_HIT"
+nopenetrate_sfx = "WEAPON/FIGHTER/IMPACT/WEAPON_FIGHTER_PLASMA_LANCE_BEAM_HIT"
+hit_clamp = 
+    { 1, 1, }

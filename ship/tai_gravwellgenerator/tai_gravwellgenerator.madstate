@@ -1,0 +1,11 @@
+TAI_GRAVWELLGENERATOR_DefenseFieldActivate_OnSet = function(ship)
+  startEffect(ship,"Open")
+  startAnim(ship, "Open")
+  setLoopCount(ship, "Open", 100000)
+  setState(ship, "DefenseFieldActivate", 1)
+end
+
+TAI_GRAVWELLGENERATOR_DefenseFieldDeActivate_OnSet = function(ship)
+  stopAnim(ship, "Open")
+  endEffect(ship, "Open")
+end

@@ -1,0 +1,13 @@
+StartWeaponConfig(NewWeaponType,"Gimble","Bullet","Kinetic_Small","Normal",3500,4000,0,0,0,0,1,1,0,3,0,0,1,0,60,60,0.1,"Normal",0,0,0)
+AddWeaponResult(NewWeaponType,"Hit","DamageHealth","Target",40,40,"")
+setPenetration(NewWeaponType,5,1,{
+  PlanetKillerArmour = 0,
+},{
+  MissileArmour = 1,
+})
+setMissileKiller(NewWeaponType,1);setAccuracy(NewWeaponType,0,{
+  Missile = 1,
+})
+setAngles(NewWeaponType,5,0,0,0,0)
+setMiscValues(NewWeaponType,0,0.5)
+addAnimTurretSound(NewWeaponType,"Data:Sound/SFX/ETG/SPECIAL/SPECIAL_ABILITIES_TURRET_ON")

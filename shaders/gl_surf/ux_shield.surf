@@ -1,0 +1,30 @@
+protect
+	depthWrite
+	depthFunc
+	cull
+	fill
+	clipPlane0
+	
+local	tex			UX_diffuse		default_white
+local   tex                     UX_glow                 default_black
+
+// Alpha handling props: Fade start, Fade curve, Scissor Fade, 0
+local	float4		UX_alphaMode	1	1	0	0
+
+//	ShieldInfo                       UV X scale Y scale             vNormalMultiplier                PulseWidth
+local 	float4		UX_shieldInfo  10.0		100.0		1.0		                 0.05
+
+layer
+	program ux_shield
+	
+	depthWrite true
+	depthFunc less
+	cull back
+	fill poly
+	clipPlane0 1
+
+	alias	UX_diffuse		inTexDiff
+	alias   UX_glow                 inTexGlow
+	
+	alias	UX_alphaMode		inAlphaMode
+	alias	UX_shieldInfo  		inShieldInfo

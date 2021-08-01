@@ -1,0 +1,29 @@
+
+-- initialization
+
+-- localized display name for the UI
+displayName = "$5501"
+
+contentType = 2
+contentName = "FXLogo"
+contentOrdered = 0
+contentChooseText = "$90013" -- CHOOSE TUTORIAL//
+contentThumbName = "$90128"
+contentThumbDesc = "$90129"
+contentSort = 1	-- Default is 1.0, so 0.5 will appear _before_ others.
+contentRules = "FXsingleplayer"	-- A DEFAULT that actually reads from SinglePlayerOptions.lua
+Mission = {}   -- create a mission structure
+Mission[1] = 
+{
+		postload = function()	
+			playAnimatic("data:animatics/FXLogo.lua", 0, 0)
+		end,
+		directory = "FXLogo",
+		level = "FXLogo.level",
+		postlevel = 
+		function()
+			postLevelComplete()
+		end,
+		displayName = "FX2.0 Trailer",
+		description = "FX2.0 Trailer",
+}

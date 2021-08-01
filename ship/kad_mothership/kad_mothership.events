@@ -1,0 +1,3102 @@
+effects = {
+  animations = {
+    animation1 = {
+      name = "Death",
+      length = 19,
+      loop = 0,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+    animation2 = {
+      name = "Radiation",
+      length = 1,
+      loop = 1,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+    animation3 = {
+      name = "dmg01",
+      length = 1,
+      loop = 1,
+      parent = "Damage",
+      minimum = 0.16,
+      maximum = 1,
+      markers = {
+        "",
+      },
+    },
+    animation4 = {
+      name = "dmg02",
+      length = 1,
+      loop = 1,
+      parent = "Damage",
+      minimum = 0.32,
+      maximum = 1,
+      markers = {
+        "",
+      },
+    },
+    animation5 = {
+      name = "dmg03",
+      length = 1,
+      loop = 1,
+      parent = "Damage",
+      minimum = 0.48,
+      maximum = 1,
+      markers = {
+        "",
+      },
+    },
+    animation6 = {
+      name = "Damage",
+      length = 1,
+      loop = 1,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+    animation7 = {
+      name = "dmg04",
+      length = 1,
+      loop = 1,
+      parent = "Damage",
+      minimum = 0.64,
+      maximum = 1,
+      markers = {
+        "",
+      },
+    },
+    animation8 = {
+      name = "dmg05",
+      length = 1,
+      loop = 1,
+      parent = "Damage",
+      minimum = 0.8,
+      maximum = 1,
+      markers = {
+        "",
+      },
+    },
+    animation9 = {
+      name = "dmg06",
+      length = 1,
+      loop = 1,
+      parent = "Damage",
+      minimum = 0.96,
+      maximum = 1,
+      markers = {
+        "",
+      },
+    },
+    animation10 = {
+      name = "Weapon_Ion",
+      length = 6,
+      loop = 0,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+    animation11 = {
+      name = "Weapon_Triton",
+      length = 10,
+      loop = 0,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+    animation12 = {
+      name = "E_Open",--开启
+      length = 16,
+      loop = 0,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+    animation13 = {
+      name = "E_Shocking",--中间态
+      length = 4,
+      loop = 1,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+    animation14 = {
+      name = "E_Close",--关闭
+      length = 12,
+      loop = 0,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+  },
+  events = {
+				death1 =
+        {
+            { "anim", "death1" },
+            { "animtime", "0" },
+            { "marker", "root" },
+            { "fx", "death_generic" },
+            { "fx_scale", "entity" },
+        },
+				--smoke
+        smoke1 = 
+				{ 
+						{ "anim", "death", }, 
+						{ "animtime", "0", }, 
+						{ "marker", "Root", }, 
+						{ "fx", "death_generic_cf_instant", },
+						{ "sound", "EXPLOSION/ACCENTS", },
+						{ "fx_scale", "1400", }, 
+				},  
+				smoke2 = 
+				{ 
+						{ "anim", "death", }, 
+						{ "animtime", "0.010", }, 
+						{ "marker", "Root", }, 
+						{ "fx", "death_generic_cf_5", },                 
+						{ "fx_scale", "1600", }, 
+				},  
+				smoke3 = 
+				{ 
+						{ "anim", "death", }, 
+						{ "animtime", "0.015", }, 
+						{ "marker", "Root", }, 
+						{ "fx", "death_generic_cf_10", },                 
+						{ "fx_scale", "1800", }, 
+				},  
+        smoke4 = 
+				{ 
+						{ "anim", "death", }, 
+						{ "animtime", "0.020", }, 
+						{ "marker", "Root", }, 
+						{ "fx", "death_generic_cf_20", },                 
+						{ "fx_scale", "2000", }, 
+				},				
+				--rapid smoke       
+        rapidsmoke2 = 
+				{ 
+						{ "anim", "death", }, 
+						{ "animtime", "0.820", }, 
+						{ "marker", "Root", }, 
+						{ "fx", "dmg_cloud_outline_smoke", },  						
+						{ "fx_scale", "2250", },
+				},               
+        rapidsmoke3 = 
+				{ 
+						{ "anim", "death", }, 
+						{ "animtime", "0.830", }, 
+						{ "marker", "Root", }, 
+						{ "fx", "dmg_cloud_outline_smoke", },  						
+						{ "fx_scale", "2800", },
+				},   
+				rapidsmoke3 = 
+				{ 
+						{ "anim", "death", }, 
+						{ "animtime", "0.840", }, 
+						{ "marker", "Root", }, 
+						{ "fx", "dmg_cloud_outline_smoke", },  						
+						{ "fx_scale", "3350", },
+				},   				
+				--cloud
+        cloud1 = 
+				{ 
+						{ "anim", "death", }, 
+						{ "animtime", "0.107", }, 
+						{ "marker", "marker1,marker2,marker3,marker4,marker5,marker06,marker07,marker08,marker09,marker10", }, 
+						{ "fx", "dmg_cloud_explosion_large", }, 
+						{ "sound", "EXPLOSION/SMALL/ETG_EXPLODE_SMALL_PLASMA_FAR", }, 
+						{ "fx_scale", "6", }, 
+				}, 
+        cloud2 = 
+				{ 
+						{ "anim", "death", }, 
+						{ "animtime", "0.204", }, 
+						{ "marker", "marker11,marker12,marker13,marker14,marker15,marker16,marker17,marker18,marker19,marker20", }, 
+						{ "fx", "dmg_cloud_explosion_large", }, 
+						{ "sound", "EXPLOSION/SMALL/ETG_EXPLODE_SMALL_PLASMA_FAR", }, 
+						{ "fx_scale", "7", }, 
+				}, 
+        cloud3 = 
+				{ 
+						{ "anim", "death", }, 
+						{ "animtime", "0.311", }, 
+						{ "marker", "marker21,marker22,marker23,marker24,marker25,marker26,marker27,marker28,marker29,marker30", }, 
+						{ "fx", "dmg_cloud_explosion_large", }, 
+						{ "sound", "EXPLOSION/SMALL/ETG_EXPLODE_SMALL_PLASMA_FAR", }, 
+						{ "fx_scale", "8", }, 
+				}, 
+        cloud4 = 
+				{ 
+						{ "anim", "death", }, 
+						{ "animtime", "0.423", }, 
+						{ "marker", "marker31,marker32,marker33,marker34,marker35,marker36,marker37,marker38,marker39,marker40", }, 
+						{ "fx", "dmg_cloud_explosion_large", }, 
+						{ "sound", "EXPLOSION/SMALL/ETG_EXPLODE_SMALL_PLASMA_FAR", }, 
+						{ "fx_scale", "9", }, 
+				}, 
+				cloud5 = 
+				{ 
+						{ "anim", "death", }, 
+						{ "animtime", "0.525", }, 
+						{ "marker", "marker41,marker42,marker43,marker44,marker45", }, 
+						{ "fx", "dmg_cloud_explosion_large", }, 
+						{ "sound", "EXPLOSION/SMALL/ETG_EXPLODE_SMALL_PLASMA_FAR", }, 
+						{ "fx_scale", "10", }, 
+				}, 
+        cloud6 = 
+				{ 
+						{ "anim", "death", }, 
+						{ "animtime", "0.607", }, 
+						{ "marker", "marker1,marker2,marker3,marker4,marker5,marker06,marker07,marker08,marker09,marker10", }, 
+						{ "fx", "dmg_cloud_explosion_large", }, 
+						{ "sound", "EXPLOSION/SMALL/ETG_EXPLODE_SMALL_PLASMA_FAR", }, 
+						{ "fx_scale", "11", }, 
+				},      
+        cloud7 = 
+				{ 
+						{ "anim", "death", }, 
+						{ "animtime", "0.664", }, 
+						{ "marker", "marker11,marker12,marker13,marker14,marker15,marker16,marker17,marker18,marker19,marker20", }, 
+						{ "fx", "dmg_cloud_explosion_large", }, 
+						{ "sound", "EXPLOSION/SMALL/ETG_EXPLODE_SMALL_PLASMA_FAR", }, 
+						{ "fx_scale", "12", }, 
+				}, 
+        cloud8 = 
+				{ 
+						{ "anim", "death", }, 
+						{ "animtime", "0.711", }, 
+						{ "marker", "marker21,marker22,marker23,marker24,marker25,marker26,marker27,marker28,marker29,marker30", }, 
+						{ "fx", "dmg_cloud_explosion_large", }, 
+						{ "sound", "EXPLOSION/SMALL/ETG_EXPLODE_SMALL_PLASMA_FAR", }, 
+						{ "fx_scale", "12.5", }, 
+				}, 
+				cloud9 = 
+				{ 
+						{ "anim", "death", }, 
+						{ "animtime", "0.753", }, 
+						{ "marker", "marker31,marker32,marker33,marker34,marker35,marker36,marker37,marker38,marker39,marker40", }, 
+						{ "fx", "dmg_cloud_explosion_large", }, 
+						{ "sound", "EXPLOSION/SMALL/ETG_EXPLODE_SMALL_PLASMA_FAR", }, 
+						{ "fx_scale", "13", }, 
+				}, 
+				cloud10 = 
+				{ 
+						{ "anim", "death", }, 
+						{ "animtime", "0.785", }, 
+						{ "marker", "marker41,marker42,marker43,marker44,marker45", }, 
+						{ "fx", "dmg_cloud_explosion_large", }, 
+						{ "sound", "EXPLOSION/SMALL/ETG_EXPLODE_SMALL_PLASMA_FAR", }, 
+						{ "fx_scale", "13.5", }, 
+				}, 
+				--explosion
+        explosion1 = 
+				{ 
+						{ "anim", "death", }, 
+						{ "animtime", "0.144", }, 
+						{ "marker", "marker1,marker2,marker3,marker4,marker5,marker06,marker07,marker08,marker09,marker10", }, 
+						{ "fx", "dmg_capital_explosion_large", }, 
+						{ "sound", "EXPLOSION/SMALL/ETG_EXPLODE_SMALL_FIREY", }, 
+						{ "fx_scale", "5", }, 
+				}, 
+        explosion2 = 
+				{ 
+						{ "anim", "death", }, 
+						{ "animtime", "0.237", }, 
+						{ "marker", "marker11,marker12,marker13,marker14,marker15,marker16,marker17,marker18,marker19,marker20", }, 
+						{ "fx", "dmg_capital_explosion_large", }, 
+						{ "sound", "EXPLOSION/SMALL/ETG_EXPLODE_SMALL_FIREY", }, 
+						{ "fx_scale", "7", }, 
+				}, 
+        explosion3 = 
+				{ 
+						{ "anim", "death", }, 
+						{ "animtime", "0.334", }, 
+						{ "marker", "marker21,marker22,marker23,marker24,marker25,marker26,marker27,marker28,marker29,marker30", }, 
+						{ "fx", "dmg_capital_explosion_large", }, 
+						{ "sound", "EXPLOSION/SMALL/ETG_EXPLODE_SMALL_FIREY", }, 
+						{ "fx_scale", "9", }, 
+				}, 
+        explosion4 = 
+				{ 
+						{ "anim", "death", }, 
+						{ "animtime", "0.453", }, 
+						{ "marker", "marker31,marker32,marker33,marker34,marker35,marker36,marker37,marker38,marker39,marker40", }, 
+						{ "fx", "dmg_capital_explosion_large", }, 
+						{ "sound", "EXPLOSION/MEDIUM/ETG_EXPLODE_MEDIUM_FIREY", }, 
+						{ "fx_scale", "11", }, 
+				}, 
+				explosion5 = 
+				{ 
+						{ "anim", "death", }, 
+						{ "animtime", "0.566", }, 
+						{ "marker", "marker41,marker42,marker43,marker44,marker45", }, 
+						{ "fx", "dmg_capital_explosion_large", }, 
+						{ "sound", "EXPLOSION/MEDIUM/ETG_EXPLODE_MEDIUM_FIREY", }, 
+						{ "fx_scale", "13", }, 
+				}, 
+        explosion6 = 
+				{ 
+						{ "anim", "death", }, 
+						{ "animtime", "0.624", }, 
+						{ "marker", "marker1,marker2,marker3,marker4,marker5,marker06,marker07,marker08,marker09,marker10", }, 
+						{ "fx", "dmg_capital_explosion_large", }, 
+						{ "sound", "EXPLOSION/MEDIUM/ETG_EXPLODE_MEDIUM_FIREY", }, 
+						{ "fx_scale", "15", }, 
+				},      
+        explosion7 = 
+				{ 
+						{ "anim", "death", }, 
+						{ "animtime", "0.702", }, 
+						{ "marker", "marker11,marker12,marker13,marker14,marker15,marker16,marker17,marker18,marker19,marker20", }, 
+						{ "fx", "dmg_capital_explosion_large", }, 
+						{ "sound", "EXPLOSION/LARGE/ETG_EXPLODE_LARGE_FIREY", }, 
+						{ "fx_scale", "17", }, 
+				}, 
+        explosion8 = 
+				{ 
+						{ "anim", "death", }, 
+						{ "animtime", "0.731", }, 
+						{ "marker", "marker21,marker22,marker23,marker24,marker25,marker26,marker27,marker28,marker29,marker30", }, 
+						{ "fx", "dmg_capital_explosion_large", }, 
+						{ "sound", "EXPLOSION/LARGE/ETG_EXPLODE_LARGE_FIREY", }, 
+						{ "fx_scale", "18", }, 
+				}, 
+				explosion9 = 
+				{ 
+						{ "anim", "death", }, 
+						{ "animtime", "0.761", }, 
+						{ "marker", "marker31,marker32,marker33,marker34,marker35,marker36,marker37,marker38,marker39,marker40", }, 
+						{ "fx", "dmg_capital_explosion_large", }, 
+						{ "sound", "EXPLOSION/LARGE/ETG_EXPLODE_LARGE_FIREY", }, 
+						{ "fx_scale", "19", }, 
+				}, 		
+				explosion10 = 
+				{ 
+						{ "anim", "death", }, 
+						{ "animtime", "0.783", }, 
+						{ "marker", "marker41,marker42,marker43,marker44,marker45", }, 
+						{ "fx", "dmg_capital_explosion_large", }, 
+						{ "sound", "EXPLOSION/LARGE/ETG_EXPLODE_LARGE_FIREY", }, 
+						{ "fx_scale", "20", }, 
+				}, 
+				--meshroom
+        meshroom1 = 
+				{ 
+						{ "anim", "death", }, 
+						{ "animtime", "0.232", }, 
+						{ "marker", "marker1,marker2,marker3,marker4,marker5,marker06,marker07,marker08,marker09,marker10", }, 
+						{ "fx", "dmg_capital_explosion_large_mushroom", },						
+						{ "fx_scale", "11", }, 
+				}, 
+        meshroom2 = 
+				{ 
+						{ "anim", "death", }, 
+						{ "animtime", "0.396", }, 
+						{ "marker", "marker11,marker12,marker13,marker14,marker15,marker16,marker17,marker18,marker19,marker20", }, 
+						{ "fx", "dmg_capital_explosion_large_mushroom", }, 						
+						{ "fx_scale", "13", }, 
+				}, 
+        meshroom3 = 
+				{ 
+						{ "anim", "death", }, 
+						{ "animtime", "0.454", }, 
+						{ "marker", "marker21,marker22,marker23,marker24,marker25,marker26,marker27,marker28,marker29,marker30", }, 
+						{ "fx", "dmg_capital_explosion_large_mushroom", }, 						
+						{ "fx_scale", "15", }, 
+				}, 
+        meshroom4 = 
+				{ 
+						{ "anim", "death", }, 
+						{ "animtime", "0.481", }, 
+						{ "marker", "marker31,marker32,marker33,marker34,marker35,marker36,marker37,marker38,marker39,marker40", }, 
+						{ "fx", "dmg_capital_explosion_large_mushroom", }, 						
+						{ "fx_scale", "17", }, 
+				}, 
+				meshroom5 = 
+				{ 
+						{ "anim", "death", }, 
+						{ "animtime", "0.532", }, 
+						{ "marker", "marker41,marker42,marker43,marker44,marker45", }, 
+						{ "fx", "dmg_capital_explosion_large_mushroom", }, 						
+						{ "fx_scale", "19", }, 
+				}, 
+				meshroom6 = 
+				{ 
+						{ "anim", "death", }, 
+						{ "animtime", "0.594", }, 
+						{ "marker", "marker1,marker2,marker3,marker4,marker5,marker06,marker07,marker08,marker09,marker10", }, 
+						{ "fx", "dmg_capital_explosion_large_mushroom", }, 						
+						{ "fx_scale", "21", }, 
+				},      
+        meshroom7 = 
+				{ 
+						{ "anim", "death", }, 
+						{ "animtime", "0.632", }, 
+						{ "marker", "marker11,marker12,marker13,marker14,marker15,marker16,marker17,marker18,marker19,marker20", }, 
+						{ "fx", "dmg_capital_explosion_large_mushroom", }, 						
+						{ "fx_scale", "23", }, 
+				}, 
+        meshroom8 = 
+				{ 
+						{ "anim", "death", }, 
+						{ "animtime", "0.681", }, 
+						{ "marker", "marker21,marker22,marker23,marker24,marker25,marker26,marker27,marker28,marker29,marker30", }, 
+						{ "fx", "dmg_capital_explosion_large_mushroom", }, 						
+						{ "fx_scale", "24", }, 
+				}, 
+				meshroom9 = 
+				{ 
+						{ "anim", "death", }, 
+						{ "animtime", "0.712", }, 
+						{ "marker", "marker31,marker32,marker33,marker34,marker35,marker36,marker37,marker38,marker39,marker40", }, 
+						{ "fx", "dmg_capital_explosion_large_mushroom", }, 						
+						{ "fx_scale", "25", }, 
+				}, 			
+				meshroom10 = 
+				{ 
+						{ "anim", "death", }, 
+						{ "animtime", "0.762", }, 
+						{ "marker", "marker41,marker42,marker43,marker44,marker45", }, 
+						{ "fx", "dmg_capital_explosion_large_mushroom", }, 						
+						{ "fx_scale", "26", }, 
+				}, 
+				--hullflare
+        hullflare1 = 
+				{ 
+						{ "anim", "death", }, 
+						{ "animtime", "0.224", }, 
+						{ "marker", "marker25", }, 
+						{ "fx", "dmg_capital_explosion_large_hull_flare_cf_5", }, 
+						{ "sound", "EXPLOSION/SMALL/ETG_EXPLODE_SMALL_PLASMA", }, 
+						{ "fx_scale", "5", }, 
+				}, 
+        hullflare2 = 
+				{ 
+						{ "anim", "death", }, 
+						{ "animtime", "0.367", }, 
+						{ "marker", "marker13", }, 
+						{ "fx", "dmg_capital_explosion_large_hull_flare_cf_5", }, 
+						{ "sound", "EXPLOSION/SMALL/ETG_EXPLODE_SMALL_PLASMA", },
+						{ "fx_scale", "3", }, 
+				}, 
+        hullflare3 = 
+				{ 
+						{ "anim", "death", }, 
+						{ "animtime", "0.394", }, 
+						{ "marker", "marker5", }, 
+						{ "fx", "dmg_capital_explosion_large_hull_flare_cf_5", }, 
+						{ "sound", "EXPLOSION/SMALL/ETG_EXPLODE_SMALL_PLASMA", }, 
+						{ "fx_scale", "5", }, 
+				}, 
+        hullflare4 = 
+				{ 
+						{ "anim", "death", }, 
+						{ "animtime", "0.443", }, 
+						{ "marker", "marker10", }, 
+						{ "fx", "dmg_capital_explosion_large_hull_flare_cf_5", }, 
+						{ "sound", "EXPLOSION/SMALL/ETG_EXPLODE_SMALL_PLASMA", },
+						{ "fx_scale", "5", }, 
+				}, 
+				hullflare5 = 				
+				{ 
+						{ "anim", "death", }, 
+						{ "animtime", "0.566", }, 
+						{ "marker", "marker3", }, 
+						{ "fx", "dmg_capital_explosion_large_hull_flare_cf_15", }, 
+						{ "sound", "EXPLOSION/MEDIUM/ETG_EXPLODE_MEDIUM_PLASMA", }, 
+						{ "fx_scale", "10", }, 
+				}, 
+        hullflare6 = 
+				{ 
+						{ "anim", "death", }, 
+						{ "animtime", "0.614", }, 
+						{ "marker", "marker15", }, 
+						{ "fx", "dmg_capital_explosion_large_hull_flare_cf_10", }, 
+						{ "sound", "EXPLOSION/MEDIUM/ETG_EXPLODE_MEDIUM_PLASMA", }, 
+						{ "fx_scale", "8", }, 
+				},      
+        hullflare7 = 
+				{ 
+						{ "anim", "death", }, 
+						{ "animtime", "0.642", }, 
+						{ "marker", "marker39", }, 
+						{ "fx", "dmg_capital_explosion_large_hull_flare_cf_5", }, 
+						{ "sound", "EXPLOSION/SMALL/ETG_EXPLODE_SMALL_PLASMA", },
+						{ "fx_scale", "5", }, 
+				}, 
+        hullflare8 = 
+				{ 
+						{ "anim", "death", }, 
+						{ "animtime", "0.671", }, 
+						{ "marker", "marker11", }, 
+						{ "fx", "dmg_capital_explosion_large_hull_flare_cf_10", }, 
+						{ "sound", "EXPLOSION/MEDIUM/ETG_EXPLODE_MEDIUM_PLASMA", },
+						{ "fx_scale", "10", }, 
+				}, 
+				hullflare9 = 
+				{ 
+						{ "anim", "death", }, 
+						{ "animtime", "0.712", }, 
+						{ "marker", "marker33", }, 
+						{ "fx", "dmg_capital_explosion_large_hull_flare_cf_5", }, 
+						{ "sound", "EXPLOSION/SMALL/ETG_EXPLODE_SMALL_PLASMA", },
+						{ "fx_scale", "5", }, 
+				},			
+				hullflare10 = 
+				{ 
+						{ "anim", "death", }, 
+						{ "animtime", "0.754", }, 
+						{ "marker", "marker3,marker5,marker10,marker11,marker13,marker15,marker25,marker33,marker39", }, 
+						{ "fx", "dmg_capital_explosion_large_hull_flare_cf_noscar_35", }, 
+						{ "sound", "EXPLOSION/MEDIUM/ETG_EXPLODE_MEDIUM_PLASMA", },
+						{ "fx_scale", "10", }, 
+				},			
+				--final
+				final1 = 
+				{ 
+						{ "anim", "death", }, 
+						{ "animtime", "0.727", }, 
+						{ "marker", "Root", }, 
+						{ "fx", "death_generic_cf_instant", },						
+						{ "fx_scale", "2500", }, 
+				},  
+				final2 = 
+				{ 
+						{ "anim", "death", }, 
+						{ "animtime", "0.733", }, 
+						{ "marker", "Root", }, 
+						{ "fx", "death_generic_cf_5", },						
+						{ "fx_scale", "2700", }, 
+				},  
+				final3 = 
+				{ 
+						{ "anim", "death", }, 
+						{ "animtime", "0.835", }, 
+						{ "marker", "Root", }, 
+						{ "fx", "explosion_firework_ms_hgn", }, 
+						{ "sound", "EXPLOSION/LARGE/ETG_EXPLODE_LARGE_ENERGY", }, 
+						{ "fx_scale", "950", },
+				},  				
+				final4= 
+				{ 
+						{ "anim", "death", }, 
+						{ "animtime", "0.915", }, 
+						{ "marker", "Root", }, 						   	
+						{ "sound", "EXPLOSION/ACCENTS", },						
+				},
+        final5 =
+        {
+            { "anim", "death" },
+            { "animtime", "0.924" },
+            { "marker", "Root" },
+            { "fx", "dmg_capital_explosion_combo" },
+            { "fx_scale", "200" },
+            { "fx_sm", "on" },
+        },
+				final6 = 
+				{ 
+						{ "anim", "death", }, 
+						{ "animtime", "0.932", }, 
+						{ "marker", "Root", }, 
+						{ "fx", "explosion_firework5,explosion_firework6,explosion_firework5_blue,explosion_firework6_blue", },   							
+						{ "fx_scale", "1850", },
+				},					
+        final8 =
+        {
+            { "anim", "death" },
+            { "animtime", "0.942" },
+            { "marker", "Root" },
+            { "fx", "DMG_MASSIVE_MESH_SPHERE_RING" },
+						{ "sound", "EXPLOSION/LARGE/ETG_EXPLODE_LARGE_PLASMA" },
+            { "fx_scale", "3.8" },
+            { "fx_sm", "on" },
+        },
+				final9 =
+        {
+            { "anim", "death" },
+            { "animtime", "0.962" },
+            { "marker", "Root" },
+            { "fx", "DMG_MASSIVE_MESH_SPHERE_RING" },						
+            { "fx_scale", "1.3" },
+            { "fx_sm", "on" },
+        },
+				--chunck
+				chunck1 = 
+				{ 
+						{ "anim", "death", }, 
+						{ "animtime", "0.949", }, 
+						{ "marker", "Root", },
+						{ "fx", "dmg_capital_explosion_large_hull_flare_cf_noscar_35_final2", },                 
+						{ "fx_scale", "8", }, 
+				},     
+				chunck2 = 
+				{ 
+						{ "anim", "death", }, 
+						{ "animtime", "0.950", }, 
+						{ "marker", "Root", },
+						{ "fx", "dmg_capital_explosion_large_hull_flare_cf_noscar_35_final2", },                 
+						{ "fx_scale", "10", }, 
+				},        
+				chunck3 = 
+				{ 
+						{ "anim", "death", }, 
+						{ "animtime", "0.951", }, 
+						{ "marker", "Root", },
+						{ "fx", "dmg_capital_explosion_large_hull_flare_cf_noscar_35_final1", },                 
+						{ "fx_scale", "12", }, 
+				},        
+				chunck4 = 
+				{ 
+						{ "anim", "death", }, 
+						{ "animtime", "0.952", }, 
+						{ "marker", "Root", }, 
+						{ "fx", "dmg_capital_explosion_large_hull_flare_cf_noscar_35_final1", },                 
+						{ "fx_scale", "14", }, 
+				},    
+				chunck5 = 
+				{ 
+						{ "anim", "death", }, 
+						{ "animtime", "0.953", }, 
+						{ "marker", "Root", },
+						{ "fx", "dmg_capital_explosion_large_hull_flare_cf_noscar_35_final", },                 
+						{ "fx_scale", "16", }, 
+				},    				
+				--prechunk
+				prechunck1 = 
+				{ 
+						{ "anim", "death", }, 
+						{ "animtime", "0.832", }, 
+						{ "marker", "Root", }, 
+						{ "fx", "dmg_capital_explosion_large_hull_flare_cf_noscar_35_final,dmg_capital_explosion_large_hull_flare_cf_noscar_35_final1", },                 
+						{ "fx_scale", "7", }, 
+				},     
+				prechunck2 = 
+				{ 
+						{ "anim", "death", }, 
+						{ "animtime", "0.833", }, 
+						{ "marker", "Root", },
+						{ "fx", "dmg_capital_explosion_large_hull_flare_cf_noscar_35_final,dmg_capital_explosion_large_hull_flare_cf_noscar_35_final1", },                 
+						{ "fx_scale", "8", }, 
+				},        
+				prechunck3 = 
+				{ 
+						{ "anim", "death", }, 
+						{ "animtime", "0.834", }, 
+						{ "marker", "Root", },
+						{ "fx", "dmg_capital_explosion_large_hull_flare_cf_noscar_35_final", },                 
+						{ "fx_scale", "9", }, 
+				},  				
+				--chunck fast				
+				chunckfast1 = 
+				{ 
+						{ "anim", "death", }, 
+						{ "animtime", "0.954", }, 						
+						{ "marker", "Root", },
+						{ "fx", "dmg_capital_explosion_large_hull_flare_cf_noscar_35_final_fast2", },                 
+						{ "fx_scale", "4", }, 
+				},    
+				chunckfast2 = 
+				{ 
+						{ "anim", "death", }, 
+						{ "animtime", "0.955", }, 						
+						{ "marker", "Root", },
+						{ "fx", "dmg_capital_explosion_large_hull_flare_cf_noscar_35_final_fast2", },                 
+						{ "fx_scale", "5", }, 
+				},  
+				chunckfast3 = 
+				{ 
+						{ "anim", "death", }, 
+						{ "animtime", "0.956", }, 						
+						{ "marker", "Root", },
+						{ "fx", "dmg_capital_explosion_large_hull_flare_cf_noscar_35_final_fast2", },                 
+						{ "fx_scale", "6", }, 
+				},  
+				chunckfast4 = 
+				{ 
+						{ "anim", "death", }, 
+						{ "animtime", "0.957", }, 						
+						{ "marker", "Root", },
+						{ "fx", "dmg_capital_explosion_large_hull_flare_cf_noscar_35_final_fast1", },                 
+						{ "fx_scale", "7", }, 
+				},  
+				chunckfast5 = 
+				{ 
+						{ "anim", "death", }, 
+						{ "animtime", "0.958", }, 						
+						{ "marker", "Root", },
+						{ "fx", "dmg_capital_explosion_large_hull_flare_cf_noscar_35_final_fast1", },                 
+						{ "fx_scale", "8", }, 
+				},  
+				chunckfast6 = 
+				{ 
+						{ "anim", "death", }, 
+						{ "animtime", "0.959", }, 						
+						{ "marker", "Root", },
+						{ "fx", "dmg_capital_explosion_large_hull_flare_cf_noscar_35_final_fast", },                 
+						{ "fx_scale", "9", }, 
+				},  
+    event53 = {
+      {
+        "anim",
+        "dmg01",
+      },
+      {
+        "animtime",
+        "-1",
+      },
+      {
+        "marker",
+        "marker1,marker2,marker3,marker4,marker5,marker6,marker7,marker8,marker9,marker10",
+      },
+      {
+        "fx",
+        "dmg_damage_puff_combo,dmg_damage_cloud_puff_spray,dmg_damage_spark_combo,dmg_damage_puff_combo",
+      },
+      {
+        "sound",
+        "DAMAGE/SMOKE/DAMAGE_SMOKE_EXHAUST_MEGASHIP",
+      },
+      {
+        "fx_scale",
+        "15",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event54 = {
+      {
+        "anim",
+        "dmg02",
+      },
+      {
+        "animtime",
+        "-1",
+      },
+      {
+        "marker",
+        "marker11,marker12,marker13,marker14,marker15,marker16,marker17,marker18,marker19,marker20",
+      },
+      {
+        "fx",
+        "dmg_damage_puff_combo,dmg_damage_cloud_puff_spray,dmg_damage_spark_combo,dmg_damage_puff_combo",
+      },
+      {
+        "sound",
+        "DAMAGE/SMOKE/DAMAGE_SMOKE_EXHAUST_MEGASHIP",
+      },
+      {
+        "fx_scale",
+        "17.5",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event55 = {
+      {
+        "anim",
+        "dmg03",
+      },
+      {
+        "animtime",
+        "-1",
+      },
+      {
+        "marker",
+        "marker20,marker21,marker22,marker23,marker24,marker25,marker26,marker27,marker28,marker29,marker30",
+      },
+      {
+        "fx",
+        "dmg_damage_puff_combo,dmg_damage_cloud_puff_spray,dmg_damage_spark_combo,dmg_damage_puff_combo",
+      },
+      {
+        "sound",
+        "DAMAGE/SMOKE/DAMAGE_SMOKE_EXHAUST_MEGASHIP",
+      },
+      {
+        "fx_scale",
+        "25",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event56 = {
+      {
+        "anim",
+        "dmg04",
+      },
+      {
+        "animtime",
+        "-1",
+      },
+      {
+        "marker",
+        "marker31,marker32,marker33,marker34,marker35,marker36,marker37,marker38,marker39,marker40,marker41",
+      },
+      {
+        "fx",
+        "dmg_damage_puff_combo,dmg_damage_cloud_puff_spray,dmg_damage_spark_combo,dmg_damage_puff_combo",
+      },
+      {
+        "sound",
+        "DAMAGE/SMOKE/DAMAGE_SMOKE_EXHAUST_MEGASHIP",
+      },
+      {
+        "fx_scale",
+        "10",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event57 = {
+      {
+        "anim",
+        "dmg05",
+      },
+      {
+        "animtime",
+        "-1",
+      },
+      {
+        "marker",
+        "marker42,marker43,marker44,marker45",
+      },
+      {
+        "fx",
+        "dmg_damage_puff_combo,dmg_damage_cloud_puff_spray,dmg_damage_spark_combo,dmg_damage_puff_combo",
+      },
+      {
+        "sound",
+        "DAMAGE/SMOKE/DAMAGE_SMOKE_EXHAUST_MEGASHIP",
+      },
+      {
+        "fx_scale",
+        "17.5",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event58 = {
+      {
+        "anim",
+        "dmg06",
+      },
+      {
+        "animtime",
+        "-1",
+      },
+      {
+        "marker",
+        "marker1,marker2,marker3,marker4,marker5,marker6,marker7,marker8,marker9,marker10",
+      },
+      {
+        "fx",
+        "dmg_damage_puff_combo,dmg_damage_cloud_puff_spray,dmg_damage_spark_combo,dmg_damage_puff_combo",
+      },
+      {
+        "sound",
+        "DAMAGE/SMOKE/DAMAGE_SMOKE_EXHAUST_MEGASHIP",
+      },
+      {
+        "fx_scale",
+        "20",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event59 = {
+      {
+        "anim",
+        "dmg01",
+      },
+      {
+        "animtime",
+        "-1",
+      },
+      {
+        "marker",
+        "marker1,marker2,marker3,marker4,marker5,marker6,marker7,marker8,marker9,marker10",
+      },
+      {
+        "fx",
+        "dmg_damage_puff_combo,dmg_damage_cloud_puff_spray,dmg_damage_spark_combo,dmg_damage_puff_combo",
+      },
+      {
+        "sound",
+        "DAMAGE/SMOKE/DAMAGE_SMOKE_EXHAUST_MEGASHIP",
+      },
+      {
+        "fx_scale",
+        "25",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event60 = {
+      {
+        "anim",
+        "dmg02",
+      },
+      {
+        "animtime",
+        "-1",
+      },
+      {
+        "marker",
+        "marker11,marker12,marker13,marker14,marker15,marker16,marker17,marker18,marker19,marker20",
+      },
+      {
+        "fx",
+        "dmg_damage_puff_combo,dmg_damage_cloud_puff_spray,dmg_damage_spark_combo,dmg_damage_puff_combo",
+      },
+      {
+        "sound",
+        "DAMAGE/SMOKE/DAMAGE_SMOKE_EXHAUST_MEGASHIP",
+      },
+      {
+        "fx_scale",
+        "17.5",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event61 = {
+      {
+        "anim",
+        "dmg03",
+      },
+      {
+        "animtime",
+        "-1",
+      },
+      {
+        "marker",
+        "marker20,marker21,marker22,marker23,marker24,marker25,marker26,marker27,marker28,marker29,marker30",
+      },
+      {
+        "fx",
+        "dmg_damage_puff_combo,dmg_damage_cloud_puff_spray,dmg_damage_spark_combo,dmg_damage_puff_combo",
+      },
+      {
+        "sound",
+        "DAMAGE/SMOKE/DAMAGE_SMOKE_EXHAUST_MEGASHIP",
+      },
+      {
+        "fx_scale",
+        "23",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event62 = {
+      {
+        "anim",
+        "dmg04",
+      },
+      {
+        "animtime",
+        "-1",
+      },
+      {
+        "marker",
+        "marker31,marker32,marker33,marker34,marker35,marker36,marker37,marker38,marker39,marker40,marker41",
+      },
+      {
+        "fx",
+        "dmg_damage_puff_combo,dmg_damage_cloud_puff_spray,dmg_damage_spark_combo,dmg_damage_puff_combo",
+      },
+      {
+        "sound",
+        "DAMAGE/SMOKE/DAMAGE_SMOKE_EXHAUST_MEGASHIP",
+      },
+      {
+        "fx_scale",
+        "18",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event63 = {
+      {
+        "anim",
+        "dmg05",
+      },
+      {
+        "animtime",
+        "-1",
+      },
+      {
+        "marker",
+        "marker42,marker43,marker44,marker45",
+      },
+      {
+        "fx",
+        "dmg_damage_puff_combo,dmg_damage_cloud_puff_spray,dmg_damage_spark_combo,dmg_damage_puff_combo",
+      },
+      {
+        "sound",
+        "DAMAGE/SMOKE/DAMAGE_SMOKE_EXHAUST_MEGASHIP",
+      },
+      {
+        "fx_scale",
+        "32",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event64 = {
+      {
+        "anim",
+        "dmg06",
+      },
+      {
+        "animtime",
+        "-1",
+      },
+      {
+        "marker",
+        "marker1,marker2,marker3,marker4,marker5,marker6,marker7,marker8,marker9,marker10",
+      },
+      {
+        "fx",
+        "dmg_damage_puff_combo,dmg_damage_cloud_puff_spray,dmg_damage_spark_combo,dmg_damage_puff_combo",
+      },
+      {
+        "sound",
+        "DAMAGE/SMOKE/DAMAGE_SMOKE_EXHAUST_MEGASHIP",
+      },
+      {
+        "fx_scale",
+        "28",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event65 = {
+      {
+        "anim",
+        "Weapon_Ion",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "Weapon_Ion_Muzzle",
+      },
+      {
+        "fx",
+        "ion_beam_charge_combo_bc",
+      },
+      {
+        "sound",
+        "WEAPON/CARRIER/FIRE/WEAPON_BATTLECRUISER_ION_CANNON_BEAM",
+      },
+      {
+        "fx_scale",
+        "2",
+      },
+    },
+    event66 = {
+      {
+        "anim",
+        "Weapon_Ion_new",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "root",
+      },
+      {
+        "fx",
+        "ion_beam_charge_combo_bc",
+      },
+      {
+        "sound",
+        "WEAPON/CARRIER/FIRE/WEAPON_BATTLECRUISER_ION_CANNON_BEAM",
+      },
+      {
+        "fx_scale",
+        "2",
+      },
+    },
+    event67 = {
+      {
+        "anim",
+        "E_Open",      -----展开
+      },
+      {
+        "animtime",
+        "0.375",
+      },
+      {
+        "marker",
+        "tx01",
+      },
+      {
+        "fx",
+        "kad_mothership_open1",  --发光条
+      },
+      {
+        "sound",
+        "",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event68 = {
+      {
+        "anim",
+        "E_Open",
+      },
+      {
+        "animtime",
+        "0.1875",
+      },
+      {
+        "marker",
+        "tx02",
+      },
+      {
+        "fx",
+        "kad_mothership_open2",   --小圈
+      },
+      {
+        "sound",
+        "",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event69 = {
+      {
+        "anim",
+        "E_Open",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "Root",
+      },
+      {
+        "fx",
+        "kad_mothership_open3",   --大圈
+      },
+      {
+        "sound",
+        "",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event70 = {
+      {
+        "anim",
+        "E_Shocking",      -----中间态
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "",
+      },
+      {
+        "fx",
+        "",
+      },
+      {
+        "fx_scale",
+        "0",
+      },
+      {
+        "sound",
+        "",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event71 = {
+      {
+        "anim",
+        "E_Close",      -----收起
+      },
+      {
+        "animtime",
+        "0.5",
+      },
+      {
+        "marker",
+        "tx01",
+      },
+      {
+        "fx",
+        "kad_mothership_close1",
+      },
+      {
+        "sound",
+        "",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event72 = {
+      {
+        "anim",
+        "E_Close",
+      },
+      {
+        "animtime",
+        "0.666",
+      },
+      {
+        "marker",
+        "tx02",
+      },
+      {
+        "fx",
+        "kad_mothership_close2",
+      },
+      {
+        "sound",
+        "",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event73 = {
+      {
+        "anim",
+        "E_Close",
+      },
+      {
+        "animtime",
+        "0.5",
+      },
+      {
+        "marker",
+        "Root",
+      },
+      {
+        "fx",
+        "kad_mothership_close3",
+      },
+      {
+        "sound",
+        "",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event100 = {
+      {
+        "anim",
+        "Weapon_Triton",    -----主炮
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "marker100",
+      },
+      {
+        "fx",
+        "super_beam_flare_spray_blue",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+    },
+    event101 = {
+      {
+        "anim",
+        "Weapon_Triton",
+      },
+      {
+        "animtime",
+        "0.05",
+      },
+      {
+        "marker",
+        "marker101",
+      },
+      {
+        "fx",
+        "super_beam_flare_spray_blue",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+    },
+    event102 = {
+      {
+        "anim",
+        "Weapon_Triton",
+      },
+      {
+        "animtime",
+        "0.1",
+      },
+      {
+        "marker",
+        "marker102",
+      },
+      {
+        "fx",
+        "super_beam_flare_spray_blue",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+    },
+    event103 = {
+      {
+        "anim",
+        "Weapon_Triton",
+      },
+      {
+        "animtime",
+        "0.15",
+      },
+      {
+        "marker",
+        "marker103",
+      },
+      {
+        "fx",
+        "super_beam_flare_spray_blue",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+    },
+    event104 = {
+      {
+        "anim",
+        "Weapon_Triton",
+      },
+      {
+        "animtime",
+        "0.2",
+      },
+      {
+        "marker",
+        "marker104",
+      },
+      {
+        "fx",
+        "super_beam_flare_spray_blue",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+    },
+    event105 = {
+      {
+        "anim",
+        "Weapon_Triton",
+      },
+      {
+        "animtime",
+        "0.25",
+      },
+      {
+        "marker",
+        "marker105",
+      },
+      {
+        "fx",
+        "super_beam_flare_spray_blue",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+    },
+    event106 = {
+      {
+        "anim",
+        "Weapon_Triton",
+      },
+      {
+        "animtime",
+        "0.3",
+      },
+      {
+        "marker",
+        "marker106",
+      },
+      {
+        "fx",
+        "super_beam_flare_spray_blue",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+    },
+    event107 = {
+      {
+        "anim",
+        "Weapon_Triton",
+      },
+      {
+        "animtime",
+        "0.35",
+      },
+      {
+        "marker",
+        "marker107",
+      },
+      {
+        "fx",
+        "super_beam_flare_spray_blue",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+    },
+    event108 = {
+      {
+        "anim",
+        "Weapon_Triton",
+      },
+      {
+        "animtime",
+        "0.4",
+      },
+      {
+        "marker",
+        "marker108",
+      },
+      {
+        "fx",
+        "super_beam_flare_spray_blue",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+    },
+    event109 = {
+      {
+        "anim",
+        "Weapon_Triton",
+      },
+      {
+        "animtime",
+        "0.45",
+      },
+      {
+        "marker",
+        "marker109",
+      },
+      {
+        "fx",
+        "super_beam_flare_spray_blue",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+    },
+    event110 = {
+      {
+        "anim",
+        "Weapon_Triton",
+      },
+      {
+        "animtime",
+        "0.5",
+      },
+      {
+        "marker",
+        "marker110",
+      },
+      {
+        "fx",
+        "super_beam_flare_spray_blue",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+    },
+    event111 = {
+      {
+        "anim",
+        "Weapon_Triton",
+      },
+      {
+        "animtime",
+        "0.55",
+      },
+      {
+        "marker",
+        "marker111",
+      },
+      {
+        "fx",
+        "super_beam_flare_spray_blue",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+    },
+
+    event112 = {
+      {
+        "anim",
+        "Weapon_Triton",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "marker112",
+      },
+      {
+        "fx",
+        "super_beam_flare_spray_blue",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+    },
+    event113 = {
+      {
+        "anim",
+        "Weapon_Triton",
+      },
+      {
+        "animtime",
+        "0.05",
+      },
+      {
+        "marker",
+        "marker113",
+      },
+      {
+        "fx",
+        "super_beam_flare_spray_blue",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+    },
+    event114 = {
+      {
+        "anim",
+        "Weapon_Triton",
+      },
+      {
+        "animtime",
+        "0.1",
+      },
+      {
+        "marker",
+        "marker114",
+      },
+      {
+        "fx",
+        "super_beam_flare_spray_blue",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+    },
+    event115 = {
+      {
+        "anim",
+        "Weapon_Triton",
+      },
+      {
+        "animtime",
+        "0.15",
+      },
+      {
+        "marker",
+        "marker115",
+      },
+      {
+        "fx",
+        "super_beam_flare_spray_blue",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+    },
+    event116 = {
+      {
+        "anim",
+        "Weapon_Triton",
+      },
+      {
+        "animtime",
+        "0.2",
+      },
+      {
+        "marker",
+        "marker116",
+      },
+      {
+        "fx",
+        "super_beam_flare_spray_blue",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+    },
+    event117 = {
+      {
+        "anim",
+        "Weapon_Triton",
+      },
+      {
+        "animtime",
+        "0.25",
+      },
+      {
+        "marker",
+        "marker117",
+      },
+      {
+        "fx",
+        "super_beam_flare_spray_blue",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+    },
+    event118 = {
+      {
+        "anim",
+        "Weapon_Triton",
+      },
+      {
+        "animtime",
+        "0.3",
+      },
+      {
+        "marker",
+        "marker118",
+      },
+      {
+        "fx",
+        "super_beam_flare_spray_blue",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+    },
+    event119 = {
+      {
+        "anim",
+        "Weapon_Triton",
+      },
+      {
+        "animtime",
+        "0.35",
+      },
+      {
+        "marker",
+        "marker119",
+      },
+      {
+        "fx",
+        "super_beam_flare_spray_blue",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+    },
+    event120 = {
+      {
+        "anim",
+        "Weapon_Triton",
+      },
+      {
+        "animtime",
+        "0.4",
+      },
+      {
+        "marker",
+        "marker120",
+      },
+      {
+        "fx",
+        "super_beam_flare_spray_blue",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+    },
+    event121 = {
+      {
+        "anim",
+        "Weapon_Triton",
+      },
+      {
+        "animtime",
+        "0.45",
+      },
+      {
+        "marker",
+        "marker121",
+      },
+      {
+        "fx",
+        "super_beam_flare_spray_blue",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+    },
+    event122 = {
+      {
+        "anim",
+        "Weapon_Triton",
+      },
+      {
+        "animtime",
+        "0.5",
+      },
+      {
+        "marker",
+        "marker122",
+      },
+      {
+        "fx",
+        "super_beam_flare_spray_blue",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+    },
+    event123 = {
+      {
+        "anim",
+        "Weapon_Triton",
+      },
+      {
+        "animtime",
+        "0.55",
+      },
+      {
+        "marker",
+        "marker123",
+      },
+      {
+        "fx",
+        "super_beam_flare_spray_blue",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+    },
+    event124 = {
+      {
+        "anim",
+        "Weapon_Triton",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "marker124",
+      },
+      {
+        "fx",
+        "super_beam_flare_spray_blue02",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+    },
+    event125 = {
+      {
+        "anim",
+        "Weapon_Triton",
+      },
+      {
+        "animtime",
+        "0.125",
+      },
+      {
+        "marker",
+        "marker125",
+      },
+      {
+        "fx",
+        "super_beam_flare_spray_blue02",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+    },
+    event126 = {
+      {
+        "anim",
+        "Weapon_Triton",
+      },
+      {
+        "animtime",
+        "0.1",
+      },
+      {
+        "marker",
+        "marker126",
+      },
+      {
+        "fx",
+        "super_beam_flare_spray_blue02",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+    },
+    event127 = {
+      {
+        "anim",
+        "Weapon_Triton",
+      },
+      {
+        "animtime",
+        "0.2",
+      },
+      {
+        "marker",
+        "marker127",
+      },
+      {
+        "fx",
+        "super_beam_flare_spray_blue02",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+    },
+    event128 = {
+      {
+        "anim",
+        "Weapon_Triton",
+      },
+      {
+        "animtime",
+        "0.075",
+      },
+      {
+        "marker",
+        "marker128",
+      },
+      {
+        "fx",
+        "super_beam_flare_spray_blue02",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+    },
+    event129 = {
+      {
+        "anim",
+        "Weapon_Triton",
+      },
+      {
+        "animtime",
+        "0.05",
+      },
+      {
+        "marker",
+        "marker129",
+      },
+      {
+        "fx",
+        "super_beam_flare_spray_blue02",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+    },
+    event130 = {
+      {
+        "anim",
+        "Weapon_Triton",
+      },
+      {
+        "animtime",
+        "0.1",
+      },
+      {
+        "marker",
+        "marker130",
+      },
+      {
+        "fx",
+        "super_beam_flare_spray_blue02",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+    },
+    event131 = {
+      {
+        "anim",
+        "Weapon_Triton",
+      },
+      {
+        "animtime",
+        "0.15",
+      },
+      {
+        "marker",
+        "marker131",
+      },
+      {
+        "fx",
+        "super_beam_flare_spray_blue02",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+    },
+    event132 = {
+      {
+        "anim",
+        "Weapon_Triton",
+      },
+      {
+        "animtime",
+        "0.025",
+      },
+      {
+        "marker",
+        "marker132",
+      },
+      {
+        "fx",
+        "super_beam_flare_spray_blue02",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+    },
+    event133 = {
+      {
+        "anim",
+        "Weapon_Triton",
+      },
+      {
+        "animtime",
+        "0.1",
+      },
+      {
+        "marker",
+        "marker133",
+      },
+      {
+        "fx",
+        "super_beam_flare_spray_blue02",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+    },
+    event134 = {
+      {
+        "anim",
+        "Weapon_Triton",
+      },
+      {
+        "animtime",
+        "0.175",
+      },
+      {
+        "marker",
+        "marker134",
+      },
+      {
+        "fx",
+        "super_beam_flare_spray_blue02",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+    },
+    event135 = {
+      {
+        "anim",
+        "Weapon_Triton",
+      },
+      {
+        "animtime",
+        "0.1",
+      },
+      {
+        "marker",
+        "marker135",
+      },
+      {
+        "fx",
+        "super_beam_flare_spray_blue02",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+    },
+    event136 = {
+      {
+        "anim",
+        "Weapon_Triton",
+      },
+      {
+        "animtime",
+        "0.4",
+      },
+      {
+        "marker",
+        "marker136",
+      },
+      {
+        "fx",
+        "super_beam_flare_spray_blue02",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+    },
+    event137 = {
+      {
+        "anim",
+        "Weapon_Triton",
+      },
+      {
+        "animtime",
+        "0.4",
+      },
+      {
+        "marker",
+        "Weapon_PhasedCannon_Muzzle",
+      },
+      {
+        "fx",
+        "super_beam_lensflare_blue",
+      },
+      {
+        "fx_scale",
+        "12",
+      },
+    },
+    event138 = {
+      {
+        "anim",
+        "Weapon_Triton",
+      },
+      {
+        "animtime",
+        "0.4",
+      },
+      {
+        "marker",
+        "marker137",
+      },
+      {
+        "fx",
+        "super_beam_lensflare_blue1",
+      },
+      {
+        "fx_scale",
+        "20",
+      },
+    },
+    event139 = {
+      {
+        "anim",
+        "Weapon_Triton",
+      },
+      {
+        "animtime",
+        "0.365",
+      },
+      {
+        "marker",
+        "marker138",
+      },
+      {
+        "sound",
+        "WEAPON/MEGASHIP/FIRE/SAJUUK_HEAVY_ION_CANNON_BEAM",
+      },
+    },
+    event140 = {
+      {
+        "anim",
+        "Weapon_Triton",
+      },
+      {
+        "animtime",
+        "0.465",
+      },
+      {
+        "marker",
+        "marker137",
+      },
+      {
+        "fx",
+        "super_beam_light_blue",--
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+    },
+    event141 = {
+      {
+        "anim",
+        "Weapon_Triton",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "Weapon_PhasedCannon_Muzzle",
+      },
+      {
+        "fx",
+        "",
+      },
+      {
+        "sound",
+        "WEAPON/MEGASHIP/FIRE/DREADNAUGHT_FIRE_1",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+    },
+    event142 = {
+      {
+        "anim",
+        "Weapon_Triton",
+      },
+      {
+        "animtime",
+        "0.465",
+      },
+      {
+        "marker",
+        "marker137",
+      },
+      {
+        "fx",
+        "dmg_capital_lensflare_small",
+      },
+      {
+        "fx_scale",
+        "20",
+      },
+    },
+    event143 = {
+      {
+        "anim",
+        "Weapon_Triton",                           -----开火固体特效
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "tx03_1",
+      },
+      {
+        "fx",
+        "kad_mothership_ioncannon1",      
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event144 = {
+      {
+        "anim",
+        "Weapon_Triton",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "tx03_2",
+      },
+      {
+        "fx",
+        "kad_mothership_ioncannon1",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event145 = {
+      {
+        "anim",
+        "Weapon_Triton",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "tx03_21",
+      },
+      {
+        "fx",
+        "",--kad_mothership_ioncannon2
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event146 = {
+      {
+        "anim",
+        "Weapon_Triton",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "tx03_3",
+      },
+      {
+        "fx",
+        "kad_mothership_ioncannon1",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event147 = {
+      {
+        "anim",
+        "Weapon_Triton",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "tx03_4",
+      },
+      {
+        "fx",
+        "kad_mothership_ioncannon1",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event148 = {
+      {
+        "anim",
+        "Weapon_Triton",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "tx03_41",
+      },
+      {
+        "fx",
+        "",--kad_mothership_ioncannon2
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event149 = {
+      {
+        "anim",
+        "Weapon_Triton",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "tx03_5",
+      },
+      {
+        "fx",
+        "kad_mothership_ioncannon1",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event150 = {
+      {
+        "anim",
+        "Weapon_Triton",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "tx03_6",
+      },
+      {
+        "fx",
+        "kad_mothership_ioncannon1",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event151 = {
+      {
+        "anim",
+        "Weapon_Triton",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "tx03_61",
+      },
+      {
+        "fx",
+        "",--kad_mothership_ioncannon2
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event152 = {
+      {
+        "anim",
+        "Weapon_Triton",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "tx03_7",
+      },
+      {
+        "fx",
+        "kad_mothership_ioncannon1",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event153 = {
+      {
+        "anim",
+        "Weapon_Triton",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "tx03_8",
+      },
+      {
+        "fx",
+        "kad_mothership_ioncannon1",  --内圈蓝色
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event154 = {
+      {
+        "anim",
+        "Weapon_Triton",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "tx03_81",
+      },
+      {
+        "fx",
+        "",--kad_mothership_ioncannon2  --外层红色
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event155 = {
+      {
+        "anim",
+        "Weapon_Triton",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "Root",
+      },
+      {
+        "fx",
+        "kad_mothership_ioncannon3",  --蓝色沟槽
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event156 = {
+      {
+        "anim",
+        "Weapon_Triton",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "c1",
+      },
+      {
+        "fx",
+        "kad_mothership_ioncannon4",  --内红圈
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event157 = {
+      {
+        "anim",
+        "Weapon_Triton",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "c1",
+      },
+      {
+        "fx",
+        "kad_mothership_ioncannon5",  --光束沟槽
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event158 = {
+      {
+        "anim",
+        "Weapon_Triton",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "tx04",
+      },
+      {
+        "fx",
+        "kad_mothership_ioncannon6",  --中部亮条
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event161 = {
+      {
+        "anim",
+        "Weapon_Triton",
+      },
+      {
+        "animtime",
+        "0.8",
+      },
+      {
+        "marker",
+        "marker151",
+      },
+      {
+        "fx",
+        "kad_mothership_thrower",      --喷气
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event162 = {
+      {
+        "anim",
+        "Weapon_Triton",
+      },
+      {
+        "animtime",
+        "0.85",
+      },
+      {
+        "marker",
+        "marker152",
+      },
+      {
+        "fx",
+        "kad_mothership_thrower",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event163 = {
+      {
+        "anim",
+        "Weapon_Triton",
+      },
+      {
+        "animtime",
+        "0.9",
+      },
+      {
+        "marker",
+        "marker153",
+      },
+      {
+        "fx",
+        "kad_mothership_thrower",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event164 = {
+      {
+        "anim",
+        "Weapon_Triton",
+      },
+      {
+        "animtime",
+        "0.95",
+      },
+      {
+        "marker",
+        "marker154",
+      },
+      {
+        "fx",
+        "kad_mothership_thrower",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event165 = {
+      {
+        "anim",
+        "Weapon_Triton",
+      },
+      {
+        "animtime",
+        "0.99",
+      },
+      {
+        "marker",
+        "marker155",
+      },
+      {
+        "fx",
+        "kad_mothership_thrower",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event166 = {
+      {
+        "anim",
+        "Weapon_Triton",
+      },
+      {
+        "animtime",
+        "0.8",
+      },
+      {
+        "marker",
+        "marker156",
+      },
+      {
+        "fx",
+        "kad_mothership_thrower",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event167 = {
+      {
+        "anim",
+        "Weapon_Triton",
+      },
+      {
+        "animtime",
+        "0.85",
+      },
+      {
+        "marker",
+        "marker157",
+      },
+      {
+        "fx",
+        "kad_mothership_thrower",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event168 = {
+      {
+        "anim",
+        "Weapon_Triton",
+      },
+      {
+        "animtime",
+        "0.9",
+      },
+      {
+        "marker",
+        "marker158",
+      },
+      {
+        "fx",
+        "kad_mothership_thrower",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event169 = {
+      {
+        "anim",
+        "Weapon_Triton",
+      },
+      {
+        "animtime",
+        "0.95",
+      },
+      {
+        "marker",
+        "marker159",
+      },
+      {
+        "fx",
+        "kad_mothership_thrower",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event170 = {
+      {
+        "anim",
+        "Weapon_Triton",
+      },
+      {
+        "animtime",
+        "0.99",
+      },
+      {
+        "marker",
+        "marker160",
+      },
+      {
+        "fx",
+        "kad_mothership_thrower",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event171 = {
+      {
+        "anim",
+        "Weapon_Triton",
+      },
+      {
+        "animtime",
+        "0.8",
+      },
+      {
+        "marker",
+        "marker161",
+      },
+      {
+        "fx",
+        "kad_mothership_thrower",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event172 = {
+      {
+        "anim",
+        "Weapon_Triton",
+      },
+      {
+        "animtime",
+        "0.85",
+      },
+      {
+        "marker",
+        "marker162",
+      },
+      {
+        "fx",
+        "kad_mothership_thrower",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event173 = {
+      {
+        "anim",
+        "Weapon_Triton",
+      },
+      {
+        "animtime",
+        "0.9",
+      },
+      {
+        "marker",
+        "marker163",
+      },
+      {
+        "fx",
+        "kad_mothership_thrower",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event174 = {
+      {
+        "anim",
+        "Weapon_Triton",
+      },
+      {
+        "animtime",
+        "0.95",
+      },
+      {
+        "marker",
+        "marker164",
+      },
+      {
+        "fx",
+        "kad_mothership_thrower",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event175 = {
+      {
+        "anim",
+        "Weapon_Triton",
+      },
+      {
+        "animtime",
+        "0.99",
+      },
+      {
+        "marker",
+        "marker165",
+      },
+      {
+        "fx",
+        "kad_mothership_thrower",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event176 = {
+      {
+        "anim",
+        "Weapon_Triton",
+      },
+      {
+        "animtime",
+        "0.8",
+      },
+      {
+        "marker",
+        "marker166",
+      },
+      {
+        "fx",
+        "kad_mothership_thrower",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event177 = {
+      {
+        "anim",
+        "Weapon_Triton",
+      },
+      {
+        "animtime",
+        "0.85",
+      },
+      {
+        "marker",
+        "marker167",
+      },
+      {
+        "fx",
+        "kad_mothership_thrower",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event178 = {
+      {
+        "anim",
+        "Weapon_Triton",
+      },
+      {
+        "animtime",
+        "0.9",
+      },
+      {
+        "marker",
+        "marker168",
+      },
+      {
+        "fx",
+        "kad_mothership_thrower",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event179 = {
+      {
+        "anim",
+        "Weapon_Triton",
+      },
+      {
+        "animtime",
+        "0.95",
+      },
+      {
+        "marker",
+        "marker169",
+      },
+      {
+        "fx",
+        "kad_mothership_thrower",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event180 = {
+      {
+        "anim",
+        "Weapon_Triton",
+      },
+      {
+        "animtime",
+        "0.99",
+      },
+      {
+        "marker",
+        "marker170",
+      },
+      {
+        "fx",
+        "kad_mothership_thrower",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+  },
+}

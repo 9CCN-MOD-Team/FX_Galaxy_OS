@@ -1,0 +1,21 @@
+NCCN_POET_Launched_OnSet = function(ship)
+    startEffect(ship, "E_Close")
+    startAnim(ship, "Mad_Close")
+    setLoopCount(ship, "Mad_Close", 100000)
+end
+
+
+NCCN_POET_Normal_OnSet = function(ship)
+    startEffect(ship, "E_Close")
+    startAnim(ship, "Mad_Close")
+    setLoopCount(ship, "Mad_Close", 100000)
+end
+
+
+NCCN_POET_Closed_OnSet = function(ship)
+    endEffect(ship, "E_Open")
+end
+
+NCCN_POET_Open_OnSet = function(ship)
+    startEffect(ship, "E_Open")
+end

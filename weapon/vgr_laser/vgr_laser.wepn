@@ -1,0 +1,20 @@
+StartWeaponConfig(NewWeaponType,"AnimatedTurret","Bullet","Vgr_Laser_Small","Normal",2600,1800,0,0,0,0,1,1,0,1,2,4,1,0,500,500,0.1,"Normal",0,0,0)
+AddWeaponResult(NewWeaponType,"Hit","DamageHealth","Target",225,225,"")
+setPenetration(NewWeaponType,5,1,{
+  TurretArmour = 0.5,
+},{
+  ResArmour = 0.24,
+},{
+  PlanetKillerArmour = 0,
+},{
+  SubSystemArmour = 0.25,
+})
+setMissileKiller(NewWeaponType,1);setAccuracy(NewWeaponType,1,{
+  Fighter = 0.04,
+},{
+  Corvette = 0.035,
+},{
+  munition = 0.1,
+})
+setAngles(NewWeaponType,0,-10,10,-10,10)
+setMiscValues(NewWeaponType,4,0.2)

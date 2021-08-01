@@ -1,0 +1,710 @@
+effects = {
+  animations = {
+    animation1 = {
+      name = "Death",
+      length = 2,
+      loop = 0,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+    animation2 = {
+      name = "Weapon_TurretTop",
+      length = 3,
+      loop = 0,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+    animation3 = {
+      name = "Damage",
+      length = 1,
+      loop = 1,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+    animation4 = {
+      name = "dmg01",
+      length = 1,
+      loop = 1,
+      parent = "Damage",
+      minimum = 0.25,
+      maximum = 1,
+      markers = {
+        "",
+      },
+    },
+    animation5 = {
+      name = "dmg02",
+      length = 1,
+      loop = 1,
+      parent = "Damage",
+      minimum = 0.5,
+      maximum = 1,
+      markers = {
+        "",
+      },
+    },
+    animation6 = {
+      name = "dmg03",
+      length = 1,
+      loop = 1,
+      parent = "Damage",
+      minimum = 0.75,
+      maximum = 1,
+      markers = {
+        "",
+      },
+    },
+    animation7 = {
+      name = "E_Launch01",
+      length = 6,
+      loop = 0,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+    animation8 = {
+      name = "E_Launch02",
+      length = 2,
+      loop = 0,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+    animation9 = {
+      name = "E_Open",
+      length = 1,
+      loop = 0,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+    animation10 = {
+      name = "E_Shocking",
+      length = 6,
+      loop = 0,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+  },
+  events = {
+    event1 = {
+      {
+        "anim",
+        "death1",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "root",
+      },
+      {
+        "fx",
+        "death_generic",
+      },
+      {
+        "sound",
+        "EXPLOSION/MEDIUM/ETG_EXPLODE_MEDIUM_FIREY",
+      },
+      {
+        "fx_scale",
+        "entity",
+      },
+    },
+    event2 = {
+      {
+        "anim",
+        "Weapon_TurretTop",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "Weapon_TurretTop_Muzzle",
+      },
+      {
+        "fx",
+        "muzzle_flash_combo_small_frigate",
+      },
+      {
+        "sound",
+        "WEAPON/FRIGATE/FIRE/WEAPON_FRIGATE_FLECHETTE_CANNON_SHELL",
+      },
+    },
+    event3 = {
+      {
+        "anim",
+        "Weapon_TurretTop",
+      },
+      {
+        "animtime",
+        "1",
+      },
+      {
+        "marker",
+        "Weapon_TurretTopSlave_Muzzle",
+      },
+      {
+        "fx",
+        "muzzle_flash_combo_small_frigate",
+      },
+      {
+        "sound",
+        "WEAPON/FRIGATE/FIRE/WEAPON_FRIGATE_FLECHETTE_CANNON_SHELL",
+      },
+    },
+    event4 = {
+      {
+        "anim",
+        "death",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "marker1",
+      },
+      {
+        "fx",
+        "dmg_cloud_explosion_large",
+      },
+      {
+        "sound",
+        "Explosion/Small/ETG_Explode_Small_Firey",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+    },
+    event5 = {
+      {
+        "anim",
+        "death",
+      },
+      {
+        "animtime",
+        "0.1",
+      },
+      {
+        "marker",
+        "marker2",
+      },
+      {
+        "fx",
+        "dmg_cloud_explosion_large",
+      },
+      {
+        "sound",
+        "Explosion/Small/ETG_Explode_Small_Plasma",
+      },
+      {
+        "fx_scale",
+        "1.5",
+      },
+    },
+    event6 = {
+      {
+        "anim",
+        "death",
+      },
+      {
+        "animtime",
+        "0.2",
+      },
+      {
+        "marker",
+        "marker3",
+      },
+      {
+        "fx",
+        "dmg_cloud_explosion_large",
+      },
+      {
+        "fx_scale",
+        "2",
+      },
+    },
+    event7 = {
+      {
+        "anim",
+        "death",
+      },
+      {
+        "animtime",
+        "0.3",
+      },
+      {
+        "marker",
+        "marker4",
+      },
+      {
+        "fx",
+        "dmg_cloud_explosion_large",
+      },
+      {
+        "sound",
+        "Explosion/Small/ETG_Explode_Small_Firey",
+      },
+      {
+        "fx_scale",
+        "2",
+      },
+    },
+    event8 = {
+      {
+        "anim",
+        "death",
+      },
+      {
+        "animtime",
+        "0.4",
+      },
+      {
+        "marker",
+        "marker5",
+      },
+      {
+        "fx",
+        "dmg_cloud_explosion_large",
+      },
+      {
+        "fx_scale",
+        "3",
+      },
+    },
+    event9 = {
+      {
+        "anim",
+        "Death",
+      },
+      {
+        "animtime",
+        "0.4",
+      },
+      {
+        "marker",
+        "Root",
+      },
+      {
+        "fx",
+        "dmg_cloud_main_explosion_combo",
+      },
+      {
+        "sound",
+        "EXPLOSION/MEDIUM/ETG_EXPLODE_MEDIUM_FIREY",
+      },
+      {
+        "fx_scale",
+        "15",
+      },
+    },
+    event10 = {
+      {
+        "anim",
+        "dmg01",
+      },
+      {
+        "animtime",
+        "-1",
+      },
+      {
+        "marker",
+        "marker1,maker2",
+      },
+      {
+        "fx",
+        "dmg_damage_puff_combo_frigate,dmg_damage_cloud_puff_spray",
+      },
+      {
+        "sound",
+        "DAMAGE/SMOKE/DAMAGE_SMOKE_EXHAUST_HEAVY",
+      },
+      {
+        "fx_scale",
+        "5",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event11 = {
+      {
+        "anim",
+        "dmg02",
+      },
+      {
+        "animtime",
+        "-1",
+      },
+      {
+        "marker",
+        "marker3,maker4",
+      },
+      {
+        "fx",
+        "dmg_damage_puff_combo_frigate,dmg_damage_cloud_puff_spray",
+      },
+      {
+        "sound",
+        "DAMAGE/SMOKE/DAMAGE_SMOKE_EXHAUST_HEAVY",
+      },
+      {
+        "fx_scale",
+        "7.5",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event12 = {
+      {
+        "anim",
+        "dmg03",
+      },
+      {
+        "animtime",
+        "-1",
+      },
+      {
+        "marker",
+        "marker5",
+      },
+      {
+        "fx",
+        "dmg_damage_puff_combo_frigate,dmg_damage_cloud_puff_spray",
+      },
+      {
+        "sound",
+        "DAMAGE/SMOKE/DAMAGE_SMOKE_EXHAUST_HEAVY",
+      },
+      {
+        "fx_scale",
+        "10",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event13 = {
+      {
+        "anim",
+        "E_Launch01",
+      },
+      {
+        "animtime",
+        "0.55",
+      },
+      {
+        "marker",
+        "marker40",
+      },
+      {
+        "fx",
+        "dmg_cloud_explosion_large",
+      },
+      {
+        "sound",
+        "SPECIAL/SPECIAL_ABILITIES_HGN_MARINE_FRIGATE_CAPTURE",
+      },
+      {
+        "fx_scale",
+        "2",
+      },
+    },
+    event14 = {
+      {
+        "anim",
+        "E_Launch02",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "marker50",
+      },
+      {
+        "fx",
+        "tur_build_frigate_thrower",    --打桩机喷雾
+      },
+      {
+        "sound",
+        "",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+    },
+    event15 = {
+      {
+        "anim",
+        "E_Open",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "marker51",
+      },
+      {
+        "fx",
+        "tur_build_frigate_thrower",  --钻头准备喷雾
+      },
+      {
+        "sound",
+        "",
+      },
+      {
+        "fx_scale",
+        "0.5",
+      },
+    },
+    event16 = {
+      {
+        "anim",
+        "E_Open",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "marker53",
+      },
+      {
+        "fx",
+        "tur_build_frigate_thrower",
+      },
+      {
+        "sound",
+        "",
+      },
+      {
+        "fx_scale",
+        "0.5",
+      },
+    },
+    event17 = {
+      {
+        "anim",
+        "E_Shocking",
+      },
+      {
+        "animtime",
+        "-1",
+      },
+      {
+        "marker",
+        "marker51",
+      },
+      {
+        "fx",
+        "tur_build_frigate_thrower",  --钻头喷雾
+      },
+      {
+        "sound",
+        "",
+      },
+      {
+        "fx_scale",
+        "0.5",
+      },
+    },
+    event18 = {
+      {
+        "anim",
+        "E_Shocking",
+      },
+      {
+        "animtime",
+        "-1",
+      },
+      {
+        "marker",
+        "marker53",
+      },
+      {
+        "fx",
+        "tur_build_frigate_thrower",
+      },
+      {
+        "sound",
+        "",
+      },
+      {
+        "fx_scale",
+        "0.5",
+      },
+    },
+    event19 = {
+      {
+        "anim",
+        "E_Shocking",
+      },
+      {
+        "animtime",
+        "-1",
+      },
+      {
+        "marker",
+        "marker52",
+      },
+      {
+        "fx",
+        "tur_build_frigate_thrower",
+      },
+      {
+        "sound",
+        "",
+      },
+      {
+        "fx_scale",
+        "0.5",
+      },
+    },
+    event20 = {
+      {
+        "anim",
+        "E_Shocking",
+      },
+      {
+        "animtime",
+        "-1",
+      },
+      {
+        "marker",
+        "marker54",
+      },
+      {
+        "fx",
+        "tur_build_frigate_thrower",
+      },
+      {
+        "sound",
+        "",
+      },
+      {
+        "fx_scale",
+        "0.5",
+      },
+    },
+    event21 = {
+      {
+        "anim",
+        "E_Shocking",
+      },
+      {
+        "animtime",
+        "-1",
+      },
+      {
+        "marker",
+        "marker41",
+      },
+      {
+        "fx",
+        "Drill_spark_combo",   --向后喷射钻花
+      },
+      {
+        "sound",
+        "",
+      },
+      {
+        "fx_scale",
+        "18",
+      },
+    },
+    event22 = {
+      {
+        "anim",
+        "E_Shocking",
+      },
+      {
+        "animtime",
+        "-1",
+      },
+      {
+        "marker",
+        "marker100",
+      },
+      {
+        "fx",
+        "Drill_spark_combo",  --钻头尖火花
+      },
+      {
+        "sound",
+        "",
+      },
+      {
+        "fx_scale",
+        "8",
+      },
+    },
+    event23 = {
+      {
+        "anim",
+        "E_Shocking",
+      },
+      {
+        "animtime",
+        "-1",
+      },
+      {
+        "marker",
+        "marker101",
+      },
+      {
+        "fx",
+        "Drill_SPARK_LIGHT",  --钻头发红光
+      },
+      {
+        "sound",
+        "",
+      },
+      {
+        "fx_scale",
+        "5",
+      },
+    },
+  },
+}

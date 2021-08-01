@@ -1,0 +1,8 @@
+MusicList["Crystallized_Spell"] = 
+{
+	name = "Crystallized_Spell-Epic_Score",
+	path = musicpath.."Crystallized_Spell",
+	minute = 2,
+	second = 36,
+	func = MP_NoCombat,
+}

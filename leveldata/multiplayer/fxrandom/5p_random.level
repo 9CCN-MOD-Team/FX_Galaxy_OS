@@ -1,0 +1,21 @@
+-------------------------------------------------------------
+-------------5p_random.level-----------2015年09月24日--------
+--由 9CCNMOD组 破天者-孤狼 编写
+--这个文件是为FXMOD编写的随机地图之一
+-------------------------------------------------------------
+-------------------------------------------------------------
+
+--加载Debug模块
+dofilepath("data:scripts/debug.lua")
+
+--定义地图列表
+DefaultLevels =
+{
+  "data:leveldata/multiplayer/deathmatchhw2/5p_silumin_training_grounds.level",
+  "data:leveldata/multiplayer/deathmatchhw1/5p_radial_symmetry.level",
+  "data:leveldata/multiplayer/deathmatchhw1/5p_treeoflife.level",
+}
+
+playernumber = 5
+
+dofilepath("data:leveldata/multiplayer/fxrandom/randommap_template.lua")

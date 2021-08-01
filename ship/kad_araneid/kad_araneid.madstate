@@ -1,0 +1,49 @@
+-- REPAIRING -------------------------------------------------------------------
+
+KAD_ARANEID_Launched_OnSet = function(ship)	
+	startAnim(ship, "Zhuan")
+	setLoopCount(ship, "Zhuan", 100000)
+end
+
+KAD_ARANEID_RepairStart_OnSet = function(ship)
+    setState(ship, "RepairStart", 0)
+    stopAnim(ship, "Close")
+    stopAnim(ship, "Work")
+
+    stopAnim(ship, "Zhuan")
+
+    endEffect(ship, "Repairing")
+    startAnim(ship, "Open")
+    startEffect(ship, "Open")
+    setPauseTime(ship, "Open", 1000)
+end
+
+KAD_ARANEID_RepairStart_OnPause = function(ship)
+    setState(ship, "RepairStart", 1)
+end
+
+KAD_ARANEID_RepairDo_OnSet = function(ship)
+    stopAnim(ship, "Open")
+    stopAnim(ship, "Close")
+    startAnim(ship, "Work")
+    startEffect(ship, "Repairing")
+    setLoopCount(ship, "Work", 1000000)
+    setState(ship, "RepairDo", 1)
+end
+
+KAD_ARANEID_RepairEnd_OnSet = function(ship)
+    stopAnim(ship, "Open")
+    stopAnim(ship, "Work")
+    endEffect(ship, "Repairing")
+    startAnim(ship, "Close")
+    startEffect(ship, "Close")
+    setState(ship, "RepairEnd", 0)
+    setPauseTime(ship, "Close", 1000)
+
+end
+
+KAD_ARANEID_RepairEnd_OnPause = function(ship)
+    startAnim(ship, "Zhuan")
+    setLoopCount(ship, "Zhuan", 100000)
+    setState(ship, "RepairEnd", 1)
+end

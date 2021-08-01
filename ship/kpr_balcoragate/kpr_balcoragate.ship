@@ -1,0 +1,168 @@
+NewShipType = StartShipConfig()
+NewShipType.defaultROE="Defensive" --默认ROE
+NewShipType.defaultStance="Neutral" --默认Stance
+NewShipType.displayedName = "$1810"
+NewShipType.sobDescription = "$2162"
+NewShipType.maxhealth = 240000
+NewShipType.regentime = 2000
+NewShipType.minRegenTime = 2000
+NewShipType.sideArmourDamage = 1
+NewShipType.rearArmourDamage = 1
+NewShipType.isTransferable = 0
+NewShipType.useEngagementRanges = 1
+NewShipType.unitCapsNumber = 1
+NewShipType.addedUnitCaps = 101
+NewShipType.paradeData = "kpr_balcoragate_parade"
+NewShipType.buildBatch = 1
+--NewShipType.passiveFormation = "Spear"
+--NewShipType.defensiveFormation = "Delta"
+--NewShipType.aggressiveFormation = "Claw"
+NewShipType.mass = 5000
+NewShipType.collisionMultiplier = 1
+NewShipType.thrusterMaxSpeed = 0
+NewShipType.mainEngineMaxSpeed = 0
+NewShipType.rotationMaxSpeed = 0
+NewShipType.thrusterAccelTime = 1
+NewShipType.thrusterBrakeTime = 1
+NewShipType.mainEngineAccelTime = 1
+NewShipType.mainEngineBrakeTime = 1
+NewShipType.rotationAccelTime = 0.2
+NewShipType.rotationBrakeTime = 0.2
+NewShipType.thrusterUsage = 1
+NewShipType.accelerationAngle = 90
+NewShipType.mirrorAngle = 0
+NewShipType.secondaryTurnAngle = 0
+NewShipType.maxBankingAmount = 2
+NewShipType.descendPitch = 0.1
+NewShipType.goalReachEpsilon = 25
+NewShipType.slideMoveRange = 100
+NewShipType.controllerType = "Ship"
+NewShipType.tumbleStaticX = 0
+NewShipType.tumbleStaticY = 0
+NewShipType.tumbleStaticZ = 0
+NewShipType.tumbleDynamicX = 0
+NewShipType.tumbleDynamicY = 0
+NewShipType.tumbleDynamicZ = 0
+NewShipType.tumbleSpecialDynamicX = 0
+NewShipType.tumbleSpecialDynamicY = 0
+NewShipType.tumbleSpecialDynamicZ = 0
+NewShipType.relativeMoveFactor = 1
+NewShipType.swayUpdateTime = 2
+NewShipType.swayOffsetRandomX = 0
+NewShipType.swayOffsetRandomY = 0
+NewShipType.swayOffsetRandomZ = 0
+NewShipType.swayBobbingFactor = 0
+NewShipType.swayRotateFactor = 0
+NewShipType.useTargetRandom = 1
+setTargetBox(NewShipType, 0, -0.45,-0.2,-0.8, -0.35,0.2,0.8)
+setTargetBox(NewShipType, 1, 0.75,-0.2,-0.8, 0.85,0.2,0.8)
+setTargetBox(NewShipType, 2, 0.1,0.5,-0.8, 0.3,0.6,0.8)
+setTargetBox(NewShipType, 3, 0.1,-0.6,-0.8, 0.3,-0.5,0.8)
+NewShipType.dustCloudDamageTime = 280
+NewShipType.nebulaDamageTime = 800
+NewShipType.MinimalFamilyToFindPathAround = "MotherShip"
+NewShipType.BuildFamily = "Flagship_Kpr"
+NewShipType.AttackFamily = "BigCapitalShip"
+NewShipType.DockFamily = "Shipyard"
+NewShipType.AvoidanceFamily = "MotherShip"
+NewShipType.DisplayFamily = "Capital"
+NewShipType.AutoFormationFamily = "SuperCap"
+NewShipType.CollisionFamily = "Big"
+NewShipType.ArmourFamily = "HeavyArmour"
+--NewShipType.UnitCapsFamily = "Capital"
+setSupplyValue(NewShipType, "Capital", 1)
+setSupplyValue(NewShipType, "LayoutBattleCruiser", 1)
+--NewShipType.UnitCapsShipType = "balcoragate"
+setSupplyValue(NewShipType, "balcoragate", 1)
+NewShipType.fighterValue = 0
+NewShipType.corvetteValue = 0
+NewShipType.frigateValue = 20
+NewShipType.neutralValue = 10
+NewShipType.antiFighterValue = 0
+NewShipType.antiCorvetteValue = 0
+NewShipType.antiFrigateValue = 0
+NewShipType.totalValue = 40
+NewShipType.buildCost = 2500
+NewShipType.buildTime = 66
+NewShipType.buildPriorityOrder = 300
+NewShipType.retaliationRange = 0
+NewShipType.retaliationDistanceFromGoal = 0
+NewShipType.visualRange = 1000
+NewShipType.prmSensorRange = 7000
+NewShipType.secSensorRange = 7000
+NewShipType.detectionStrength = 1
+NewShipType.TOScale = 1
+NewShipType.TODistanceFade0 = 14439.382317879
+NewShipType.TODistanceDisappear0 = 14266.1179698217
+NewShipType.TODistanceFade1 = 125
+NewShipType.TODistanceDisappear1 = 100
+NewShipType.TODistanceFade2 = 35108
+NewShipType.TODistanceDisappear2 = 385802
+NewShipType.TOGroupScale = 1
+NewShipType.TOGroupMergeSize = 0
+NewShipType.healthBarStyle = 2
+NewShipType.nlips = 0
+NewShipType.nlipsRange = 75000
+NewShipType.nlipsFar = 0
+NewShipType.nlipsFarRange = 0
+NewShipType.SMRepresentation = "Mesh"
+NewShipType.alwaysInRenderList = 1
+NewShipType.meshRenderLimit = 250000
+NewShipType.dotRenderLimit = 10
+NewShipType.visibleInSecondary = 1
+NewShipType.minLOD = 1
+NewShipType.goblinsStartFade = 4500
+NewShipType.goblinsOff = 4500
+--NewShipType.upLOD = 5000
+--NewShipType.upLOD = 6950
+--NewShipType.downLOD = 5015
+--NewShipType.downLOD = 6965
+NewShipType.minimumZoomFactor = 0.25
+NewShipType.preciseSelectionLimit = 40000
+NewShipType.preciseATILimit = 5000
+NewShipType.selectionPriority = 65
+NewShipType.militaryUnit = 0
+NewShipType.alternativeHyperspaceA = "/etg/special/SPECIAL_ABILITIES_HYPERSPACE_IN_MS"
+NewShipType.SMHighlightDistMin = 30000
+NewShipType.SMHighlightDistMax = 50000
+addAbility(NewShipType,"CanDock",1,0)
+NewShipType.holdSlots = 1 --占用槽位数
+NewShipType.dockTimeBetweenTwoFormations = 1
+NewShipType.dockTimeBeforeStart = 2
+NewShipType.dockNrOfShipsInDockFormation = 1
+NewShipType.dockFormation = "delta"
+NewShipType.queueFormation = "dockline"
+NewShipType.dontDockWithOtherRaceShips = 1
+NewShipType.ignoreRaceWhenDocking = 0
+addAbility(NewShipType,"CanLaunch")
+NewShipType.launchTimeBetweenTwoFormations = 1
+NewShipType.launchTimeBeforeStart = 2
+NewShipType.launchNrOfShipsInDockFormation = 1
+NewShipType.launchFormation = "delta"
+addAbility(NewShipType,"ShipHold",1,0,0,"rallypoint","",10)
+addAbility(NewShipType,"ParadeCommand",1)
+addAbility(NewShipType,"WaypointMove")
+addAbility(NewShipType,"HyperSpaceCommand",0,2,625,833,0,3)
+addAbility(NewShipType,"CanBuildShips",1,"SmallCapital_Kpr, Capital_Kpr, BigCapital_Kpr, Battlecruiser_Kpr, Platform_kpr, SubSystem_kpr","Utility, Fighter, Corvette, Frigate, Platform, Capital, SubSystemModule")
+addAbility(NewShipType,"CanBeRepaired")
+addAbility(NewShipType,"SensorPing",0,1,15,2.5)
+addAbility(NewShipType,"HyperspaceInhibitorAbility",0,12000)
+--addCustomCode(NewShipType,"data:scripts/gatejump.lua","Load_GateJump","","Update_GateJump","","kpr_balcoragate",0.15)
+addCustomCode(NewShipType,"data:leveldata/multiplayer/resdata/CustomCode_Common.lua","","Create_Common","Update_Common","Destroy_Common","kpr_balcoragate",1)
+LoadModel(NewShipType,1)
+
+--StartShipHardPointConfig(NewShipType, "Generic1", "HardpointGeneric1", "System", "Generic","Destroyable","","kpr_BUILD")
+--StartShipHardPointConfig(NewShipType, "Generic2", "HardpointGeneric2", "System", "Generic","Destroyable","","kpr_Hyperspace")
+--StartShipHardPointConfig(NewShipType, "Generic3", "HardpointGeneric3", "System", "Generic","Destroyable","","kpr_Core")
+
+addShield(NewShipType,"EMP",10000,20)
+NewShipType.battleScarMaxTriBase = 200
+NewShipType.battleScarMaxTriInc = 300
+NewShipType.sobDieTime = 18
+NewShipType.sobSpecialDieTime = 8
+NewShipType.specialDeathSpeed = 40
+NewShipType.chanceOfSpecialDeath = 0
+NewShipType.deadSobFadeTime = 0
+NewShipType.trailLinger = 8
+loadShipPatchList(NewShipType, "data:sound/sfx/ship/megaliths/", 1, "RandomEmit/KAROS_HULKS", "Root")
+NewShipType.canSurround=1

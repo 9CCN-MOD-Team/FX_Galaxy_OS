@@ -1,0 +1,36 @@
+StartWeaponConfig(NewWeaponType, "Gimble", "Bullet", "kinetic_small", "Normal", 2500, 16000, 0, 0, 0, 0, 1, 1, 1, 0.1, 4, 1, 1, 1, 40, 25, 0.1, "Normal", 1, 0, 0)
+AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 15, 15, "")
+setPenetration(NewWeaponType, 50, 1, 
+{ 
+    PlanetKillerArmour = 0, 
+}, 
+{ 
+    SubSystemArmour = 0.3, })
+setMissileKiller(NewWeaponType,1);setAccuracy(NewWeaponType, 1, 
+{ 
+    Fighter = 0.05, 
+}, 
+{ 
+    Corvette = 0.05, 
+}, 
+{ 
+    munition = 0.05, 
+}, 
+{ 
+    Frigate = 0.8, 
+    damage = 1, 
+}, 
+{ 
+    SmallCapitalShip = 0.6, 
+    damage = 1, 
+}, 
+{ 
+    BigCapitalShip = 0.6, 
+    damage = 1, 
+}, 
+{ 
+    ResourceLarge = 0.6, 
+    damage = 1, })
+setAngles(NewWeaponType, 90, 0, 0, 0, 0)
+
+

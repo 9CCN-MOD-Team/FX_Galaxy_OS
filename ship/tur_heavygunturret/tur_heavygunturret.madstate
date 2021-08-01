@@ -1,0 +1,15 @@
+TUR_HEAVYGUNTURRET_CodeRed_OnSet = function(ship)
+    if(isAnimRunning(ship,"Open") == 0) then
+	setState(ship, "CodeRed", 0)
+        startTime = 0
+        startAnim(ship, "Open")
+        startEffect(ship, "Open")
+        setTime(ship,"open",startTime)
+        setPauseTime(ship, "Open", 1000)
+    end
+end
+
+TUR_HEAVYGUNTURRET_CodeRed_OnPause = function(ship)
+    setState(ship, "CodeRed", 1)
+end
+

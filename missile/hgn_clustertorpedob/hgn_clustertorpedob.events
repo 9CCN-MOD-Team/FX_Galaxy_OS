@@ -1,0 +1,39 @@
+effects = {
+  animations = {
+    animation1 = {
+      name = "Death",
+      length = 1,
+      loop = 0,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+  },
+  events = {
+    event1 = {
+      {
+        "anim",
+        "Death",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "Root",
+      },
+      {
+        "sound",
+        "WEAPON/CARRIER/FIRE/WEAPON_DESTROYER_MISSLE_LAUNCH",
+      },
+      {
+        "fx_transform",
+        "None",
+      },
+    },
+  },
+}

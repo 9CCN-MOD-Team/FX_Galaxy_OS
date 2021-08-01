@@ -1,0 +1,8 @@
+TAI_MOTHERSHIP_DockPathOpen_OnSet = function(ship)	
+startEffect(ship, "open")
+end
+
+TAI_MOTHERSHIP_DockPathClosed_OnSet = function(ship)	
+        endEffect(ship, "open")
+        --setState(ship, "DockPathClose", 0)Don't need this, since we have no ANIM, and  though NO WAITING
+end

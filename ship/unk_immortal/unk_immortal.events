@@ -1,0 +1,2975 @@
+-- LuaDC version 0.9.19
+-- 2010-8-1 17:45:13
+-- LuaDC by Age2uN
+-- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
+--
+effects = 
+{ 
+    animations = 
+    { 
+        animation1 = 
+        { 
+            name = "Death", 
+            length = 2, 
+            loop = 0, 
+            parent = "", 
+            minimum = 0, 
+            maximum = 0, 
+            markers = 
+                { "", }, }, 
+
+        animation2 = 
+        { 
+            name = "Turret1", 
+            length = 1, 
+            loop = 0, 
+            parent = "", 
+            minimum = 0, 
+            maximum = 0, 
+            markers = 
+                { "", }, }, 
+
+        animation3 = 
+        { 
+            name = "Turret2", 
+            length = 1, 
+            loop = 0, 
+            parent = "", 
+            minimum = 0, 
+            maximum = 0, 
+            markers = 
+                { "", }, }, 
+
+        animation4 = 
+        { 
+            name = "Turret3", 
+            length = 1, 
+            loop = 0, 
+            parent = "", 
+            minimum = 0, 
+            maximum = 0, 
+            markers = 
+                { "", }, }, 
+
+        animation5 = 
+        { 
+            name = "Turret4", 
+            length = 1, 
+            loop = 0, 
+            parent = "", 
+            minimum = 0, 
+            maximum = 0, 
+            markers = 
+                { "", }, }, 
+        animation6 = 
+        { 
+            name = "Turret5", 
+            length = 1, 
+            loop = 0, 
+            parent = "", 
+            minimum = 0, 
+            maximum = 0, 
+            markers = 
+                { "", }, }, 
+
+        animation7 = 
+        { 
+            name = "Turret6", 
+            length = 1, 
+            loop = 0, 
+            parent = "", 
+            minimum = 0, 
+            maximum = 0, 
+            markers = 
+                { "", }, }, 
+
+        animation8 = 
+        { 
+            name = "Turret7", 
+            length = 1, 
+            loop = 0, 
+            parent = "", 
+            minimum = 0, 
+            maximum = 0, 
+            markers = 
+                { "", }, }, 
+
+        animation9 = 
+        { 
+            name = "LS1", 
+            length = 1, 
+            loop = 0, 
+            parent = "", 
+            minimum = 0, 
+            maximum = 0, 
+            markers = 
+                { "", }, }, 
+
+        animation10 = 
+        { 
+            name = "LS2", 
+            length = 1, 
+            loop = 0, 
+            parent = "", 
+            minimum = 0, 
+            maximum = 0, 
+            markers = 
+                { "", }, }, 
+
+
+        animation11 = 
+        { 
+            name = "LS3", 
+            length = 1, 
+            loop = 0, 
+            parent = "", 
+            minimum = 0, 
+            maximum = 0, 
+            markers = 
+                { "", }, }, 
+
+
+        animation12 = 
+        { 
+            name = "LS4", 
+            length = 1, 
+            loop = 0, 
+            parent = "", 
+            minimum = 0, 
+            maximum = 0, 
+            markers = 
+                { "", }, }, 
+
+        animation13 = 
+        { 
+            name = "LS5", 
+            length = 1, 
+            loop = 0, 
+            parent = "", 
+            minimum = 0, 
+            maximum = 0, 
+            markers = 
+                { "", }, }, 
+
+        animation14 = 
+        { 
+            name = "LS6", 
+            length = 1, 
+            loop = 0, 
+            parent = "", 
+            minimum = 0, 
+            maximum = 0, 
+            markers = 
+                { "", }, }, 
+
+        animation15 = 
+        { 
+            name = "LS7", 
+            length = 1, 
+            loop = 0, 
+            parent = "", 
+            minimum = 0, 
+            maximum = 0, 
+            markers = 
+                { "", }, }, 
+
+        animation16 = 
+        { 
+            name = "LS8", 
+            length = 1, 
+            loop = 0, 
+            parent = "", 
+            minimum = 0, 
+            maximum = 0, 
+            markers = 
+                { "", }, }, 
+
+        animation17 = 
+        { 
+            name = "LS9", 
+            length = 1, 
+            loop = 0, 
+            parent = "", 
+            minimum = 0, 
+            maximum = 0, 
+            markers = 
+                { "", }, }, 
+
+        animation18 = 
+        { 
+            name = "LS10", 
+            length = 1, 
+            loop = 0, 
+            parent = "", 
+            minimum = 0, 
+            maximum = 0, 
+            markers = 
+                { "", }, }, 
+
+        animation19 = 
+        { 
+            name = "LS11", 
+            length = 1, 
+            loop = 0, 
+            parent = "", 
+            minimum = 0, 
+            maximum = 0, 
+            markers = 
+                { "", }, }, 
+
+        animation20 = 
+        { 
+            name = "LS12", 
+            length = 1, 
+            loop = 0, 
+            parent = "", 
+            minimum = 0, 
+            maximum = 0, 
+            markers = 
+                { "", }, }, 
+
+
+        animation21 = 
+        { 
+            name = "Hyperbeam_Charge", 
+            length = 10, 
+            loop = 0, 
+            parent = "", 
+            minimum = 0, 
+            maximum = 0, 
+            markers = 
+                { "", }, }, 
+
+}, 
+    events = 
+    { 
+        event1 = 
+            { 
+                { "anim", "death", }, 
+                { "animtime", "0", }, 
+                { "marker", "marker1", }, 
+                { "fx", "dmg_cloud_explosion_large", }, 
+                { "sound", "Explosion/Small/ETG_Explode_Small_Firey", }, 
+                { "fx_scale", "10", }, 
+            }, 
+        event2 = 
+            { 
+                { "anim", "death", }, 
+                { "animtime", "0.1", }, 
+                { "marker", "marker2", }, 
+                { "fx", "dmg_cloud_explosion_large", }, 
+                { "sound", "Explosion/Small/ETG_Explode_Small_Plasma", }, 
+                { "fx_scale", "20", }, 
+            }, 
+        event3 = 
+            { 
+                { "anim", "death", }, 
+                { "animtime", "0.2", }, 
+                { "marker", "marker3", }, 
+                { "fx", "dmg_cloud_explosion_large", }, 
+                { "fx_scale", "10", }, 
+            }, 
+        event4 = 
+            { 
+                { "anim", "death", }, 
+                { "animtime", "0.3", }, 
+                { "marker", "marker4", }, 
+                { "fx", "dmg_cloud_explosion_large", }, 
+                { "sound", "EXPLOSION/SMALL/ETG_EXPLODE_SMALL_PLASMA_FAR", }, 
+                { "fx_scale", "30", }, 
+            }, 
+        event5 = 
+            { 
+                { "anim", "death", }, 
+                { "animtime", "0.4", }, 
+                { "marker", "marker5", }, 
+                { "fx", "dmg_cloud_explosion_large", }, 
+                { "sound", "EXPLOSION/SMALL/ETG_EXPLODE_SMALL_PLASMA_FAR", }, 
+                { "fx_scale", "30", }, 
+            }, 
+        event6 = 
+            { 
+                { "anim", "Death", }, 
+                { "animtime", "0.4", }, 
+                { "marker", "Root", }, 
+                { "fx", "dmg_cloud_main_explosion_combo", }, 
+                { "sound", "Explosion/Large/ETG_Explode_Large_Plasma", }, 
+                { "fx_scale", "60", }, 
+            }, 
+
+
+        event7 = 
+            { 
+                { "anim", "Turret1", }, 
+                { "animtime", "0", }, 
+                { "marker", "Weapon_Turret1_Muzzle", }, 
+                { "fx", "muzzle_flash_combo_small_capital_dread", }, 
+                { "sound", "WEAPON/FOSS/FIRE/iMMCANNON_FIRE", }, 
+                { "fx_scale", "3", }, 
+            }, 
+
+
+        event8 = 
+            { 
+                { "anim", "Turret1", }, 
+                { "animtime", "0.2", }, 
+                { "marker", "Weapon_Turret1Slave_Muzzle", }, 
+                { "fx", "muzzle_flash_combo_small_capital_dread", }, 
+                { "sound", "WEAPON/FOSS/FIRE/iMMCANNON_FIRE", }, 
+                { "fx_scale", "3", }, 
+            }, 
+
+event9 =
+{
+{"anim","Turret2", },
+{ "animtime", "0", },
+{ "marker", "Weapon_Turret2_Muzzle", },
+{ "fx", "muzzle_flash_combo_small_capital_dread", },
+{ "sound", "WEAPON/FOSS/FIRE/iMMCANNON_FIRE", },
+{ "fx_scale", "3", },
+},
+event10 =
+{
+{"anim","Turret2", },
+{ "animtime", "0.2", },
+{ "marker", "Weapon_Turret2Slave_Muzzle", },
+{ "fx", "muzzle_flash_combo_small_capital_dread", },
+{ "sound", "WEAPON/FOSS/FIRE/iMMCANNON_FIRE", },
+{ "fx_scale", "3", },
+},
+event11 =
+{
+{"anim","Turret3", },
+{ "animtime", "0", },
+{ "marker", "Weapon_Turret3_Muzzle", },
+{ "fx", "muzzle_flash_combo_small_capital_dread", },
+{ "sound", "WEAPON/FOSS/FIRE/iMMCANNON_FIRE", },
+{ "fx_scale", "3", },
+},
+event12 =
+{
+{"anim","Turret3", },
+{ "animtime", "0.2", },
+{ "marker", "Weapon_Turret3Slave_Muzzle", },
+{ "fx", "muzzle_flash_combo_small_capital_dread", },
+{ "sound", "WEAPON/FOSS/FIRE/iMMCANNON_FIRE", },
+{ "fx_scale", "3", },
+},
+event13 =
+{
+{"anim","Turret4", },
+{ "animtime", "0", },
+{ "marker", "Weapon_Turret4_Muzzle", },
+{ "fx", "muzzle_flash_combo_small_capital_dread", },
+{ "sound", "WEAPON/FOSS/FIRE/iMMCANNON_FIRE", },
+{ "fx_scale", "3", },
+},
+event14 =
+{
+{"anim","Turret4", },
+{ "animtime", "0.2", },
+{ "marker", "Weapon_Turret4Slave_Muzzle", },
+{ "fx", "muzzle_flash_combo_small_capital_dread", },
+{ "sound", "WEAPON/FOSS/FIRE/iMMCANNON_FIRE", },
+{ "fx_scale", "3", },
+},
+event15 =
+{
+{"anim","Turret5", },
+{ "animtime", "0", },
+{ "marker", "Weapon_Turret5_Muzzle", },
+{ "fx", "muzzle_flash_combo_small_capital_dread", },
+{ "sound", "WEAPON/FOSS/FIRE/iMMCANNON_FIRE", },
+{ "fx_scale", "3", },
+},
+event16 =
+{
+{"anim","Turret5", },
+{ "animtime", "0.2", },
+{ "marker", "Weapon_Turret5_Muzzle", },
+{ "fx", "muzzle_flash_combo_small_capital_dread", },
+{ "sound", "WEAPON/FOSS/FIRE/iMMCANNON_FIRE", },
+{ "fx_scale", "3", },
+},
+event17 =
+{
+{"anim","Turret6", },
+{ "animtime", "0", },
+{ "marker", "Weapon_Turret6_Muzzle", },
+{ "fx", "muzzle_flash_combo_small_capital_dread", },
+{ "sound", "WEAPON/FOSS/FIRE/iMMCANNON_FIRE", },
+{ "fx_scale", "3", },
+},
+event18 =
+{
+{"anim","Turret6", },
+{ "animtime", "0.2", },
+{ "marker", "Weapon_Turret6Slave_Muzzle", },
+{ "fx", "muzzle_flash_combo_small_capital_dread", },
+{ "sound", "WEAPON/FOSS/FIRE/iMMCANNON_FIRE", },
+{ "fx_scale", "3", },
+},
+event19 =
+{
+{"anim","Turret7", },
+{ "animtime", "0", },
+{ "marker", "Weapon_Turret7_Muzzle", },
+{ "fx", "muzzle_flash_combo_small_capital_dread", },
+{ "sound", "WEAPON/FOSS/FIRE/iMMCANNON_FIRE", },
+{ "fx_scale", "3", },
+},
+event20 =
+{
+{"anim","Turret7", },
+{ "animtime", "0.2", },
+{ "marker", "Weapon_Turret7Slave_Muzzle", },
+{ "fx", "muzzle_flash_combo_small_capital_dread", },
+{ "sound", "WEAPON/FOSS/FIRE/iMMCANNON_FIRE", },
+{ "fx_scale", "3", },
+},
+
+event21 =
+{
+{"anim","LS1", },
+{ "animtime", "0", },
+{ "marker", "Weapon_Laser1_Position", },
+{ "fx", "lance_charged_particle", },
+{ "sound", "WEAPON/CORVETTE/FIRE/WEAPON_CORVETTE_VULCAN_KINETIC_TURRET_SHELL", },
+{ "fx_nlips", "on", }, 
+},
+event22 =
+{
+{"anim","LS2", },
+{ "animtime", "0", },
+{ "marker", "Weapon_Laser2_Position", },
+{ "fx", "lance_charged_particle", },
+{ "sound", "WEAPON/CORVETTE/FIRE/WEAPON_CORVETTE_VULCAN_KINETIC_TURRET_SHELL", },
+{ "fx_nlips", "on", }, 
+},
+event23 =
+{
+{"anim","LS3", },
+{ "animtime", "0", },
+{ "marker", "Weapon_Laser3_Position", },
+{ "fx", "lance_charged_particle", },
+{ "sound", "WEAPON/CORVETTE/FIRE/WEAPON_CORVETTE_VULCAN_KINETIC_TURRET_SHELL", },
+{ "fx_nlips", "on", }, 
+},
+event24 =
+{
+{"anim","LS4", },
+{ "animtime", "0", },
+{ "marker", "Weapon_Laser4_Position", },
+{ "fx", "lance_charged_particle", },
+{ "sound", "WEAPON/CORVETTE/FIRE/WEAPON_CORVETTE_VULCAN_KINETIC_TURRET_SHELL", },
+{ "fx_nlips", "on", }, 
+},
+event25 =
+{
+{"anim","LS5", },
+{ "animtime", "0", },
+{ "marker", "Weapon_Laser5_Position", },
+{ "fx", "lance_charged_particle", },
+{ "sound", "WEAPON/CORVETTE/FIRE/WEAPON_CORVETTE_VULCAN_KINETIC_TURRET_SHELL", },
+{ "fx_nlips", "on", }, 
+},
+event26 =
+{
+{"anim","LS6", },
+{ "animtime", "0", },
+{ "marker", "Weapon_Laser6_Position", },
+{ "fx", "lance_charged_particle", },
+{ "sound", "WEAPON/CORVETTE/FIRE/WEAPON_CORVETTE_VULCAN_KINETIC_TURRET_SHELL", },
+{ "fx_nlips", "on", }, 
+},
+event27 =
+{
+{"anim","LS7", },
+{ "animtime", "0", },
+{ "marker", "Weapon_Laser7_Position", },
+{ "fx", "lance_charged_particle", },
+{ "sound", "WEAPON/CORVETTE/FIRE/WEAPON_CORVETTE_VULCAN_KINETIC_TURRET_SHELL", },
+{ "fx_nlips", "on", }, 
+},
+event28 =
+{
+{"anim","LS8", },
+{ "animtime", "0", },
+{ "marker", "Weapon_Laser8_Position", },
+{ "fx", "lance_charged_particle", },
+{ "sound", "WEAPON/CORVETTE/FIRE/WEAPON_CORVETTE_VULCAN_KINETIC_TURRET_SHELL", },
+{ "fx_nlips", "on", }, 
+},
+event29 =
+{
+{"anim","LS9", },
+{ "animtime", "0", },
+{ "marker", "Weapon_Laser9_Position", },
+{ "fx", "lance_charged_particle", },
+{ "sound", "WEAPON/CORVETTE/FIRE/WEAPON_CORVETTE_VULCAN_KINETIC_TURRET_SHELL", },
+{ "fx_nlips", "on", }, 
+},
+event30 =
+{
+{"anim","LS10", },
+{ "animtime", "0", },
+{ "marker", "Weapon_Laser10_Position", },
+{ "fx", "lance_charged_particle", },
+{ "sound", "WEAPON/CORVETTE/FIRE/WEAPON_CORVETTE_VULCAN_KINETIC_TURRET_SHELL", },
+{ "fx_nlips", "on", }, 
+},
+event31 =
+{
+{"anim","LS11", },
+{ "animtime", "0", },
+{ "marker", "Weapon_Laser11_Position", },
+{ "fx", "lance_charged_particle", },
+{ "sound", "WEAPON/CORVETTE/FIRE/WEAPON_CORVETTE_VULCAN_KINETIC_TURRET_SHELL", },
+{ "fx_nlips", "on", }, 
+},
+event32 =
+{
+{"anim","LS12", },
+{ "animtime", "0", },
+{ "marker", "Weapon_Laser12_Position", },
+{ "fx", "lance_charged_particle", },
+{ "sound", "WEAPON/CORVETTE/FIRE/WEAPON_CORVETTE_VULCAN_KINETIC_TURRET_SHELL", },
+{ "fx_nlips", "on", }, 
+},
+
+
+event33 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0", },
+{ "marker", "marker1", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event34 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.0145", },
+{ "marker", "marker2", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event35 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.029", },
+{ "marker", "marker3", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event36 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.0435", },
+{ "marker", "marker4", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event37 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.058", },
+{ "marker", "marker5", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event38 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.0725", },
+{ "marker", "marker6", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event39 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.087", },
+{ "marker", "marker7", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event40 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.1015", },
+{ "marker", "marker8", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event41 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.116", },
+{ "marker", "marker9", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event42 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.1305", },
+{ "marker", "marker10", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event43 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.145", },
+{ "marker", "marker11", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event44 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.1595", },
+{ "marker", "marker12", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event45 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.174", },
+{ "marker", "marker13", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event46 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.1885", },
+{ "marker", "marker14", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event47 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.203", },
+{ "marker", "marker15", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event48 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.2175", },
+{ "marker", "marker16", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event49 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.232", },
+{ "marker", "marker17", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event50 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.2465", },
+{ "marker", "marker18", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event51 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.261", },
+{ "marker", "marker19", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event52 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.2755", },
+{ "marker", "marker20", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event53 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.29", },
+{ "marker", "marker21", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event54 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.3045", },
+{ "marker", "marker22", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event55 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.319", },
+{ "marker", "marker23", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event56 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.3335", },
+{ "marker", "marker24", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event57 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.348", },
+{ "marker", "marker25", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event58 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.3625", },
+{ "marker", "marker26", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event59 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.377", },
+{ "marker", "marker27", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event60 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.3915", },
+{ "marker", "marker28", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event61 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.406", },
+{ "marker", "marker29", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event62 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.4205", },
+{ "marker", "marker30", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event63 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.435", },
+{ "marker", "marker31", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event64 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.4495", },
+{ "marker", "marker32", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event65 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.464", },
+{ "marker", "marker33", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event66 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.4785", },
+{ "marker", "marker34", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event67 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.493", },
+{ "marker", "marker35", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+
+
+event68 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0", },
+{ "marker", "marker70", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event69 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.0145", },
+{ "marker", "marker69", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event70 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.029", },
+{ "marker", "marker68", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event71 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.0435", },
+{ "marker", "marker67", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event72 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.058", },
+{ "marker", "marker66", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event73 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.0725", },
+{ "marker", "marker65", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event74 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.087", },
+{ "marker", "marker64", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event75 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.1015", },
+{ "marker", "marker63", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event76 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.116", },
+{ "marker", "marker62", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event77 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.1305", },
+{ "marker", "marker61", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event78 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.145", },
+{ "marker", "marker60", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event79 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.1595", },
+{ "marker", "marker59", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event80 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.174", },
+{ "marker", "marker58", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event81 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.1885", },
+{ "marker", "marker57", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event82 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.203", },
+{ "marker", "marker56", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event83 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.2175", },
+{ "marker", "marker55", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event84 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.232", },
+{ "marker", "marker54", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event85 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.2465", },
+{ "marker", "marker53", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event86 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.261", },
+{ "marker", "marker52", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event87 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.2755", },
+{ "marker", "marker51", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event88 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.29", },
+{ "marker", "marker50", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event89 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.3045", },
+{ "marker", "marker49", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event90 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.319", },
+{ "marker", "marker48", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event91 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.3335", },
+{ "marker", "marker47", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event92 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.348", },
+{ "marker", "marker46", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event93 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.3625", },
+{ "marker", "marker45", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event94 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.377", },
+{ "marker", "marker44", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event95 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.3915", },
+{ "marker", "marker43", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event96 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.406", },
+{ "marker", "marker42", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event97 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.4205", },
+{ "marker", "marker41", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event98 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.435", },
+{ "marker", "marker40", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event99 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.4495", },
+{ "marker", "marker39", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event100 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.464", },
+{ "marker", "marker38", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event101 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.4785", },
+{ "marker", "marker37", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event102 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.493", },
+{ "marker", "marker36", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+
+event103 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0", },
+{ "marker", "marker113", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event104 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.012", },
+{ "marker", "marker114", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event105 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.024", },
+{ "marker", "marker115", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event106 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.036", },
+{ "marker", "marker116", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event107 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.048", },
+{ "marker", "marker117", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event108 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.06", },
+{ "marker", "marker118", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event109 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.072", },
+{ "marker", "marker119", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event110 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.084", },
+{ "marker", "marker120", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event111 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.096", },
+{ "marker", "marker121", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event112 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.108", },
+{ "marker", "marker122", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event113 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.12", },
+{ "marker", "marker123", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event114 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.132", },
+{ "marker", "marker124", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event115 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.144", },
+{ "marker", "marker125", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event116 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.156", },
+{ "marker", "marker126", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event117 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.168", },
+{ "marker", "marker127", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event118 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.18", },
+{ "marker", "marker128", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event119 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.192", },
+{ "marker", "marker129", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event120 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.204", },
+{ "marker", "marker130", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event121 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.216", },
+{ "marker", "marker131", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event122 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.228", },
+{ "marker", "marker132", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event123 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.24", },
+{ "marker", "marker133", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event124 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.252", },
+{ "marker", "marker134", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event125 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.264", },
+{ "marker", "marker135", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event126 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.276", },
+{ "marker", "marker136", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event127 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.288", },
+{ "marker", "marker137", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event128 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.3", },
+{ "marker", "marker138", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event129 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.312", },
+{ "marker", "marker139", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event130 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.324", },
+{ "marker", "marker140", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event131 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.336", },
+{ "marker", "marker141", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event132 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.348", },
+{ "marker", "marker142", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event133 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.36", },
+{ "marker", "marker143", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event134 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.372", },
+{ "marker", "marker144", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event135 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.384", },
+{ "marker", "marker145", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event136 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.396", },
+{ "marker", "marker146", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event137 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.408", },
+{ "marker", "marker147", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event138 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.42", },
+{ "marker", "marker148", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event139 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.432", },
+{ "marker", "marker149", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event140 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.444", },
+{ "marker", "marker150", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+
+
+event141 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0", },
+{ "marker", "marker151", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event142 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.012", },
+{ "marker", "marker152", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event143 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.024", },
+{ "marker", "marker153", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event144 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.036", },
+{ "marker", "marker154", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event145 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.048", },
+{ "marker", "marker155", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event146 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.06", },
+{ "marker", "marker156", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event147 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.072", },
+{ "marker", "marker157", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event148 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.084", },
+{ "marker", "marker158", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event149 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.096", },
+{ "marker", "marker159", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event150 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.108", },
+{ "marker", "marker160", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event151 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.12", },
+{ "marker", "marker161", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event152 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.132", },
+{ "marker", "marker162", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event153 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.144", },
+{ "marker", "marker163", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event154 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.156", },
+{ "marker", "marker164", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event155 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.168", },
+{ "marker", "marker165", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event156 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.18", },
+{ "marker", "marker166", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event157 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.192", },
+{ "marker", "marker167", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event158 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.204", },
+{ "marker", "marker168", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event159 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.216", },
+{ "marker", "marker169", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event160 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.228", },
+{ "marker", "marker170", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event161 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.24", },
+{ "marker", "marker171", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event162 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.252", },
+{ "marker", "marker172", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event163 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.264", },
+{ "marker", "marker173", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event164 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.276", },
+{ "marker", "marker174", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event165 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.288", },
+{ "marker", "marker175", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event166 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.3", },
+{ "marker", "marker176", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event167 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.312", },
+{ "marker", "marker177", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event168 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.324", },
+{ "marker", "marker178", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event169 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.336", },
+{ "marker", "marker179", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event170 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.348", },
+{ "marker", "marker180", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event171 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.36", },
+{ "marker", "marker181", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event172 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.372", },
+{ "marker", "marker182", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event173 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.384", },
+{ "marker", "marker183", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event174 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.396", },
+{ "marker", "marker184", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event175 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.408", },
+{ "marker", "marker185", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event176 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.42", },
+{ "marker", "marker186", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event177 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.432", },
+{ "marker", "marker187", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event178 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.444", },
+{ "marker", "marker188", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+
+event179 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.5", },
+{ "marker", "Weapon_HyperBeam_Position", },
+{ "fx", "super_beam_lensflare", },
+{ "fx_scale", "0.75", }, 
+{ "gameEv", "playBgLightAnim,super_beam_background_ring", }, 
+},
+
+event180 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.5", },
+{ "marker", "Weapon_HyperBeam_Position", },
+{ "sound", "WEAPON/MEGASHIP/FIRE/SAJUUK_HEAVY_ION_CANNON_BEAM", },
+},
+
+
+event181 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.5", },
+{ "marker", "marker71", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event182 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.5", },
+{ "marker", "marker72", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event183 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.5", },
+{ "marker", "marker73", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event184 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.5", },
+{ "marker", "marker74", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event185 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.5", },
+{ "marker", "marker75", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event186 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.5", },
+{ "marker", "marker76", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event187 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.5", },
+{ "marker", "marker77", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event188 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.5", },
+{ "marker", "marker78", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event189 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.5", },
+{ "marker", "marker79", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event190 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.5", },
+{ "marker", "marker80", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event191 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.5", },
+{ "marker", "marker81", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event192 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.5", },
+{ "marker", "marker82", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event193 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.5", },
+{ "marker", "marker83", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event194 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.5", },
+{ "marker", "marker84", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event195 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.5", },
+{ "marker", "marker85", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event196 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.5", },
+{ "marker", "marker86", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event197 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.5", },
+{ "marker", "marker87", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event198 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.5", },
+{ "marker", "marker88", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event199 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.5", },
+{ "marker", "marker89", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event200 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.5", },
+{ "marker", "marker90", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event201 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.5", },
+{ "marker", "marker91", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event202 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.7", },
+{ "marker", "marker71", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event203 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.7", },
+{ "marker", "marker72", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event204 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.7", },
+{ "marker", "marker73", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event205 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.7", },
+{ "marker", "marker74", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event206 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.7", },
+{ "marker", "marker75", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event207 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.7", },
+{ "marker", "marker76", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event208 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.7", },
+{ "marker", "marker77", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event209 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.7", },
+{ "marker", "marker78", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event210 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.7", },
+{ "marker", "marker79", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event211 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.7", },
+{ "marker", "marker80", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event212 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.7", },
+{ "marker", "marker81", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event213 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.7", },
+{ "marker", "marker82", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event214 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.7", },
+{ "marker", "marker83", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event215 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.7", },
+{ "marker", "marker84", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event216 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.7", },
+{ "marker", "marker85", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event217 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.7", },
+{ "marker", "marker86", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event218 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.7", },
+{ "marker", "marker87", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event219 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.7", },
+{ "marker", "marker88", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event220 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.7", },
+{ "marker", "marker89", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event221 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.7", },
+{ "marker", "marker90", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event222 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.7", },
+{ "marker", "marker91", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event223 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.9", },
+{ "marker", "marker71", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event224 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.9", },
+{ "marker", "marker72", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event225 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.9", },
+{ "marker", "marker73", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event226 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.9", },
+{ "marker", "marker74", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event227 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.9", },
+{ "marker", "marker75", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event228 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.9", },
+{ "marker", "marker76", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event229 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.9", },
+{ "marker", "marker77", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event230 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.9", },
+{ "marker", "marker78", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event231 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.9", },
+{ "marker", "marker79", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event232 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.9", },
+{ "marker", "marker80", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event233 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.9", },
+{ "marker", "marker81", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event234 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.9", },
+{ "marker", "marker82", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event235 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.9", },
+{ "marker", "marker83", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event236 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.9", },
+{ "marker", "marker84", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event237 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.9", },
+{ "marker", "marker85", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event238 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.9", },
+{ "marker", "marker86", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event239 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.9", },
+{ "marker", "marker87", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event240 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.9", },
+{ "marker", "marker88", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event241 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.9", },
+{ "marker", "marker89", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event242 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.9", },
+{ "marker", "marker90", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+event243 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.9", },
+{ "marker", "marker91", },
+{ "fx", "super_beam_flare_spray", },
+                { "fx_scale", "1.8", },  
+},
+
+
+event244 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.5", },
+{ "marker", "marker92", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event245 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.5", },
+{ "marker", "marker93", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event246 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.5", },
+{ "marker", "marker94", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event247 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.5", },
+{ "marker", "marker95", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event248 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.5", },
+{ "marker", "marker96", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event249 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.5", },
+{ "marker", "marker97", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event250 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.5", },
+{ "marker", "marker98", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event251 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.5", },
+{ "marker", "marker99", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event252 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.5", },
+{ "marker", "marker100", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event253 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.5", },
+{ "marker", "marker101", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event254 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.5", },
+{ "marker", "marker102", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event255 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.5", },
+{ "marker", "marker103", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event256 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.5", },
+{ "marker", "marker104", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event257 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.5", },
+{ "marker", "marker105", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event258 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.5", },
+{ "marker", "marker106", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event259 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.5", },
+{ "marker", "marker107", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event260 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.5", },
+{ "marker", "marker108", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event261 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.5", },
+{ "marker", "marker109", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event262 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.5", },
+{ "marker", "marker110", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event263 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.5", },
+{ "marker", "marker111", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event264 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.5", },
+{ "marker", "marker112", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event265 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.7", },
+{ "marker", "marker92", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event266 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.7", },
+{ "marker", "marker93", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event267 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.7", },
+{ "marker", "marker94", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event268 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.7", },
+{ "marker", "marker95", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event269 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.7", },
+{ "marker", "marker96", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event270 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.7", },
+{ "marker", "marker97", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event271 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.7", },
+{ "marker", "marker98", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event272 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.7", },
+{ "marker", "marker99", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event273 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.7", },
+{ "marker", "marker100", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event274 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.7", },
+{ "marker", "marker101", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event275 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.7", },
+{ "marker", "marker102", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event276 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.7", },
+{ "marker", "marker103", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event277 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.7", },
+{ "marker", "marker104", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event278 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.7", },
+{ "marker", "marker105", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event279 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.7", },
+{ "marker", "marker106", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event280 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.7", },
+{ "marker", "marker107", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event281 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.7", },
+{ "marker", "marker108", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event282 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.7", },
+{ "marker", "marker109", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event283 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.7", },
+{ "marker", "marker110", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event284 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.7", },
+{ "marker", "marker111", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event285 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.7", },
+{ "marker", "marker112", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event286 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.9", },
+{ "marker", "marker92", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event287 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.9", },
+{ "marker", "marker93", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event288 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.9", },
+{ "marker", "marker94", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event289 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.9", },
+{ "marker", "marker95", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event290 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.9", },
+{ "marker", "marker96", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event291 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.9", },
+{ "marker", "marker97", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event292 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.9", },
+{ "marker", "marker98", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event293 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.9", },
+{ "marker", "marker99", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event294 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.9", },
+{ "marker", "marker100", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event295 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.9", },
+{ "marker", "marker101", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event296 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.9", },
+{ "marker", "marker102", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event297 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.9", },
+{ "marker", "marker103", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event298 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.9", },
+{ "marker", "marker104", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event299 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.9", },
+{ "marker", "marker105", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event300 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.9", },
+{ "marker", "marker106", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event301 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.9", },
+{ "marker", "marker107", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event302 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.9", },
+{ "marker", "marker108", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event303 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.9", },
+{ "marker", "marker109", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event304 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.9", },
+{ "marker", "marker110", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event305 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.9", },
+{ "marker", "marker111", },
+{ "fx", "blue_beam_charge_spray", },
+                { "fx_scale", "1.8", },  
+},
+event306 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.9", },
+{ "marker", "marker112", },
+{ "fx", "blue_beam_charge_spray", },
+     
+           { "fx_scale", "1.8", },  
+},
+event307 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0", },
+{ "marker", "Weapon_HyperBeam_Position", },
+{ "sound", "WEAPON/MEGASHIP/FIRE/DREADNAUGHT_FIRE_1", },
+},
+
+event308 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.3", },
+{ "marker", "marker189", },
+{ "fx", "blue_beam_charge_spray", },
+{ "fx_scale", "1.8", },  
+},
+
+event309 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.33", },
+{ "marker", "marker190", },
+{ "fx", "blue_beam_charge_spray", },
+{ "fx_scale", "1.8", },  
+},
+
+event310 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.36", },
+{ "marker", "marker191", },
+{ "fx", "blue_beam_charge_spray", },
+{ "fx_scale", "1.8", },  
+},
+
+
+event311 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.39", },
+{ "marker", "marker192", },
+{ "fx", "blue_beam_charge_spray", },
+{ "fx_scale", "1.8", },  
+},
+
+event312 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.42", },
+{ "marker", "marker193", },
+{ "fx", "blue_beam_charge_spray", },
+{ "fx_scale", "1.8", },  
+},
+
+event313 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.45", },
+{ "marker", "marker194", },
+{ "fx", "blue_beam_charge_spray", },
+{ "fx_scale", "1.8", },  
+},
+
+event314 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.3", },
+{ "marker", "marker195", },
+{ "fx", "blue_beam_charge_spray", },
+{ "fx_scale", "1.8", },  
+},
+
+event315 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.33", },
+{ "marker", "marker200", },
+{ "fx", "blue_beam_charge_spray", },
+{ "fx_scale", "1.8", },  
+},
+
+event316 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.36", },
+{ "marker", "marker199", },
+{ "fx", "blue_beam_charge_spray", },
+{ "fx_scale", "1.8", },  
+},
+
+
+event317 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.39", },
+{ "marker", "marker198", },
+{ "fx", "blue_beam_charge_spray", },
+{ "fx_scale", "1.8", },  
+},
+
+event318 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.42", },
+{ "marker", "marker197", },
+{ "fx", "blue_beam_charge_spray", },
+{ "fx_scale", "1.8", },  
+},
+
+event319 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.45", },
+{ "marker", "marker196", },
+{ "fx", "blue_beam_charge_spray", },
+{ "fx_scale", "1.8", },  
+},
+
+
+event320 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.33", },
+{ "marker", "marker189", },
+{ "fx", "super_beam_flare_spray", },
+{ "fx_scale", "1.8", },  
+},
+
+event321 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.36", },
+{ "marker", "marker190", },
+{ "fx", "super_beam_flare_spray", },
+{ "fx_scale", "1.8", },  
+},
+
+event322 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.39", },
+{ "marker", "marker191", },
+{ "fx", "super_beam_flare_spray", },
+{ "fx_scale", "1.8", },  
+},
+
+
+event323 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.42", },
+{ "marker", "marker192", },
+{ "fx", "super_beam_flare_spray", },
+{ "fx_scale", "1.8", },  
+},
+
+event324 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.45", },
+{ "marker", "marker193", },
+{ "fx", "super_beam_flare_spray", },
+{ "fx_scale", "1.8", },  
+},
+
+event325 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.48", },
+{ "marker", "marker194", },
+{ "fx", "super_beam_flare_spray", },
+{ "fx_scale", "1.8", },  
+},
+
+event326 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.33", },
+{ "marker", "marker195", },
+{ "fx", "super_beam_flare_spray", },
+{ "fx_scale", "1.8", },  
+},
+
+event327 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.36", },
+{ "marker", "marker200", },
+{ "fx", "super_beam_flare_spray", },
+{ "fx_scale", "1.8", },  
+},
+
+event328 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.39", },
+{ "marker", "marker199", },
+{ "fx", "super_beam_flare_spray", },
+{ "fx_scale", "1.8", },  
+},
+
+
+event329 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.42", },
+{ "marker", "marker198", },
+{ "fx", "super_beam_flare_spray", },
+{ "fx_scale", "1.8", },  
+},
+
+event330 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.45", },
+{ "marker", "marker197", },
+{ "fx", "super_beam_flare_spray", },
+{ "fx_scale", "1.8", },  
+},
+
+event331 =
+{
+{"anim","Hyperbeam_Charge", },
+{ "animtime", "0.48", },
+{ "marker", "marker196", },
+{ "fx", "super_beam_flare_spray", },
+{ "fx_scale", "1.8", },  
+},
+},
+
+}

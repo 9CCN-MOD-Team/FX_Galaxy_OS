@@ -1,0 +1,140 @@
+-- LuaDC version 0.9.19
+-- 2010-8-1 17:45:13
+-- LuaDC by Age2uN
+-- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
+--
+effects = 
+{ 
+    animations = 
+    { 
+        animation1 = 
+        { 
+            name = "Death", 
+            length = 2, 
+            loop = 0, 
+            parent = "", 
+            minimum = 0, 
+            maximum = 0, 
+            markers = 
+                { "", }, }, 
+
+        animation2 = 
+        { 
+            name = "Fire", 
+            length = 1.2, 
+            loop = 0, 
+            parent = "", 
+            minimum = 0, 
+            maximum = 0, 
+            markers = 
+                { "", }, }, 
+
+
+}, 
+    events = 
+    { 
+        event1 = 
+            { 
+                { "anim", "death", }, 
+                { "animtime", "0", }, 
+                { "marker", "root", }, 
+                { "fx", "dmg_cloud_explosion_large", }, 
+                { "sound", "Explosion/Small/ETG_Explode_Small_Firey", }, 
+                { "fx_scale", "10", }, 
+            }, 
+        event2 = 
+            { 
+                { "anim", "death", }, 
+                { "animtime", "0.1", }, 
+                { "marker", "root", }, 
+                { "fx", "dmg_cloud_explosion_large", }, 
+                { "sound", "Explosion/Small/ETG_Explode_Small_Plasma", }, 
+                { "fx_scale", "20", }, 
+            }, 
+        event3 = 
+            { 
+                { "anim", "death", }, 
+                { "animtime", "0.2", }, 
+                { "marker", "root", }, 
+                { "fx", "dmg_cloud_explosion_large", }, 
+                { "fx_scale", "10", }, 
+            }, 
+        event4 = 
+            { 
+                { "anim", "death", }, 
+                { "animtime", "0.3", }, 
+                { "marker", "root", }, 
+                { "fx", "dmg_cloud_explosion_large", }, 
+                { "sound", "EXPLOSION/SMALL/ETG_EXPLODE_SMALL_PLASMA_FAR", }, 
+                { "fx_scale", "30", }, 
+            }, 
+        event5 = 
+            { 
+                { "anim", "death", }, 
+                { "animtime", "0.4", }, 
+                { "marker", "root", }, 
+                { "fx", "dmg_cloud_explosion_large", }, 
+                { "sound", "EXPLOSION/SMALL/ETG_EXPLODE_SMALL_PLASMA_FAR", }, 
+                { "fx_scale", "30", }, 
+            }, 
+        event6 = 
+            { 
+                { "anim", "Death", }, 
+                { "animtime", "0.4", }, 
+                { "marker", "Root", }, 
+                { "fx", "great_explosion_spray_spray", }, 
+                { "sound", "Explosion/Large/ETG_Explode_Large_Plasma", }, 
+                { "fx_scale", "1", }, 
+            }, 
+
+
+
+        event7 = 
+            { 
+                { "anim", "Fire", }, 
+                { "animtime", "0", }, 
+                { "marker", "Weapon_Ion_Muzzle", }, 
+                { "fx", "ion_beam_purple_charge_combo", }, 
+                { "sound", "WEAPON/FRIGATE/FIRE/WEAPON_FRIGATE_ION_CANNON_BEAM",},
+            },
+
+        event8 = 
+            { 
+                { "anim", "Fire", }, 
+                { "animtime", "0.25", }, 
+                { "marker", "Weapon_IonSlave_Muzzle", }, 
+                { "fx", "ion_beam_purple_charge_combo", }, 
+                { "sound", "WEAPON/FRIGATE/FIRE/WEAPON_FRIGATE_ION_CANNON_BEAM",},
+            },
+
+        event9 = 
+            { 
+                { "anim", "Fire", }, 
+                { "animtime", "0.5", }, 
+                { "marker", "Weapon_IonSlave1_Muzzle", }, 
+                { "fx", "ion_beam_purple_charge_combo", }, 
+                { "sound", "WEAPON/FRIGATE/FIRE/WEAPON_FRIGATE_ION_CANNON_BEAM",},
+            },
+
+        event10 = 
+            { 
+                { "anim", "Fire", }, 
+                { "animtime", "0.75", }, 
+                { "marker", "Weapon_IonSlave2_Muzzle", }, 
+                { "fx", "ion_beam_purple_charge_combo", }, 
+                { "sound", "WEAPON/FRIGATE/FIRE/WEAPON_FRIGATE_ION_CANNON_BEAM",},
+            },
+
+        event11 = 
+            { 
+                { "anim", "Fire", }, 
+                { "animtime", "0", }, 
+                { "marker", "Root", }, 
+                { "fx", "CoJ_ASFF_SFX", }, 
+            },
+
+
+
+
+},
+}

@@ -1,0 +1,499 @@
+function Override_Init()
+	sg_dobuild = 1
+	sg_dosubsystems = 1
+	sg_doresearch = 1
+	sg_doupgrades = 1
+	sg_domilitary = 1
+	sg_fightersize=1
+	sg_corvettesize=1
+	sg_frigatesize=1
+	sg_kDemandResetValue = 4
+	sg_kCollector = TAI_RESOURCECOLLECTOR
+	sg_classPersonalityDemand[ eFighter ] = 0.25
+	sg_classPersonalityDemand[ eCorvette ] = 0.25
+	sg_classPersonalityDemand[ eFrigate ] = 0.5
+	sg_classPersonalityDemand[ ePlatform ] = -0.5
+	SetResourceDockFamily("Utility")
+	sg_numCollectorPerChannel=4
+	sg_RUsPerChannel=500
+	sg_ForceBuilderRU=2000
+	sg_militaryDemand = 1
+	sg_subSystemDemand = 0
+	sg_shipDemand = 10
+	sg_militaryToBuildPerCollector = 1
+	sg_debug=0
+end
+
+ai_data={}
+ai_data[TAI_REPAIRCORVETTE]=
+	{
+		Name="TAI_REPAIRCORVETTE",
+		Type="Ship",
+		Require={},
+		Upgrades={},
+		UpgradeDemand=0,
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=0,
+		UnitCap="Corvette",
+	}
+ai_data[TAI_SCOUT]=
+	{
+		Name="TAI_SCOUT",
+		Type="Ship",
+		Require={},
+		Upgrades={TAI_AIRWEAPONUPGRADE1,TAI_AIRWEAPONUPGRADE2,TAI_AIRWEAPONUPGRADE3,TAI_AIRHEALTHUPGRADE1,TAI_AIRHEALTHUPGRADE2,TAI_AIRHEALTHUPGRADE3},
+		UpgradeDemand=1,
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=0,
+		UnitCap="scout",
+	}
+ai_data[TAI_INTERCEPTOR]=
+	{
+		Name="TAI_INTERCEPTOR",
+		Type="Ship",
+		Require={TAI_RESEARCHSHIP_5F},
+		Upgrades={TAI_AIRWEAPONUPGRADE1,TAI_AIRWEAPONUPGRADE2,TAI_AIRWEAPONUPGRADE3,TAI_AIRHEALTHUPGRADE1,TAI_AIRHEALTHUPGRADE2,TAI_AIRHEALTHUPGRADE3},
+		UpgradeDemand=1,
+		SizeControl={eFighter,0.7},
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=0,
+		UnitCap="Fighter",
+	}
+ai_data[TAI_ATTACKBOMBER]=
+	{
+		Name="TAI_ATTACKBOMBER",
+		Type="Ship",
+		Require={TAI_RESEARCHSHIP_1F},
+		Upgrades={TAI_AIRWEAPONUPGRADE1,TAI_AIRWEAPONUPGRADE2,TAI_AIRWEAPONUPGRADE3,TAI_AIRHEALTHUPGRADE1,TAI_AIRHEALTHUPGRADE2,TAI_AIRHEALTHUPGRADE3},
+		UpgradeDemand=1,
+		SizeControl={eFighter,0.7},
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=0,
+		UnitCap="Fighter",
+	}
+ai_data[TAI_HEAVYDEFENDER]=
+	{
+		Name="TAI_HEAVYDEFENDER",
+		Type="Ship",
+		Require={TAI_RESEARCHSHIP_2F},
+		Upgrades={TAI_AIRWEAPONUPGRADE1,TAI_AIRWEAPONUPGRADE2,TAI_AIRWEAPONUPGRADE3,TAI_AIRHEALTHUPGRADE1,TAI_AIRHEALTHUPGRADE2,TAI_AIRHEALTHUPGRADE3},
+		UpgradeDemand=1,
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		SizeControl={eCollector,0.2},
+		BasicDemand=-20,
+		AddDemand=
+		{
+			{TAI_RESOURCECOLLECTOR,1},
+		},
+		UnitCap="defenseFighter",
+	}
+ai_data[TAI_DEFENSEFIGHTER]=
+	{
+		Name="TAI_DEFENSEFIGHTER",
+		Type="Ship",
+		Require={TAI_RESEARCHSHIP_2F},
+		Upgrades={TAI_AIRWEAPONUPGRADE1,TAI_AIRWEAPONUPGRADE2,TAI_AIRWEAPONUPGRADE3,TAI_AIRHEALTHUPGRADE1,TAI_AIRHEALTHUPGRADE2,TAI_AIRHEALTHUPGRADE3},
+		UpgradeDemand=1,
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		SizeControl={eScout,0.5},
+		BasicDemand=1,
+		LODDemand={-4,-2,-1,0},
+		UnitCap="defenseFighter",
+	}
+ai_data[TAI_LIGHTCORVETTE]=
+	{
+		Name="TAI_LIGHTCORVETTE",
+		Type="Ship",
+		Require={TAI_RESEARCHSHIP_3F},
+		Upgrades={TAI_AIRWEAPONUPGRADE1,TAI_AIRWEAPONUPGRADE2,TAI_AIRWEAPONUPGRADE3,TAI_AIRHEALTHUPGRADE1,TAI_AIRHEALTHUPGRADE2,TAI_AIRHEALTHUPGRADE3},
+		UpgradeDemand=1,
+		SizeControl={eCorvette,0.7},
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=1,
+		UnitCap="Corvette",
+	}
+ai_data[TAI_HEAVYCORVETTE]=
+	{
+		Name="TAI_HEAVYCORVETTE",
+		Type="Ship",
+		Require={TAI_RESEARCHSHIP_4F},
+		Upgrades={TAI_AIRWEAPONUPGRADE1,TAI_AIRWEAPONUPGRADE2,TAI_AIRWEAPONUPGRADE3,TAI_AIRHEALTHUPGRADE1,TAI_AIRHEALTHUPGRADE2,TAI_AIRHEALTHUPGRADE3},
+		UpgradeDemand=1,
+		SizeControl={eCorvette,0.7},
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=1,
+		UnitCap="Corvette",
+	}
+--ai_data[TAI_REPAIRCORVETTE]=
+--	{
+--		Type="Ship",
+--		Require={TAI_RESEARCHSHIP_3F},
+--		Upgrades={TAI_AIRHEALTHUPGRADE1,TAI_AIRHEALTHUPGRADE2,TAI_AIRHEALTHUPGRADE3},
+--		UpgradeDemand=1,
+--		SizeControl={eFrigate,0.2},
+--		BuildShipChannel=0,
+--		BuildSubsystemChannel=0,
+--		BasicDemand=3,
+--		LODDemand={-4,-2,-1,0},
+--		UnitCap="Corvette",
+--	}
+ai_data[TAI_SALCAPCORVETTE]=
+	{
+		Name="TAI_SALCAPCORVETTE",
+		Type="Ship",
+		Require={TAI_RESEARCHSHIP_3F,TAI_RESEARCHSTATION},
+		Upgrades={TAI_AIRHEALTHUPGRADE1,TAI_AIRHEALTHUPGRADE2,TAI_AIRHEALTHUPGRADE3},
+		UpgradeDemand=1,
+		SizeControl={eCorvette,0.4},
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=1,
+		UnitCap="Corvette",
+	}
+ai_data[TAI_STANDARDFRIGATE]=
+	{
+		Name="TAI_STANDARDFRIGATE",
+		Type="Ship",
+		Require={TAI_RESEARCHSTATION,TAI_RESEARCHSHIP_1F},
+		Upgrades={TAI_FRIGATEWEAPONUPGRADE1,TAI_FRIGATEWEAPONUPGRADE2,TAI_FRIGATEWEAPONUPGRADE3,TAI_FRIGATEHEALTHUPGRADE1,TAI_FRIGATEHEALTHUPGRADE2,TAI_FRIGATEHEALTHUPGRADE3},
+		UpgradeDemand=1,
+		SizeControl={eFrigate,0.7},
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=2,
+		UnitCap="Frigate",
+	}
+ai_data[TAI_DEFENSEFRIGATE]=
+	{
+		Name="TAI_DEFENSEFRIGATE",
+		Type="Ship",
+		Require={DEFENSE},
+		Upgrades={TAI_FRIGATEHEALTHUPGRADE1,TAI_FRIGATEHEALTHUPGRADE2,TAI_FRIGATEHEALTHUPGRADE3},
+		UpgradeDemand=1,
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		SizeControl={eFrigate,0.1},
+		BasicDemand=2,
+		LODDemand={-2,-1,0,1},
+		UnitCap="Frigate",
+	}
+ai_data[TAI_SUPPORTFRIGATE]=
+	{
+		Name="TAI_SUPPORTFRIGATE",
+		Type="Ship",
+		Require={TAI_RESEARCHSTATION},
+		Upgrades={TAI_FRIGATEHEALTHUPGRADE1,TAI_FRIGATEHEALTHUPGRADE2,TAI_FRIGATEHEALTHUPGRADE3},
+		UpgradeDemand=1,
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		SizeControl={eFrigate,0.15},
+		BasicDemand=-10,
+		LODDemand={-10,-5,0,5},
+		AddDemand=
+		{
+			{TAI_STANDARDFRIGATE,1},
+			{TAI_DEFENSEFRIGATE,1},
+			{TAI_IONCANNONFRIGATE,1},
+			{TAI_CARRIER,2},
+			{TAI_MOTHERSHIP,3},
+			{TAI_SHIPYARD,3},
+			{TAI_DESTROYER,2},
+			{TAI_MISSILEDESTROYER,2},
+			{TAI_HEAVYCRUISER,3},
+		},
+		UnitCap="Frigate",
+	}
+ai_data[TAI_IONCANNONFRIGATE]=
+	{
+		Name="TAI_IONCANNONFRIGATE",
+		Type="Ship",
+		Require={FRIGATEPRODUCTION},
+		Upgrades={TAI_FRIGATEWEAPONUPGRADE1,TAI_FRIGATEWEAPONUPGRADE2,TAI_FRIGATEWEAPONUPGRADE3,TAI_FRIGATEHEALTHUPGRADE1,TAI_FRIGATEHEALTHUPGRADE2,TAI_FRIGATEHEALTHUPGRADE3},
+		UpgradeDemand=1,
+		SizeControl={eFrigate,0.7},
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=5,
+		UnitCap="Frigate",
+	}
+ai_data[TAI_CARRIER]=
+	{
+		Name="TAI_CARRIER",
+		Type="Ship",
+		Require={},
+		Upgrades={TAI_CAPITALHEALTHUPGRADE1,TAI_CAPITALHEALTHUPGRADE2,TAI_CAPITALHEALTHUPGRADE3},
+		UpgradeDemand=1,
+		BuildShipChannel=1,
+		BuildSubsystemChannel=0,
+		BasicDemand=0,
+		UnitCap="Carrier",
+	}
+ai_data[TAI_MOTHERSHIP]=
+	{
+		Name="TAI_MOTHERSHIP",
+		Type="Ship",
+		Require={},
+		Upgrades={TAI_CAPITALHEALTHUPGRADE1,TAI_CAPITALHEALTHUPGRADE2,TAI_CAPITALHEALTHUPGRADE3},
+		UpgradeDemand=1,
+		BuildShipChannel=1,
+		BuildSubsystemChannel=0,
+		BasicDemand=0,
+		UnitCap="TAIMothership",
+	}
+ai_data[TAI_SHIPYARD]=
+	{
+		Name="TAI_SHIPYARD",
+		Type="Ship",
+		Require={TAI_RESEARCHSTATION},
+		Upgrades={TAI_CAPITALHEALTHUPGRADE1,TAI_CAPITALHEALTHUPGRADE2,TAI_CAPITALHEALTHUPGRADE3},
+		UpgradeDemand=1,
+		BuildShipChannel=2,
+		BuildSubsystemChannel=0,
+		BasicDemand=0,
+		UnitCap="Shipyard",
+	}
+ai_data[TAI_DESTROYER]=
+	{
+		Name="TAI_DESTROYER",
+		Type="Ship",
+		Require={CAPSHIPPRODUCTION},
+		Upgrades={TAI_CAPITALWEAPONUPGRADE1,TAI_CAPITALWEAPONUPGRADE2,TAI_CAPITALWEAPONUPGRADE3,TAI_CAPITALHEALTHUPGRADE1,TAI_CAPITALHEALTHUPGRADE2,TAI_CAPITALHEALTHUPGRADE3},
+		UpgradeDemand=1,
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=2,
+		UnitCap="Destroyer",
+	}
+ai_data[TAI_MISSILEDESTROYER]=
+	{
+		Name="TAI_MISSILEDESTROYER",
+		Type="Ship",
+		Require={MISSILE},
+		Upgrades={TAI_CAPITALWEAPONUPGRADE1,TAI_CAPITALWEAPONUPGRADE2,TAI_CAPITALWEAPONUPGRADE3,TAI_CAPITALHEALTHUPGRADE1,TAI_CAPITALHEALTHUPGRADE2,TAI_CAPITALHEALTHUPGRADE3},
+		UpgradeDemand=1,
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=2,
+		UnitCap="Destroyer",
+	}
+ai_data[TAI_HEAVYCRUISER]=
+	{
+		Name="TAI_HEAVYCRUISER",
+		Type="Ship",
+		Require={HEAVYGUN},
+		Upgrades={TAI_CAPITALWEAPONUPGRADE1,TAI_CAPITALWEAPONUPGRADE2,TAI_CAPITALWEAPONUPGRADE3,TAI_CAPITALHEALTHUPGRADE1,TAI_CAPITALHEALTHUPGRADE2,TAI_CAPITALHEALTHUPGRADE3},
+		UpgradeDemand=1,
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=3,
+		UnitCap="HeavyCruiser",
+	}
+ai_data[TAI_BATTLESHIP]=
+	{
+		Name="TAI_BATTLESHIP",
+		Type="Ship",
+		Require={HEAVYGUN,TAI_SHIPYARD,TAI_SHIPYARD,TAI_SHIPYARD,TAI_SHIPYARD,TAI_SHIPYARD},
+		Upgrades={TAI_CAPITALWEAPONUPGRADE1,TAI_CAPITALWEAPONUPGRADE2,TAI_CAPITALWEAPONUPGRADE3,TAI_CAPITALHEALTHUPGRADE1,TAI_CAPITALHEALTHUPGRADE2,TAI_CAPITALHEALTHUPGRADE3},
+		UpgradeDemand=1,
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=3,
+		UnitCap="HeavyCruiser",
+	}
+ai_data[TAI_SENSORARRAY]=
+	{
+		Name="TAI_SENSORARRAY",
+		Type="Ship",
+		Require={SENSORARRAY,SENSORARRAY,SENSORARRAY,SENSORARRAY,-TAI_SENSORARRAY,-TAI_SENSORARRAY},
+		Upgrades={TAI_PLATFORMHEALTHUPGRADE1,TAI_PLATFORMHEALTHUPGRADE2,TAI_PLATFORMHEALTHUPGRADE3},
+		UpgradeDemand=0,
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		SizeControl={eMotherShip,1},
+		BasicDemand=1,
+		UnitCap="Platform",
+	}
+ai_data[TAI_RESOURCECOLLECTOR]=
+	{
+		Name="TAI_RESOURCECOLLECTOR",
+		Type="Ship",
+		Require={},
+		Upgrades={},
+		UpgradeDemand=0,
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=0,
+		UnitCap="ResourceCollector",
+	}
+ai_data[TAI_RESOURCECONTROLLER]=
+	{
+		Name="TAI_RESOURCECONTROLLER",
+		Type="Ship",
+		Require={TAI_RESEARCHSTATION},
+		Upgrades={},
+		UpgradeDemand=0,
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=0,
+		UnitCap="ResourceController",
+	}
+ai_data[TAI_RESEARCHSHIP]=
+	{
+		Name="TAI_RESEARCHSHIP",
+		Type="Ship",
+		Require={},
+		Upgrades={TAI_PLATFORMHEALTHUPGRADE1,TAI_PLATFORMHEALTHUPGRADE2,TAI_PLATFORMHEALTHUPGRADE3},
+		UpgradeDemand=0,
+		BuildShipChannel=0,
+		BuildSubsystemChannel=1,
+		BasicDemand=10,
+		UnitCap="Researchship",
+	}
+ai_data[TAI_RESEARCHSHIP_1F]=
+	{
+		Name="TAI_RESEARCHSHIP_1F",
+		Type="Ship",
+		Require={TAI_RESEARCHSHIP_5F},
+		Upgrades={},
+		UpgradeDemand=0,
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=2,
+		UnitCap="Researchship",
+	}
+ai_data[TAI_RESEARCHSHIP_2F]=
+	{
+		Name="TAI_RESEARCHSHIP_2F",
+		Type="Ship",
+		Require={TAI_RESEARCHSHIP_5F},
+		Upgrades={},
+		UpgradeDemand=0,
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=2,
+		UnitCap="Researchship",
+	}
+ai_data[TAI_RESEARCHSHIP_3F]=
+	{
+		Name="TAI_RESEARCHSHIP_3F",
+		Type="Ship",
+		Require={TAI_RESEARCHSHIP_5F},
+		Upgrades={},
+		UpgradeDemand=0,
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=2,
+		UnitCap="Researchship",
+	}
+ai_data[TAI_RESEARCHSHIP_4F]=
+	{
+		Name="TAI_RESEARCHSHIP_4F",
+		Type="Ship",
+		Require={TAI_RESEARCHSHIP_3F},
+		Upgrades={},
+		UpgradeDemand=0,
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=2,
+		UnitCap="Researchship",
+	}
+ai_data[TAI_RESEARCHSHIP_5F]=
+	{
+		Name="TAI_RESEARCHSHIP_5F",
+		Type="Ship",
+		Require={TAI_RESEARCHSHIP},
+		Upgrades={},
+		UpgradeDemand=0,
+		BuildShipChannel=0,
+		BuildSubsystemChannel=0,
+		BasicDemand=200,
+		UnitCap="Researchship",
+	}
+ai_data[TAI_RESEARCHSTATION]=
+	{
+		Name="TAI_RESEARCHSTATION",
+		Type="Ship",
+		Require={TAI_RESEARCHSHIP_3F},
+		Upgrades={TAI_PLATFORMHEALTHUPGRADE1,TAI_PLATFORMHEALTHUPGRADE2,TAI_PLATFORMHEALTHUPGRADE3},
+		UpgradeDemand=0,
+		BuildShipChannel=1,
+		BuildSubsystemChannel=1,
+		BasicDemand=2,
+		UnitCap="Researchship",
+	}
+ai_data[FRIGATEPRODUCTION]=
+	{
+		Name="FRIGATEPRODUCTION",
+		Type="Subsystem",
+		Require={TAI_RESEARCHSTATION},
+		IsForFleet=1,
+		BasicDemand=0,
+	}
+ai_data[DEFENSE]=
+	{
+		Name="DEFENSE",
+		Type="Subsystem",
+		Require={TAI_RESEARCHSTATION},
+		IsForFleet=1,
+		BasicDemand=0,
+	}
+ai_data[CAPSHIPPRODUCTION]=
+	{
+		Name="CAPSHIPPRODUCTION",
+		Type="Subsystem",
+		Require={FRIGATEPRODUCTION},
+		IsForFleet=1,
+		BasicDemand=0,
+	}
+ai_data[MISSILE]=
+	{
+		Name="MISSILE",
+		Type="Subsystem",
+		Require={CAPSHIPPRODUCTION},
+		IsForFleet=1,
+		BasicDemand=0,
+	}
+ai_data[HEAVYGUN]=
+	{
+		Name="HEAVYGUN",
+		Type="Subsystem",
+		Require={CAPSHIPPRODUCTION},
+		IsForFleet=1,
+		BasicDemand=0,
+	}
+ai_data[SENSORARRAY]=
+	{
+		Name="SENSORARRAY",
+		Type="Subsystem",
+		Require={CAPSHIPPRODUCTION},
+		IsForFleet=1,
+		BasicDemand=0.1,
+	}
+
+
+function Proc_DetermineDemandWithNoCounterInfo()
+end
+
+function Proc_DetermineSpecialDemand()
+end
+
+function CpuBuildSS_DefaultSubSystemDemandRules()
+end
+
+function DoResearchTechDemand()
+end
+
+
+function Override_MilitaryInit()
+	if (sg_Delay==0) then
+		cp_attackPercent=0
+	end
+end

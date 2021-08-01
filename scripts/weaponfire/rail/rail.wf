@@ -1,0 +1,9 @@
+hitfx = "dmg_pulsar_laser_hit"
+bulletfx = "pulsar_rail_beam2"
+nopenetratefx = "dmg_pulsar_laser_hit"
+blowthroughfx = "blowthrough_generic"
+deathtype = "deathBeam"
+scartype = "Plasma_Bomb/Plasma_Bomb"
+hit_sfx = "WEAPON/CORVETTE/IMPACT/HWEAPON_CORVETTE_PULASAR_CANNON_BEAM_HIT"
+nopenetrate_sfx = "WEAPON/CORVETTE/IMPACT/HWEAPON_CORVETTE_PULASAR_CANNON_BEAM_HIT"
+hit_clamp = {0.5, 1.25}

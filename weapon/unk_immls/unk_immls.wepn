@@ -1,0 +1,16 @@
+StartWeaponConfig(NewWeaponType, "AnimatedTurret", "InstantHit", "Laser", "Normal", 0, 3000, 0, 0.4, 0, 0, 1, 0, 0, 0.4, 0.0, 0.0, 1, 1, 120, 120, 0.1, "Normal", 1, 0, 3000)
+AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 100, 100, "")
+setPenetration(NewWeaponType, 5, 1,
+{
+PlanetKillerArmour = 0, })
+setMissileKiller(NewWeaponType,1);setAccuracy(NewWeaponType, 1,
+{
+Fighter = 0.41,
+},
+{
+Corvette = 0.75,
+},
+{
+munition = 0.1, })
+setAngles(NewWeaponType, 0, -60, 60, -50, 50)
+setMiscValues(NewWeaponType, 0, 0)

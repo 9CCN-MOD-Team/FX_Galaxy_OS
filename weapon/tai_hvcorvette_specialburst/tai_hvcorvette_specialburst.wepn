@@ -1,0 +1,11 @@
+StartWeaponConfig(NewWeaponType,"Fixed","SphereBurst","ArtilleryBurst","Normal",0,0,33,2,0,0,5,0,0,0,0,0,0,0,0,0,0.1,"Normal",1,0,0);
+AddWeaponResult(NewWeaponType,"Hit","DamageHealth","Target",70/2,70/2,"");
+setPenetration(NewWeaponType,5,1,
+{Unarmoured=0.1},
+{LightArmour=0.24},
+{MediumArmour=0.9},
+{HeavyArmour=1.13},
+{ResArmour=0.12},
+{SubSystemArmour=0.4},
+{TurretArmour=0.4});
+setAngles(NewWeaponType,180,0,0,0,0);

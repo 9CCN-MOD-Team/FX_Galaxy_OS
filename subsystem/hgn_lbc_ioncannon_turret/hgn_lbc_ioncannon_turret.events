@@ -1,0 +1,138 @@
+effects = {
+  animations = {
+    animation1 = {
+      name = "Death",
+      length = 1,
+      loop = 0,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
+    animation2 = {
+      name = "Weapon_TurretTop",
+      length = 4,
+      loop = 0,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+  },
+ },
+  events = {
+       event1 = {
+      {
+        "anim",
+        "Weapon_TurretTop",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "Weapon_TurretTop_Muzzle",
+      },
+      {
+        "fx",
+        "ion_beam_charge_combo_bc",
+      },
+      {
+        "sound",
+        "WEAPON/FRIGATE/FIRE/WEAPON_FRIGATE_ION_CANNON_BEAM",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+    event2 = {
+      {
+        "anim",
+        "Weapon_TurretTop",
+      },
+      {
+        "animtime",
+        "0.3",
+      },
+      {
+        "marker",
+        "Weapon_TurretTopSlave_Muzzle",
+      },
+      {
+        "fx",
+        "ion_beam_charge_combo_bc",
+      },
+      {
+        "sound",
+        "WEAPON/FRIGATE/FIRE/WEAPON_FRIGATE_ION_CANNON_BEAM",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
+       
+    event3 = {
+      {
+        "anim",
+        "death",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "root",
+      },
+      {
+        "fx",
+        "dmg_cloud_explosion_large",
+      },
+      {
+        "sound",
+        "Explosion/Small/ETG_Explode_Small_Firey",
+      },
+      {
+        "fx_scale",
+        "1",
+      },
+    },
+event4 = {
+      {
+        "anim",
+        "Weapon_TurretTop",
+      },
+      {
+        "animtime",
+        "0.1",
+      },
+      {
+        "marker",
+        "vent1",
+      },
+      {
+        "fx",
+        "ion_cannon_steam_spray",
+      },
+      {
+        "sound",
+        "DAMAGE/SMOKE/ION_BEAM_DISCHARGE",
+      },
+    }, 
+
+  },
+}

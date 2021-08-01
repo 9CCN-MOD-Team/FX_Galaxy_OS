@@ -1,0 +1,17 @@
+-- LuaDC version 0.9.19
+-- 2010-10-4 18:25:54
+-- LuaDC by Age2uN
+-- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
+--
+hitfx = "ion_dmg_ring_spray"
+bulletfx = "LightRuler"
+nopenetratefx = "ion_dmg_ring_spray"
+blowthroughfx = "blowthrough_generic"
+deathtype = "deathBeam"
+scartype = "Plasma_Bomb/Plasma_Bomb"
+firefx = "ion_beam_charge_combo"
+fire_sfx = "WEAPON/FRIGATE/FIRE/WEAPON_FRIGATE_ION_CANNON_BEAM"
+hit_sfx = "WEAPON/CORVETTE/IMPACT/HWEAPON_CORVETTE_PULASAR_CANNON_BEAM_HIT"
+nopenetrate_sfx = "WEAPON/CORVETTE/IMPACT/HWEAPON_CORVETTE_PULASAR_CANNON_BEAM_HIT"
+hit_clamp = 
+    { 1, 1, }

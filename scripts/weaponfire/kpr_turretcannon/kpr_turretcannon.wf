@@ -1,0 +1,13 @@
+hitfx = "plasma_hit_spray_tai" --plasma_hit_spray_dread
+bulletfx = "kad_energycannon_combo" --kad_wave_beam_combo_Medium
+nopenetratefx = "plasma_hit_spray_dread"
+deathtype = "deathCannon"
+firefx = "muzzle_flash_combo_plasma_kpr"
+fire_sfx = "WEAPON/ENERGYLARGE"
+scartype = "Plasma_Bomb/Plasma_Bomb"
+hit_sfx = "WEAPON/CORVETTE/IMPACT/WEAPON_CORVETTE_PULASAR_CANNON_BEAM_HIT"
+nopenetrate_sfx = "WEAPON/FIGHTER/IMPACT/WEAPON_FIGHTER_PLASMA_LANCE_BEAM_HIT"
+hit_clamp = {
+  1,
+  1,
+}

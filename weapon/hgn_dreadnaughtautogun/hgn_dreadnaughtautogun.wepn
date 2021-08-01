@@ -1,0 +1,17 @@
+StartWeaponConfig(NewWeaponType,"Gimble","Bullet","Hddread","Normal",1500,3000,0,0,0,0,1,1,1,0.4,0.9,1.1,1,1,0,0,0.1,"Normal",0,0,0)
+AddWeaponResult(NewWeaponType,"Hit","DamageHealth","Target",160,160,"")
+setPenetration(NewWeaponType,0,0.5,{
+  Unarmoured = 0.25,
+},{
+  DroneArmour = 0.25,
+})
+setMissileKiller(NewWeaponType,1);setAccuracy(NewWeaponType,0,{
+  Fighter = 0.4,
+},{
+  Corvette = 1,
+},{
+  munition = 1,
+},{
+  Frigate = 1,
+})
+setAngles(NewWeaponType,75,0,0,0,0)

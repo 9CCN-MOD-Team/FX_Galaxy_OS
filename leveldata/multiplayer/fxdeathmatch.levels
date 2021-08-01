@@ -1,0 +1,89 @@
+
+--Local_Desc - Description of this package
+--Package_Sym - Shared name for packages with the same catagory
+--Package_Desc - Description - may move to a 'package' desc file...
+
+Root = "DATA:\\LevelData\\Multiplayer\\fxdeathmatch"
+
+ExtFilter = "levels_fx_dm"
+
+--Tags - Set single tags for all levels...
+Tags = "fx_dm"
+
+--TagSets - Set groups of tags for all levels (defined in Scripts/Tags/*.tags) - makes bulk editing faster...
+--TagSets = "hw1"
+
+LevelList = {
+	{
+		Tags = "2p",
+		Name = "2p_attacking",
+		Desc = "$96326",
+		MaxPlayers = 2,
+	},
+	{
+		Tags = "2p",
+		Name = "2p_destiny",
+		Desc = "$96333",
+		MaxPlayers = 2,
+	},
+	{
+		Tags = "2p",
+		Name = "2P_Karos",
+		Desc = "$96339",
+		MaxPlayers = 2,
+	},
+	{
+		Tags = "2p",
+		Name = "2p_oppose",
+		Desc = "$96334",
+		MaxPlayers = 2,
+	},
+	{
+		Tags = "2p",
+		Name = "2p_piegate",
+		Desc = "$96321",
+		MaxPlayers = 2,
+	},
+	{
+		Tags = "3p",
+		Name = "3p_Dust_Hunters",
+		Desc = "$96340",
+		MaxPlayers = 3,
+	},
+	{
+		Tags = "3p",
+		Name = "3p_storm",
+		Desc = "$96335",
+		MaxPlayers = 3,
+	},
+	{
+		Tags = "4p",
+		Name = "4p_bloodgarden",
+		Desc = "$96323",
+		MaxPlayers = 4,
+	},
+	{
+		Tags = "4p",
+		Name = "4p_idolum",
+		Desc = "$96337",
+		MaxPlayers = 4,
+	},
+	{
+		Tags = "4p",
+		Name = "4p_oppose",
+		Desc = "$96334",
+		MaxPlayers = 4,
+	},
+	{
+		Tags = "6p",
+		Name = "6p_battlecloud",
+		Desc = "$96338",
+		MaxPlayers = 6,
+	},
+--	{
+--		Tags = "6p",
+--		Name = "6p_Cathedral_of_Kadesh",
+--		Desc = "$96341",
+--		MaxPlayers = 6,
+--	},
+}

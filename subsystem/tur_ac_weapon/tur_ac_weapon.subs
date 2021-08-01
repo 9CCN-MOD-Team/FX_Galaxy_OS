@@ -1,0 +1,21 @@
+NewSubSystemType = StartSubSystemConfig()
+NewSubSystemType.displayedName = "$2229"
+NewSubSystemType.sobDescription = "$2230"
+NewSubSystemType.selectionLimit=1
+NewSubSystemType.type = "Weapon"
+NewSubSystemType.typeString = "AttackCarrierWeapon"
+NewSubSystemType.costToBuild = 500
+NewSubSystemType.timeToBuild = 30
+NewSubSystemType.isResearch = 0
+NewSubSystemType.visible = 1
+LoadHODFile(NewSubSystemType,1)
+NewSubSystemType.BuildFamily = "SubSystem_tur"
+NewSubSystemType.AttackFamily = "SubSystem"
+NewSubSystemType.DisplayFamily = "SubSystemModule"
+NewSubSystemType.ArmourFamily = "SubSystemArmour"
+loadShipPatchList(NewSubSystemType,"data:sound/sfx/ship/Hiigaran/Subsystems/",1,"HPSubsystemCapShipAmb")
+StartSubSystemWeaponConfig(NewSubSystemType,"tur_ac_ioncannon","Weapon_TurretTop","Fire")
+StartSubSystemWeaponConfig(NewSubSystemType,"tur_ac_ioncannon","Weapon_TurretTop1","Fire1")
+StartSubSystemWeaponConfig(NewSubSystemType,"tur_HullDefenseGun","Weapon_TurretTop2","Weapon_TurretTop2")
+StartSubSystemWeaponConfig(NewSubSystemType,"tur_HullDefenseGun","Weapon_TurretTop3","Weapon_TurretTop3")
+AddSubSystemAbility(NewSubSystemType,"Attack",1,"ThisShipOnly",0)

@@ -1,0 +1,74 @@
+NCCN_RAIN_Normal_OnSet = function(ship)	
+stopAnim(ship,"Mad_Open")
+end
+
+NCCN_RAIN_CaptureActive_OnSet = function(ship)	
+	setState(ship, "CaptureActive", 0)
+        startTime = 0
+        if(isAnimRunning(ship,"Retract") ~= 0) then
+            startTime = getAnimLength(ship, "Retract") - getTime(ship, "Retract")
+            stopAnim(ship, "Retract")
+            endEffect(ship, "Retract")
+        end
+        startAnim(ship, "Launch")
+        startEffect(ship, "E_Launch01")
+        startEffect(ship, "E_Launch02")
+        setTime(ship,"Launch",startTime)
+        setPauseTime(ship, "Launch", 1000)
+
+
+end
+
+NCCN_RAIN_CaptureActive_OnPause = function(ship)	
+    setState(ship, "CaptureActive", 1)
+    startEffect(ship,"E_Shocking")
+ 
+end
+
+NCCN_RAIN_CaptureInActive_OnSet = function(ship)	
+    if(isAnimRunning(ship,"Retract") == 0) then
+        startTime = 0
+        if(isAnimRunning(ship,"Launch") ~= 0) then
+            startTime = getAnimLength(ship, "Launch") - getTime(ship, "Launch")
+            stopAnim(ship, "Launch")
+        end
+        endEffect(ship,"E_Shocking")
+        startAnim(ship, "Retract")
+        startEffect(ship, "Retract")
+        setTime(ship,"Retract",startTime)
+        setPauseTime(ship, "Retract", 1000)
+    end
+end
+
+NCCN_RAIN_CaptureInActive_OnPause = function(ship)	
+	NCCN_RAIN_CaptureActive_OnPause(ship)
+end
+
+------------------------------------------------------------------------
+NCCN_RAIN_ResourceStart_OnSet = function(ship)
+	setState(ship, "ResourceStart", 0)
+	stopAnim(ship, "Mad_Close")
+	stopAnim(ship, "Mad_Shock")
+	endEffect(ship, "E_Shocking")
+	startAnim(ship, "Mad_Open")
+	--startEffect(ship, "E_Open")
+	setPauseTime(ship, "Mad_Open", 1000)
+end
+NCCN_RAIN_ResourceDo_OnSet = function(ship)
+	stopAnim(ship, "Mad_Open")
+	stopAnim(ship, "Mad_Close")
+	startAnim(ship,"Mad_Shock")
+	--startEffect(ship, "E_Shocking")
+	setLoopCount(ship, "Mad_Shock", 999999)
+	setState(ship, "ResourceDo", 1)
+end
+
+NCCN_RAIN_ResourceEnd_OnSet = function(ship)
+	stopAnim(ship, "Mad_Open")
+	stopAnim(ship, "Mad_Shock")
+	--endEffect(ship, "E_Shocking")
+	startAnim(ship, "Mad_Close")
+	--startEffect(ship, "E_Close")
+	setState(ship, "ResourceEnd", 1)
+	setPauseTime(ship, "Mad_Close", 1000)
+end

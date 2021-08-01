@@ -1,0 +1,37 @@
+KUS_RESOURCECOLLECTOR_ResourceStart_OnSet = function(ship)
+    -- unset the state, the C++ will have set it but we want to delay till the anim is finished
+    setState(ship, "ResourceStart", 0)
+    stopAnim(ship, "WorkOff")
+    stopAnim(ship, "Work")
+    endEffect(ship, "Resourcing")
+    startAnim(ship, "WorkOn")
+    startEffect(ship, "WorkOn")
+    -- apparently we are supposed to use a 'big number' to mean pause at end, 1000 is apparently 'big' enough
+    setPauseTime(ship, "WorkOn", 1000)
+end
+
+KUS_RESOURCECOLLECTOR_ResourceStart_OnPause = function(ship)
+    -- the WorkOn animation has finished, now we can set the state to resource start
+    setState(ship, "ResourceStart", 1)
+end
+
+KUS_RESOURCECOLLECTOR_ResourceDo_OnSet = function(ship)
+    -- stop the WorkOn animation (that's the one that should have played to get us here, and may still be playing)
+    stopAnim(ship, "WorkOn")
+    stopAnim(ship, "WorkOff")
+    startAnim(ship, "Work")
+    startEffect(ship, "Resourcing")
+    setLoopCount(ship, "Work", 1000000)
+    setState(ship, "ResourceDo", 1)
+end
+
+KUS_RESOURCECOLLECTOR_ResourceEnd_OnSet = function(ship)
+    -- stop the WorkOn and work animations, they may be running
+    stopAnim(ship, "WorkOn")
+    stopAnim(ship, "Work")
+    endEffect(ship, "Resourcing")
+    startAnim(ship, "WorkOff")
+    startEffect(ship, "WorkOff")
+    setState(ship, "ResourceEnd", 1)
+    setPauseTime(ship, "WorkOff", 1000)
+end

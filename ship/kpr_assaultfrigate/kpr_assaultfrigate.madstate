@@ -1,0 +1,39 @@
+KPR_ASSAULTFRIGATE_ResourceStart_OnSet = function(ship)
+    setState(ship,"Launched",0)
+    startTime = 0
+    if(isAnimRunning(ship, "Mad_Close") ~= 0) then
+        startTime = getAnimLength(ship, "Mad_Close") - getTime(ship, "Mad_Close")
+        stopAnim(ship, "Mad_Close")
+        endEffect(ship, "E_Close")
+    end
+    startAnim(ship, "Mad_Open")
+    startEffect(ship, "E_Open")
+    setTime(ship,"Mad_Open",startTime)
+    setPauseTime(ship, "Mad_Open", 1000)
+end
+
+KPR_ASSAULTFRIGATE_ResourceStart_OnPause = function(ship)
+    endEffect(ship,"E_Open")
+    startAnim(ship,"Mad_Shock")        
+    setLoopCount(ship,"Mad_Shock",1000000)
+    startEffect(ship,"E_Shock")
+    setState(ship,"Launched",1)
+end
+
+
+KPR_ASSAULTFRIGATE_ResourceEnd_OnSet = function(ship)
+    startTime = 0
+    if(isAnimRunning(ship, "Mad_Open") ~= 0) then
+        startTime = getAnimLength(ship, "Mad_Open") - getTime(ship, "Mad_Open")
+        stopAnim(ship, "Mad_Open")
+        endEffect(ship, "E_Open")
+    end
+--
+    stopAnim(ship,"Mad_Shock")
+    endEffect(ship,"E_Shock")
+--
+    startAnim(ship, "Mad_Close")
+    startEffect(ship, "E_Close")
+    setTime(ship,"Mad_Close",startTime)
+    setPauseTime(ship, "Mad_Close", 1000)
+end

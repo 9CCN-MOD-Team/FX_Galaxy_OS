@@ -1,0 +1,11 @@
+hitfx = "hit_generic"
+bulletfx = "bullet_generic"
+nopenetratefx = "nopen_generic"
+deathtype = "deathCannon"
+scartype = "Hgn_Torpedo/Torpedo"
+hit_sfx = "WEAPON/FRIGATE/IMPACT/WEAPON_FRIGATE_TORPEDO_HIT"
+nopenetrate_sfx = "WEAPON/FRIGATE/IMPACT/WEAPON_FRIGATE_TORPEDO_HIT"
+hit_clamp = {
+  1,
+  1,
+}

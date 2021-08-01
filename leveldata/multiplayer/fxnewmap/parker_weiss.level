@@ -1,0 +1,173 @@
+function DetermChunk()	
+	addPoint("StartPos0", {1000, 0, 7000}, {0, 180, 0})
+	addPoint("StartPos1", {13000, 0, 22000}, {0, 180, 0})
+	addPoint("StartPos2", {-13000, 0, 22000}, {0, 180, 0})
+	addPoint("StartPos3", {-1000, 0, -7000}, {0, 0, 0})
+	addPoint("StartPos4", {13000, 0, -22000}, {0, 0, 0})
+	addPoint("StartPos5", {-13000, 0, -22000}, {0, 0, 0})
+	addPoint("StartPos6", {0, 0, 0}, {0, 0, 0})
+
+	addAsteroid("Asteroid_3",	{22200, 0, 0},		100, 0, 0, 0, 0)
+	addAsteroid("Asteroid_4",	{22000, 0, 0},		100, 0, 0, 0, 0)
+	addAsteroid("Asteroid_3",	{21800, 0, 0},	100, 0, 0, 0, 0)
+
+	addAsteroid("Asteroid_3",	{-22200, 0, 0},		100, 0, 0, 0, 0)
+	addAsteroid("Asteroid_4",	{-22000, 0, 0},		100, 0, 0, 0, 0)
+	addAsteroid("Asteroid_3",	{-21800, 0, 0},	100, 0, 0, 0, 0)
+
+
+	addAsteroid("Asteroid_3",	{200, 0, 5000},		100, 0, 0, 0, 0)
+	addAsteroid("Asteroid_4",	{0, 0, 5000},		100, 0, 0, 0, 0)
+	addAsteroid("Asteroid_3",	{-200, 0, 5000},	100, 0, 0, 0, 0)
+
+	addAsteroid("Asteroid_3",	{6200, 0, 8000},		100, 0, 0, 0, 0)
+	addAsteroid("Asteroid_4",	{6000, 0, 8000},		100, 0, 0, 0, 0)
+	addAsteroid("Asteroid_3",	{5800, 0, 8000},	100, 0, 0, 0, 0)
+
+	addAsteroid("Asteroid_3",	{-6200, 0, 8000},		100, 0, 0, 0, 0)
+	addAsteroid("Asteroid_4",	{-6000, 0, 8000},		100, 0, 0, 0, 0)
+	addAsteroid("Asteroid_3",	{-5800, 0, 8000},	100, 0, 0, 0, 0)
+
+	addAsteroid("Asteroid_3",	{12200, 0, 20000},		100, 0, 0, 0, 0)
+	addAsteroid("Asteroid_4",	{12000, 0, 20000},		100, 0, 0, 0, 0)
+	addAsteroid("Asteroid_3",	{11800, 0, 20000},	100, 0, 0, 0, 0)
+
+	addAsteroid("Asteroid_3",	{-12200, 0, 20000},		100, 0, 0, 0, 0)
+	addAsteroid("Asteroid_4",	{-12000, 0, 20000},		100, 0, 0, 0, 0)
+	addAsteroid("Asteroid_3",	{-11800, 0, 20000},	100, 0, 0, 0, 0)
+
+	addAsteroid("Asteroid_3",	{9200, 0, 15000},		100, 0, 0, 0, 0)
+	addAsteroid("Asteroid_4",	{9000, 0, 15000},		100, 0, 0, 0, 0)
+	addAsteroid("Asteroid_3",	{8800, 0, 15000},	100, 0, 0, 0, 0)
+
+	addAsteroid("Asteroid_3",	{-9200, 0, 15000},		100, 0, 0, 0, 0)
+	addAsteroid("Asteroid_4",	{-9000, 0, 15000},		100, 0, 0, 0, 0)
+	addAsteroid("Asteroid_3",	{-8800, 0, 15000},	100, 0, 0, 0, 0)
+
+	addAsteroid("Asteroid_3",	{16200, 0, 10000},		100, 0, 0, 0, 0)
+	addAsteroid("Asteroid_4",	{16000, 0, 10000},		100, 0, 0, 0, 0)
+	addAsteroid("Asteroid_3",	{15800, 0, 10000},	100, 0, 0, 0, 0)
+
+	addAsteroid("Asteroid_3",	{-16200, 0, 10000},		100, 0, 0, 0, 0)
+	addAsteroid("Asteroid_4",	{-16000, 0, 10000},		100, 0, 0, 0, 0)
+	addAsteroid("Asteroid_3",	{-15800, 0, 10000},	100, 0, 0, 0, 0)
+
+
+	addAsteroid("Asteroid_3",	{200, 0, -5000},		100, 0, 0, 0, 0)
+	addAsteroid("Asteroid_4",	{0, 0, -5000},		100, 0, 0, 0, 0)
+	addAsteroid("Asteroid_3",	{-200, 0, -5000},	100, 0, 0, 0, 0)
+
+	addAsteroid("Asteroid_3",	{6200, 0, -8000},		100, 0, 0, 0, 0)
+	addAsteroid("Asteroid_4",	{6000, 0, -8000},		100, 0, 0, 0, 0)
+	addAsteroid("Asteroid_3",	{5800, 0, -8000},	100, 0, 0, 0, 0)
+
+	addAsteroid("Asteroid_3",	{-6200, 0, -8000},		100, 0, 0, 0, 0)
+	addAsteroid("Asteroid_4",	{-6000, 0, -8000},		100, 0, 0, 0, 0)
+	addAsteroid("Asteroid_3",	{-5800, 0, -8000},	100, 0, 0, 0, 0)
+
+	addAsteroid("Asteroid_3",	{12200, 0, -20000},		100, 0, 0, 0, 0)
+	addAsteroid("Asteroid_4",	{12000, 0, -20000},		100, 0, 0, 0, 0)
+	addAsteroid("Asteroid_3",	{11800, 0, -20000},	100, 0, 0, 0, 0)
+
+	addAsteroid("Asteroid_3",	{-12200, 0, -20000},		100, 0, 0, 0, 0)
+	addAsteroid("Asteroid_4",	{-12000, 0, -20000},		100, 0, 0, 0, 0)
+	addAsteroid("Asteroid_3",	{-11800, 0, -20000},	100, 0, 0, 0, 0)
+
+	addAsteroid("Asteroid_3",	{9200, 0, -15000},		100, 0, 0, 0, 0)
+	addAsteroid("Asteroid_4",	{9000, 0, -15000},		100, 0, 0, 0, 0)
+	addAsteroid("Asteroid_3",	{8800, 0, -15000},	100, 0, 0, 0, 0)
+
+	addAsteroid("Asteroid_3",	{-9200, 0, -15000},		100, 0, 0, 0, 0)
+	addAsteroid("Asteroid_4",	{-9000, 0, -15000},		100, 0, 0, 0, 0)
+	addAsteroid("Asteroid_3",	{-8800, 0, -15000},	100, 0, 0, 0, 0)
+
+	addAsteroid("Asteroid_3",	{16200, 0, -10000},		100, 0, 0, 0, 0)
+	addAsteroid("Asteroid_4",	{16000, 0, -10000},		100, 0, 0, 0, 0)
+	addAsteroid("Asteroid_3",	{15800, 0, -10000},	100, 0, 0, 0, 0)
+
+	addAsteroid("Asteroid_3",	{-16200, 0, -10000},		100, 0, 0, 0, 0)
+	addAsteroid("Asteroid_4",	{-16000, 0, -10000},		100, 0, 0, 0, 0)
+	addAsteroid("Asteroid_3",	{-15800, 0, -10000},	100, 0, 0, 0, 0)
+
+
+	setWorldBoundsInner({0.00, 0.00, 0.00}, {30000, 30000, 30000})
+end
+
+function NonDetermChunk()
+	-- Music
+	setDefaultMusic("data:sound/music/ambient/tutorial")
+	setBattleMusic("data:sound/music/battle/battle_04_alt")
+
+    fogSetActive(0)
+    setGlareIntensity(0)
+    setLevelShadowColour(0, 0, 0, 1)
+    loadBackground("m09")
+    setSensorsManagerCameraDistances(10000, 40000)
+end
+
+
+levelDesc = "$96355"
+maxPlayers = 7
+player = {}
+
+player[0] = 
+{
+	id = 0,
+	name = "",
+	resources = 1000,
+	raceID = 1,
+	startPos = 1,
+}
+
+player[1] = 
+{
+	id = 1,
+	name = "",
+	resources = 1000,
+	raceID = 1,
+	startPos = 1,
+}
+
+player[2] = 
+{
+	id = 2,
+	name = "",
+	resources = 1000,
+	raceID = 1,
+	startPos = 1,
+}
+
+player[3] = 
+{
+	id = 3,
+	name = "",
+	resources = 1000,
+	raceID = 1,
+	startPos = 1,
+}
+
+player[4] = 
+{
+	id = 4,
+	name = "",
+	resources = 1000,
+	raceID = 1,
+	startPos = 1,
+}
+
+player[5] = 
+{
+	id = 5,
+	name = "",
+	resources = 1000,
+	raceID = 1,
+	startPos = 1,
+}
+player[6] = 
+{
+	id = 6,
+	name = "",
+	resources = 1000,
+	raceID = 1,
+	startPos = 1,
+}

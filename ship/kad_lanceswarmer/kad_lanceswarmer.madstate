@@ -1,0 +1,32 @@
+KAD_LANCESWARMER_Normal_OnSet = function(ship)
+	startAnim(ship,"Mad_Shock")
+	 --startEffect(ship, "E_Shocking")
+	setLoopCount(ship, "Mad_Shock", 999999)
+	setState(ship, "ResourceDo", 1)
+end
+
+KAD_LANCESWARMER_Launched_OnSet = function(ship)
+    startTime = 0
+    if(isAnimRunning(ship, "Mad_Close") ~= 0) then
+        startTime = getAnimLength(ship, "Mad_Close") - getTime(ship, "Mad_Close")
+        stopAnim(ship, "Mad_Close")
+        endEffect(ship, "Close")
+    end
+    startAnim(ship, "Mad_Open")
+    startEffect(ship, "Open")
+    setTime(ship,"Mad_Open",startTime)
+    setPauseTime(ship, "Mad_Open", 1000)
+end
+
+KAD_LANCESWARMER_Docked_OnSet = function(ship)
+    startTime = 0
+    if(isAnimRunning(ship, "Mad_Open") ~= 0) then
+        startTime = getAnimLength(ship, "Mad_Open") - getTime(ship, "Mad_Open")
+        stopAnim(ship, "Mad_Open")
+        endEffect(ship, "Open")
+    end
+    startAnim(ship, "Mad_Close")
+    startEffect(ship, "Close")
+    setTime(ship,"Mad_Close",startTime)
+    setPauseTime(ship, "Mad_Close", 1000)
+end

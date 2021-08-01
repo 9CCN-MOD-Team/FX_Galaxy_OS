@@ -1,0 +1,217 @@
+g_GateDis = 1000
+
+maxPlayers = 8
+player = {}
+
+for i=0,7 do
+player[i] = 
+{
+	id = i,
+	name = "",
+	resources = 0,
+	raceName = "Hiigaran",
+	startPos = 0,
+}
+end
+
+dofilepath("data:leveldata/campaign/tutorial/RPG/script/tradedata.lua")
+dofilepath("data:leveldata/campaign/Tutorial/RPG/script/trade_intercept.lua")
+dofilepath("player:RPG_"..DTM4_PlayerRace..".lua")
+
+if (MissionData==nil) then
+	MissionData=DTM4_PlayerRace.."_Start"
+	player[0].raceName=DTM4_PlayerRace
+	dofilepath("Data:leveldata/campaign/tutorial/RPG/Script/StartSave_"..DTM4_PlayerRace..".lua")
+end
+
+
+for i=1,maxPlayers-1 do
+	if(g_MissionData[MissionData].Camp[i]~=nil)then
+		player[i].name = Camp[g_MissionData[MissionData].Camp[i]].name
+		player[i].raceName = Camp[g_MissionData[MissionData].Camp[i]].raceName
+	end
+end
+
+function	DTM4_SetStation(iGroup, iShip, iPosition, iOwner, iDirection, iHP)
+	addSquadron(iGroup, iShip, iPosition, iOwner, iDirection, 0, iHP)
+	createSOBGroup(iGroup)
+	addToSOBGroup(iGroup, iGroup)
+end
+
+function DTM4_SetNPCFleet()
+	for i,j in g_NPCFleet do
+		createSOBGroup("NPC"..i)
+		createSOBGroup("NPC"..i.."Attacker")
+		for k,l in j.ships do
+			addSquadron("NPC"..i..k, l, {0, 0, 0}, j.owner, {0, 0, 0}, 0, 1)
+			addToSOBGroup("NPC"..i..k, "NPC"..i)
+		end
+	end
+	addSquadron("HSI", "rpg_inhibitor", {0,0,0}, g_PiratePlayer, {0,0,0}, 0, 1)
+	createSOBGroup("HSI")
+	addToSOBGroup("HSI", "HSI")
+end
+
+function DTM4_LinkZoneAtOnce(iGate, iPlayer)
+	local HSI = 1
+	for i,j in g_mapzones do
+		for k,l in j.path do
+			if (l>i) then
+				DTM4_LinkZone(i, l, iGate, iPlayer)
+				addSphere("HSI"..HSI, {g_mapzones[i].position[1]/2+g_mapzones[l].position[1]/2,g_mapzones[i].position[2]/2+g_mapzones[l].position[2]/2,g_mapzones[i].position[3]/2+g_mapzones[l].position[3]/2}, 0)
+				HSI = HSI + 1
+			end
+		end
+	end
+end
+
+function DTM4_LinkZone(iz1,iz2,iShip,iPlayer)
+	local iZone1 = g_mapzones[iz1].position
+	local iZone2 = g_mapzones[iz2].position
+	local rZone1 = g_mapzones[iz1].radius
+	local rZone2 = g_mapzones[iz2].radius
+	local iDis = sqrt((iZone1[1]-iZone2[1])^2+(iZone1[2]-iZone2[2])^2+(iZone1[3]-iZone2[3])^2)
+	local iP1 = {iZone1[1]+(iZone2[1]-iZone1[1])*rZone1/iDis,iZone1[2]+(iZone2[2]-iZone1[2])*rZone1/iDis,iZone1[3]+(iZone2[3]-iZone1[3])*rZone1/iDis}
+	local iP2 = {iZone2[1]+(iZone1[1]-iZone2[1])*rZone2/iDis,iZone2[2]+(iZone1[2]-iZone2[2])*rZone2/iDis,iZone2[3]+(iZone1[3]-iZone2[3])*rZone2/iDis}
+	addSquadron("MG"..iz1..iz2, iShip, iP1, iPlayer, {0,0,0}, 0, 0)
+	addSquadron("MG"..iz2..iz1, iShip, iP2, iPlayer, {0,0,0}, 0, 0)
+	createSOBGroup("MG"..iz1..iz2)
+	addToSOBGroup("MG"..iz1..iz2, "MG"..iz1..iz2)
+	createSOBGroup("MG"..iz2..iz1)
+	addToSOBGroup("MG"..iz2..iz1, "MG"..iz2..iz1)
+	addSphere("FX"..iz1..iz2, iP1, 0)
+	addSphere("FX"..iz2..iz1, iP2, 0)
+end
+
+function DTM4_GetStartPos(iPos)
+	local iDis = sqrt(iPos[1]^2+iPos[2]^2+iPos[3]^2)
+	local iRate1 = (iDis-g_GateDis)/iDis
+	local iRate2 = (iDis-2*g_GateDis)/iDis
+	local result1 = {iRate1*iPos[1],iRate1*iPos[2],iRate1*iPos[3]}
+	local result2 = {iRate2*iPos[1],iRate2*iPos[2],iRate2*iPos[3]}
+	return result1,result2
+end
+
+function DTM4_GetGateOutPos(iPos)
+	local iDis = sqrt(iPos[1]^2+iPos[2]^2+iPos[3]^2)
+	local iRate = (iDis-g_GateDis)/iDis
+	local result = {iRate*iPos[1],iRate*iPos[2],iRate*iPos[3]}
+	return result
+end
+
+function DTM4_GetGateDirection(iPos)
+	local a2=atan2(iPos[1],iPos[3])+180
+	local iDis = sqrt(iPos[1]^2+iPos[3]^2)
+	local a1=-1*atan(iPos[2]/iDis)
+	local iDir = {a1,a2,0}
+	return iDir
+end
+
+function DTM4_SetGate(iIndex,iShip,iPlayer,iHP)
+	local iPosition = g_MissionData[MissionData].MapCanGoTo[iIndex].Position
+	addSquadron("HPG"..iIndex, iShip, iPosition, iPlayer, DTM4_GetGateDirection(iPosition), 0, iHP)
+	addSphere("HPGV"..iIndex, DTM4_GetGateOutPos(iPosition), 0)
+	createSOBGroup("HPG"..iIndex)
+	addToSOBGroup("HPG"..iIndex, "HPG"..iIndex)
+end
+
+function DetermChunk()
+		createSOBGroup("DTM4_Flag")
+		for i=1,10 do
+			createSOBGroup("DTM4_ControlGroup"..i)
+		end
+		addSquadron("DTM4_Flag", "rpg_inhibitor", {0,10000000,0,}, -1, {0,0,0,}, 0, 1)
+		addToSOBGroup("DTM4_Flag", "DTM4_Flag")
+		createSOBGroup("DTM4_TempGroup")
+		createSOBGroup("DTM4_Transfer")
+		createSOBGroup("DTM4_ABOverrideTemp")
+		createSOBGroup("DTM4_ABOverrideRepair")
+		createSOBGroup("DTM4_ABOverrideMove")
+		createSOBGroup("DTM4_ABOverrideFire")
+		createSOBGroup("DTM4_ABOverrideCloak")
+		createSOBGroup("DTM4_ABOverrideHPJump")
+		createSOBGroup("DTM4_ABOverrideOpenDS")
+		createSOBGroup("DTM4_Refuel")
+		createSOBGroup("DTM4_RefuelTemp")
+    if (MissionData~=nil) then
+ 			createSOBGroup("Player_Start")
+			--Ëæ»ú»õÏä
+			createSOBGroup("Sob_RandomCrate_1")
+			createSOBGroup("Sob_PlayerCrate_1")
+			createSOBGroup("Sob_PlayerShipRemove")
+	   	if (g_Intercept==0) then
+				dofilepath("data:leveldata/campaign/tutorial/RPG/MapLua/"..MissionData..".lua")
+				dofilepath("data:leveldata/campaign/tutorial/RPG/MapScript/"..MissionData..".lua")
+				local sPosition = g_MissionData[MissionData].MapCanGoTo[g_CameFrom].Position
+				local iPosition,cPosition = DTM4_GetStartPos(sPosition)
+				addSphere("StartPoint", iPosition, 1000)
+				addCamera("Cam_RPGStart", iPosition, cPosition) 
+    		local iShip = 1
+    		DTM4_ShipDataCreate()
+				while (shiplist[iShip]~=nil) do
+				    if (FleetData[shiplist[iShip].name][1]~=nil) then
+							for i,j in FleetData[shiplist[iShip].name] do
+								local l_ShipData = DTM4_GetShipData(iShip, FleetData[shiplist[iShip].name][i].Type)
+								local iHP=0
+						    createSOBGroup(shiplist[iShip].name..i)
+								if(l_ShipData.needdocked~=nil)then
+									if(j.DockedWith=="")then
+						    		addSquadron(shiplist[iShip].name..i, shiplist[iShip].name.."_"..j.Type, {2*sPosition[1],2*sPosition[2],2*sPosition[3]}, 0, {0,0,0}, 0, 0)
+						    		addToSOBGroup(shiplist[iShip].name..i, "DTM4_Transfer")
+						    	else
+						    		addSquadron(shiplist[iShip].name..i, shiplist[iShip].name.."_"..j.Type, {2*sPosition[1],2*sPosition[2],2*sPosition[3]}, 0, {0,0,0}, 0, 0)
+									end
+								else
+						    	addSquadron(shiplist[iShip].name..i, shiplist[iShip].name.."_"..j.Type, {2*sPosition[1],2*sPosition[2],2*sPosition[3]}, 0, {0,0,0}, 0, 0)
+						    	addToSOBGroup(shiplist[iShip].name..i, "Player_Start")
+								end
+						    addToSOBGroup(shiplist[iShip].name..i, shiplist[iShip].name..i)
+							end
+						end
+					  iShip = iShip + 1
+				end
+				iShip = 1
+				while (ShipManage[iShip]~=nil) do
+					if (MissionData==ShipManage[iShip].Level) then
+						addSquadron("Sob_ShipManage_"..iShip, ShipManage[iShip].fName, ShipManage[iShip].Position, ShipManage[iShip].OwnedBy, {0,0,0}, 0, 0)
+						createSOBGroup("Sob_ShipManage_"..iShip)
+						addToSOBGroup("Sob_ShipManage_"..iShip, "Sob_ShipManage_"..iShip)
+					end
+					iShip=iShip+1
+				end
+			else
+				dofilepath("data:leveldata/campaign/tutorial/RPG/MapLua/"..g_Intercept..".lua")
+				addSphere("StartPoint", g_InterceptData[g_Intercept].Position, 1000)
+    		local iShip = 1
+				while (shiplist[iShip]~=nil) do
+			    if (FleetData[shiplist[iShip].name][1]~=nil) then
+						for i,j in FleetData[shiplist[iShip].name] do
+					    addSquadron(shiplist[iShip].name..i, shiplist[iShip].name.."_"..j.Type, {2*g_InterceptData[g_Intercept].Position[1],2*g_InterceptData[g_Intercept].Position[2],2*g_InterceptData[g_Intercept].Position[3]}, 0, {0,0,0}, 0, 0)
+					    createSOBGroup(shiplist[iShip].name..i)
+					    addToSOBGroup(shiplist[iShip].name..i, shiplist[iShip].name..i)
+					    if (shiplist[iShip].needdocked==nil) then
+					    	addToSOBGroup(shiplist[iShip].name..i, "Player_Start")
+					    end
+						end
+					end
+				  iShip = iShip + 1
+				end
+			end
+    else
+			dofilepath("data:leveldata/campaign/tutorial/RPG/MapLua/start.lua")
+    end
+    DetermChunk1()
+end
+
+function NonDetermChunk()	
+	if (MissionData~=nil) then
+		if (g_Intercept==0) then
+			dofilepath("data:leveldata/campaign/tutorial/RPG/MapLua/"..MissionData..".lua")
+		else
+			dofilepath("data:leveldata/campaign/tutorial/RPG/MapLua/"..g_Intercept..".lua")
+		end
+	else
+		dofilepath("data:leveldata/campaign/tutorial/RPG/MapLua/start.lua")
+	end
+	NonDetermChunk1()
+end

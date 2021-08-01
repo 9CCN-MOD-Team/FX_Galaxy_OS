@@ -1,0 +1,21 @@
+-- LuaDC version 0.9.20
+-- 2006/10/20 ¤U¤È 09:06:28
+-- LuaDC by Age2uN
+-- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
+--
+fps = 35
+startFrame = 0
+loopCount = 40
+layout = 
+    { 8, 1, }
+textureLayout = 
+    { 
+        { "data:/ART/FX/alos_ionburstcannon/alos_ion_burst_squirt_outrim.tga", 0, 0, }, 
+        { "data:/ART/FX/alos_ionburstcannon/alos_ion_burst_squirt_outrim.tga", 1, 0, }, 
+        { "data:/ART/FX/alos_ionburstcannon/alos_ion_burst_squirt_outrim.tga", 2, 0, }, 
+        { "data:/ART/FX/alos_ionburstcannon/alos_ion_burst_squirt_outrim.tga", 3, 0, }, 
+        { "data:/ART/FX/alos_ionburstcannon/alos_ion_burst_squirt_outrim.tga", 4, 0, }, 
+        { "data:/ART/FX/alos_ionburstcannon/alos_ion_burst_squirt_outrim.tga", 5, 0, }, 
+        { "data:/ART/FX/alos_ionburstcannon/alos_ion_burst_squirt_outrim.tga", 6, 0, }, 
+        { "data:/ART/FX/alos_ionburstcannon/alos_ion_burst_squirt_outrim.tga", 7, 0, },
+    }

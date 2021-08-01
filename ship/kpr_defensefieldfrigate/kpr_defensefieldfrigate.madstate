@@ -1,0 +1,27 @@
+
+
+KPR_DEFENSEFIELDFRIGATE_Launched_OnSet = function(ship)
+    startTime = 0
+    if(isAnimRunning(ship, "Close") ~= 0) then
+        startTime = getAnimLength(ship, "Close") - getTime(ship, "Close")
+        stopAnim(ship, "Close")
+        endEffect(ship, "Close")
+    end
+    startAnim(ship, "On")
+    startEffect(ship, "On")
+    setTime(ship,"On",startTime)
+    setPauseTime(ship, "On", 1000)
+end
+
+KPR_DEFENSEFIELDFRIGATE_Docked_OnSet = function(ship)
+    startTime = 0
+    if(isAnimRunning(ship, "On") ~= 0) then
+        startTime = getAnimLength(ship, "On") - getTime(ship, "On")
+        stopAnim(ship, "On")
+        endEffect(ship, "On")
+    end
+    startAnim(ship, "Close")
+    startEffect(ship, "Close")
+    setTime(ship,"Close",startTime)
+    setPauseTime(ship, "Close", 1000)
+end

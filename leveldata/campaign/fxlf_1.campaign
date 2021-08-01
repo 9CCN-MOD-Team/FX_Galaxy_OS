@@ -1,0 +1,29 @@
+
+-- initialization
+
+-- localized display name for the UI
+displayName = "$5501"
+
+contentType = 2
+contentName = "FXLF_1"
+contentOrdered = 0
+contentChooseText = "$90013" -- CHOOSE TUTORIAL//
+contentThumbName = "$90013"
+contentThumbDesc = "$90014"
+contentSort = 0.5	-- Default is 1.0, so 0.5 will appear _before_ others.
+contentRules = "FXsingleplayer"	-- A DEFAULT that actually reads from SinglePlayerOptions.lua
+Mission = {}   -- create a mission structure
+Mission[1] = 
+{
+		postload = function()	
+		end,
+		directory = "FXLF_1",
+		level = "FXLF_1.level",
+		postlevel = 
+		function()
+			postLevelComplete()
+		end,
+		displayName = "$90013",
+		description = "$90014",
+		forcesubtitles = 1,
+}

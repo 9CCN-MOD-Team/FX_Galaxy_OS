@@ -1,0 +1,10 @@
+-- LuaDC version 0.9.19
+-- 2011-1-1 22:59:32
+-- LuaDC by Age2uN
+-- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
+--
+fps = 15
+startFrame = 0
+loopCount = 1
+texture = 
+    { "data:/ART/FX/DestroyerI/DestroyerI_00000.tga", "data:/ART/FX/DestroyerI/DestroyerI_00001.tga", "data:/ART/FX/DestroyerI/DestroyerI_00002.tga", "data:/ART/FX/DestroyerI/DestroyerI_00003.tga", "data:/ART/FX/DestroyerI/DestroyerI_00004.tga", "data:/ART/FX/DestroyerI/DestroyerI_00005.tga", "data:/ART/FX/DestroyerI/DestroyerI_00006.tga", "data:/ART/FX/DestroyerI/DestroyerI_00006.tga", "data:/ART/FX/DestroyerI/DestroyerI_00006.tga", "data:/ART/FX/DestroyerI/DestroyerI_00006.tga", "data:/ART/FX/DestroyerI/DestroyerI_00006.tga", "data:/ART/FX/DestroyerI/DestroyerI_00006.tga", "data:/ART/FX/DestroyerI/DestroyerI_00006.tga", "data:/ART/FX/DestroyerI/DestroyerI_00006.tga", "data:/ART/FX/DestroyerI/DestroyerI_00006.tga", "data:/ART/FX/DestroyerI/DestroyerI_00006.tga", "data:/ART/FX/DestroyerI/DestroyerI_00006.tga", "data:/ART/FX/DestroyerI/DestroyerI_00006.tga", "data:/ART/FX/DestroyerI/DestroyerI_00006.tga", "data:/ART/FX/DestroyerI/DestroyerI_00006.tga", "data:/ART/FX/DestroyerI/DestroyerI_00006.tga", "data:/ART/FX/DestroyerI/DestroyerI_00006.tga", "data:/ART/FX/DestroyerI/DestroyerI_00006.tga", "data:/ART/FX/DestroyerI/DestroyerI_00006.tga", "data:/ART/FX/DestroyerI/DestroyerI_00006.tga", "data:/ART/FX/DestroyerI/DestroyerI_00006.tga", "data:/ART/FX/DestroyerI/DestroyerI_00006.tga", "data:/ART/FX/DestroyerI/DestroyerI_00006.tga", "data:/ART/FX/DestroyerI/DestroyerI_00006.tga", "data:/ART/FX/DestroyerI/DestroyerI_00006.tga", "data:/ART/FX/DestroyerI/DestroyerI_00006.tga", "data:/ART/FX/DestroyerI/DestroyerI_00006.tga", "data:/ART/FX/DestroyerI/DestroyerI_00006.tga", "data:/ART/FX/DestroyerI/DestroyerI_00006.tga", "data:/ART/FX/DestroyerI/DestroyerI_00006.tga", "data:/ART/FX/DestroyerI/DestroyerI_00006.tga", "data:/ART/FX/DestroyerI/DestroyerI_00006.tga", }

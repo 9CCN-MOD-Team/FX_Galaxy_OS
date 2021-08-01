@@ -1,0 +1,50 @@
+NewSubSystemType = StartSubSystemConfig()
+NewSubSystemType.displayedName = "$1595"
+NewSubSystemType.sobDescription = "$1596"
+NewSubSystemType.tacticalIcon = "hexagon"
+NewSubSystemType.tacticalIconMinSize = 0.0035
+NewSubSystemType.tacticalIconMinFadeSize = 0.0045
+NewSubSystemType.tacticalIconMaxFadeSize = 0.008
+NewSubSystemType.groupMergeSize = 0.001
+NewSubSystemType.hasIcon=0
+NewSubSystemType.mouseOverMinFadeSize = 0.045
+NewSubSystemType.mouseOverMaxFadeSize = 0.1
+NewSubSystemType.maxhealth = 50000
+NewSubSystemType.regentime = 50
+NewSubSystemType.nlips = 0
+NewSubSystemType.nlipsRange = 0
+NewSubSystemType.nlipsFar = 0
+NewSubSystemType.nlipsFarRange = 0
+NewSubSystemType.meshRenderLimit = 0.004
+NewSubSystemType.minimumZoomFactor = 0.6800000000000001
+NewSubSystemType.selectionLimit = 0
+NewSubSystemType.preciseATILimit = 0
+NewSubSystemType.selectionPriority = 37.5
+NewSubSystemType.type = "Weapon"
+NewSubSystemType.typeString = "HeavyTurret"
+NewSubSystemType.collateralDamage = 100
+NewSubSystemType.inactiveTimeAfterDamage = 80
+NewSubSystemType.activateHealthPercentage = 0.1
+NewSubSystemType.costToBuild = 0
+NewSubSystemType.timeToBuild = 30
+NewSubSystemType.isResearch = 0
+NewSubSystemType.visible = 1
+LoadHODFile(NewSubSystemType,1)
+NewSubSystemType.BuildFamily = "SubSystem_Hgn"
+NewSubSystemType.AttackFamily = "UnAttackable"
+NewSubSystemType.DockFamily = "CantDock"
+NewSubSystemType.DisplayFamily = "Capital"
+NewSubSystemType.ArmourFamily = "SubSystemArmour"
+AddSubSystemMultiplier(NewSubSystemType,"MAXSPEED","ThisShipOnly","Linear",0.4,0.4,0)
+--AddSubSystemMultiplier(NewSubSystemType,"SPEED","ThisShipOnly","Linear",1,1,0)
+
+StartSubSystemWeaponConfig(NewSubSystemType,"hgn_LBCpulsarside","Weapon_HullDefense1","Weapon_HullDefense1")
+StartSubSystemWeaponConfig(NewSubSystemType,"hgn_LBCpulsarside","Weapon_HullDefense2","Weapon_HullDefense2")
+StartSubSystemWeaponConfig(NewSubSystemType,"hgn_LBCpulsarside","Weapon_HullDefense3","Weapon_HullDefense3")
+StartSubSystemWeaponConfig(NewSubSystemType,"hgn_LBCpulsarside","Weapon_HullDefense4","Weapon_HullDefense4")
+StartSubSystemWeaponConfig(NewSubSystemType,"hgn_lbckineticburstcannonheavy1","Weapon_HeavyTurret1","Weapon_Turret1")
+StartSubSystemWeaponConfig(NewSubSystemType,"hgn_lbckineticburstcannonheavy1","Weapon_HeavyTurret2","Weapon_Turret2")
+StartSubSystemWeaponConfig(NewSubSystemType,"hgn_lbckineticburstcannonHeavy2","Weapon_HeavyTurret3","Weapon_Turret3")
+--StartSubSystemWeaponConfig(NewSubSystemType,"hgn_lbckineticburstcannonHeavy2","Weapon_HeavyTurret4","Weapon_Turret4")
+StartSubSystemWeaponConfig(NewSubSystemType,"hgn_lbckineticburstcannonHeavy2","Weapon_HeavyTurret5","Weapon_Turret5")
+--StartSubSystemWeaponConfig(NewSubSystemType,"hgn_lbckineticburstcannonHeavy2","Weapon_HeavyTurret6","Weapon_Turret6")

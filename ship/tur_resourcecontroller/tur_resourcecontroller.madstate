@@ -1,0 +1,11 @@
+TUR_RESOURCECONTROLLER_DockPathOpen_OnSet = function(ship)
+		startEffect(ship, "open")
+end
+
+TUR_RESOURCECONTROLLER_Closed_OnSet = function(ship)
+		startEffect(ship, "E_Shock")
+end
+
+TUR_RESOURCECONTROLLER_Open_OnSet = function(ship)
+		endEffect(ship, "E_Shock")
+end

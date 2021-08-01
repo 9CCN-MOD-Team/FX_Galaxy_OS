@@ -1,0 +1,18 @@
+StartWeaponConfig(NewWeaponType,"AnimatedTurret","Bullet","kpr_turretcannon","Normal",3000,2200,0,0,0,0,1,1,1,2,0,0,1,0,80,80,0.1,"Normal",1,0,0)
+AddWeaponResult(NewWeaponType,"Hit","SpawnWeaponFire","Target",0,0,"Kpr_BurstCannonBurst")
+AddWeaponResult(NewWeaponType,"Miss","SpawnWeaponFire","Target",0,0,"Kpr_BurstCannonBurst")
+AddWeaponResult(NewWeaponType,"Hit","SpawnWeaponFire","Target",0,0,"Kpr_BurstCannonBurstFX")
+AddWeaponResult(NewWeaponType,"Miss","SpawnWeaponFire","Target",0,0,"Kpr_BurstCannonBurstFX")
+setPenetration(NewWeaponType,5,1,{
+  PlanetKillerArmour = 0,
+})
+setMissileKiller(NewWeaponType,1);setAccuracy(NewWeaponType,1,{
+  Fighter = 0.005,
+},{
+  Corvette = 0.15,
+},{
+  munition = 0.05,
+})
+setAngles(NewWeaponType,0,-180,180,-20,25)
+setMiscValues(NewWeaponType,4.7,0)
+addAnimTurretSound(NewWeaponType,"Data:Sound/SFX/ETG/SPECIAL/SPECIAL_ABILITIES_TURRET_ON")
