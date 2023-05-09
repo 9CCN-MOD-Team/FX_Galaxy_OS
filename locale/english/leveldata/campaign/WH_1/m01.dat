@@ -1,136 +1,134 @@
 filerange 40600 40750
 rangestart 40600 40750
 
-40600	卡洛斯外围 - 未知区域
-40601	终结之战后，卡洛斯坟场重新激起了人们的兴趣
-40602	在希格拉达成停战协议后，卡洛斯地区得以开放，这里到处是渴望在这个大发现时代分一杯羹的冒险者...
-40603	图拉尼人的舰队大修和殖民行动，使得他们对资源和可回收残骸的需求日益增长，他们因此更加看重这里
-40605	目前为止，卡洛斯的中心地区几乎已被充分发掘。但是在一些更加遥远而不起眼的地方，仍埋藏着无数秘密...
-40606	短程跳跃成功，坐标验证无误，我们已抵达目标地点
-40607	传感器的初步扫描发现附近的垃圾堆中存在一些微弱的信号
-40608	在工程组准备期间，优先探索我们周围的环境，看看外面有没有什么值得回收的东西
-40609	我们的护航舰队已经确认正在途中，很快就会抵达
-40610	这里是侦察1号。我们扫描了附近的所有目标地点。与我们之前的报告没有任何不同，船长。待命中...
-40611	收到，侦察1号。在我们深入探索之前，能拿多少算多少吧。接工程组，你们准备好就可以出发了
-40612	侦察1号，这里是方铲2号。你确定这些鬼地方没有啥自动炮台之类的吧？
-40613	是的，方铲2号。除了废铁和灰尘这儿什么都没有
-40614	了解。终于不是一上来就被些个自动防御炮夹道欢迎了，还真有点不适应
-40615	你们经常来这边？
-40616	已经八次了...在这儿待着还是浑身不自在。垃圾捡多了就会觉得还是在乡港修船好
-40618	你算是说对了
-40619	护航舰队，这里是舰桥。我们在前方接收到了微弱的信号，时断时续，你们可否帮忙确认？
-40620	是的，大铁头看到了。看来还是有人不请自来啊。我们这就发动引擎过去看看
-40621	还是留心点，我们还不确定具体情况。只要派出一队侦察机就可以让我们得到想要的情报，不必打草惊蛇
-40622	工程部确认C至F生产线已恢复。我们还拥有了100%的引擎出力
-40623	已经可以建造垃圾箱，建议部署一个以增加采集效率
-40625	这里是“深鹰”侦察小队。我们截获了一些微弱的通讯信号。看上去是一支卡德仕舰队，就在前面不远的地方
-40626	看上去她们应该还没发现我们，有新情况我们会第一时间汇报
-40627	我们没有能力直接发起攻击。远离交战区域，目前优先考虑我们的资源作业
-40628	工程组回声2队报告。我们恢复了所有小型系统的电力，舰载研究设施即将启动，马上就可以运作
-40630	可以开始新的研究和建造项目了
-40631	“深鹰”报告。呃...看来我们已经完全吸引了她们的注意! 大量护卫舰级别信号正在接近
-40632	明白，“深鹰”。全员注意，热身活动就到这里，立刻进入战斗状态。航向2-1-2，全力防守 
-40633	探测到超空间信号...是一支希格拉舰队! 这下麻烦大了
-40634	卡德仕人正在脱离并向希格拉舰队发动攻击
-40635	不要追击。我们应该趁此机会重整舰队并检查损伤情况。各部门汇...
-40636	作战部队，我是大铁头，全速前进。在这些炮管闲的生锈之前，给我多捞点战利品回来！
-40637	护航舰队，你们偏离了指定集合区...你们在干什么？你们这是火中取栗！
-40638	战利品就是要趁热去抢。你的履历的确令人印象深刻，老头，但你年纪大了，居然连这些卡德仕疯娘们和自大的希格拉人都害怕
-40639	这帮头脑发热的蠢蛋！  不管怎样，我们不能放任他们就这样冲过去...没得选了，动力部门，全速前进！
-40640	他们再蠢也知道战况不利就要撤退，我们就负责殿后，确保这帮家伙的退路吧
-40641	注意远离交战区，我们在那里坚持不了多久
-40643	似乎哪里不对...已经走了这么远了我们还是没有探测到任何自动装置的活动迹象。但前方那片区域里的确有不少崭新的残骸...呼叫护航舰队，告诉他们远离那-
-40644	警报！警报！不明目标正在迅速靠近，数量很多！
-40645	他们不见了...我们的护航舰队从雷达上完全消失了，所有频率上的呼叫均无应答。发生了什么？
-40646	呃，正在...呃...检查数据...在失去联系之前我们的仪器探测到一股能量流，读数类似某种电磁脉冲，我们不太确定...
-40647	质量信号表明我们的巡洋舰和其他船只仍然完好无损，并在缓慢移动，但...它们没有任何交火迹象，也不再发出任何生命特征！
-40648	明白了...该死！
-40649	不论如何，我们目前只能假定已经失去了护航舰队。我们应该马上撤退并重建舰队
-40650	希望这些区域的尘埃云能为我们提供掩护来对抗那些...鬼知道是什么的东西。与此同时研究部门立刻分析侦察小队传回的数据
-40651	回声2号报告所有剩余系统成功启动。主港区已可用，研究部门获得全部电力供应
-40652	我们准备加入港区和引擎的工程组了，完毕
-40653	我们的攻击运载舰现在已满负荷运转。已经可以生产护卫舰，但是没有护航舰队的支持我们无法维持一个庞大的数量
-40654	这里是侦察1号。几分钟前卡德仕的云母撤离之后我们就开始收到一个异常信号。
-40655	无法获悉这是个什么东西，但这家伙貌似不小。我们初步将之定位到卡德仕舰队之前所处位置附近。
-40656	这可能就是卡德仕和希格拉人寻找的东西，说不定这就是我们的救命稻草了。
-40657	建议寻找该异常点。侦察机的隐形能力可以确保其安全地缩小探索范围并确定其位置
-40658	侦察小队报告。我们发现它了，正在上传视频讯息...这是一艘废弃的大型战舰
-40659	这家伙看上去烂透了，没有检测到任何能量读数或信号，完全一个废铁疙瘩
-40660	收到。正在分析数据，原地待命
-40661	这艘废弃舰船的外表与夺走护航舰队的那些飞船颇为相似，建议派遣一支登陆队伍进一步登船检查
-40662	工程技术人员说，他们可以改装该船的系统，发出一个自动的定位脉冲信号，并启动其自毁序列。他们相信，如果那些被抢夺的船只真的是AI控制，就一定可以引诱他们靠近然后引发殉爆
-40663	那艘船的装甲抵挡不了我们的巡洋舰的火力。因此我们也要发射一个定位信号将护航舰队吸引到我们这边。我们将尝试夺回或至少摧毁我们被夺去的舰船
-40664	工程技术人员说，他们可以改装一艘破城登陆舰以将技术人员送到未知飞船上。建议立刻派遣一艘，但务必注意安全
-40665	我们进来了，引擎彻底不能用了，不过舰载数据库里还有些内容或许有用，正在回传
-40666	从废弃舰船上我们得知这里曾经专门用来存放各种失效的舰船，其中大多数在漫长的岁月里逐渐解体了
-40667	看来我们被发现了！所有被抢夺的船只正快速向我们接近。全员注意，进入战斗状态...这将是一场硬仗
-40668	全舰队分散并自由开火。所有能量供给武器系统，攻击范围内的任何目标
-40669	刚刚那是什么情况？
-40670	正在检查...巡洋舰的船体被某种持续的电磁场所包围。看来我们无法将其夺回，只能予以摧毁了
-40671	开始探索
-40672	附近的尘埃云返回有微弱的信号。部署侦察机对这些地区进行初步查探
-40673	工程部门报告，运载舰初步具备了生产能力，引擎动力恢复。他们已经派出工程组继续恢复运载舰的的剩余系统
-40674	大铁头闪亮登场。久等了，女士们。我们负责执行护航任务
-40675	调查该区域
-40676	调查该区域
-40677	调查该区域
-40678	调查该区域
-40679	侦察1号报告。目前为止居然没发现什么好东西...最多也就是些残破的漫步者，破到根本没有回收利用价值。我们会继续调查并沿途释放探测器，完毕
-40680	开始采集作业
-40681	开始从附近回收碎片和原材料，但不要离我们的护航舰队太远。
-40682	大铁头，这里是“深鹰”。探测到微弱的尾焰，看来有人要去拜访你们了，代我向她们问好
-40683	截获通讯信息...她们似乎在寻找什么东西。怪不得到现在还没有全力攻打我们
-40684	我们的小型宇航器也可能是卡德仕空军的攻击目标。建议主要部署护航艇级单位，以提高我们的防空能力
-40685	保护舰队
-40686	我们正遭受卡德仕舰船的攻击。与护航舰队合力保护我们的主力舰船
-40687	..怎么回事..？！什么鬼东西这是？！给我--
-40688	重组舰队
-40689	失去护航舰队令我们目前不堪一击，建议向附近的资源点撤退并重新组建舰队
-40691	获取异常
-40692	卡德仕舰队千方百计寻找这个异常点。追踪它的信号源并获取它
-40693	未知舰船
-40694	派遣破城登陆舰与该船接舷
-40695	未知飞船马上就要爆炸了，我们时间紧迫
-40696	读数显示未知飞船还有2分钟就会自爆。我们必须马上摧毁巡洋舰并离开这里！
-40697	爆炸迫在眉睫，我们没时间了！所有人回到船上，回到船--
-40698	距该区域爆炸还有: %1MINUTES%:%2SECONDS% 
-40699	感应器探测到多个移动信号指向废弃舰船，图拉尼舰船信号指向我们这里，抓住这个机会摆平我们的那艘巡洋舰
-40700	..看来起作用了！图拉尼船只信号正在向我们接近。全员进入战斗状态，准备行动
-40701	摧毁重炮巡洋舰
-40702	必须在未知飞船自爆前抢占或击沉护航舰队的那艘重炮巡洋舰。\n\n<b>提示:</b> 使用搭载重武器的船只对抗其坚固的装甲
-40703	注意寻找那艘重炮巡洋舰。它虽然行动迟缓，但是火力强劲。轰炸机和空雷应该会为我们摧毁它带来些许优势
-40704	摧毁重炮巡洋舰
-40705	必须在未知飞船自爆前抢占或击沉护航舰队的那艘重炮巡洋舰。\n\n<b>提示:</b> 使用搭载重武器的船只对抗其坚固的装甲
-40706	巡洋舰已经被摧毁，超空间抑制场消失了。那艘废弃飞船即将爆炸并带走其余的船只。准备紧急进入超空间并返回基地
-40707	任务失败
-40708	任务完成
-40709	图拉尼打捞舰队
-40710	护航舰队
-40711	卡德仕拾荒者
-40712	希格拉舰队
-40713	残骸
-40714	重炮巡洋舰
-40715	%d 发现卡德仕舰队
-40716	%d 希格拉舰队出现
-40717	%d 护航舰队失去联系
-40718	不说了，等我们把他们打个稀巴烂再呼叫你将他们碎片运回基地
-40719	我们应该脱离了他们的探测范围。但他们迟早还会找到我们
-40720	我们周围的大片空间都从未被探索过，我们必须保持十二分的警惕
-40721	分析完成。我们的舰船被一些自动化的AI防御机制接管了。对视频记录的研究表明那些小型船只是某种先祖漫步者的变体
-40722	研究部门认为这些变体漫步者在我们的船体上施加了某种干扰电场，当舰载系统宕机后，一个AI程序随之植入控制系统并接管了舰船
-40723	警告！我们与护航舰队完全失去了联系...多个不明信号接近，我们必须离开这里！
-40724	建议立即向该处撤退！
-40725	追赶护航舰队
-40726	运载舰引擎正满功率运行以追赶护航舰队，保护好它
-40727	巡洋舰已经被摧毁，我们可以离开这里了，事情本来不会这样的不过...全体注意，准备紧急进入超空间并返回基地
-40728	将攻击运载舰移动到这里
-40729	我们已经进一步定位了那个异常的信号源。感应器信息已经更新
-40730	分析数据
-40731	研究侦察机传回的数据，以确认护航舰队究竟发生了什么
-40732	我们还获悉一个先祖活跃区就在这附近，我们之前遭遇的那些被叫做“登陆者”，它们把守着入口，见船就抢，也许我们可以...
-40733	呃，头儿...有点不妙...那艘废弃舰船的某个系统自己激活了...它启动了一个自毁程序！我们正在尝试阻止
-40734	我们不能就这样把那艘巡洋舰留在这里。我们必须尝试在那艘船自爆前夺回它，或者至少摧毁它来重新启动我们的超空间引擎
-40735	“大铁头”
+40600	Karos Outskirts - Unexplored Area
+40601	The Karos Graveyard stirs with a renewed interest after the Vaygr war.
+40602	After the Hiigarans' ceasefire pact many have ventured into Karos, now an open zone, hoping to obtain their shares of the Age of Discovery.
+40603	Pressure especially is on the Turanic Raiders, whose ongoing fleet overhaul and colonization efforts have created a mounting need for usable wreckage.
+40605	Most of Karos' more central areas have been completely excavated by now. But secrets still lurk in some of the lesser, more remote sectors...
+40606	Range jump successful. Verifying coordinates..check, we have arrived at the target site.
+40607	While faint, initial sensor sweeps are returning echoes from the nearby dustbanks.
+40608	Begin exploring our surroundings, see if there is anything worthwhile out there as we prep the working crews.
+40609	Our Escort Team has confirmed they are en-route, and will be arriving shortly.
+40610	This is Reckon1. All target sites in the vicinity have been processed. Negative, captain. Nothing new from our previous report. Standing by.
+40611	Copy that reckon. We'll just grab whatever we can from here before we venture deeper. Working teams, standby to deploy.
+40612	Reckon, this is Scrapper J2. Can you confirm there are no active defenses at these sites?
+40613	Got you J2, affirmative. Nothing here but scraps and dust.
+40614	Copy that. First time we don't have some automata trying to blast us to scrap from the get-go..not sure what to think about this.
+40615	Come here often?
+40616	Eighth time now..never really get used to it though. Jobs like these make you appreciate the hauling work back at the base a lot more.
+40618	You got that right.
+40619	Escort Team, this is the Bridge. We're picking up a contact in the area ahead. Its reading is weak, but has been consistent. Can you confirm?
+40620	This is Heavy Boss. Aye, we see 'er. Might have some uninvited guests here after all. We'll rev up the engines and go take a look.
+40621	Be advised, this is uncharted terrority. One of your Scouts can get us more intel without putting whatever may be out there on alert.
+40622	Engineering has confirmed construction bays C through F are now online. We also have full power to engines.
+40623	Dustbins are available for construction. Recommend deploying them to increase harvesting efficiency.
+40625	This is reckon "Deep Eagle" to base. Picking up some faint com chatter...it appears to be a Kadeshi fleet. 
+40626	Doesn't seem like they've noticed us yet. Will keep you advised.
+40627	We are currently in no position for a direct assault. Stay clear and focus on our resourcing operations for the time being.
+40628	This is Engineering Team Echo 2. We have power to all smaller systems, on-board researching is coming online and will be set to go momentarily.
+40630	New research and build options now available. 
+40631	Deep Eagle to base. Err...looks like we've got have their attention now! Additional contacts inbound, there's a number of mass signatures matching Frigate-sized vessels among them. 
+40632	Understood Deep Eagle. Attention crew, the warmup is over. All hands to combat stations, set bearing to 2-1-2. Hold the perimeter. 
+40633	We've got a hyperspace signature..it's a Hiigaran fleet! This could become a real headache.
+40634	The Kadeshi are breaking off to engage the Hiigaran fleet. 
+40635	Do not pursue. We'll take this chance to rebuild our forces and check on the damage reports. All stations-.
+40636	This is Heavy Boss. Combat teams: ahead full. Let's go nab ourselves some bonus pay before these cannons here start rusting from boredom.
+40637	Escort Team, you're straying from the perimeter .. what are you doing? Do you know what you're about to get the fleet into?
+40638	Going in hot and seizing the spoils while they're still fresh is what defines a TRUE Raider. Your track record is impressive old man, but your age has left you cowering over a bunch of nutcases and some uppity Hiigarans. 
+40639	We can't leave those hotheads to themselves out there. Who knows what they will bring upon us. We don't have a choice. Engines: ahead full. 
+40640	Bring up the rear and keep an escape route open at all times. If we can't convince them, the firepower being thrown around out there will.
+40641	Be advised, stay clear of the combat zone. We won't last long in there.
+40643	Something isn't right..we still haven't encountered any defenses this far in. And yet some of that debris ahead dates pretty recent..contact our escorts at once, tell them to get-
+40644	Alert, Alert! Contacts inbound, multiple! 
+40645	..they are gone. Our Escort Fleet has vanished from radars, all frequencies lost. Reckon, did you get anything?
+40646	Uhh..checking the uh- data now...our instruments registered an energy spike right before we lost contact. Readings suggest it may be some sort of EMP..we're not sure.
+40647	Mass signatures indicate that our cruiser is still active and moving about slowly, but..it is no longer engaging the other ships, or..or returning any life signs..
+40649	Whatever happened out there, we have to assume that our Escort Fleet is lost. We should fall back and rebuild our fleet immediately.
+40650	We are counting on the dustclouds near these resources to keep us hidden from .. whatever is out there. Have researching study reckon's data as soon as possible. 
+40651	Team Echo 2 reports all remaining systems are go. The main hangar bays are online and researching has full power.
+40653	Our Attack Carrier is now operating at full capacity. Frigates are available for construction, but with our escorts lost we can only man a few.
+40654	Reckon to Base. We've been picking up an anomalous signal in the region ever since the Kadeshi Needleship vanished from sensors. 
+40655	There no way to tell what it is, but it is big. We have narrowed its location down to the vicinity of the former Kadesh site. Suggest.
+40656	That anomaly may be what these Kadeshi and Hiigarans were after. If nothing else, it may be a way to ensure we live to tell the tale. 
+40657	Recommend investigating the anomaly. Out Scouts' cloak generators will allow them to safely narrow down and pinpoint its location.
+40658	This is Reckon1, we've got it captain! Putting it on visuals now ... it's a large derelict ship. 
+40659	It looks to be in pretty rough shape. Detecting no power signatures or signals, it's completely offline.
+40660	Copy that, reckon. Good work, standby.
+40661	The derelict vessel's appearance bears similarities to those units that vanished our escorts. Recommend sending in a team for further investigation.
+40662	
+40663	
+40664	Engineering reports they can retrofit a Siege Drill Frigate to carry our technicians on board the alien ship. Dispatch one immediately, but take all precautions.
+40665	We're in. The ship's engines are beyond repairs, but we have found something in its databanks that might prove useful. Sending the data now.
+40666	From the derelict vessels, we have learned that this sector of space was once used as a storage site for defunct alien ships. Most of them have broken up further since.
+40667	We have been discovered! Sensors indicate all reanimated vessels are closing on our position. All hands to battle stations! ..This will be a tough call.
+40668
+40669	What the hell was that?
+40670	Our cruiser's hull is enveloped in some sort of sustained electromagnetic field. Capturing it will be impossible, we must destroy it!
+40671	Begin Exploration
+40672	The nearby dustclouds are returning faint echoes. Deploy Scouts and setup preliminary surveillance of the area. 
+40673	Engineering reports we have partial power to construction and engines. They are now dispatching to bring the carrier's remaining systems back online. Standby for updates.
+40674	This is Heavy Boss entering your perimeter. Kept you waiting ladies. Standing down for escort duty.
+40675	Investigate the area
+40676	Investigate the area
+40677	Investigate the area
+40678	Investigate the area
+40679	This is Reckon1, status update. There's surprisingly little out here so far..best we got are a few derelict Movers, and not in a condition where they'll help provide for the base upkeep. We'll keep moving and drop beacons as we go, standby. 
+40680	Setup Resourcing
+40681	Begin retrieval of debris and raw materials from the immediate vicinity. Recommend staying near our Escort Fleet once they have arrived.
+40682	H.B., this is Deep Eagle. Picking up faint energy spikes out here. You may have some visitors coming over, prep the welcoming committee.
+40683	Picking up com chatter..they appear to be looking for something. Explains why we don't have their full attention yet.
+40684	Our smaller crafts may as well be target drones for those Kadeshi ships. Recommend fielding additional Brigand and Thief Corvettes to increase our anti-strikecraft capabilities.
+40685	Defend the Fleet
+40686	We are under attack by Kadeshi units. Work together with our escort fleet to protect our Capital Ships.
+40687	..the hell is happening..?! What are these things?! Get--(*KRRRRRRR*)
+40688	Rebuild the Fleet
+40689	The loss of our Escort Fleet has left us crippled. Fall back to one of the nearby resource deposits and rebuild the fleet. 
+40691	Secure the Anomaly
+40692	The Kadeshi and Hiigaran fleets went to great lengths to find this anomaly. Track down the source of its signal and secure it.
+40693	Unknown Vessel
+40694	Send a Siege Drill Frigate to board the vessel
+40695	The derelict vessel is about to go critical. We're running out of time.
+40696	Readings suggest the derelict vessel will self-destruct in 2 minutes. We must neutralize our Cruiser and get out of here!
+40697	Detonation is imminent, we're out of time! All hands return to ship, return to-
+40698	ETA until area explosion: %1MINUTES%:%2SECONDS% 
+40699	Sensors indicate multiple enemy signatures changing course to the derelict vessel. Raider signatures maintaining course and approaching us. Use this opportunity to neutralize our Cruiser. 
+40700	
+40701	Neutralize the HeavyGun Cruiser
+40702	Capture or Destroy our former Escort Cruiser. It must be neutralized to escape the alien vessel's self-destruct.\n\n<b>Tip:</b> Units using [Heavy Weapons] will be able to take advantage of its solid armor.
+40703	Keep your eyes open for our Cruiser. It is slow, but powerful. Bombers and Minefields may give us the edge needed to topple it.
+40704	Neutralize the HeavyGun Cruiser
+40705	Capture or Destroy our former Escort Cruiser. It must be neutralized to escape the alien vessel's self-destruct.\n\n<b>Tip:</b> Units using [Heavy Weapons] will be able to take advantage of its solid armor.
+40706	The cruiser has been destroyed, the hyperspace dampening field is disappearing. The derelict vessel is in deep red and will take down the remaining ships with it. All hands, standby for immediate hyperspace .. let's go home.
+40707	MISSION FAILED
+40708	MISSION COMPLETE
+40709	Turanic Salvage Fleet
+40710	Escort Fleet
+40711	Kadeshi Scavengers
+40712	Hiigaran Fleet
+40713	Derelict
+40714	Heavy Gun Cruiser
+40715	%d Kadeshi Fleet Found
+40716	%d Hiigaran Arrival
+40717	%d Escort Fleet Lost
+40718	Terminating comms now, we'll check back when we need you to haul their debris back to base. 
+40719	We appear to be out of their sensor range for now. But it is only a matter of time until they find us.
+40720	This is an uncharted sector of space. We must remain vigilant.
+40721	Analysis complete. Our ships were taken over by some sort of automated AI defense mechanism. After studying the visuals, researching believes the derelict ships to be some type of Progenitor Mover variant.
+40722	It is their opinion that these Movers run a static charge through the hull of a ship upon contact. With the vessel incapitated, an AI is then uploaded into its control systems to reconfigure them and take control.
+40723	Warning! We have lost all contact with our escorts .. more enemy signatures inbound, we must get out of here!
+40724	Recommend immediate retreat to this position. Now go!
+40725	Pursue the Escort Fleet
+40726	Your Carrier has diverted all power to engines in an attempt to keep up with the rogue escort fleet. Protect it.
+40727	The cruiser has been destroyed .. we can now hyperspace out. Maybe things could have been different, but .. all hands, standby for emergency hyperspace exit. Let's go home.
+40728	Move your Attack Carrier here
+40729	We have been able to further narrow down the source of the anomalous signal. Sensor grid updated.
+40730	Analyze the Data
+40731	[Research] the data from our Scouts to deduct what happened to our escort fleet.
+40732	We have also learned of a large Progenitor site that lays beyond this area. The Capture Movers we encountered safeguard the passage, bolstering their ranks with anything that comes too close. Maybe we can-
+40733	Uhh..Captain? We have a problem here..some sort of system on the derelict vessel suddenly flared to life..it has activated a self-destruct sequence! We are vacating it as we speak.
+40734	We can't just leave our Cruiser out there. We must try to capture it before the derelict vessel explodes, or destroy it to re-enable our Hyperspace Drive if we can't. 
+40735	"HeavyBoss"
 
 rangeend
 

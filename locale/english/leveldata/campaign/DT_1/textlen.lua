@@ -1,1 +1,1 @@
-textlength = { 20, 14, 26, }
+textlength = { 35, 23, 21, }

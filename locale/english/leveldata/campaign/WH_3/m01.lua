@@ -2,6 +2,6 @@ dofilepath("player:playercfg.lua")
 dofilepath("locale:utf16.lua")
 
 function TaiC_41060()
-	local iText="我们的命运紧密地交织在了一起，我不知道你接下来会前往何处，但我有预感这个银河会愈发注意到你的存在，那么再会吧，"..conv_chatname(PlayerSetup.chatname, "军士").."..."
+	local iText="Our fates are intertwined. I don't know where you will go next, but I have a feeling this galaxy will be seeing more of you. Until we meet again, "..conv_chatname(PlayerSetup.chatname, "soilder").."..."
 	return iText
 end

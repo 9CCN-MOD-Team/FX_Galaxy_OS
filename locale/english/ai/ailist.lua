@@ -48,7 +48,7 @@ AI_IMGs =
   Kad_Standard=
   {
     {
-      file = "locale:ai/kad_standard1.dds",
+      file = "locale:ai/kad_easy1.dds",
       uv = {0, 0, 660, 704},
       aspect = 660/704,
       size = 1,
@@ -57,13 +57,7 @@ AI_IMGs =
   Kad_Hard=
   {
     {
-      file = "locale:ai/kad_hard1.dds",
-      uv = {0, 0, 660, 704},
-      aspect = 660/704,
-      size = 1,
-    },
-    {
-      file = "locale:ai/kad_hard2.dds",
+      file = "locale:ai/kad_easy1.dds",
       uv = {0, 0, 660, 704},
       aspect = 660/704,
       size = 1,
@@ -72,19 +66,7 @@ AI_IMGs =
   Kad_Expert=
   {
     {
-      file = "locale:ai/kad_expert1.dds",
-      uv = {0, 0, 660, 704},
-      aspect = 660/704,
-      size = 1,
-    },
-    {
-      file = "locale:ai/kad_expert2.dds",
-      uv = {0, 0, 660, 704},
-      aspect = 660/704,
-      size = 1,
-    },
-    {
-      file = "locale:ai/kad_expert3.dds",
+      file = "locale:ai/kad_easy1.dds",
       uv = {0, 0, 660, 704},
       aspect = 660/704,
       size = 1,

@@ -1,141 +1,141 @@
 filerange 40751 40900
 rangestart 40751 40900
 
-40751	扫描无异常
-40752	节点已确认, 这儿什么都没有
-40753	没有收到任何信号
-40754	里轧避难所
-40755	我们已经抵达避难所，开始寻找并帮助我们的姊妹舰 她已经陪同主力舰队在该星系巡逻得够久了
-40756	我们的姊妹舰会得知我们抵达的讯号 在等待她联系我们期间，先进行初步的采矿作业
-40757	已经超过预计时间的一倍，目前仍无任何联系，原地待命
-40758	主要频率上没有信号，但我们的监听器确认附近地区并无紧急信号的迹象 我们的姊妹舰可能又在守株待兔了，以前也总是这样
-40759	姊妹舰的航行计划已输入传感器 派遣单位前往已知的联络点，获取友军讯号
-40760	有了，正对信号进行分析
-40761	似乎是一个信标，读数比较微弱，但是频率匹配，是我们的
-40762	我们已经将其位置锁定在这个地区
-40763	派遣单位调查该信号源
+40751	Scans negative.
+40752	Point verified, nothing in range.
+40753	No contacts acquired.
+40754	Sanctuary of Lir'Zha
+40755	We have arrived at the Sanctuary to look for and assist our sistership. It is currently on patrol in this system together with our main fleet, but is overdue. 
+40756	Our sistership will know we have entered their area. Setup preliminary resource operations while we wait for them to contact us. 
+40757	T-2 intervals have passed, no contact acquired. Standby.
+40758	The main frequencies remain silent, but our Listeners confirm no emergency signals linger in the vicinity. Our sistership is probably laying in wait near a target again. The current situation bears consistent with the past.
+40759	Our sistership's navigation plan is being projected. Send units ahead to these known contact points, and establish a positive ID.
+40760	Picking up something, commencing analysis.
+40761	It appears to be a beacon signal. Reading is a little faint, but the frequencies match. It's ours.
+40762	We have narrowed its location down to this position. 
+40763	Dispatch a team to verify the source of the signal.
 40764	 ... ...
 40765	 ... ...
-40766	已成功获取友军ID，舰船数据匹配，他们来自于我们的姊妹舰队 不过我们的通讯受到了明显的干扰，无法建立联系
-40767	我们尝试直接取得联络，将云母移动到联络范围内，然后重新尝试建立联系
+40766	Positive ID established. Ship markings are a match, they are part of our sistership's fleet. However, we are unable to verify the contents of their transmission due to apparent interference.
+40767	We will attempt a direct link. Advance the mothership to within their transmission range, and retry communication.
 40768	 ... ...
 40769	 ... ... 
-40770	似乎仍然无法建立联系...但我们从公共频率收到了一条讯息:
-40771	该讯息表明他们受到了一场电子风暴的袭击，联络设备全部因此瘫痪 他们受命留在此地维修，其余舰队则继续前进
-40772	他们还说包括姊妹舰在内的主力舰队目前状态良好 他们似乎盯上了一块肥肉，正等待我们会合
-40773	坐标信息已经输入传感器 看来他们就在这片残骸区等待 命令舰队前往此处，准备与主力舰队会合
-40774	又收到一条讯息 友军确认修理工作正有序展开 他们预计很快就能加入我们
-40775	星云女神啊，求您宽恕...
-40776	已确认我们抵达了目标地点，但是呃...我们没有看到姊妹舰及其舰队的任何迹象...但是监听器显示他们就在我们附近...!
-40777	...马上开始扫描，看看是否...
-40778	检测到敌对信号...有人在打我们的主意! 距离很近，为数不少!
-40779	...已确认! 保护星云母舰!
-40780	敌人已消灭 局势得到了控制 原地待命
-40781	...我们的姊妹舰已经被摧毁了 在刚刚交战期间对周围残骸的扫描显示出86.2%的匹配度 同时还辨别出主力舰队的特征
-40782	悲痛和疑惑是免不了的，但目前还不是时候 我们必须对舰上的生者负责...今时更甚往日
-40783	我们应该回去联络之前发现的那些掉队的友军 且不说他们目前面临的安全问题，主要是他们的日志和数据库可能有助于我们排查出这里究竟发生了什么 派遣单位通知他们，并护送他们与母舰会合
-40784	我们的监听器仍能在该地区收到来自我们姊妹舰的强烈信号 一些有用的东西可能会在爆炸中幸存
-40785	建议在我们确定维修方案期间对这片残骸进行探索，部分较大的残骸上可能有些能帮到我们的东西，我们的打捞小组已经上路了
-40786	这里是搜索队，我们在残骸中找到了原属于姊妹舰的主要模块舱段之一 虽然有一定的损毁，但基本完好 工程部门应该能够将之移植到母舰上
-40787	新的建造项目可用
-40788	这里是搜索队，我们找到了一个外壳完好的燃料座舱，从ID来看应该属于我们的主力舰队 它似乎发生了故障因此飘荡在这里 这些残骸可能保护了它没有被探测到
-40789	这艘船已经无法修复了，但我们在内部发现了不少细胞 正在重新接驳港区的电力并转移人员激活其远程跟随机能
-40790	友军舰队，这里是D3小队，主力舰队遭遇了埋伏，所有人员全部遇害 我们是来保护你们的
+40770	It appears we are still unable to establish communications..but we have received a text message on our open channel. 
+40771	The message reads that they were hit by an electromagnetic storm. Their communications equipment has been down since. As per instructions, they stayed behind to fix it while the rest of the fleet went on ahead.
+40772	The message also confirms that the main fleet including our sistership is in good health. It appears they indeed found a large prey, and are waiting for us to join them at the attached coordinates.
+40773	Navigation has established our destination. It appears they are laying in wait near this debris field. Advance the fleet, and standby for rendezvous with our main force.
+40774	Additional message received. Our allies confirm repairs are proceeding smoothly. They hope to join up with us momentarily.
+40775	Lady Nagual, pray take mercy..
+40776	Coordinates confirm that we have indeed arrived at the site, but uh . . we are not seeing or reading any signs of our sistership and her fleet .. and yet our Listeners claim that we uh- are in fact right next to them..!
+40777	..Begin scans immediately, see if-
+40778	Picking up energy signatures...we have hostiles! Close range, multiple!
+40779	..Confirmed! Defend the mothership!
+40780	Hostiles cleansed. Situation under control. Standby.
+40781	..Our sistership has been destroyed. Scans taken during the battle have returned a 86.2% match with the debris around us. Segments of our main fleet were also identified.
+40782	Grief and questions remain. But right now we must endure. We owe it to those we still carry with us...now more than ever.
+40783	We should check back with the detached unit we encountered previously. Their safety aside, their logs and databanks might help us deduct what happened here. Dispatch a unit to inform them, and guide them to the mothership.
+40784	Our Listeners report that particularly strong traces of our sisterstip still linger in this area. Some useful components might have survived the explosion.
+40785	Recommend exploring and harvesting the debris around us. Larger segments of wreckage may hold things that can aid in our survival. Our Salvage crews are en-route to assist.
+40786	Search Team. We have identified one of our sistership's main modules amidst the debris. It is damaged, but mostly intact. Engineering may be able to graft it onto the mothership.
+40787	New build option available.
+40788	Search team. We have located an intact Fuel Pod. It has been ID'ed as part of our main fleet. Seems to have malfunctioned and drifted off. The wreckage probably helped it avoid detection.
+40789	The vessel itself is beyond repairs, but we have uncovered several Swarmers. We are rerouting power to the hangar and transferring crews to activate their remote follow function.
+40790	This is squadron D3 to allied fleet. The main force was ambushed, all hands KIA. We have come to secure you.
 40791	... ...
-40792	重复，我们来此确保你们的安全，请加入编队并立即随我们同母舰会合
+40792	Repeat, we have come to ensure your safety. Please assume formation and follow us to the mothership immediately.
 40793	... ...
-40794	? 呵, 真搞不懂你们为啥还没死...
-40795	..?! 遭到友军攻击! 请立即停火，立...
-40796	警告，我们同前方单位失去了联系 他们最后的报告显示友军单位已经叛变...!
-40797	舰桥，这里是突击一队 我们得知了目前的情况，特来汇报
-40798	既然事已至此，我们认为唯一的办法就是从那些船员嘴里把答案撬出来 他们可能挟持了人质 请求允许对叛变船只进行登陆作战
-40799	我们保证不会攻击任何未参与叛变的同胞 请下达命令吧
-40800	...批准 我们会准备一艘武装渗透座舱搭载你的队员进入那里 愿花园殉道者能够原谅我们的所作所为
-40801	就快抵达舰桥了
-40802	即将取得控制权
-40803	警报，与突击队的联系中断了 叛变的舰船从感应器当中消失了...! 突击小队，收到请回答
+40794	?.huh, how did you survive that, I wonder?
+40795	..?! Taking friendly fire! Stay clear fleet, stay-
+40796	Warning, we have lost contact with our forward units. Last they reported was that our allied unit has gone rogue..!
+40797	Bridge, this is Assault Team 1. We have been listening in and are aware of the situation.
+40798	Now that things have come to this we believe the only way is to get some answers from the crew themselves. They may be being held hostage. Requesting permission to dispatch and board the rogue vessel.
+40799	We assure the safety of any non-combatants. Please give us the order.
+40800	..Granted. We will prepare an Armed Infiltrate Pod to carry your team there. May the Martyrs of the Garden guide and absolve us all.
+40801	The bridge is coming within view.
+40802	We've almost got it.
+40803	Alert, communications with our Assault Team were cut off. The rogue unit has vanished from sensors..! Assault Team, if you read this: come in.
 40804	...
-40805	重复，突击小队，收到吗? 请回答
+40805	Repeat. Assault Team, come in. Do you read?
 40806	...
-40807	...这里是突击一队代理指挥官，叛变的舰船在我们能够超驰控制之前就启动了自毁程序，我方伤亡超85%，已无法维持基本运作...本舰将回港拆除
-40808	感谢星云女神眷顾，你们还活着 那里发生了什么?
-40809	...他们根本不是我们的人, 萨尤克该死 我们的队员报告说飞船内部到处都是死去同胞的尸体 而活着的船员则个个全副武装
-40810	...看起来他们在我们抵达之前就登上了这艘船并引诱我们进入埋伏 我们无法得知他们所属的种族
-40811	不过，数据链激活期间我们得到了飞船系统的部分信息 似乎我们的姊妹舰察觉到了图拉尼舰队活动在本区域的持续增长 但是最终，他们遭到伏击，没来得及传输更多有关他们发现的信息
-40812	...我们现在已经无依无靠 将舰队在母舰周围重组，在商讨下一步行动之前，做好应对一切可能的准备
-40813	即便是步姊妹舰的后尘，我们也必须获取更多情报 谁也不敢肯定没有人在我们来的地方伏击我们，或是正在向我们进犯
-40814	目视确认...
-40815	这帮萨尤克的恶仆! 先是暴露了我们的存在，现在又来侵犯我们的圣地，真是欲求不满，他们绝不能得到轻饶
-40816	摧毁入侵的舰队和他们的旗舰，一个都不能逃走
-40817	母舰将进行一次短战术跳跃，将敌人纳入打击范围 我们可以利用这一点困住他们并补给前线部队
-40819	所有目标均已摧毁
-40820	教友们大仇得报，但我们不能忽视现实 避难所已经被突破 很快萨尤克的恶仆还会回来，敌人只会越来越多...这里已经不再安全了
-40821	失去了主力舰队和一艘星云母舰，我们也没有任何留在此地的意义了 我们只能忍痛再次踏上逃亡之旅
-40822	我们只能忍痛，守护那些与我们一起活过了今天的兄弟姐妹们 只有他们的后代能够继承我们的遗产...和意志
-40823	开始采集
-40824	周边区域资源丰富 在等待姊妹舰与我们联系的期间，先进行初步的采矿作业
-40825	联络节点
-40826	定位舰队
-40827	向姊妹舰已知的联络节点派遣单位，找到通向其可能位置的道路
-40828	继续深入避难所
-40829	仍然一无所获，调整机载感应设备...
-40830	继续深入避难所
-40831	建立通讯
-40832	查探友军信号源并与之建立通讯联系
-40833	友军信号
-40834	移动母舰至此
-40835	会合点
-40836	会合点 - 移动母舰至此
-40837	保护友军单位
-40838	保护友军单位
-40839	必须让那些掉队的友军知道姊妹舰的遭遇并将他们立即置于我们的保护之下 派遣单位与之建立联系，并护送他们同母舰会合
-40840	捕获叛变舰船
-40841	派遣一艘武装渗透座舱捕获叛变的支援座舱
-40842	叛变的支援座舱被摧毁了...我们永远无法得知这里究竟发生了什么
-40843	感应器检测到叛变的舰队正在呼叫增援，如果再不抓紧我们将失去优势
-40844	调查残骸
-40845	周围的大部分残骸在传回微弱的信号 派遣单位检查有无在爆炸中幸存的东西
-40846	残存的模块已经成功安装 新的建造和研究项目可用 船员正在尝试整合更先进的系统，但这需要不少时间
-40847	这里是搜索队 我们定位到一些货箱，看来是资源集装箱 其中有些完好无损
-40848	这片区域的残骸损坏程度非常高 它们都在表明我们的姊妹舰遭受了猛烈的炮火而解体，一切都发生得非常突然
-40849	我们的搜索队报告说所有残骸均已检查完毕
-40850	逃离避难所
-40851	摧毁入侵的舰队及其旗舰，然后在敌人增援抵达前离开避难所
-40855	掉队的单位
-40856	叛变舰队
-40857	记忆提取失败
-40858	任务完成
-40859	伏击舰队
-40860	避难所入侵者
-40861	避难所入侵者
-40862	库申人穿过星云的旅途将卡德仕人推到了灭族的边缘
-40863	只有少数零散的部队因为距离过远来不及加入主力舰队而躲过了劫难
-40864	幸存者们聚在一起躲进了星云的深处，长时间未再出现
-40865	最终，他们所有的资源，人力，科技都凝聚到了最后两艘母舰的建造工程之中
-40866	悲痛渐渐消弭，取而代之的怒火则会席卷银河若干世代
-40867	他们完全没有停火或是回应呼叫，究竟是发了什么疯?
-40868	今天我们将要离开族人最后的一片家园，但是我们的离开，会伴随着狩猎，伴随着生存，伴随着复仇 终有一天，我们的后代会回到这里，终有一天，我们会恢复旧日的荣光
-40869	捕获叛变的舰船
-40870	废弃的舰船
-40871	我们的一个采集器妄图亵渎神圣的花园 所有工作组注意，任何资源采集作业必须在实体表面上进行
-40872	这些资源点几近枯竭 奇怪，执行巡逻任务的舰船一般会携带主力舰队库存资源的绝大部分，这样就不会依赖任何现场采集
-40873	我们遭受重创，马上组装机械蜘蛛进行维修作业
-40874	废弃的燃料座舱正发射其留存的细胞
-40878	我们已经记下其位置以便回收，正传回相关数据
-40879	一艘敌军航母正在撤退，必须在它逃脱前将之击沉
-40880	我们已经决定立即离开避难所，最快的离开方式是通过这片区域 星云女神的吐息在这里尤为密集 入侵避难所的不洁者最有可能藏在此处
-40881	新的建造项目可用 向前方区域内发射深层探测器 所有人高度戒备
-40882	发射探测器
-40883	更多的敌人可能已经渗入避难所 向前方星云中部署探测器进一步证实
-40884	我们的监听器显示敌人的资源采集单位减缓了行动 敌人一定是在准备撤离 我们的时间不多了
-40885	发射一枚探测器
-40886	敌军航母
-40887	发现友军
-40888	打败埋伏
-40889	捕获座舱
-40890	明白 保持当前位置
-40891	逃离点
-40892	离开点
+40807	..this is the acting commander for Team 1, copy. The rogue vessel self-destructed before I could cross over. Casualties over 85%, unable to maintain operations..making our final run.
+40808	Good to have you still with us. What happened?
+40809	...They were not ours, Jihr-sa. Our teams reported that numerous dead bodies were strewn across the vessel's interior. Its present crew was heavily armed and clad in protective gear.
+40810	...It seems they were boarded prior to our arrival. The vessel's new crew then lured us into that ambush. We were unable to ascertain their affiliation.
+40811	However, while the datalink was active we got a brief glimpse into the vessel's systems. It appears our sistership had intel on increasing Turanic Raider activity in this region. But in the end, something ambushed them before they saw chance to transmit or even register their findings.
+40812	We are alone. Group our units around the mothership, and be prepared for anything while we discuss the next course of action.
+40813	We must find out more before we share in our sistership's fate. There is no guarantee that an ambush fleet isn抰 already waiting for us back where we came from, or is encroaching on us as we speak.
+40814	Visuals confirmed..
+40815	They first came and took away our identity. And now yet again the Sajiikrit encroach, defiling what remains in their endless greed. This cannot come to pass.
+40816	Destroy the invading fleets and their commanding vessels. None are to escape.
+40817	The mothership will perform a short-range jumps to bring us within striking distance. We can utilize this function to trap them and reinforce the offensive.
+40819	All targets have been destroyed.
+40820	We have avenged our brethren, but we cannot ignore the facts. The Sanctuary has been breached. Soon the Sajiikrit will return, and in their wake more will follow. ...This place is no longer safe.
+40821	With our sistership and main fleet lost we no longer have the means to stop them. As painful as it is, we have to flee. ..Again.
+40822	As painful as it is, we must protect those who survived today and we carry with us. Their descendants are all who can carry on our legacy..and our will.
+40823	Setup Resourcing
+40824	The area around us is rich in resources. Setup preliminary resource operations while we wait for our sistership to contact us.
+40825	Contact Point
+40826	Locate the Fleet
+40827	Dispatch units to our sistership's known contact points and find a lead on its whereabouts.
+40828	Head deeper into the Sanctuary
+40829	Still nothing, adjusting onboard sensors..
+40830	Head deeper into the Sanctuary
+40831	Establish Communications
+40832	Verify the source of the allied signal and establish communications with it.
+40833	Allied Contact
+40834	Advance the mothership
+40835	Rally Point
+40836	Rally Point - Advance the Mothership
+40837	Secure the Allied Unit
+40838	Secure the Allied Unit
+40839	Our detached unit must be informed about what happened to our sistership and placed under our protection at once. Dispatch units to establish contact, and escort them to the mothership.
+40840	Capture the Rogue Vessel
+40841	Dispatch an Armed Infiltrate Pod to board and capture the rogue Support Pod. 
+40842	The rogue Support Pod was destroyed...we no longer have a means to find out what happened here.
+40843	Sensors indicate that the rogue unit is calling for reinforcements. If we delay too long our advantage will be forfeit.
+40844	Investigate the Wrecksite
+40845	Larger segments of the debris around us are returning faint echoes. Dispatch units to check for any commodities that may have survived the blast.
+40846	Derelict module installed. New build and research options available. Crews are now working on merging the more advanced systems with our own, but have reported this will take time. 
+40847	Search team. We have located several crates that appear be RU containers. Some of them are still intact. 
+40848	This debris is completely scorched. The concentrations of these fields suggest that our sistership broke apart under tremendous firepower. It must have been instantaneous.
+40849	Our search teams report all wrecksites have processed.
+40850	Escape the Sanctuary
+40851	Destroy the invading fleets and their commanding vessels, and escape the Sanctuary before reinforcements arrive.
+40855	Detached Unit
+40856	Rogue Fleet
+40857	MEMORY SYNCHRONIZATION FAILED
+40858	MISSION COMPLETE
+40859	Ambush Fleet
+40860	Sanctuary Invader
+40861	Sanctuary Invader
+40862	The Kushan passage through the Nebula has left the Kadeshi on the verge of extinction.
+40863	No more than a few scattered contacts escaped the ordeal, having been too far away to join the main fleet in time.
+40864	The survivors banded together and disappeared into the Nebula, hiding from the eyes of time.
+40865	In time, the last of their resources, manpower and technologies were funnelled into the creation of two final motherships.
+40866	Grief eventually faded. But what came to replace it would stir the galaxy for generations to come.
+40867	They are not powering down or responding to hails. What has come over them?
+40868	Today we leave the last segment of our ancient home. But as we run, we will hunt. We will survive. We will avenge. And one day, our descendants will return..and, ultimately, reclaim.
+40869	Capture the Rogue Unit
+40870	Derelict Vessel
+40871	One of our Salvagers attempted to commit sacrilege. All working crews are reminded that only physical surfaces are eligible for resource extraction.
+40872	These resource pockets have been depleted. Strange, the ship on patrol duty always carries the majority of our fleet's resources with it. That way it doesn't have to rely on any on-site procurement.
+40873	We are taking heavy fire. Scramble Araneids to assist with repairs.
+40874	Friendly Swarmers launching from the derelict Fuel Pod.
+40878	We have marked down their location for retrieval. Sending the data now.
+40879	An enemy carrier is retreating. It must be destroyed before it can escape.
+40880	It was decided that an immediate escape from the Sanctuary is in order. The fastest way out is through this area. The goddesses' veins run thick here; any heathen units that might have invaded the Sanctuary are likely to be within.
+40881	Our crews have reported new build options are available. Dispatch Scanner Probes to the areas ahead. All hands are to remain at maximum alert.
+40882	Dispatch Probes
+40883	Secure our escape route, deploy Probes to the Nebulae ahead to see if any other enemy units have infiltrated the Sanctuary. 
+40884	Our Listeners have reported that the enemy Resource Collectors are slowing down. The enemy fleets must be preparing to withdraw. We are running out of time.
+40885	Dispatch a Probe
+40886	Enemy Carrier
+40887	Found Ally
+40888	Defeat Ambush
+40889	Support Pod Captured
+40890	Understood. Hold position.
+40891	Exit Point
+40892	Enemy Rally Point
 
 rangeend
 

@@ -34,7 +34,7 @@
  g_sellposition[33]="收购地点：\n帝国之门贸易站\n帝国殖民地贸易站\n希格拉首星贸易站\n" 
  g_sellposition[34]="收购地点：\n帝国殖民地太空食品厂\n帝国殖民地淡水处理厂\n" 
  g_sellposition[35]="收购地点：\n希格拉首星贸易站\n尼福尔海姆贸易站\n" 
- g_sellposition[36]="收购地点：\n帝国之门贸易站(50万RU）\n希格拉首星贸易站\n" 
+ g_sellposition[36]="收购地点：\n帝国之门贸易站(50万RU)\n希格拉首星贸易站\n" 
  g_sellposition[37]="收购地点：\n帝国之门贸易站\n希格拉首星贸易站\n未知贸易站\n" 
  g_sellposition[38]="收购地点：\n帝国之门贸易站\n希格拉首星贸易站\n" 
  g_sellposition[39]="收购地点：\n帝国之门贸易站\n希格拉首星贸易站\n巴塔利安战舰坟场贸易站\n" 

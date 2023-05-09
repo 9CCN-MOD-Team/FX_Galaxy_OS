@@ -1,41 +1,41 @@
 filerange 41001 41100
 rangestart 41001 41100
 
-41001	AI外交系统教学
-41002	欢迎来到AI外交系统教学
-41003	该教学将介绍如何使用银河歧路星的AI外交系统。如果你在教学过程中有疑惑，可以查看[目标]面板。点击[确定]继续。#+
-41004	AI外交系统用来在人机对战中与电脑玩家进行互动。为了了解该系统的作用，我们先了解下当前的局势:
-41005	敌人在该处部署了一支庞大的舰队。我们有很多RU，但我们的航母还没有准备好生产任何单位
-41006	幸运的是，我们有一个AI盟友。他们能够生产舰船，但是缺少RU。如果我们能将RU提供给他们一部分，他们就能够帮助我们了
-41007	首先，按[K]或左侧外交按钮打开外交界面
-41008	向盟友移交RU
-41009	使用外交系统向泰坦盟友赠送8000RU\n1. 打开外交界面 (快捷键: [K])\n2. 选择泰坦玩家, 点击[打开通讯器]\n3. 使用[我想和你互通有无]功能赠与其8000RU, 获取80点好感度.
-41010	这就是外交界面，游戏会自动暂停，所以可以尽情浏览
-41011	左侧窗口列出了当前游戏的所有玩家。盟友的初始好感度为0，而敌人的好感度永远是-100
-41012	接下来，选择好感度为0的泰坦盟友，然后点击右侧界面的[打开通讯器]按钮
-41013	然后选择[我想和你互通有无]，选择[我想给你提供一些资源]
-41014	使用[我想给你提供一些资源]功能向盟友赠送8000RU，直到好感度达到80
-41015	干得好。你现在可以关闭外交界面了: 在左侧点击任意玩家，然后按[K]或点击[关闭通讯器]按钮
-41016	多谢你们的RU，我们已经了解了你们的处境并会派出一支舰队予以协助
-41017	看来我们给盟友留下了一个好印象，从好感度上可以看到这一点
-41018	好感度相当于一种货币。你可以通过多种途径获得及使用它。需要记住的一点是: 你获得越多的好感度，你就可以对盟友施加越多的影响
-41019	我们将利用当前的好感度向盟友寻求对敌方舰队的全面进攻。这一选项会在好感度达到80后解锁
-41020	再次按下[K]打开外交界面，选择泰坦盟友。这一次，选择[我想和你讨论一下战术策略]选项，然后请求其发动进攻
-41021	请求进攻
-41022	请求盟友派遣一支舰队发动攻击\n1. 打开外交界面 (快捷键: [K])\n2. 选择泰坦玩家, 点击[打开通讯器]\n3. 使用[我想和你讨论一下战术策略]功能请求一次进攻
-41023	做的很好。还记得如何关闭外交界面吧? 点击左侧的一个玩家，然后按[K]或点击[关闭通讯器]
-41024	敌方舰队被吸引了! 我们可以利用这一机会突袭敌人的母舰
-41025	摧毁敌方母舰
-41026	加入盟友的舰队彻底摧毁敌军，或利用敌人分身乏术之际直捣黄龙，摧毁母舰
-41027	感应器探测到敌人仍有一艘生产船只躲藏在某处，但他们的主力舰队被毁后，也许会选择投降，这可以为我们节省时间
-41028	再次打开外交界面，这一次，选择敌方卡德仕，以饶对方不死为条件要求他们投降
-41029	强迫敌人投降
-41030	使用外交系统要求敌方卡德仕玩家投降\n1. 打开外交界面 (快捷键: [K])\n2. 选择卡德仕玩家, 点击[打开通讯器]\n3. 承诺确保其性命，要求其投降
-41031	很好。我们的仁慈将会在这片星区广为流传
-41032	以上就是关于外交系统的教学了。该系统还有更多内容可供体验，比如用于获得好感度的AI任务。在你游玩和体验的过程中，会找到通往胜利的新途径，祝好运!
-41033	卡德仕舰队
-41034	我们的巡逻舰队回来了。派遣他们支援我们的盟友，或趁其不备直接向敌人母舰发起进攻
-41035	敌方母舰
+41001	Diplomacy System Tutorial
+41002	Welcome to the AI Diplomacy Tutorial.
+41003	This tutorial will teach you how to use the FXmod's Diplomacy System. If you are lost at any point during this tutorial, please see the [OBJECTIVES] window. Click [OK] to begin.#+
+41004	The AI Diplomacy System is used to interact with CPU players in Offline gameplay modes. To see how this can be useful, let's take a look at the following situation:
+41005	An enemy has deployed a powerful fleet before us. We have a good amount of RUs, but our Carrier is not ready for unit production.
+41006	Luckily, we have an allied player. They have the means to build ships, but are low on resources. If we give them some of our RUs, they may be able to help us out.
+41007	First, open the Diplomacy Window by pressing your [K] button, or clicking the Diplomacy button in the left sidebar on your screen.
+41008	Transfer RUs to ally
+41009	Use the Diplomacy System to transfer 8000 RUs to your Taiidan ally.\n1. Open Diplomacy System (hotkey: [K])\n2. Select Taiidan player, click [Open Communicator]\n3. Use the [I'd like to have an exchange with you] option to gift him 8000 RUs, and reach 80 reputation.
+41010	This is the Diplomacy Window. The game is automatically paused while it is open, so rest assured.
+41011	The left window shows all players currently in the game. Friendly or Allied players start with a Relationship level of "0"; enemy players are always set to "-100".
+41012	To continue, select the Taiidan player with 0 Reputation, and click [Open Communicator] in the right window.
+41013	Now navigate to the [I'd like to have an exchange with you] option, and choose [I'd like to give you some RUs].
+41014	Use the [I'd like to give you some RUs] option to transfer 8000 RUs to our ally (=80 Reputation).
+41015	Good job. You can now close the Diplomacy Window: click any player in the left window, and press [K]. Or click the [Close Communicator] button.
+41016	Thanks for the RUs, we have heard of your situation and will commission a fleet to assist you.
+41017	It seems we have left a favorable impression with our ally. This is shown via the Reputation we have with them.
+41018	Reputation works much like a currency. It can be earned and spent in various ways. Important to remember is: The more reputation you have with an allied player, the more influence you will have over them.
+41019	We will use our good standing with our ally to call for a strike on the enemy fleet. This option is unlocked by reaching 80 reputation.
+41020	Open up the Communicator again by pressing [K], and select our Taiidan ally. This time, choose the [I'd like to discuss tactics with you] option, and call for a strike.
+41021	Call a Strike
+41022	Request your ally to send in a fleet to attack.\n1. Open Diplomacy System (hotkey: [K])\n2. Select Taiidan player, click [Open Communicator].\n3. Choose the [I'd like to discuss tactics with you] option and call for a strike.
+41023	Great work. Do you still remember how to close the Diplomacy Window? Click any player in the left window, and press [K] or click [Close Communicator].
+41024	The enemy fleet is distracted! We can use this chance to strike at the enemy's Mothership. 
+41025	Destroy the Enemy Mothership
+41026	Join with the allied fleet and destroy the enemy ships, or use the distraction to head straight for their Mothership and take it out.
+41027	Sensors detect there still is an enemy production vessel left somewhere. But with their main fleet destroyed, they may be inclined to surrender. It would save us some time.
+41028	Open the Diplomacy System one last time ([K]). This time, select the enemy Kadeshi player, and offer them to surrender by assuring their safety.
+41029	Force Surrender
+41030	Use the Diplomacy System to offer the enemy Kadesh player a surrender.\n1. Open Diplomacy System (hotkey: [K])\n2. Select Kadeshi player, click [Open Communicator]\n3. Offer a surrender, and promise their safety.
+41031	Good job. Word of our mercy will surely spread throughout this quadrant of the galaxy.
+41032	This concludes the Diplomacy System tutorial. There are many more options, like player missions you can complete for Reputation. As you play and experiment, you will discover new pathways to victory. Good luck!
+41033	Kadeshi Fleet
+41034	Our patrol fleet has returned. Use it to reinforce our allies, or move straight for and destroy enemy's Mothership while its fleet is distracted.
+41035	Enemy Mothership
 
 rangeend
 
