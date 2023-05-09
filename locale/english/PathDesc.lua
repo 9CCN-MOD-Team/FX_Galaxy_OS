@@ -71,7 +71,7 @@ Path_Text.D23="玩家(泰坦 3000RU)VS 专家(希格拉 1000RU)"
 Path_Text.D24="玩家(先祖 1000RU)& 标准(希格拉 1000RU)VS 专家(泰坦 1000RU)& 专家(维格尔 1000RU)"
 Path_Text.D25="玩家(希格拉 10000RU)VS 困难(先祖 3000RU)& 专家(先祖 3000RU)"
 Path_Text.D26="玩家(卡德仕 10000RU)& 专家(卡德仕 10000RU)VS 简单(希格拉 3000RU)& 标准(希格拉 3000RU)& 困难(希格拉 3000RU)& 专家(希格拉 3000RU)"
-Path_Text.D27="玩家(泰坦 3000RU)& 简单(图拉尼 2000RU)VS 专家(卡德仕 2000RU)& 专家(维格尔 2000RU)VS 专家(先祖 2000RU)& 专家(希格拉 2000RU)"
+Path_Text.D27="玩家(泰坦 3000RU) & 专家 (图拉尼 2000RU) VS 标准 (卡德仕 2000RU) & 标准 (维格尔 2000RU) VS 标准 (先祖 2000RU) & 标准 (希格拉 2000RU)"
 Path_Text.D28="玩家(希格拉 5000RU)& 专家(希格拉 5000RU)VS 简单(卡德仕 1000RU)& 标准(卡德仕 1000RU)& 困难(卡德仕 1000RU)& 专家(卡德仕 1000RU)"
 Path_Text.D29="玩家(维格尔 1000RU)& 困难(先祖 10000RU)VS 简单(维格尔 0RU)& 标准(维格尔 0RU)& 困难(维格尔 0RU)& 专家(维格尔 0RU)"
 Path_Text.D30="玩家(图拉尼 10000RU)& 专家(图拉尼 10000RU)VS 困难(卡德仕 1500RU)& 困难(泰坦 1500RU)& 困难(希格拉 1500RU)& 困难(维格尔 1500RU)"
@@ -83,12 +83,26 @@ Path_Text.D35="玩家(本图西 5000RU))VS 标准(维格尔 1500RU)VS 标准(图拉尼 1500RU)V
 Path_Text.D36="玩家(库申 3000RU))& 困难(泰坦 1500RU)VS 困难(维格尔 1500RU)& 标准(图拉尼 2000RU)VS 困难(先祖 1500RU)& 标准(卡德仕 2000RU)"
 Path_Text.D37="在平行宇宙里重温两代游戏的关键时刻吧! 你能否改变命运呢?\n每次开始这一关卡你将随机进入四个情境之一!\n\n希格拉: 专家(库申 1000RU) VS 专家(泰坦 1000RU)\n或者\n坦尼斯: 专家(希格拉 0RU) VS 专家(维格尔 2000RU)"
 Path_Text.D38="Player (Hiigaran 0RU) VS Hard (Vaygr 1000RU)\nIn an alternate universe, Makaan leads the attack on Tanis himself. Can you change fate?\nA lower difficulty version of one of the four new bonus stages, available to everyone in this build to celebrate the new release!\n\nComplete the Shimmering Path to unlock all other variants and bonus stages."
+Path_Text.Tip="点击获取提示"
+Path_Text.S1T1="本关的提示? 干就完事了! 我们可以利用初始RU的优势轻易碾压敌人!"
+Path_Text.S2T1="我们拥有数量优势! 将关键单位向盟友靠拢对我们会很有帮助!"
+Path_Text.S2T2="如果我们能够给予帮助, 他们或许能够回应我们的请求! (按[K]开启外交系统)"
+Path_Text.S3T1="很多图拉尼单位都拥有隐形能力, 我们可以利用这里的尘云带作为掩护攻击敌方侧翼"
+Path_Text.S4T1="你知道我们可以要求敌人投降吗? 如果他们走投无路, 是有可能向我们投降的, 你可以随时通过外交系统([K])要求敌人投降"
+Path_Text.S5T1="我们的第一场2V2战斗, 你应该能够猜到敌人的位置吧? 如果我们能从任意一边取得突破，胜利就是我们的囊中之物了!"
+Path_Text.S6T1="在资源匮乏的地图上中央矿区是关键, 如果我们能够抢占中央矿区, 那里的RU可以让我们充分发挥泰坦的生产线优势!"
+Path_Text.S7T1="先祖是强大的盟友, 如果我们向他们提供一些RU, 帮助他们战斗, 他们可以轻松帮助我们赢得胜利!"
+Path_Text.S11T1="探测到大量残骸, 我们在稳固自身后应该尽快将资源采集作业转移到下方, 别让敌人抢先了"
+Path_Text.S12T1="\"大乱斗\", 我们的敌人会忙于自相残杀, 但我们仍然需要尽快均衡各方实力, 你永远不知道他们何时会将枪口对准我们!"
+Path_Text.S15T1="我们的盟友会吸引敌人的火力, 尤其是我们如果帮助并要求他们这样做的话! 与此同时我们可以趁机突袭敌人"
+Path_Text.S16T1="再强大的战舰没有生产船只也会走向失败! 我们应该找到并摧毁敌人的金字塔, 如果能在巴科拉之门将强大的战舰召唤出来之前就摧毁它就更好了, 死神攻击艇适合做这项工作!"
+Path_Text.S17T1="如果我们不必担心一边的侧翼就会轻松很多, 祝你好运, 记住: 你的盟友能够从另一个你无法抵达的方向获得胜利(外交系统[K])"
 
 FXP_AIData=
 {
 	Kad_Easy=
 	{
-		Name="蒂芙尼修士",--角色名
+		Name=Path_Text.A1,--"蒂芙尼修士",--角色名
 		Badge="DATA:badges/KAD.TGA",--舰徽
 		BaseColour={255/255, 255/255, 255/255},--基色
 		StripeColour={255/255, 255/255, 255/255},--条纹色
@@ -132,7 +146,7 @@ FXP_AIData=
 	},
 	Kad_Standard=
 	{
-		Name="塞琉姆神父",--角色名
+		Name=Path_Text.A2,--"塞琉姆神父",--角色名
 		Badge="DATA:badges/KAD.TGA",--舰徽
 		BaseColour={255/255, 198/255, 211/255},--基色
 		StripeColour={255/255, 255/255, 255/255},--条纹色
@@ -176,7 +190,7 @@ FXP_AIData=
 	},
 	Kad_Hard=
 	{
-		Name="近卫队长 索菲亚",--角色名
+		Name=Path_Text.A3,--"近卫队长 索菲亚",--角色名
 		Badge="DATA:badges/KAD.TGA",--舰徽
 		BaseColour={255/255, 128/255, 158/255},--基色
 		StripeColour={255/255, 255/255, 255/255},--条纹色
@@ -220,7 +234,7 @@ FXP_AIData=
 	},
 	Kad_Expert=
 	{
-		Name="白圣女 丽芙",--角色名
+		Name=Path_Text.A4,--"白圣女 丽芙",--角色名
 		Badge="DATA:badges/KAD.TGA",--舰徽
 		BaseColour={255/255, 58/255, 104/255},--基色
 		StripeColour={255/255, 255/255, 255/255},--条纹色

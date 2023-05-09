@@ -132,6 +132,8 @@ Events.WreckSite1 =
         { HW2_SubTitleEvent(actor_scout, "$40786", 12), HW2_Wait( 13 ), }, 
         { HW2_SubTitleEvent(actor_nebula, "$40787", 2), HW2_Wait( 1 ), }, 
         { { "Player_UnrestrictBuildOption(0, 'kad_m_capshipadvanced')", "" , }, },
+        { { "Player_UnrestrictBuildOption(0, 'kad_gunturret')", "" , }, },
+
 	}
 Events.WreckSite3 = 
 	{
@@ -931,7 +933,7 @@ end
 
 function KadC_MissionComplete2()
 	Rule_Remove("KadC_MissionComplete2")
-    Profile_SetSingleMissionComplete("mini", 2, 1)
+    Profile_SetSingleMissionComplete("mini", 4, 1)
     FE_ExitToMainMenu()
     UI_DialogAccept()
 end
@@ -1036,6 +1038,8 @@ function KadC_WatchNebula2()
 end
 
 function Rule_DisablePlayer()
+	dofilepath("player:PLAYERCFG.LUA")
+	Player_SetTeamColours(Universe_CurrentPlayer(),{PlayerSetup.teamcolour[1]/255,PlayerSetup.teamcolour[2]/255,PlayerSetup.teamcolour[3]/255,},{PlayerSetup.stripecolour[1]/255,PlayerSetup.stripecolour[2]/255,PlayerSetup.stripecolour[3]/255,})
 	SobGroup_Despawn("Player_KTB")
 	SobGroup_CreateIfNotExist("Player_Nebula")
 	Player_FillShipsByType("Player_Nebula", 0, "kad_mothership")
@@ -1051,6 +1055,7 @@ function Rule_DisablePlayer()
     Player_RestrictBuildOption(0, "kad_advancedassaultswarmer")
     Player_RestrictBuildOption(0, "kad_probe")
     Player_RestrictBuildOption(0, "kad_fuelpod")
+    Player_RestrictBuildOption(0, "kad_gunturret")
     Player_RestrictBuildOption(0, "kad_variationswarmer")
     Player_RestrictBuildOption(0, "kad_m_capshipadvanced")
     Player_RestrictBuildOption(0, "kad_multibeamfrigate")

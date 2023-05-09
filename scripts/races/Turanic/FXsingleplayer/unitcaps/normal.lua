@@ -1,0 +1,1 @@
+dofilepath("data:/scripts/races/Turanic/DeathmatchFX2/normal.lua")

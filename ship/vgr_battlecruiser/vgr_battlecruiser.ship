@@ -184,8 +184,8 @@ StartShipWeaponConfig(NewShipType,"Vgr_BCForwardWeapon","Weapon_BCUberPulse","We
 addShield(NewShipType,"EMP",10000,20)
 StartShipHardPointConfig(NewShipType,"Engine","Hardpoint_Engine","System","Innate","Damageable","Vgr_BattleCruiserEngine","","","","","","","","")
 StartShipHardPointConfig(NewShipType,"HeavyFusionMissileLauncher","Weapon_MissileBattery","Weapon","Innate","Damageable","Vgr_HeavyFusionMissileLauncherBC","","","","","","","","")
-StartShipHardPointConfig(NewShipType,"Weapon_MissileRight","HardpointGeneric1","Weapon","Innate","Ship","Vgr_HeavyFusionMissileLauncherTurret","","","","","","","","");
-StartShipHardPointConfig(NewShipType,"Weapon_MissileLeft","HardpointGeneric2","Weapon","Innate","Ship","Vgr_HeavyFusionMissileLauncherTurretLeft","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"Weapon_MissileRight","HardpointGeneric1","Weapon","Innate","Ship","Vgr_BC_MissileVolley","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"Weapon_MissileLeft","HardpointGeneric2","Weapon","Innate","Ship","Vgr_BC_MissileVolley","","","","","","","","");
 --StartShipHardPointConfig(NewShipType,"Generic 1","HardpointGeneric1","System","Generic","Destroyable","","Vgr_C_Module_Hyperspace","Vgr_C_Module_CloakGenerator","Vgr_C_Module_HyperspaceInhibitor","Vgr_C_Module_FireControl","","","","")
 --StartShipHardPointConfig(NewShipType,"Generic 2","HardpointGeneric2","System","Generic","Destroyable","","Vgr_C_Module_Hyperspace","Vgr_C_Module_CloakGenerator","Vgr_C_Module_HyperspaceInhibitor","Vgr_C_Module_FireControl","","","","")
 SpawnSalvageOnDeath(NewShipType,"Slv_Chunk_Lrg03",1, 0.40,0,0,0, 0,0,0,50,0,0,0,200,0,0,0,50,0,0,0,50);

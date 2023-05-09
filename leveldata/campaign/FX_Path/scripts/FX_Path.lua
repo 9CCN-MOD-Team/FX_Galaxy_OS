@@ -19,6 +19,7 @@ dofilepath("data:scripts/SCAR/SCAR_Util.lua")
 dofilepath("data:scripts/scar/restrict.lua")
 dofilepath("data:leveldata/multiplayer/lib/ui.lua")
 dofilepath("data:leveldata/campaign/FX_Path/scripts/main.lua")
+dofilepath("data:leveldata/campaign/FX_Path/scripts/PathTips.lua")
 
 dofilepath("data:scripts/SCAR/SCAR_Util.lua")
 
@@ -122,7 +123,7 @@ function OnInit()
 	FX_Achievements_Init("FX_Path")
 	FXP_AIInit()
 	FX_Common_Rule_OnInit()
-	
+	FX_PathTipOninit()
 	if (Override_Init~=nil) then
 		Override_Init()
 	end
@@ -132,7 +133,7 @@ function FXP_AIInit()
 	for iPlayer=0,Universe_PlayerCount()-1 do
 		CPU_DoString(iPlayer, "FXP_Init()")
 		CPU_DoString(iPlayer, "FXP_AIInit()")
-		GameEvent_Listen(6000+iPlayer,tostring(Player_GetLevelOfDifficulty(iPlayer)))
+		GameEvent_Listen(6000+iPlayer,tostring(CPU_GetVar(iPlayer,"g_LOD")+1))
 	end
 end
 
@@ -351,6 +352,10 @@ function OnStartOrLoad()
 		dofilepath("data:scripts/FX_AchievementControl_TableFunctions.lua")
 		--X System Reload
 		XInitOnLoad()
+		-- 重载文本文件，因为其中含有部分 table function
+		dofilepath("Locale:PathDesc.lua")
+		-- 显示AI外交按钮
+		FX_AIContact_OnStartOrLoad()
 end
 
 

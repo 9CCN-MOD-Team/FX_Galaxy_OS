@@ -411,7 +411,7 @@ Events.intelevent_playerwins =
         { HW2_LocationCardEvent("$40545", 5.5), }, 
         { HW2_Wait(2), }, 
         { 
-	    	{ "Profile_SetSingleMissionComplete('mini', 5, 1)", "", }, 
+	    	{ "Profile_SetSingleMissionComplete('mini', 2, 1)", "", }, 
 	    	{ "FE_ExitToMainMenu()", "", }, 
 	    	{ "UI_DialogAccept()", "", }, 
         }, 

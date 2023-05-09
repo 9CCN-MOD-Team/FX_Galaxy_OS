@@ -23,7 +23,7 @@ LoadingTips=
 "Tip: Unable to hyperspace? Can't cloak? Check your surroundings - an enemy unit with a passive ability may be nearby!",
 "Tip: The TUR Minelayer Corvette can both deploy minefields and attack targets directly.",
 "Tip: Visit our ModDB page for various guides and tips (moddb.com/mods/fx-galaxy).",
-"Tip: Hold SHIFT while placing a build order while queue 5 of those units.",
+"Tip: Holding SHIFT while placing a build order will queue 5 of those units.",
 "Tip: In Single-player, you can name your ships by clicking the [A__] button above its UI box in the lower left",
 "Tip: Some units like Balcora Gate and Sajuuk can't be rebuilt once destroyed.",
 "Tip: The FXmod is optimized for Competitive Deathmatch mode. Other settings may cause unusual AI behavior and results.",

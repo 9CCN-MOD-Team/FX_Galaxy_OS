@@ -217,7 +217,7 @@ function timer_updating3()
 				FXP_PlayerAI[Fame].Num=FXP_PlayerAI[Fame].Num+1
 				if(Comment[FXP_PlayerAI[Fame].Num]==nil)then
 					--if (SobGroup_CanDoAbility(Fame, AB_Hyperspace)==1) then
-						SobGroup_EnterHyperSpaceOffMap(Fame)
+						--SobGroup_EnterHyperSpaceOffMap(Fame)
 					--else
 					--	SobGroup_Despawn(Fame)
 					--end

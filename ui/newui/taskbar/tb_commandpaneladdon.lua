@@ -7,5 +7,6 @@ BTN_CMD_SPEEDBOOST		= GetCommandButton("btnSpeedActivate",	"$2959", 168,	"DATA:U
 BTN_CMD_SWITCH	= GetCommandButton("btnSwitch",	"$90102", 168,	"DATA:UI\\NewUI\\Taskbar\\CommandIcons\\cmd_ico_gravewellgenerator.dds",		"MainUI_UserEventData( eCustomToggle, 4 );")  
 BTN_CMD_DELIVER	= GetCommandButton("btnDeliver",	"$90103", 168,	"DATA:UI\\NewUI\\Taskbar\\CommandIcons\\cmd_ico_dronefrigate.dds",		"MainUI_UserEventData( eCustomToggle, 5 );")  
 BTN_CMD_RELEASE	= GetCommandButton("btnRelease",	"$90104", 168,	"DATA:UI\\NewUI\\Taskbar\\CommandIcons\\cmd_ico_speedburst.dds",		"MainUI_UserEventData( eCustomToggle, 6 );")  
---BTN_CMD_SUPPORT	= GetCommandButton("btnSupport",	"$90106", 168,	"DATA:UI\\NewUI\\Taskbar\\CommandIcons\\cmd_ico_hyperspace.dds",		"MainUI_UserEventData( eCustomToggle, 7 );")  
+--BTN_CMD_SUPPORT	= GetCommandButton("btnSupport",	"$90106", 168,	"DATA:UI\\NewUI\\Taskbar\\CommandIcons\\cmd_ico_hyperspace.dds",		"MainUI_UserEventData( eCustomToggle, 7 );") 
+BTN_CMD_KAMIKAZE = nil 
 	

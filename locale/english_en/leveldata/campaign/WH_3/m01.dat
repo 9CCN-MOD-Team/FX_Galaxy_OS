@@ -57,7 +57,7 @@ rangestart 41001 41150
 41055	We have been detected.
 41056	Short-range sensors have identified a Vaygr outpost and Shipyard at the mouth of the Corridor. Without them, the enemy's resistance will crumble. 
 41057	Targets destroyed. The corridor is secure. 
-41058	You have done well here, soldier. From this day on, the name of the Taiidani will once again be known throughout this galaxy. 
+41058	The Vaygr put up a fiercer resistance than expected. And that new Capital-class vessel...it appears we are not the only ones revising their military. We'll need to be especially alert from now on.
 41059	We will hold position here and assist our main fleet with establishing a safe perimeter. But I heard you have been called to duty elsewhere, and will be returning ahead. 
 41060	Our fates are intertwined. I don't know where you will go next, but I have a feeling this galaxy will be seeing more of you. Until we meet again...
 41061	MISSION COMPLETE
@@ -126,5 +126,8 @@ rangestart 41001 41150
 41124	The enemy is failing...
 41133	DETECTION ZONE
 41134	(Communication Chatter)
+41135	These new units bear similarities to Vaygr Battlecruisers. But their configurations...we've never seen anything like it.
+41136	It appears to be a new Capital-Class. Its capabilities are unknown. Advice caution.
+41137	Alert. Unknown Vaygr signature detected.
 
 rangeend

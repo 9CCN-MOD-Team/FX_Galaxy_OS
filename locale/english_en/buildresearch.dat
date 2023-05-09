@@ -674,7 +674,7 @@ rangestart 7000 8131
 7976	Spear Frigate
 7977	<b>Description:</b> Frigate equipped with long-range cannon, laser sighting device and swarmer missile launcher. Excels vs. Stationary Targets. \n\n<b>Strong vs:</b> Frigates, Resource Collectors \n<b>Weak vs:</b> Bombers, Destroyers \n\n</b>Construction time:</b> 33 s\n<b>Prerequisites:</b> Spear Artillery Module and Frigate Facility or Advanced Production Module.
 7978	Defense Cruiser
-7979	<b>Description:</b> Capital Ship Class Anti Fighter Ship. Equipped with 2 Module and 2 Weapon Slots. \n\n<b>Strong vs:</b> Fighter, Corvette \n<b>Weak vs:</b> Frigate, Capital Ship \n\n<b>Prerequisites:</b> Capital Ship Facility and Defense Cruiser Classic.
+7979	<b>Description:</b> Large Capital Ship equipped with trinity spear cannon, heavy missile launchers and AA laser weapon.  Takes 1 Carrier supply.\n\n<b>Strong vs:</b> Destroyer \n<b>Weak vs:</b> Bomber, Super Capital Ship \n\n</b>Construction time:</b> 150 s\n<b>Prerequisites:</b> Spear Artillery Module and Capital Ship Facility.
 7980	<b>Description:</b> Allows Scouts to fire an EMP attack that disables enemy ships for a limited time.\n\n<b>Prerequisites:</b> Weapon Research Module.
 7981	<b>Description:</b> Allows Bombers to launch anti-subsystem bombs.\n\n<b>Prerequisites:</b> Weapon Research Module and Fusion Bombs Research.
 7982	Spear Artillery
@@ -735,6 +735,7 @@ rangestart 7000 8131
 
 8036	Super Capital Ship Facility
 8037	<b>Description:</b>  Unlocks Super Capital Ship. \n\n<b>Type:</b> Production Facility (Takes 1 Production Slot). \n\n</b>Construction time:</b> 65 s\n<b>Prerequisites:</b> Capital Ship Facility.
+8038	<b>Description:</b> Enables Spear Frigate and Defense Cruiser Production. \n\n<b>Type:</b> Module (Takes 1 Module Slot). \n\n</b>Construction time:</b> 60 s\n<b>Prerequisites:</b> Research Module and Frigate Facility.
 
 
 

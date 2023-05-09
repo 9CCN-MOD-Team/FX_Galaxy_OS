@@ -180,8 +180,8 @@ keys =
     { 101,"SendCancelSubSystemOrder()",									INKE_KeyDown,    0,                 "$5399",                            {ALTKEY,VKEY } },
     { 102,"SendPauseSubSystemOrder()",									INKE_KeyDown,    0,                 "$5400",                            {ALTKEY,GKEY } },
 
-    { 113,eShiftModifier,												INKE_KeyDown,    INKE_KeyDown,      "$5401",							{ keyAddModifier } },
-    { 114,eShiftModifier,												INKE_KeyUp,      INKE_KeyUp,        "$5402",							{ keyAddModifier } },
+    { 113,[[MainUI_UserEventData( eShiftModifier, 0 ); MainUI_ScarEvent("INPUT_METHOD_SHIFT_PRESSED = 1")]], INKE_KeyDown,    INKE_KeyDown,      "$5401",							{ keyAddModifier } },
+    { 114,[[MainUI_UserEventData( eShiftModifier, 1 ); MainUI_ScarEvent("INPUT_METHOD_SHIFT_PRESSED = 0")]], INKE_KeyUp,      INKE_KeyUp,        "$5402",							{ keyAddModifier } },
 
     { 115,eControlModifier,												INKE_KeyDown,    INKE_KeyDown,      "$5403",							{ CONTROLKEY } },		-- Ctrl - Attack
     { 116,eControlModifier,												INKE_KeyUp,      INKE_KeyUp,        "$5404",							{ CONTROLKEY } },
@@ -208,7 +208,7 @@ keys =
 --  { 138, "MainUI_UserEvent( eRallyPoint)",		 										INKE_KeyDown, 0, 	"   $5424", 		{ PKEY } },
     { 139, "UI_ToggleScreenGameRubrick( 'InGameMenu', 'BuildQueueMenu', 0, gr_all)",			INKE_KeyDown, 0, 	"$5425", 		{ QKEY } },
     { 140, "UI_ToggleScreenGameRubrick( 'InGameMenu', 'EventsScreen', 0, gr_all)",				INKE_KeyDown, 0, 	"$5426", 		{ VKEY } },
-    { 141, "UI_ToggleScreenGameRubrick( 'InGameMenu', 'DiplomacyScreen', 0, gr_multiplayer);MainUI_ScarEvent('FX_ContectUIPopup()')",	INKE_KeyDown, 0, 	"$5427", 		{ KKEY } },
+    { 141, "UI_ToggleScreenGameRubrick( 'InGameMenu', 'DiplomacyScreen', 0, gr_multiplayer);MainUI_ScarEvent('FX_ContactUIPopup()')",	INKE_KeyDown, 0, 	"$5427", 		{ KKEY } },
     { 142, "UI_ToggleScreenGameRubrick( 'InGameMenu', 'SpeechRecall', 0, gr_all)",				INKE_KeyDown, 0, 	"$5428", 		{ CONTROLKEY, KKEY } },
     { 143, eDefenseField,          																INKE_KeyDown, 0,	"$5429",		{ TKEY } },
     { 144, eCloak,																				INKE_KeyDown, 0,	"$5430",		{ CKEY } },
@@ -246,7 +246,7 @@ keys =
     { 168, eCustomActivate,												INKE_KeyDown, -1,	"$5446", { CONTROLKEY, ZKEY } },
     { 169, eCustomDeActivate,											INKE_KeyDown, -1,	"$5447", { SHIFTKEY, ZKEY } },
     { 170, eCustomToggle,												INKE_KeyDown, -1,	"$5448", { CONTROLKEY, SHIFTKEY, ZKEY } },	-- Gravwell Generator
-    { 171, eKamikaze,													INKE_KeyDown, 0,	"$5307", { CONTROLKEY, SHIFTKEY, KKEY } },		-- Kamikaze
+    --{ 171, eKamikaze,													INKE_KeyDown, 0,	"$5307", { CONTROLKEY, SHIFTKEY, KKEY } },		-- Kamikaze
 		{ 172, "MainUI_UserEventData2( eSpecialAttack, 0, 7)",				INKE_KeyDown, 0,	"$5519", { CONTROLKEY, SHIFTKEY, BKEY } },		-- Burst Attack
 		{ 173, "MainUI_UserEventData( eCustomActivate, 3 )",				INKE_KeyDown, 0,	"$5518", { CONTROLKEY, SHIFTKEY, SKEY } },		-- SpeedBurst
 		{ 174, "MainUI_UserEventData( eCustomToggle, 2 )",					INKE_KeyDown, 0,	"$5517", { CONTROLKEY, SHIFTKEY, DKEY } },		-- Drone Activate
@@ -286,7 +286,7 @@ keys =
     { 195, "MainUI_ScarEvent('Camera_RotateBegin(1)')"    ,			INKE_KeyDown,   0,	"$5441", { SHIFTKEY, DKEY  }},
     { 196, "MainUI_ScarEvent('Camera_RotateBegin(2)')"    ,			INKE_KeyDown,   0,	"$5441", { SHIFTKEY, SKEY  }},
     { 197, "MainUI_ScarEvent('Camera_RotateBegin(-2)')"    ,			INKE_KeyDown,   0,	"$5441", { SHIFTKEY, WKEY  }},
-    { 198, [[MainUI_ScarEvent("Rule_Remove('Camera_Rotate')")]]    ,			INKE_KeyDown,   0,	"$5441", { SHIFTKEY, QKEY  }},
+    { 198, [[MainUI_ScarEvent("Rule_Remove('Camera_Rotate')");MainUI_UserEvent( eSubtitleOk )]]    ,			INKE_KeyDown,   0,	"$5441", { SHIFTKEY, QKEY  }},
     { 199, "camAction_EnableMirroring(-1)"    ,			INKE_KeyDown,   0,	"$90123", { SHIFTKEY, FKEY  }},
     { 200, [[MainUI_ScarEvent("Camera_ForwardInit(1)")]]    ,			INKE_KeyDown,   0,	"$90124", { SHIFTKEY, XKEY  }},
 }

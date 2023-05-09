@@ -20,6 +20,15 @@ FX_Achievements_ConditionJudge.ValueDetect=function(iPlayer,iCondition)--±äÁ¿ÅÐ¶
 	return iFlag
 end
 
+FX_Achievements_ConditionJudge.Function=function(iPlayer,iCondition)--º¯ÊýÅÐ¶Ï£¬{"Function",<iFunction>}
+	local iFlag=0
+	--_ALERT(iCondition[2]())
+	if (iCondition[2]~=nil)then
+		iFlag=iCondition[2]()
+	end
+	return iFlag
+end
+
 FX_Achievements_ConditionJudge.IsPlayerWinInDM=function(iPlayer,iCondition)--ËÀÍö¾ºÈüÊ¤ÀûÅÐ¶Ï£¬{"IsPlayerWinInDM"}
 	local iFlag=0
 	if (Rule_Exists("waitForEnd")==1)then
@@ -28,4 +37,50 @@ FX_Achievements_ConditionJudge.IsPlayerWinInDM=function(iPlayer,iCondition)--ËÀÍ
 		end
 	end
 	return iFlag
+end
+
+FX_Achievements_ConditionJudge.IsPlayerWinInMP=function(iPlayer,iCondition)--Áª»ú¶ÔÕ½Ê¤ÀûÅÐ¶Ï£¬{"IsPlayerWinInMP"}
+	local iFlag=0
+	if (Rule_Exists("waitForEnd")==1)then
+		if(Player_IsAlive(iPlayer)==1)then
+			for i=0,Universe_PlayerCount()-1 do
+				if (Player_GetLevelOfDifficulty(i)==0) and (i~=iPlayer) then
+					if (AreAllied(i, iPlayer)==0) then
+						iFlag=1
+					end
+				end
+			end
+		end
+	end
+	return iFlag
+end
+
+function FXA_Rep80()
+	local iMaxRep=0
+	if FX_AIRelation~=nil then
+		local iPlayer=1
+		while FX_AIRelation[iPlayer]~=nil do
+			if (FX_AIRelation[iPlayer]>iMaxRep) then
+				iMaxRep=FX_AIRelation[iPlayer]
+			end
+			iPlayer=iPlayer+1
+		end
+	end
+	if iMaxRep>80 then
+		return 1
+	else
+		return 0
+	end
+end
+
+function FXA_PathFinish()
+	dofilepath("player:playercfg.lua")
+	if fx_path~=nil then
+		if fx_path.M35~=nil and fx_path.M36~=nil and fx_path.M37~=nil then
+			if fx_path.M35.complete==1 and fx_path.M36.complete==1 and fx_path.M37.complete==1 then
+				return 1
+			end
+		end
+	end
+	return 0
 end

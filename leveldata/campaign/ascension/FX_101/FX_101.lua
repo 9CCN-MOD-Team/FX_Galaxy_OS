@@ -425,8 +425,14 @@ function FXT_Keeper2()
 end
 
 function FXT_Final()
-	Player_SetRU(0,Player_GetRU(0)+5000)
-	Sound_SpeechPlay('data:sound/speech/allships/fleet/command_rus_transferred')
+		Player_SetRU(0,Player_GetRU(0)+5000)
+		
+		-- 设置成就完成度
+		local achievement_value = Get_FX_Achievements_Value("TutorialComplete")
+		achievement_value = math_or(achievement_value, 1)
+		Set_FX_Achievements_Value("TutorialComplete", achievement_value)
+
+		Sound_SpeechPlay('data:sound/speech/allships/fleet/command_rus_transferred')
     SobGroup_AbilityActivate("player_deliver", AB_Move, 1)
     SobGroup_AbilityActivate("plr_keeper", AB_Move, 1)
     SobGroup_AbilityActivate("ally_res1", AB_Move, 1)
@@ -460,7 +466,6 @@ function FXT_Final()
 	Objective_AddDescription(obj_attack, "$40962")
 	Rule_Remove("FXT_SizeControl1")
 	Rule_Remove("FXT_SizeControl2")
-	Set_FX_Achievements_Value("TutorialComplete",1)
 	Rule_AddInterval("FXT_VgrArrive",170)
 end
 
@@ -484,7 +489,8 @@ end
 function FXT_FinalCheck()
 	if (Player_GetNumberOfSquadronsOfTypeAwakeOrSleeping(3, "vgr_carrier")==0) then
 		Objective_SetState(obj_attack, OS_Complete)
-    	Sound_MusicPlayType("data:sound/music/ambient/tutorial", MUS_Ambient)
+    Sound_MusicPlayType("data:sound/music/ambient/tutorial", MUS_Ambient)
+		Set_FX_Achievements_Value("TutorialFullComplete",1)
 		Rule_Remove("FXT_FinalCheck")
 	end
 end
@@ -505,27 +511,30 @@ function OnInit()
 --X system entrance
 	XInit("reslist.lua", "")
 --
-    --Camera_SetLetterboxStateNoUI(1,0)
-    CPU_Enable(1, 0)
-    CPU_Enable(2, 0)
-    CPU_Enable(3, 0)
+  --Camera_SetLetterboxStateNoUI(1,0)
+  CPU_Enable(1, 0)
+  CPU_Enable(2, 0)
+  CPU_Enable(3, 0)
 	Sound_EnableAllSpeech(0)
-    Rule_AddInterval("Rule_DisablePlayer",0.1)
-    Rule_AddInterval("Rule_Init",1)
-    Rule_AddInterval("Mission_Start",1)
-    Universe_Fade(1, 0)
+  Rule_AddInterval("Rule_DisablePlayer",0.1)
+  Rule_AddInterval("Rule_Init",1)
+  Rule_AddInterval("Mission_Start",1)
+  Universe_Fade(1, 0)
 --Achievements
-		FX_Achievements_Init("FXsingleplayer")
+	FX_Achievements_Init("Tutorial")
 --------
-		Councilor_Switch=0
-		FX_Common_Rule_OnInit()
+	Councilor_Switch=0
+	FX_Common_Rule_OnInit()
 ---- Stop flash the Turtorial btn in main menu
-    if writeto("$fx_done_tutorial.lua") then 
-      write("FX_DONE_TUTORIAL = 1")
-      writeto()
-    else 
-      _ALERT("Error happened when write to $fx_done_tutorial.lua")
-    end
+	dofilepath("profiles:fx_done_tutorial.lua")
+	FX_DONE_TUTORIAL = FX_DONE_TUTORIAL or 0
+	FX_DONE_TUTORIAL = math_or(FX_DONE_TUTORIAL, 1)
+  if writeto("$fx_done_tutorial.lua") then 
+    write("FX_DONE_TUTORIAL = "..FX_DONE_TUTORIAL)
+    writeto()
+  else 
+    _ALERT("Error happened when write to $fx_done_tutorial.lua")
+  end
 end
 
 function Mission_Start()

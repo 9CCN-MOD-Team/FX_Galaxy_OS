@@ -5,26 +5,30 @@ ct_init=40
 cf_dis=0
 
 function Camera_ForwardInit(c_spd)
-	if (ct_pos.pos==nil) then
-		Camera_PosInit()
-		ct_pos.pos=Camera_GetPosition()
-		ct_pos.tgt=SobGroup_GetPosition("Player_Ships"..Universe_CurrentPlayer())
-		ct_pos.spd=20
-		c_dis=sqrt((ct_pos.tgt[1]-ct_pos.pos[1])^2+(ct_pos.tgt[2]-ct_pos.pos[2])^2+(ct_pos.tgt[3]-ct_pos.pos[3])^2)
-		for i=1,3 do--计算目标位置
-			ct_pos.tgt[i]=ct_pos.pos[i]+(ct_pos.tgt[i]-ct_pos.pos[i])*(ct_dis/c_dis)
+	if UI_IsScreenActive("PinYinIME")==0 then
+		if (ct_pos.pos==nil) then
+			Camera_PosInit()
+			ct_pos.pos=Camera_GetPosition()
+			ct_pos.tgt=SobGroup_GetPosition("Player_Ships"..Universe_CurrentPlayer())
+			ct_pos.spd=20
+			c_dis=sqrt((ct_pos.tgt[1]-ct_pos.pos[1])^2+(ct_pos.tgt[2]-ct_pos.pos[2])^2+(ct_pos.tgt[3]-ct_pos.pos[3])^2)
+			for i=1,3 do--计算目标位置
+				ct_pos.tgt[i]=ct_pos.pos[i]+(ct_pos.tgt[i]-ct_pos.pos[i])*(ct_dis/c_dis)
+			end
+			Volume_AddSphere("target",ct_pos.tgt,1)
+			Camera_FocusVolumeKeepingEyePosition("target")	
+			Volume_Delete("target")
 		end
-		Volume_AddSphere("target",ct_pos.tgt,1)
-		Camera_FocusVolumeKeepingEyePosition("target")	
-		Volume_Delete("target")
-	end
-	if (Rule_Exists("Camera_Forward")==0) then
-		ct_init=10
-		Rule_Add("Camera_Forward")
-		Camera_UsePanning(0)
-	else
-		Rule_Remove("Camera_Forward")
-		Camera_UsePanning(1)
+		if (Rule_Exists("Camera_Forward")==0)and(Rule_Exists("Camera_Rotate")==0)and(Rule_Exists("Camera_Track")==0) then
+			ct_init=10
+			Rule_Add("Camera_Forward")
+			Camera_UsePanning(0)
+			Subtitle_Message("$90233", 1)
+		else
+			MainUI_UserEvent( eSubtitleOk )
+			Rule_Remove("Camera_Forward")
+			Camera_UsePanning(1)
+		end
 	end
 end
 
@@ -68,11 +72,14 @@ function Camera_Forward()
 end
 
 function Camera_RotateBegin(iDirection)
-	if (FX_SelectedShips("camera")==1) then
-		cr_mover[5]=Camera_GetDistanceToSobGroup("camera")
-		cr_mover[abs(iDirection)]=cr_mover[abs(iDirection)]+iDirection/abs(iDirection)
-		if (Rule_Exists("Camera_Rotate")==0)and(SobGroup_Empty("camera")==0) then
-			Rule_Add("Camera_Rotate")
+	if UI_IsScreenActive("PinYinIME")==0 then
+		if (FX_SelectedShips("camera")==1) then
+			cr_mover[5]=Camera_GetDistanceToSobGroup("camera")
+			cr_mover[abs(iDirection)]=cr_mover[abs(iDirection)]+iDirection/abs(iDirection)
+			if (Rule_Exists("Camera_Forward")==0)and(Rule_Exists("Camera_Rotate")==0)and(Rule_Exists("Camera_Track")==0)and(SobGroup_Empty("camera")==0) then
+				Rule_Add("Camera_Rotate")
+				Subtitle_Message("$90234", 1)
+			end
 		end
 	end
 end
@@ -92,21 +99,25 @@ function Camera_Rotate()
 end
 
 function Camera_TrackSelected()
-	if (Rule_Exists("Camera_Rotate")==0) then
-		Camera_PosInit()
-		if (Rule_Exists("Camera_Track")==0) then
-			if (FX_SelectedShips("CameraTrackTempGroup")==1) then
-				local c_pos=Camera_GetPosition()
-				cr_mover[1]=c_pos[1]
-				cr_mover[2]=c_pos[2]
-				cr_mover[3]=c_pos[3]
-				Rule_Add("Camera_Track")
-				local s_pos=SobGroup_GetPosition("CameraTrackTempGroup")
-				cf_dis=sqrt((cr_mover[1]-s_pos[1])^2+(cr_mover[2]-s_pos[2])^2+(cr_mover[3]-s_pos[3])^2)
+	if UI_IsScreenActive("PinYinIME")==0 then
+		if (Rule_Exists("Camera_Rotate")==0) then
+			Camera_PosInit()
+			if (Rule_Exists("Camera_Forward")==0)and(Rule_Exists("Camera_Rotate")==0)and(Rule_Exists("Camera_Track")==0) then
+				if (FX_SelectedShips("CameraTrackTempGroup")==1) then
+					local c_pos=Camera_GetPosition()
+					cr_mover[1]=c_pos[1]
+					cr_mover[2]=c_pos[2]
+					cr_mover[3]=c_pos[3]
+					Rule_Add("Camera_Track")
+					Subtitle_Message("$90235", 1)
+					local s_pos=SobGroup_GetPosition("CameraTrackTempGroup")
+					cf_dis=sqrt((cr_mover[1]-s_pos[1])^2+(cr_mover[2]-s_pos[2])^2+(cr_mover[3]-s_pos[3])^2)
+				end
+			else
+				MainUI_UserEvent( eSubtitleOk )
+				Rule_Remove("Camera_Track")
+				--Camera_SetVerticalFOV(70)
 			end
-		else
-			Rule_Remove("Camera_Track")
-			--Camera_SetVerticalFOV(70)
 		end
 	end
 end
@@ -115,8 +126,11 @@ function Camera_TrackSobGroup(iSob)
 	if (Rule_Exists("Camera_Rotate")==0) then
 		Camera_PosInit()
 		--if (Rule_Exists("Camera_TrackSobGroup")==0) then
-			if (SobGroup_Empty(iSob)==0) then
-				SobGroup_SobGroupAdd("CameraTrackTempGroup", iSob)
+			--if (SobGroup_Empty("CameraTrackTempGroup")==1) then
+				if (iSob~=nil) then
+					SobGroup_SobGroupAdd("CameraTrackTempGroup", iSob)
+				end
+			--else
 				local c_pos=Camera_GetPosition()
 				cr_mover[1]=c_pos[1]
 				cr_mover[2]=c_pos[2]
@@ -126,7 +140,15 @@ function Camera_TrackSobGroup(iSob)
 				end
 				local s_pos=SobGroup_GetPosition("CameraTrackTempGroup")
 				cf_dis=sqrt((cr_mover[1]-s_pos[1])^2+(cr_mover[2]-s_pos[2])^2+(cr_mover[3]-s_pos[3])^2)
-			end
+				local c_pos={}
+				c_pos[1]=2*s_pos[1]-cr_mover[1]
+				c_pos[2]=2*s_pos[2]-cr_mover[2]
+				c_pos[3]=2*s_pos[3]-cr_mover[3]
+				Volume_AddSphere("position",c_pos,1)
+				Camera_FocusVolumeWithBuffer ("position", 1, 100000, 0)
+				Camera_FocusSobGroupWithBuffer ("CameraTrackTempGroup", cf_dis, 100000, 0)	
+				Volume_Delete("position")
+			--end
 		--else
 		--	Rule_Remove("Camera_TrackSobGroup")
 			--Camera_SetVerticalFOV(70)
@@ -138,7 +160,7 @@ function Camera_TrackSobGroupFromPosition(iSob,iPos)
 	if (Rule_Exists("Camera_Rotate")==0) then
 		Camera_PosInit()
 		--if (Rule_Exists("Camera_TrackFromPosition")==0) then
-			if (SobGroup_Empty(iSob)==0) then
+			--if (SobGroup_Count(iSob)>0) then
 				SobGroup_SobGroupAdd("CameraTrackTempGroup", iSob)
 				cr_mover[1]=iPos[1]
 				cr_mover[2]=iPos[2]
@@ -156,7 +178,7 @@ function Camera_TrackSobGroupFromPosition(iSob,iPos)
 				Camera_FocusVolumeWithBuffer ("position", 1, 100000, 0)
 				Camera_FocusSobGroupWithBuffer ("CameraTrackTempGroup", cf_dis, 100000, 0)	
 				Volume_Delete("position")
-			end
+			--end
 		--else
 		--	Rule_Remove("Camera_TrackFromPosition")
 			--Camera_SetVerticalFOV(70)

@@ -275,7 +275,7 @@ KeyBindingList = {
 			144, 1,	-- cloak
 			145, 1,	-- capture
 			147, 1,	-- sensor ping
-			171, 1, 	-- kamikaze
+			--171, 1, 	-- kamikaze
 			7, 1, 	-- special attack
 			21, 1,	-- rally point
 			22, 1,	-- rally to object

@@ -52,6 +52,12 @@ LevelList =
 		MaxPlayers = 3,
 	},
 	{
+		Tags = "4p",
+		Name = "SaldimGanu_4p",
+		Desc = "$96358",
+		MaxPlayers = 5,
+	},
+	{
 		Tags = "6p",
 		Name = "parker_weiss",
 		Desc = "$96346",

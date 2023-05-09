@@ -1,5 +1,5 @@
 StartWeaponConfig(NewWeaponType,"Gimble","InstantHit","vgr_ionbeam_Small","Normal",0,2000,0,2,0,0,50,0,1,4,0,0,0,0,0,0,0.1,"Normal",0,0,0)
-AddWeaponResult(NewWeaponType,"Hit","DamageHealth","Target",600,600,"")
+AddWeaponResult(NewWeaponType,"Hit","DamageHealth","Target",800,800,"")
 setPenetration(NewWeaponType,10,1,{
   PlanetKillerArmour = 0,
 })

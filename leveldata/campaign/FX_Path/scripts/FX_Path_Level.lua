@@ -1,49 +1,13 @@
 FXP_StartingFleet=
 {
-	Hiigaran=
-	{
-		hgn_mothership=1,
-		hgn_carrier=1,
-	},
-	Vaygr=
-	{
-		vgr_mothership=1,
-		vgr_carrier=1,
-	},
-	Taiidan=
-	{
-		tai_mothership=1,
-		tai_carrier=1,
-		tai_researchship=1
-	},
-	Turanic=
-	{
-		tur_shipyard=1,
-		tur_carrier=1,
-	},
-	Keeper=
-	{
-		kpr_balcoragate=1,
-		kpr_deliver=1,
-		kpr_carrier=1,
-	},
-	Kadesh=
-	{
-		kad_mothership=1,
-		kad_carrier=1,
-	},
-	Kushan=
-	{
-		kus_mothership=1,
-		kus_carrier=1,
-	},
-	Bentusi=
-	{
-		ben_bentus=1,
-		ben_resourcecollector=1,
-		ben_floatingcity=1,
-		ben_cargobarge=6,
-	},
+	Hiigaran={"hgn_mothership","hgn_carrier",},
+	Vaygr={"vgr_mothership","vgr_carrier",},
+	Taiidan={"tai_mothership","tai_carrier","tai_researchship"},
+	Turanic={"tur_shipyard","tur_carrier",},
+	Keeper={"kpr_balcoragate","kpr_deliver","kpr_carrier",},
+	Kadesh={"kad_mothership","kad_carrier",},
+	Kushan={"kus_mothership","kus_carrier",},
+	Bentusi={"ben_bentus","ben_resourcecollector","ben_floatingcity","ben_cargobarge","ben_cargobarge","ben_cargobarge","ben_cargobarge","ben_cargobarge","ben_cargobarge",},
 }
 
 
@@ -53,14 +17,12 @@ function FXP_AddStartingFleet(iPlayer,iPosition,iDirection)
 	addSphere("StartPos"..iPlayer,iPosition, 0)
  	createSOBGroup("Player_StartingFleet"..iPlayer)
  	createSOBGroup("Player_StartingFleetToDock"..iPlayer)
-	for iShip,iNum in FXP_StartingFleet[iRace] do
-		 for  i=1,iNum do
-		 	addSquadron(iShip.."_"..iPlayer.."_"..i, iShip, p_position, iPlayer, {0, 0, 0}, 0, 0)
- 			addToSOBGroup(iShip.."_"..iPlayer.."_"..i, "Player_StartingFleet"..iPlayer)
-		 end
+	for iNum,iShip in FXP_StartingFleet[iRace] do
+		addSquadron(iShip.."_"..iPlayer.."_"..iNum, iShip, p_position, iPlayer, {0, 0, 0}, 0, 0)
+ 		addToSOBGroup(iShip.."_"..iPlayer.."_"..iNum, "Player_StartingFleet"..iPlayer)
 	end
 	--for iShip,iNum in FXP_StartingFleetToDock[iRace] do
-	--	 for  i=1,iNum do
+	--	 for  i",iNum do
 	--	 	addSquadron(iShip.."_"..iPlayer.."_"..i, iShip, p_position, iPlayer, {0, 0, 0}, 0, 0)
  	--		addToSOBGroup(iShip.."_"..iPlayer.."_"..i, "Player_StartingFleetToDock"..iPlayer)
 	--	 end

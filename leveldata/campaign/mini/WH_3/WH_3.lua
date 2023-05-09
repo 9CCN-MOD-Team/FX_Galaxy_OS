@@ -72,16 +72,17 @@ Events.Intro =
 	{ 
 		HW2FX_EventStartSet(0,0,"Emperor",1,1,1), 
 	    { HW2_LocationCardEvent("$41001", 3 ),},
-		{ {"Universe_Fade(0, 2)", "",}, { "SobGroup_MoveToPoint(3, 'Vgr_OPDD', {5777, 2799, 62619})", "",}, },
+		{ {"Universe_Fade(0, 2)", "",}, { "SobGroup_MoveToPoint(3, 'Vgr_OPDD', {5777, 2799, 62619})", "",}, { "Camera_Interpolate('Camera1', 'Camera2', 9)", "",}, },
 		{ HW2_Wait(3.5),},
 	    { { "TaiC_FXID=FX_PlayEffectBetweenPoints('ion_beam_combo_new_tai', 'EffectPoint02', 'EffectPoint01', 0.5)", "" , }, { "Sound_SpeechPlay('data:sound/sfx/etg/WEAPON/FRIGATE/IMPACT/WEAPON_FRIGATE_ION_CANNON_BEAM_HIT')", "" , }, HW2_Wait( 3 ), }, 
         { { "SobGroup_SetHealth('Vgr_OPDD', 0)", "" , }, { "FX_StopEffect(TaiC_FXID)", "" , }, }, 
-        { { "Rule_Remove('Camera_TrackFromPosition')", "" , }, }, 
+        --{ { "Rule_Remove('Camera_TrackFromPosition')", "" , }, }, 
         { { "SobGroup_Move(0, 'P_BS', 'Player_Adv')", "" , }, { "SobGroup_MoveToPoint(0, 'Tai_rrCarrier', {767, 3200, 57306})", "" , }, }, 
 		{ HW2_Wait(3), },
 		{ { "Mission_Start()","",}, },
 		{ HW2_Wait(2), },
 		{ HW2_SubTitleEvent(actor_HC, "$41119", 0), HW2_Wait(3),},
+		{ { "GameEvent_UnListen(5000)","",}, {"Rule_Add('CameraShakeCheck')", "",}, },
 		{ HW2_SubTitleEvent(actor_HC, "$41120", 0), HW2_Wait(2),},
 		{ HW2_SubTitleEvent(actor_AF, "$41121", 0), HW2_Wait(2),},
 		{ HW2_SubTitleEvent(actor_HC, "$41122", 0), HW2_Wait(2),},
@@ -89,6 +90,7 @@ Events.Intro =
 		{ HW2_SubTitleEvent(actor_AF, "$41124", 0), HW2_Wait(3),},
 		{ HW2_SubTitleEvent(actor_BS, "$41002", 6), HW2_Wait( 1 ), }, 
 		{ HW2_SubTitleEvent(actor_CC, "$41003", 5.5), HW2_Wait( 3 ), }, 
+		    { { "Rule_AddInterval('TaiC_StageForce',1)", "" , },  },
         { { "Sensors_Toggle(1)", "" , }, HW2_Wait(1), },
         { { "TaiC_EventPointer_1=EventPointer_AddVolume('Vgr_BlockadeSphere', HW2_rgb(230,230,230), 2000)", "" , }, }, 
         { HW2_Wait(2), },
@@ -212,7 +214,7 @@ Events.BaseDocked =
         { HW2_SubTitleEvent(actor_BS, "$41015", 15), { "Rule_AddInterval('TaiC_AddEventPointer',1)", "" , }, HW2_Wait( 6 ), },
         { HW2_SubTitleEvent(actor_BS, "$41016", 13), { "TaiC_EventPointer_5=EventPointer_AddVolume('CorridorPointer', HW2_rgb(230,230,230), 17000)", "" , }, HW2_Wait(5), },
         { HW2_SubTitleEvent(actor_BS, "$41017", 15), { "EventPointer_Remove(TaiC_EventPointer_5)", "" , }, { "Rule_AddInterval('TaiC_AddEventPointer2',1)", "" , }, HW2_Wait( 4 ), },
-        { HW2_SubTitleEvent(actor_BS, "$41018", 10.5), HW2_Wait( 2 ), { "Rule_AddInterval('TaiC_41019',30)", "" , }, { "TaiC_EventPointer_6=EventPointer_AddSobGroup('Tai_rrCarrier', HW2_rgb(230,230,230), 1000)", "" , }, }, 
+        { HW2_SubTitleEvent(actor_BS, "$41018", 10.5), HW2_Wait( 2 ), { "Rule_AddInterval('TaiC_41019',150)", "" , }, { "TaiC_EventPointer_6=EventPointer_AddSobGroup('Tai_rrCarrier', HW2_rgb(230,230,230), 1000)", "" , }, }, 
         { { "SobGroup_SwitchOwner('Tai_rrCarrier', 0)", "" , }, { "SobGroup_SwitchOwner('P_Controller', 0)", "" , },  { "SobGroup_AbilityActivate('Tai_rrCarrier', AB_Attack, 1)", "" , }, HW2_Wait(2), },
         {
         	{ "SobGroup_CreateShip('Tai_rrCarrier', 'TAI_resourcecollector')", "" , }, 
@@ -385,7 +387,7 @@ Events.SOCComplete =
 		{ { "SobGroup_MoveToSobGroup('TaiC_SOCPlayerV', 'M_CRoid')", "" , }, {"Camera_FocusSobGroupWithBuffer('TaiC_SOCPlayerV', 500, 500, 3)", "" , }, }, 
 		{ HW2_Wait( 3 ), }, 
         { { "Camera_TrackSobGroup('TaiC_SOC')", "" , },  { "Universe_Fade(1, 3)", "" , }, HW2_Wait( 4 ), }, 
-        { HW2_SubTitleEvent(actor_AF, "$41043", 1.5), {"Sound_SpeechPlay('data:sound/speech/missions/WH_3/T_30_assumingposition')", "", }, {"Rule_Remove('Camera_TrackSobGroup')", "", }, HW2_Wait( 2 ), }, 
+        { HW2_SubTitleEvent(actor_AF, "$41043", 1.5), {"Sound_SpeechPlay('data:sound/speech/missions/WH_3/T_30_assumingposition')", "", }, {"Rule_Remove('Camera_TrackSobGroup')", "", }, {"Camera_AltFocus('M_CRoid', 0)", "",}, HW2_Wait( 2 ), }, 
         { HW2_SubTitleEvent(actor_AF, "$41044", 3.5), {"Sound_SpeechPlay('data:sound/speech/missions/WH_3/T_34_acquisition')", "", }, HW2_Wait( 3 ), }, 
         { HW2_SubTitleEvent(actor_AF, "$41045", 2), {"Sound_SpeechPlay('data:sound/speech/missions/WH_3/T_35_maccomplished')", "", }, HW2_Wait( 1 ), }, 
         { { "Universe_Fade(0, 3)", "" , }, {"SobGroup_SwitchOwner('M_CRoid', 3)", "",}, {"SobGroup_AbilityActivate('Tai_ScoutFleet', AB_Sensors, 1)", "",}, }, 
@@ -412,15 +414,15 @@ Events.SO3 =
 	{
         { HW2_SubTitleEvent(actor_BS, "$41050", 12.5), HW2_Wait( 1 ), }, 
         { HW2_SubTitleEvent(actor_CC, "$41051", 6), {"Sound_SpeechPlay('data:sound/speech/missions/WH_3/T_40_rogerthat')", "", }, HW2_Wait( 3 ), }, 
-        { {"Sound_SpeechPlay('data:sound/speech/missions/WH_3/allunitsretreat')", "", }, {"TaiC_Retreat()","",}, HW2_Wait( 3 ), }, 
+        { {"Sound_SpeechPlay('data:sound/speech/missions/WH_3/T_41_allunitsretreat')", "", }, {"TaiC_Retreat()","",}, HW2_Wait( 3 ), }, 
         { HW2_SubTitleEvent(actor_BS, "$41053", 5.5), HW2_Wait( 1 ), }, 
 	}
 Events.FinalBattleNormal = 
 	{
 		{ HW2_Wait( 13 ), }, 
 		HW2FX_EventStartSet(1,0,"Emperor",1,1,1), 
-		{ { "Sensors_Toggle(1)", "" , }, },
-        { HW2_SubTitleEvent(actor_BS, "$41092", 12.5), HW2_Wait( 1 ), }, 
+		{ { "Sensors_Toggle(1)", "" , }, { "Sound_MusicPlayType('Data:sound/music/ambient/Empty', MUS_Ambient)", "",},},
+        { HW2_SubTitleEvent(actor_BS, "$41092", 4), HW2_Wait( 1 ), }, 
         { { "TaiC_EventPointer_8=EventPointer_AddVolume('CorridorBS1', HW2_rgb(230,230,230), 2800)", "" , }, HW2_Wait( 1 ), },
         { HW2_SubTitleEvent(actor_BS, "$41094", 12.5), HW2_Wait( 1 ), }, 
         { { "TaiC_Ping_7=Ping_AddPoint('$41062', 'anomaly', 'CorridorBS1')", "" , }, { "Ping_AddDescription(TaiC_Ping_7, 0, '$41117')","",}, { "Ping_LabelVisible(TaiC_Ping_7, 1)","",}, {"EventPointer_Remove(TaiC_EventPointer_8)", "",}, HW2_Wait( 3 ), },
@@ -454,6 +456,7 @@ Events.FinalBattleNormal =
 			{ "SobGroup_AbilityActivate('Vgr_Base',AB_Move, 0)", "",},
 			{ "SobGroup_AbilityActivate('Vgr_Shipyard',AB_Move, 0)", "",},
 			{ "CPU_Enable(1, 1)","",},
+			{ "CPU_RemoveSobGroup(1, 'Vgr_BaseDefCC')","",},
 			{ "Player_GrantResearchOption(1, 'cpuplayers_dynamic')", "",},
 			{ "CPU_RemoveSobGroup(1, 'Vgr_EliteCC1')", "",},
 			{ "CPU_RemoveSobGroup(1, 'Vgr_EliteCC2')", "",},
@@ -505,6 +508,7 @@ Events.FinalBattleHard =
 			{ "SobGroup_AbilityActivate('Vgr_Base',AB_Move, 0)", "",},
 			{ "SobGroup_AbilityActivate('Vgr_Shipyard',AB_Move, 0)", "",},
 			{ "CPU_Enable(1, 1)","",},
+			{ "CPU_RemoveSobGroup(1, 'Vgr_BaseDefCC')","",},
 			{ "Player_GrantResearchOption(1, 'cpuplayers_dynamic')", "",},
 			{ "CPU_RemoveSobGroup(1, 'Vgr_EliteCC1')", "",},
 			{ "CPU_RemoveSobGroup(1, 'Vgr_EliteCC2')", "",},
@@ -519,10 +523,20 @@ Events.FinalBattleHard =
         { HW2_SubTitleEvent(actor_BS, "$41096", 13), HW2_Wait( 1 ), }, 
         { { "Timer_Start(2,900)","",}, {"Subtitle_TimeCounter( 2, 41097 )", "",}, {"Rule_AddInterval('TaiC_Timer900', 1 )", "",}, HW2_Wait( 1 ), },
 	}
+Events.Ambush = 
+	{
+		{ HW2_Wait( 4 ), }, 
+		HW2FX_EventStartSet(1,0,"Emperor",1,1,1), 
+		{ HW2_Wait( 2 ), }, 
+		{ {"Camera_Interpolate('here', 'Camera3', 3)", "",}, },
+    { HW2_SubTitleEvent(actor_BS, "$41136", 8), HW2_Wait( 5 ), }, 
+    { {"Camera_FocusRestore()", "",}, { "SobGroup_MakeDead('tempvision')", "" , }, },
+    HW2FX_EventEndSet(1,1,1,0,1), 
+	}
 Events.PlayerWin = 
 	{
         { HW2_SubTitleEvent(actor_BS, "$41057", 4), HW2_Wait( 5 ), }, 
-        { HW2_SubTitleEvent(actor_BS, "$41058", 12.5), HW2_Wait( 2 ), }, 
+        { HW2_SubTitleEvent(actor_BS, "$41058", 19), HW2_Wait( 2 ), }, 
         { HW2_SubTitleEvent(actor_BS, "$41059", 17), HW2_Wait( 1 ), }, 
         { HW2_SubTitleEvent(actor_BS, TaiC_41060(), 15.5), HW2_Wait( 1 ), }, 
         { { "UI_SetElementVisible('NewTaskbar','btnHW1SPHyperspace',1)", "", },  }, 
@@ -638,7 +652,7 @@ function FXT_End1()
 end
 
 function FXT_End()
-    Profile_SetSingleMissionComplete("mini", 1, 1)
+    Profile_SetSingleMissionComplete("mini", 5, 1)
     FE_ExitToMainMenu()
     UI_DialogAccept()
 end
@@ -694,6 +708,14 @@ function OnInit()
 		Councilor_Switch=0
 		FX_Common_Rule_OnInit()
 	    --SobGroup_LoadPersistantData("Kad_Mothership")
+	  Rule_Remove("CameraShakeCheck")
+end
+
+function TaiC_P1Engage()
+	if (SobGroup_UnderAttack("P_Tai1")==1) then
+		SobGroup_Attack(0, "P_Tai1", "Vgr_Sentry")
+		Rule_Remove("TaiC_P1Engage")
+	end
 end
 
 function Mission_Start()
@@ -704,6 +726,7 @@ function Mission_Start()
     Camera_FocusSobGroupWithBuffer("P_BS", 1000, 1000, 3)
 	Camera_AllowControl(1)
     SobGroup_Move(0, "P_Tai1", "Player_Adv")
+    Rule_AddInterval("TaiC_P1Engage",1)
     --SobGroup_Move(0, "P_Tai2", "Player_Adv")
     SobGroup_Attack(0, "P_Tai2", "Vgr_Sentry")
     SobGroup_Attack(1, "Vgr_Craft","P_Tai2")
@@ -724,7 +747,6 @@ function Mission_Start()
 	SobGroup_SetSwitchOwnerFlag("M_TutRoid",0)
 	SobGroup_SetSwitchOwnerFlag("M_BRoid",0)
 	SobGroup_SetSwitchOwnerFlag("Tai_rrCarrier",0)
-    Rule_AddInterval("TaiC_StageForce",1)
 end
 
 function TaiC_StageForce()
@@ -754,6 +776,7 @@ function TaiC_VgrBlockade()
     	Sound_MusicPlayType("data:sound/music/ambient/amb_12", MUS_Ambient)
 		Event_Start("BlockadeDestroyed")
 		Rule_Remove("TaiC_VgrBlockade")
+		Rule_Remove("TaiC_VgrFleeCreate")
 	end
 end
 
@@ -876,6 +899,7 @@ function TaiC_41020()
 	SobGroup_Create("TaiC_SOBPlayer")
 	SobGroup_Create("TaiC_SOCPlayer")
 	SobGroup_SetSwitchOwnerFlag("TaiC_SOA",0)
+	SobGroup_SetSwitchOwnerFlag("M_ARoid",0)
 	SobGroup_SetSwitchOwnerFlag("Vgr_CFleet",0)
 	SobGroup_SwitchOwner("M_BRoid",0)
 	SobGroup_AbilityActivate("M_BRoid", AB_Scuttle, 0)
@@ -888,6 +912,7 @@ function TaiC_41020()
 	Rule_Remove("TaiC_41020")
 	for i=1,4 do
 		TaiC_Ping2[i]=Ping_AddPoint("$41133", "anomaly", "Detect_Marker"..i)
+		Ping_LabelVisible(TaiC_Ping2[i], 1)
 	end
 end
 
@@ -947,6 +972,7 @@ function TaiC_FinalBattle()
 				TaiC_SO3=TaiC_SO3+1
 			else
 				Objective_SetState(obj_SO[i],OS_Failed)
+				Ping_Remove(TaiC_Ping[i])
 			end
 		end
         Subtitle_Add(actor_BS, "$41021", 12.5)
@@ -956,16 +982,34 @@ function TaiC_FinalBattle()
         	Event_Start("FinalBattleHard")
         end
         Objective_SetState(obj_PTA, OS_Complete)
+    Rule_AddInterval("TaiC_VgrBaseCC",1)
+    SobGroup_CreateIfNotExist("BaseCCTrigger")
 		Rule_Remove("TaiC_FinalBattle")
 		Rule_Remove("TaiC_41039")
 		Rule_Remove("TaiC_41055")
 		KadC_AutoSave(2)
-	elseif (Objective_GetState(obj_SO[1])==OS_Complete) and  (Objective_GetState(obj_SO[2])==OS_Complete) and (Objective_GetState(obj_SO[3])==OS_Complete) and (TaiC_SO3==0) then
+	elseif (Objective_GetState(obj_SO[1])==OS_Complete) and  (Objective_GetState(obj_SO[2])==OS_Complete) and (Objective_GetState(obj_SO[3])==OS_Complete) and (TaiC_SO3==0) and(Event_IsDone("SOAComplete")==1) and(Event_IsDone("SOB")==1) and(Event_IsDone("SOCComplete")==1) then
 		Event_Start("SO3")
-		TaiC_SOTime = min(TaiC_SOTime,Universe_GameTime() + 180)
+		TaiC_SOTime = Universe_GameTime() + 210
 		TaiC_SO3 = 1
 		Set_FX_Achievements_Value("TaiMiniFullComplete",1)
 	end
+end
+
+function TaiC_VgrBaseCC()
+	SobGroup_FillSobGroupInVolume("BaseCCTrigger", "Player_Ships0", "Vgr_ExtraDefCCTrigger")
+	if (SobGroup_AreAnyFromTheseAttackFamilies("BaseCCTrigger", "SmallCapitalShip, BigCapitalShip")==1) then
+		SobGroup_SetHidden( "Vgr_BaseDefCC", 0)
+		SobGroup_Attack(1, "Vgr_BaseDefCC", "BaseCCTrigger")
+		Rule_AddInterval("TaiC_41135",12)
+		Rule_Remove("TaiC_VgrBaseCC")
+	end
+	SobGroup_Clear("BaseCCTrigger")
+end
+
+function TaiC_41135()
+	Subtitle_Add(actor_BS, "$41135", 6)
+	Rule_Remove("TaiC_41135")
 end
 
 function TaiC_Retreat()
@@ -1064,7 +1108,7 @@ end
 
 function TaiC_CorridorBS1()
 	SobGroup_FillSobGroupInVolume("TaiC_CorridorBS1", "Player_Ships0", "CorridorBS1")
-	if (SobGroup_AreAnyOfTheseTypes("TaiC_CorridorBS1", "Tai_BattleShip")==1) then
+	if (SobGroup_AreAnyFromTheseAttackFamilies("TaiC_CorridorBS1", "SmallCapitalShip, BigCapitalShip")==1) then
 		Ping_Remove(TaiC_Ping_7)
 		TaiC_Ping_8=Ping_AddPoint("$41062", "anomaly", "CorridorBS2")
 		Ping_AddDescription(TaiC_Ping_8, 0, "$41117")
@@ -1077,7 +1121,7 @@ end
 
 function TaiC_CorridorBS2()
 	SobGroup_FillSobGroupInVolume("TaiC_CorridorBS2", "Player_Ships0", "CorridorBS2")
-	if (SobGroup_AreAnyOfTheseTypes("TaiC_CorridorBS2", "Tai_BattleShip")==1) then
+	if (SobGroup_AreAnyFromTheseAttackFamilies("TaiC_CorridorBS1", "SmallCapitalShip, BigCapitalShip")==1) then
 		Ping_Remove(TaiC_Ping_8)
 		TaiC_Ping_9=Ping_AddSobGroup("$41108", "anomaly", "Vgr_Station")
 		TaiC_Ping_10=Ping_AddSobGroup("$41109", "anomaly", "Vgr_Shipyard")
@@ -1097,7 +1141,10 @@ function TaiC_Ambush()
 	SobGroup_FillSobGroupInVolume("TaiC_Ambush", "Player_Ships0", "AmbushTrigger")
 	if (SobGroup_AreAnyOfTheseTypes("TaiC_Ambush", "Tai_BattleShip")==1) then
 		SobGroup_ExitHyperSpace("Vgr_EliteCC2", "AmbushExit")
+		Subtitle_Add(actor_BS, "$41137", 4)
 		Rule_AddInterval("TaiC_Ambush2",1)
+		Event_Start("Ambush")
+		SobGroup_SpawnNewShipInSobGroup(0, "rpg_inhibitor", "rpg_inhibitor", "tempvision", "AmbushExit")
 		Rule_Remove("TaiC_Ambush")
 	end
 end
@@ -1113,6 +1160,7 @@ function TaiC_Ambush2()
 		SobGroup_CreateSubSystem("Vgr_CC2", "vgr_c_module_hyperspace")
 		Rule_AddInterval("Vgr_EliteCC2",40)
 		Rule_Remove("TaiC_Ambush2")
+		Camera_FocusSave()
 	end
 end
 
@@ -1134,7 +1182,7 @@ function Vgr_EliteCC2()
 end
 
 function TaiC_PlayerWin()
-	if (SobGroup_Empty("Vgr_Shipyard")==1)and(SobGroup_Empty("Vgr_Station")==1)and(SobGroup_Empty("Vgr_Base")==1) then
+	if (SobGroup_Empty("Vgr_Shipyard")==1)and(SobGroup_Empty("Vgr_Station")==1) then
 		Timer_End(2)
         Objective_SetState(obj_PTV, OS_Complete)
     	Sound_MusicPlayType("data:sound/music/ambient/a04_mission5", MUS_Ambient)
@@ -1145,6 +1193,9 @@ function TaiC_PlayerWin()
 end
 
 function TaiC_SOC()
+	if (Objective_GetState(obj_SO[3])==OS_Failed) then
+		Rule_Remove("TaiC_SOC")
+	end
 	SobGroup_FillSobGroupInVolume("TaiC_SOCPlayer", "Player_Ships0", "CWarning")
 	if (SobGroup_Empty("TaiC_SOCPlayer")==0) then
 		Rule_Remove("TaiC_SOC")
@@ -1163,6 +1214,9 @@ function SobGroup_RemoveSobGroup(sg1,sg2)
 end
 
 function TaiC_SOC2()
+	if (Objective_GetState(obj_SO[3])==OS_Failed) then
+		Rule_Remove("TaiC_SOC2")
+	end
 	SobGroup_Clear("TaiC_SOC")
 	SobGroup_FillCompare("TaiC_SOC", "Vgr_CFleet", "Player_Ships0")
 	if SobGroup_Count("TaiC_SOC")>0 then
@@ -1187,6 +1241,9 @@ function TaiC_SOC2()
 end
 
 function TaiC_SOB()
+	if (Objective_GetState(obj_SO[2])==OS_Failed) then
+		Rule_Remove("TaiC_SOB")
+	end
 	SobGroup_FillSobGroupInVolume("TaiC_SOBPlayer", "Player_Ships0", "SiteB")
 	SobGroup_RemoveType("TaiC_SOBPlayer", "meg_gehenna_1")
 	if (SobGroup_Empty("TaiC_SOBPlayer")==0) then
@@ -1224,6 +1281,9 @@ function TaiC_SOB()
 end
 
 function TaiC_SOA()
+	if (Objective_GetState(obj_SO[1])==OS_Failed) then
+		Rule_Remove("TaiC_SOA")
+	end
 	if (SobGroup_FillSobGroupInVolume("TaiC_SOA", "Player_Ships0", "SiteA")==1) then
 		if (SobGroup_AreAnyFromTheseAttackFamilies("TaiC_SOA", "Frigate")==1) then
 			local iShip=0
@@ -1319,7 +1379,10 @@ function Rule_Init()
     Event_Start("Chatter")
 	Sound_MusicPlayType('data:sound/music/battle/battle_01', MUS_Ambient)
     SobGroup_SetHealth("Vgr_OPDD", 0.03)
-	Camera_TrackSobGroupFromPosition("Vgr_OPDD",{6211, 2960, 61617})
+	--Camera_TrackSobGroupFromPosition("Vgr_OPDD",{6211, 2960, 61617})
+	Camera_UseCameraPoint("Camera1")
+	SobGroup_SetROE("P_Tai1", PassiveROE)
+	SobGroup_SetROE("P_Tai2", PassiveROE)
 	--Camera_UseCameraPoint("Cam_Start")
     Player_SetPlayerName(1, "$41112")
     Player_SetPlayerName(2, "$41113")
@@ -1348,6 +1411,7 @@ function Rule_Init()
     Rule_Remove("Rule_Init")
     Rule_AddInterval("TaiC_VgrFleeCreate",1)
 	Rule_AddInterval("TaiC_VgrFlee",1)
+	SobGroup_SetHidden( "Vgr_BaseDefCC", 1)
 end
 
 function TaiC_VgrFleeCreate()
@@ -1437,6 +1501,8 @@ function TaiC_WatchTBB()
 end
 
 function Rule_DisablePlayer()
+	dofilepath("player:PLAYERCFG.LUA")
+	Player_SetTeamColours(Universe_CurrentPlayer(),{PlayerSetup.teamcolour[1]/255,PlayerSetup.teamcolour[2]/255,PlayerSetup.teamcolour[3]/255,},{PlayerSetup.stripecolour[1]/255,PlayerSetup.stripecolour[2]/255,PlayerSetup.stripecolour[3]/255,})
     --SobGroup_AbilityActivate("Tai_rrCarrier", AB_Builder, 0)
     SobGroup_AbilityActivate("Tai_ScoutFleet", AB_Move, 0)
     SobGroup_AbilityActivate("Tai_ScoutFleet", AB_Attack, 0)

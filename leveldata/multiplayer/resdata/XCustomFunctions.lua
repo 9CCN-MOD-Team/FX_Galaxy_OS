@@ -65,3 +65,11 @@ function SobGroup_RemoveSobGroup(sg1,sg2)
 	SobGroup_Clear(sg1)
 	SobGroup_Copy(sg1,"SobGroupTempRemoveGroup")
 end
+
+function Kpr_CaptureStop(CustomGroup, playerIndex, shipID)
+	SobGroup_Clear("Kpr_CaptureGroup"..shipID)
+	SobGroup_GetSobGroupCapturingGroup(CustomGroup, "Kpr_CaptureGroup"..shipID)
+	if (SobGroup_Empty("Kpr_CaptureGroup"..shipID)==0) then
+		SobGroup_Stop(SobGroup_OwnedBy("Kpr_CaptureGroup"..shipID),"Kpr_CaptureGroup"..shipID)
+	end
+end

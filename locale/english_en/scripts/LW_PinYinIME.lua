@@ -11,7 +11,8 @@ PinYin_functions =
 	inputBtnClick = function(char)
 		--先检查大写锁定状态，并转换输入字符的大小写
 		local PinYin_btnchar=""	--用于保存转换后的输入字符的局部变量
-		if PinYin_Vars.CapsLk_Check == 0 then
+		INPUT_METHOD_SHIFT_PRESSED = INPUT_METHOD_SHIFT_PRESSED or 0 --第一次使用时，该变量可能为 nil
+		if PinYin_Vars.CapsLk_Check == INPUT_METHOD_SHIFT_PRESSED then
 			PinYin_btnchar = strlower(char)
 		else
 			PinYin_btnchar = strupper(char)
@@ -83,7 +84,7 @@ PinYin_functions =
 		end
 		UI_UnBindKeyEvent(BACKSPACEKEY)
 		UI_UnBindKeyEvent(CAPSLOCKKEY)
-		UI_UnBindKeyEvent(SHIFTKEY)
+		--UI_UnBindKeyEvent(SHIFTKEY)
 		UI_UnBindKeyEvent(ENTERKEY)
 		
 		Rule_Remove("PinYin_Rule_DisplayText")

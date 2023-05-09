@@ -192,7 +192,7 @@ function Fix_DockBug()
 			while (SobGroup_Empty("TempDockGroup2")==0) do
 				local SquadronSize=SobGroup_GetStaticF(SobGroup_GetShipType("TempDockGroup2"), "buildBatch")
 				if ((SobGroup_Count("TempDockGroup2")<0.8*SquadronSize)and(SquadronSize>1))or((SquadronSize==1)and(SobGroup_HealthPercentage("TempDockGroup2")<0.5)) then
-					if (SobGroup_UnderAttack("TempDockGroup2")==0)and(SobGroup_CanDoAbility("TempDockGroup2",AB_Dock)==1)and(SobGroup_AreAllInRealSpace("TempDockGroup2")==1) then
+					if (SobGroup_UnderAttack("TempDockGroup2")==0)and(SobGroup_CanDoAbility("TempDockGroup2",AB_Dock)==1)and(SobGroup_AreAllInRealSpace("TempDockGroup2")==1)and((SobGroup_AreAnyFromTheseAttackFamilies("TempDockGroup2", "Fighter, Corvette, Mover")==1)or(SobGroup_AreAnyOfTheseTypes("TempDockGroup2", "Tur_VulcanFrigate, Tur_IonArrayFrigate, Tur_SeigeDrillFrigate, Tur_EnergyJamFrigate, Tur_Carrier, Tur_HeavyCruiser, Tur_ResourceController")==1)) then
 						SobGroup_DockSobGroupWithAny("TempDockGroup2")
 					end
 				end
@@ -219,6 +219,8 @@ function Fix_DockBug()
 end
 
 function FX_Common_Rule_OnStartOrLoad()
+	GameEvent_Listen(GE_ShipDocked,"FX_PlayDeliverFX")
+	GameEvent_Listen(GE_ShipLaunched,"FX_PlayDeliverFX")
 	LW_SpeechRaceHelper()
 	dofilepath("data:scripts/XTR_Output.lua")
 	dofilepath("data:scripts/LW_PinYinIMEControl.lua")
@@ -227,5 +229,19 @@ function FX_Common_Rule_OnStartOrLoad()
 	if (Rule_Exists("Play_Music")==1) then
 		UI_SetElementVisible("NewTaskbar", "btnMP", 1)
 	end
+	
+	dofilepath("data:scripts/AIContact_TableFunctions.lua")
+	FX_DeliverFixOnLoad()
 end
-
+--ÐÞ¸´ÏàÎ»Àâ¾µ¶ÁµµºóÌØÐ§¶ªÊ§
+function FX_DeliverFixOnLoad()
+	SobGroup_CreateIfNotExist("FX_DeliverFix")
+	ShipTypeLostFX={"kpr_deliver","kpr_energy_ioncannon","kpr_energy_PhasedCannon","kpr_energy_photonBomb","kpr_energy_photoncannon","kpr_energy_Pulsar","kpr_energy_SuperPulsar"}
+	for i=1,Universe_PlayerCount() do
+		for j,iType in ShipTypeLostFX do
+			Player_FillShipsByType("FX_DeliverFix", i-1, ShipTypeLostFX[j])
+			SobGroup_SetMadState("FX_DeliverFix", "Launched")
+			SobGroup_Clear("FX_DeliverFix")
+		end
+	end
+end

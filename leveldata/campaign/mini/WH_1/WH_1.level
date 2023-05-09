@@ -290,6 +290,10 @@ function DetermChunk()
 	for i=1,10 do
 		addToSOBGroup("Kad_StartingFleet"..i, "Kad_StartingFleet")
 	end
+	createSOBGroup("Kpr_CapMover")
+	for i=1,6 do
+		addToSOBGroup("Kpr_Cap"..i, "Kpr_CapMover")
+	end
 	for i=1,10 do
 		createSOBGroup("CapturedTarget"..i)
 		createSOBGroup("Kpr_Cap"..i)

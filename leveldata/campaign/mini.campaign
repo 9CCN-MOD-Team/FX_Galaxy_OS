@@ -12,52 +12,6 @@ Mission = {}
 
 
 Mission[1] = 
-{
-	postload = function()	
-		playAnimatic("data:animatics/taimini.lua", 0, 0)
-	end,
-	directory = "WH_3",
-	level = "WH_3.level",
-	postlevel = function(bWin)	
-		postLevelComplete()
-	end,
-	displayName = "$90130",
-	description = "$90131",
-	forcesubtitles = 1,
-}
-
-Mission[2] = 
-{
-	postload = function()	
-		playAnimatic("data:animatics/kadmini.lua", 0, 0)
-	end,
-	directory = "WH_2",
-	level = "WH_2.level",
-	postlevel = function(bWin)	
-		postLevelComplete()
-	end,
-	displayName = "$90082",
-	description = "$90083",
-	forcesubtitles = 1,
-	usepersist = "data:leveldata\\campaign\\mini\\WH_2\\startingplayerfleet.lua",
-}
-
-Mission[3] = 
-{
-	postload = function()	
-		--playAnimatic("data:animatics/B00.lua", 0, 0)
-	end,
-	directory = "WH_1",
-	level = "WH_1.level",
-	postlevel = function(bWin)	
-		postLevelComplete()
-	end,
-	displayName = "$90047",
-	description = "$90048",
-	forcesubtitles = 1,
-}
-
-Mission[4] = 
 { 
 	postload = function ()
 	end, 
@@ -78,7 +32,7 @@ Mission[4] =
 	forcesubtitles = 1,
 }
 
-Mission[5] = 
+Mission[2] = 
 {
 	postload = function()	
 		--playAnimatic("data:animatics/B00.lua", 0, 0)
@@ -90,5 +44,52 @@ Mission[5] =
 	end,
 	displayName = "$90015",
 	description = "$90016",
+	forcesubtitles = 1,
+}
+
+Mission[3] = 
+{
+	postload = function()	
+		--playAnimatic("data:animatics/B00.lua", 0, 0)
+	end,
+	directory = "WH_1",
+	level = "WH_1.level",
+	postlevel = function(bWin)	
+		postLevelComplete()
+	end,
+	displayName = "$90047",
+	description = "$90048",
+	forcesubtitles = 1,
+}
+
+Mission[4] = 
+{
+	postload = function()	
+		playAnimatic("data:animatics/kadmini.lua", 0, 0)
+	end,
+	directory = "WH_2",
+	level = "WH_2.level",
+	postlevel = function(bWin)	
+		postLevelComplete()
+	end,
+	displayName = "$90082",
+	description = "$90083",
+	forcesubtitles = 1,
+	usepersist = "data:leveldata//campaign//mini//WH_2//startingplayerfleet.lua",
+	usedefaultpersist = 1,
+}
+
+Mission[5] = 
+{
+	postload = function()	
+		playAnimatic("data:animatics/taimini.lua", 0, 0)
+	end,
+	directory = "WH_3",
+	level = "WH_3.level",
+	postlevel = function(bWin)	
+		postLevelComplete()
+	end,
+	displayName = "$90130",
+	description = "$90131",
 	forcesubtitles = 1,
 }

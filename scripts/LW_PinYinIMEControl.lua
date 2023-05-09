@@ -61,7 +61,7 @@ function PinYin_Init(text,func)
 	end
 	UI_BindKeyEvent(BACKSPACEKEY, "PinYin_KeyBinds_BACKSPACEKEY")
 	UI_BindKeyEvent(CAPSLOCKKEY, "PinYin_KeyBinds_CAPSLOCKKEY")
-	UI_BindKeyEvent(SHIFTKEY, "PinYin_KeyBinds_CAPSLOCKKEY")
+	--UI_BindKeyEvent(SHIFTKEY, "PinYin_KeyBinds_CAPSLOCKKEY")
 	UI_BindKeyEvent(ENTERKEY, "PinYin_KeyBinds_ENTERKEY")
 	
 	--这个是用来控制输入框内光标闪烁的规则

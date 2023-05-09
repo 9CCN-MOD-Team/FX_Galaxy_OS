@@ -292,7 +292,7 @@ table.insert(tableToEdit,
 
 			},
 							
-			onMouseClicked = [[MainUI_ScarEvent("FX_ContectUIPopup()")]],
+			onMouseClicked = [[MainUI_ScarEvent("FX_ContactUIPopup()")]],
 				helpTip = "$2746",
 				helpTipTextLabel = "commandsHelpTip",
 				hotKeyID = 141,

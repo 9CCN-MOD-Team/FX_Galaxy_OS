@@ -6,6 +6,18 @@
 -- ============================================================
 
 dofilepath("data:leveldata/campaign/FX_Path/scripts/FX_Path_Level.lua")
+Map_Sob = {}
+
+function addSquadronToSOB(SobName,ShipType,ShipPos,ShipOwner,ShipDirection,Misc1,Misc2)
+	if Map_Sob[SobName]==nil then
+		createSOBGroup(SobName)
+		Map_Sob[SobName] = 1
+	end
+	local shipID=abs(floor(ShipPos[1])+floor(ShipPos[2])+floor(ShipPos[3]))
+	addSquadron(ShipType..shipID,ShipType,ShipPos,ShipOwner,ShipDirection,Misc1,Misc2)
+	addToSOBGroup(ShipType..shipID, SobName)
+end
+
 function DetermChunk()
 	-- Points
 	--addPoint("StartPos0", {0, 0, -29391.44}, {0, 0, 0})
@@ -14,10 +26,10 @@ function DetermChunk()
 	FXP_AddStartingFleet(1, {0, 0, 27962.85}, {0, 181, 0})
 
 	-- Squadrons
-	addSquadron("Meg_Chimera3", "meg_chimera", {-6763, 0, 22511.44}, 1, {0, -90, 0}, 0, 0)
-	addSquadron("Meg_TanisStructure_Medium", "meg_tanisstructure_medium", {1420, -745, 28791.91}, 1, {0, -90, 0}, 0, 0)
-	addSquadron("Meg_TanisStructure_Medium1", "meg_tanisstructure_medium2", {-1302, -745, 28791.91}, 1, {0, -90, 0}, 0, 0)
-	addSquadron("Meg_Tanis2", "meg_tanis", {0, 1120, 31908.43}, 1, {0, 0, 0}, 1, 0)
+	addSquadronToSOB("meg_tanis", "meg_chimera", {-6763, 0, 22511.44}, -1, {0, -90, 0}, 0, 0)
+	addSquadronToSOB("meg_tanis", "meg_tanisstructure_medium", {1420, -745, 28791.91}, -1, {0, -90, 0}, 0, 0)
+	addSquadronToSOB("meg_tanis", "meg_tanisstructure_medium2", {-1302, -745, 28791.91}, -1, {0, -90, 0}, 0, 0)
+	addSquadronToSOB("meg_tanis", "meg_tanis", {0, 1120, 31908.43}, -1, {0, 0, 0}, 1, 0)
 	addSquadron("Meg_VGRRoid", "meg_asteroid", {-6520.622, 0, -27444.22}, -1, {22, 0, 0}, 0, 0)
 	addSquadron("Meg_Roid", "meg_asteroid", {19507.55, 1876.802, -22328.34}, -1, {22, -74, 0}, 0, 0)
 

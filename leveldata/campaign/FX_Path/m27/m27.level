@@ -22,7 +22,7 @@ player[2] =
     id = 2, 
     name = "", 
     resources = 2000, 
-    raceName= "Kadesh", 
+    raceName= "Hiigaran", 
     startPos = 1, }
 player[3] = 
 { 
@@ -43,7 +43,7 @@ player[5] =
     id = 5, 
     name = "", 
     resources = 2000, 
-    raceName= "Hiigaran", 
+    raceName= "Kadesh", 
     startPos = 1, }
 
 function DetermChunk()

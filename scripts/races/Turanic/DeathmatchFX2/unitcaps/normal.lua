@@ -1,3 +1,4 @@
+supplyLimit("Fighter",18)
 supplyLimit("Corvette",18)
 supplyLimit("Frigate",30)
 supplyLimit("Capital",10)

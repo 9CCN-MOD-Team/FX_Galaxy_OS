@@ -70,37 +70,6 @@ X_CustomFunctionCreate["vgr_carrier"]=function (CustomGroup, playerIndex, shipID
 	SobGroup_CreateIfNotExist("AIAttackGroup")
 end
 
-X_CustomFunctionUpdate["vgr_carrier"]=function (CustomGroup, playerIndex, shipID)
-	if (SobGroup_HasSubsystem(CustomGroup, "vgr_c_missilevolley")==1)and(SobGroup_HasSubsystem(CustomGroup, "vgr_c_missilevolley_f")==0) then
-		SobGroup_CreateSubSystem(CustomGroup, "vgr_c_missilevolley_f")
-	elseif (SobGroup_HasSubsystem(CustomGroup, "vgr_c_missilevolley")==0)and(SobGroup_HasSubsystem(CustomGroup, "vgr_c_missilevolley_f")==1) then
-		SobGroup_SetHardPointHealth(CustomGroup, "Weapon1", 0)
-	end
-	if Player_GetLOD(playerIndex)>0 then
-		if (SobGroup_HasSubsystem(CustomGroup, "vgr_c_missilevolley")==1) and (SobGroup_GroupInGroup("AIAttackGroup",CustomGroup)==0) then
-			if (SobGroup_Empty("AITempRemoveGroup")==1)then
-				SobGroup_SobGroupAdd("AITempRemoveGroup",CustomGroup)
-			end
-			SobGroup_CreateIfNotExist("AIGuardGroup"..playerIndex)
-			SobGroup_Clear("AIGuardGroup"..playerIndex)
-			SobGroup_SobGroupAdd("AIGuardGroup"..playerIndex,"Player_Ships"..playerIndex)
-			SobGroup_RemoveType("AIGuardGroup"..playerIndex, "Vgr_Shipyard")
-			SobGroup_RemoveType("AIGuardGroup"..playerIndex, "Vgr_resourcecontroller")
-			SobGroup_RemoveType("AIGuardGroup"..playerIndex, "Vgr_resourcecollector")
-			SobGroup_RemoveType("AIGuardGroup"..playerIndex, "Vgr_mothership")
-			SobGroup_RemoveType("AIGuardGroup"..playerIndex, "Vgr_weaponplatform_missile")
-			SobGroup_RemoveType("AIGuardGroup"..playerIndex, "Vgr_carrier")
-			SobGroup_SobGroupAdd("AIAttackGroup",CustomGroup)
-			SobGroup_GuardSobGroup(CustomGroup, "Player_Ships"..playerIndex)
-		elseif (SobGroup_HasSubsystem(CustomGroup, "vgr_c_missilevolley")==0) and (SobGroup_GroupInGroup("AIAttackGroup",CustomGroup)==1)then
-			if (SobGroup_Empty("AITempAddGroup")==1)then
-				SobGroup_SobGroupAdd("AITempAddGroup",CustomGroup)
-			end
-			SobGroup_RemoveSobGroup("AIAttackGroup",CustomGroup)
-		end
-	end
-end
-
 --kus_repaircarrier
 X_CustomFunctionUpdate["kus_mothership"]=function (CustomGroup, playerIndex, shipID)
 	if (Race_GetName(Player_GetRace(playerIndex))=="Kushan")then
@@ -420,6 +389,24 @@ end
 	--end
 --end
 
+X_CustomFunctionUpdate["kad_guardianspirit"]=function(CustomGroup, playerIndex, shipID)
+		if ((Player_GetNumberOfSquadronsOfTypeAwakeOrSleeping(playerIndex, "kad_mothershipdark")==0)or(SobGroup_GetROE(CustomGroup)~=2)) then
+			if (SobGroup_IsDoingAbility(CustomGroup, AB_Cloak)==1) then
+				SobGroup_CloakToggle(CustomGroup)
+			end
+			if (SobGroup_CanDoAbility(CustomGroup, AB_Cloak)==1) then
+				SobGroup_AbilityActivate(CustomGroup, AB_Cloak, 0)
+			end
+		else
+			if (SobGroup_CanDoAbility(CustomGroup, AB_Cloak)==0) then
+				SobGroup_AbilityActivate(CustomGroup, AB_Cloak, 1)
+			end
+			if (SobGroup_IsDoingAbility(CustomGroup, AB_Cloak)==0) then
+				SobGroup_CloakToggle(CustomGroup)
+			end
+		end
+end
+
 X_CustomFunctionDestroy["kad_guardianspirit"]=function(CustomGroup, playerIndex, shipID)
 	shockwave(playerIndex,CustomGroup)	
 end
@@ -621,7 +608,7 @@ end
 
 X_CustomFunctionCreate["kad_mothershipdark"]=function(CustomGroup, playerIndex, shipID)
 	if(Player_GetLOD(playerIndex) > 0)then
-		SobGroup_Create("KMD_TempGroup1"..shipID)
+		SobGroup_CreateIfNotExist("KMD_TempGroup1"..shipID)
 		SobGroup_Create("KMD_TempGroup2"..shipID)
 		SobGroup_CreateIfNotExist("KMD_TempGroup")
 		SobGroup_CreateIfNotExist("KMD_TempGroup2")
@@ -633,6 +620,7 @@ X_CustomFunctionUpdate["kad_mothershipdark"]=function(CustomGroup, playerIndex, 
 	ProtectFX_Create(AB_Move, CustomGroup)
 	ProtectFX_Create(AB_Attack, CustomGroup)
 	if(Player_GetLOD(playerIndex) > 1)then
+				SobGroup_CreateIfNotExist("KMD_TempGroup1"..shipID)
 				SobGroup_Clear("KMD_TempGroup1"..shipID)
 				--SobGroup_Clear("KMD_TempGroup2"..shipID)
 				SobGroup_FillProximitySobGroup("KMD_TempGroup1"..shipID, "Player_Ships"..playerIndex, CustomGroup, 7000)
@@ -714,6 +702,7 @@ X_CustomFunctionDestroy["kad_mothershipdark"]=function(CustomGroup, playerIndex,
 	if(Player_GetLOD(playerIndex) > 0)then
 		SobGroup_SobGroupAdd("AITempAddGroup","KMD_TempGroup2"..shipID)
 		SobGroup_AbilityActivate("KMD_TempGroup2"..shipID, AB_Attack,1)
+		SobGroup_GuardSobGroup("KMD_TempGroup2"..shipID, "Player_Ships"..playerIndex)
 	end
 end
 

@@ -58,7 +58,7 @@ build = {
   {
     Type = SubSystem,
     ThingToBuild = "Tur_AC_Weapon",
-    RequiredResearch = "InstaLightWeaponTech | InstaHeavyWeaponTech",
+    RequiredResearch = "InstaLightWeaponTech & InstaHeavyWeaponTech",
     RequiredFleetSubSystems = "CapShipProduction",
     DisplayPriority = 2,
     DisplayedName = "$9388",

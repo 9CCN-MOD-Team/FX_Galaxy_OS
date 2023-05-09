@@ -82,6 +82,20 @@ Path_Text.D35="Player (Bentusi5000 RU) VS Standard (Vaygr 1500RU) VS Standard (T
 Path_Text.D36="Player (Kushan 3000 RU) & Hard (Taiidan 1500RU) VS Standard (Turanic 2000RU) & Hard (Vaygr 1500RU) VS Standard (Kadeshi 2000RU) & Hard (Progenitor 1500RU)"
 Path_Text.D37="Relive the key moment of HW1 & HW2 in an alternate universe! Can you change fate itself?\nYou will randomly load into one of four possible scenarios each time this stage is played.\n\nRe:Hiigara - Kushan (Expert 1000RU) VS Taiidan (Expert 1000RU) or\nRe:Tanis - Hiigaran (Expert 0RU) VS Vaygr (Expert 2000RU)"
 Path_Text.D38="Player (Hiigaran 0RU) VS Hard (Vaygr 1000RU)\nIn an alternate universe, Makaan leads the attack on Tanis himself. Can you change fate?\nA lower difficulty version of one of the four new bonus stages, available to everyone in this build to celebrate the new release!\n\nComplete the Shimmering Path to unlock all other variants and bonus stages."
+Path_Text.Tip="Click to get tip"
+Path_Text.S1T1="Tip for this first stage? Just build, build, build! We can easily overwhelm them with our RUs!"
+Path_Text.S2T1="There's strength in numbers! Moving some of our key units to our ally will help us!"
+Path_Text.S2T2="If we do them some favors, they may even listen to our requests! (Press [K] to open up the Diplomacy System)."
+Path_Text.S3T1="A lot of Turanic Raider units can cloak. We can use these and the local dustclouds to flank any enemy forces."
+Path_Text.S4T1="Did you know that you can advise an enemy to surrender? Depending on the situation, they may just accept and allow us through. You can offer an enemy to surrender anytime via Diplomacy ([K])."
+Path_Text.S5T1="Our first 2v2. You can guess the enemy's placement, can't you? If we can force a breakthrough on either side, we'll have this one in the bag!"
+Path_Text.S6T1="On maps with limited resources the middle is key. If we can secure the middle area, the RUs there will really allow us to utilize the Taiidan's production advantage!"
+Path_Text.S7T1="The Progenitors are powerful allies. If we supply them with some RUs and help them out, they can easily win the match for us!"
+Path_Text.S11T1="We are detecting heavy debris fields. After setting up a bridgehead we should hurry and expand RU operations into the valleys below ¨C before the enemy does so."
+Path_Text.S12T1="\"Free for All\". Our enemies will be busy fighting each other, but still we should try to equalize the playing field as soon as possible - you never know when they may turn on us!"
+Path_Text.S15T1="Our allies will to keep the enemy busy, especially if we gain their favor and ask them to! We can strike from during that time."
+Path_Text.S16T1="Even the mightiest fleet loses without production vessels! We should find and destroy their Pyramids, or ideally the Balcora Gate before it grows too strong .. our Azrael Attackers can help!"
+Path_Text.S17T1="It would be good if we don't have to worry about one of our flanks. Good luck, and remember: Your allies can open up a path to victory where you can't! (Diplomacy System - ([K])"
 
 FXP_AIData=
 {

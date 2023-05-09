@@ -8,8 +8,8 @@ teamcolours =
     [1] = 
         { 
             { 0.9, 0.9, 0.9, }, 
-            { 0.1, 0.1, 0.1, }, "DATA:Badges/Vaygr.tga", 
-            { 0.921, 0.75, 0.419, }, "data:/effect/trails/vgr_trail_clr.tga", }, 
+            { 0.1, 0.1, 0.1, }, "DATA:Badges/Turanic.tga", 
+            { 0.921, 0.75, 0.419, }, "data:/effect/trails/tur_trail_clr.tga", }, 
     [2] = 
         { 
             { 0.752, 0.694, 0.556, }, 
@@ -18,8 +18,8 @@ teamcolours =
     [3] = 
         { 
             { 0.9, 0.9, 0.9, }, 
-            { 0.1, 0.1, 0.1, }, "DATA:Badges/Vaygr.tga", 
-            { 0.921, 0.75, 0.419, }, "data:/effect/trails/vgr_trail_clr.tga", },
+            { 0.1, 0.1, 0.1, }, "DATA:Badges/Turanic.tga", 
+            { 0.921, 0.75, 0.419, }, "data:/effect/trails/tur_trail_clr.tga", },
     [4] = 
         { 
             { 0.752, 0.694, 0.556, }, 

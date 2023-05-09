@@ -841,7 +841,7 @@ Events.PlayerWins =
 	{ HW2_Wait(2), }, 		
 	{ 
 		{ "Camera_AllowControl(1)", "", }, 
-    	{ "Profile_SetSingleMissionComplete('mini', 4, 1)", "", }, 
+    	{ "Profile_SetSingleMissionComplete('mini', 1, 1)", "", }, 
     	{ "FE_ExitToMainMenu()", "", }, 
     	{ "UI_DialogAccept()", "", }, 
 	}, 

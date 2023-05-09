@@ -23,5 +23,11 @@ end
 
 dofilepath("data:leveldata/campaign/FX_Path/scripts/FX_Path.lua")
 
+Path_Tips = 
+{
+	{desc=Path_Text.S2T1},
+	{desc=Path_Text.S2T2},
+}
+
 
 FXP_MissionName=Path_Text.N2

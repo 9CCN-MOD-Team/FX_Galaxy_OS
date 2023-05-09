@@ -62,7 +62,7 @@ build = {
     RequiredShipSubSystems = "FrigateProduction",
     DisplayPriority = 3,
     DisplayedName = "$8124",
-    Description = "$8125",
+    Description = "$8038",
   },
   {
     Type = SubSystem,
@@ -220,15 +220,15 @@ build = {
     DisplayedName = "$7110",
     Description = "$7111",
   },
-  {
-    Type = SubSystem,
-    ThingToBuild = "Vgr_C_MissileVolley",
-    RequiredResearch = "CapShipTech",
+  --{
+    --Type = SubSystem,
+    --ThingToBuild = "Vgr_C_MissileVolley",
+    --RequiredResearch = "CapShipTech",
     --RequiredFleetSubSystems = "CapShipProduction",
-    DisplayPriority = 40,
-    DisplayedName = "$7226",
-    Description = "$7227",
-  },
+    --DisplayPriority = 40,
+    --DisplayedName = "$7226",
+    --Description = "$7227",
+  --},
   {
     Type = SubSystem,
     ThingToBuild = "Vgr_C_MissileVolley_F",
@@ -513,6 +513,15 @@ build = {
     DisplayPriority = 265,
     DisplayedName = "$7152",
     Description = "$7153",
+  },
+  {
+    Type = Ship,
+    ThingToBuild = "Vgr_DefenseCruiser",
+    RequiredResearch = "",
+    RequiredShipSubSystems = "FrigateArtillery & (CapShipProduction | AdvancedCapShipProduction)",
+    DisplayPriority = 270,
+    DisplayedName = "$7978",
+    Description = "$7979",
   },
   {
     Type = Ship,

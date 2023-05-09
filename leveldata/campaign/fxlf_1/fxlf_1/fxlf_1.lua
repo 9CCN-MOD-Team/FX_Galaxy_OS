@@ -114,7 +114,7 @@ function OnInit()
 	
 	Councilor_Switch = 0
 	FX_Common_Rule_OnInit() 
-		FX_Achievements_Init("FXsingleplayer")
+		FX_Achievements_Init("FXLF")
 --------
 		FX_Common_Rule_OnInit()
 end

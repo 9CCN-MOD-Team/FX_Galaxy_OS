@@ -1,7 +1,7 @@
 displayName = "$5501"
 contentType = 0
 contentName = "ascension"
-contentOrdered = 1
+contentOrdered = 0
 contentChooseText = "$3451"  -- CHOOSE TUTORIAL//
 contentThumbName = "$90086"
 contentThumbDesc = "$90087"
@@ -20,5 +20,18 @@ Mission[1] =
 	end,
 	displayName = "$90086",
 	description = "$90087",
-	--forcesubtitles = 1,
+	forcesubtitles = 1,
+}
+Mission[2] = 
+{
+	postload = function()	
+	end,
+	directory = "FX_102",
+	level = "FX_102.level",
+	postlevel = function(bWin)	
+		postLevelComplete()
+	end,
+	displayName = "$90146",
+	description = "$90147",
+	forcesubtitles = 1,
 }

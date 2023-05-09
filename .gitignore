@@ -1,5 +1,6 @@
 preview.jpg
 config.txt
+do_not_pack_this/
 *.hod
 *.mad
 *.tga

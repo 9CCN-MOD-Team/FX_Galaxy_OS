@@ -90,7 +90,7 @@ GameSetupOptions =
         name = "AdviseInterval", 
         locName = "$90070", 
         tooltip = "$90071", 
-        default = 2, 
+        default = 0, 
         visible = 0, 
         choices = 
         { 

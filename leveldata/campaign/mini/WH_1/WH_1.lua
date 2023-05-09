@@ -22,6 +22,8 @@ actor_scout=11
 actor_worker=12
 actor_carrier=6
 actor_cruiser=20
+TurC_HgnTarget="Kad_AttackWave2"
+TurC_KadTarget="Hgn_FleetAc"
 
 Events = {}
 Events.Intro = 
@@ -757,7 +759,7 @@ function TurC_HgnFleetGrow()
 		end
 		SobGroup_FillSubstract("Kad_AttackWave2", "Player_Ships2", "Kad_AttackWave")
 		SobGroup_RemoveType("Kad_AttackWave2", "kad_mothership")
-		SobGroup_Attack(3,"Hgn_FleetAc", "Kad_AttackWave2")
+		SobGroup_Attack(3,"Hgn_FleetAc", TurC_HgnTarget)
 		TurC_AllyCharge()
 	else
 		Rule_Remove("TurC_HgnFleetGrow")
@@ -776,7 +778,7 @@ function TurC_KadFleetGrow()
 		if (iKind~="") and (SobGroup_Count("Kad_AttackWave2")<(105/61)*SobGroup_Count("Hgn_FleetAc")) then
 			SobGroup_SobGroupAdd("Kad_AttackWave2", SobGroup_CreateShip("Kad_StartingFleet",iKind))
 		end
-		SobGroup_Attack(2,"Player_Ships2", "Hgn_FleetAc")
+		SobGroup_Attack(2,"Player_Ships2", TurC_KadTarget)
 		if (SobGroup_Empty("Kad_AttackWave")==0) then
 			SobGroup_AttackPlayer("Kad_AttackWave", 0)
 		end
@@ -860,6 +862,8 @@ function TurC_HuntingBegin()
 	Rule_AddInterval("TurC_GiveScoutBack",1)
 	Rule_Remove("TurC_MoverCapture")
 	Rule_AddInterval("TurC_MoverCapture2",10)
+	TurC_HgnTarget="Kpr_CapMover"
+	TurC_KadTarget="Kpr_CapMover"
 end
 
 function TurC_MoverCapture()
@@ -868,10 +872,10 @@ function TurC_MoverCapture()
 	SobGroup_FillShipsByType("CapturedTarget3", "Player_Ships3", "hgn_assaultfrigate")
 	SobGroup_FillShipsByType("CapturedTarget4", "Player_Ships3", "hgn_torpedofrigate")
 	SobGroup_FillShipsByType("CapturedTarget5", "Player_Ships3", "hgn_ioncannonfrigate")
-	SobGroup_FillShipsByType("CapturedTarget6", "Player_Ships1", "tur_heavycruiser")
-	SobGroup_FillShipsByType("CapturedTarget7", "Player_Ships1", "tur_vulcanfrigate")
-	SobGroup_FillShipsByType("CapturedTarget8", "Player_Ships1", "tur_ionarrayfrigate")
-	SobGroup_FillShipsByType("CapturedTarget9", "Player_Ships3", "hgn_destroyer")
+	SobGroup_FillShipsByType("CapturedTarget6", "Player_Ships3", "hgn_destroyer")
+	SobGroup_FillShipsByType("CapturedTarget7", "Player_Ships1", "tur_heavycruiser")
+	SobGroup_FillShipsByType("CapturedTarget8", "Player_Ships1", "tur_vulcanfrigate")
+	SobGroup_FillShipsByType("CapturedTarget9", "Player_Ships1", "tur_ionarrayfrigate")
 	SobGroup_Clear("CapturedTarget10")
 		for i=1,9 do
 			local j=10
@@ -1051,17 +1055,17 @@ end
 
 function TurC_LastAnomalyCheck()
 	if (SobGroup_PlayerIsInSensorRange("kpr_arsenalship", 0)==1) then
+		if PointerLast~=nil then
+			EventPointer_Remove(PointerLast)
+		else
+			PointerLast = 0
+		end
 		Rule_Remove("TurC_LastAnomalyCheck")
 		Event_Start("LastAnomalyFound")
 	end
 end
 
 function TurC_ArsenalPointer()
-	if PointerLast~=nil then
-		EventPointer_Remove(PointerLast)
-	else
-		PointerLast = 0
-	end
 	ping_arsenalship = Ping_AddSobGroup("$40693", "anomaly", "kpr_arsenalship" )
 	Ping_AddDescription(ping_arsenalship, 0, "$40694")
     Player_UnrestrictBuildOption(0, "tur_siegedrillfrigate")

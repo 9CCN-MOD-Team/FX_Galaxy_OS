@@ -7,7 +7,7 @@ Number_Properties = {
 String_Properties_Priority = 2.0
 
 String_Properties = {
-	path_research = "data:scripts/races/Keeper/FXsingleplayer/research.lua",
+	--path_research = "data:scripts/races/Keeper/FXsingleplayer/research.lua",
 	dm_carriersonly_build_restrict = "",
 	dm_carriersonly_research_restrict = "",
 	generic_mp_build_restrict = "",

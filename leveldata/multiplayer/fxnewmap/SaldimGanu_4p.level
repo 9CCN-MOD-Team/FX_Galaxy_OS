@@ -1,0 +1,130 @@
+function DetermChunk()
+	-- Points
+	addPoint("StartPos0", {-6500, 3000, 15000}, {0, 180, 0})
+	addPoint("StartPos1", {6500, 0, 15000}, {0, 180, 0})
+	addPoint("StartPos2", {-6500, 0, -15000}, {0, 0, 0})
+	addPoint("StartPos3", {6500, 3000, -15000}, {0, 0, 0})
+	addPoint("StartPos4", {0, 15000, 0}, {0, -90, 0})
+
+	-- Asteroids
+	addAsteroid("asteroid_4", {-6500, 3000, 18000}, 50, 0, 0, 0, 0)
+	addAsteroid("asteroid_3", {-6900, 3250, 18000}, 50, 0, 0, 0, 0)
+	addAsteroid("asteroid_3", {-6900, 2750, 18000}, 50, 0, 0, 0, 0)
+	addAsteroid("asteroid_3", {-6100, 3250, 18000}, 50, 0, 0, 0, 0)
+	addAsteroid("asteroid_4", {-3000, 2000, 4500}, 100, 0, 0, 0, 0)
+	addAsteroid("asteroid_3", {-3200, 2000, 4500}, 100, 0, 0, 0, 0)
+	addAsteroid("asteroid_3", {-2800, 2000, 4500}, 100, 0, 0, 0, 0)
+	addAsteroid("asteroid_4", {3000, 1000, 4500}, 100, 0, 0, 0, 0)
+	addAsteroid("asteroid_3", {3200, 1000, 4500}, 100, 0, 0, 0, 0)
+	addAsteroid("asteroid_3", {2800, 1000, 4500}, 100, 0, 0, 0, 0)
+	addAsteroid("asteroid_4", {12000, 1000, -7000}, 100, 0, 0, 0, 0)
+	addAsteroid("asteroid_3", {12200, 1000, -7000}, 100, 0, 0, 0, 0)
+	addAsteroid("asteroid_3", {11800, 1000, -7000}, 100, 0, 0, 0, 0)
+	addAsteroid("asteroid_4", {3000, 2000, -4500}, 100, 0, 0, 0, 0)
+	addAsteroid("asteroid_3", {2800, 2000, -4500}, 100, 0, 0, 0, 0)
+	addAsteroid("asteroid_3", {3200, 2000, -4500}, 100, 0, 0, 0, 0)
+	addAsteroid("asteroid_3", {-6100, 2750, 18000}, 50, 0, 0, 0, 0)
+	addAsteroid("asteroid_4", {-12000, 1000, 7000}, 100, 0, 0, 0, 0)
+	addAsteroid("asteroid_3", {-12200, 1000, 7000}, 100, 0, 0, 0, 0)
+	addAsteroid("asteroid_3", {-11800, 1000, 7000}, 100, 0, 0, 0, 0)
+	addAsteroid("asteroid_4", {-12000, 2000, -7000}, 100, 0, 0, 0, 0)
+	addAsteroid("asteroid_3", {-12200, 2000, -7000}, 100, 0, 0, 0, 0)
+	addAsteroid("asteroid_3", {-11800, 2000, -7000}, 100, 0, 0, 0, 0)
+	addAsteroid("asteroid_4", {-3000, 1000, -4500}, 100, 0, 0, 0, 0)
+	addAsteroid("asteroid_3", {-3200, 1000, -4500}, 100, 0, 0, 0, 0)
+	addAsteroid("asteroid_3", {-2800, 1000, -4500}, 100, 0, 0, 0, 0)
+	addAsteroid("asteroid_4", {12000, 2000, 7000}, 100, 0, 0, 0, 0)
+	addAsteroid("asteroid_3", {11800, 2000, 7000}, 100, 0, 0, 0, 0)
+	addAsteroid("asteroid_3", {12200, 2000, 7000}, 100, 0, 0, 0, 0)
+	addAsteroid("asteroid_4", {6500, 0, 18000}, 50, 0, 0, 0, 0)
+	addAsteroid("asteroid_3", {6100, 250, 18000}, 50, 0, 0, 0, 0)
+	addAsteroid("asteroid_3", {6900, 250, 18000}, 50, 0, 0, 0, 0)
+	addAsteroid("asteroid_3", {6900, -250, 18000}, 50, 0, 0, 0, 0)
+	addAsteroid("asteroid_3", {6100, -250, 18000}, 50, 0, 0, 0, 0)
+	addAsteroid("asteroid_4", {-6500, 0, -18000}, 50, 0, 0, 0, 0)
+	addAsteroid("asteroid_3", {-6100, 250, -18000}, 50, 0, 0, 0, 0)
+	addAsteroid("asteroid_3", {-6100, -250, -18000}, 50, 0, 0, 0, 0)
+	addAsteroid("asteroid_3", {-6900, 250, -18000}, 50, 0, 0, 0, 0)
+	addAsteroid("asteroid_3", {-6900, -250, -18000}, 50, 0, 0, 0, 0)
+	addAsteroid("asteroid_4", {6500, 3000, -18000}, 50, 0, 0, 0, 0)
+	addAsteroid("asteroid_3", {6100, 3250, -18000}, 50, 0, 0, 0, 0)
+	addAsteroid("asteroid_3", {6900, 3250, -18000}, 50, 0, 0, 0, 0)
+	addAsteroid("asteroid_3", {6900, 2750, -18000}, 50, 0, 0, 0, 0)
+	addAsteroid("asteroid_3", {6100, 2750, -18000}, 50, 0, 0, 0, 0)
+	addAsteroid("asteroid_3", {3500, 2500, -10700}, 50, 0, 0, 0, 0)
+	addAsteroid("asteroid_3", {3300, 2500, -10500}, 50, 0, 0, 0, 0)
+	addAsteroid("asteroid_3", {-3300, 500, -10500}, 50, 0, 0, 0, 0)
+	addAsteroid("asteroid_3", {-3500, 500, -10700}, 50, 0, 0, 0, 0)
+	addAsteroid("asteroid_3", {-3300, 2500, 10500}, 50, 0, 0, 0, 0)
+	addAsteroid("asteroid_3", {-3500, 2500, 10700}, 50, 0, 0, 0, 0)
+	addAsteroid("asteroid_3", {3300, 500, 10500}, 50, 0, 0, 0, 0)
+	addAsteroid("asteroid_3", {3500, 500, 10700}, 50, 0, 0, 0, 0)
+
+	-- Settings
+	setWorldBoundsInner({0, 0, 0}, {28000, 8000, 28000})
+end
+
+function NonDetermChunk()
+	-- Fog
+	fogSetActive(0)
+
+	-- Settings
+	loadBackground("ez11")
+	setGlareIntensity(0)
+	setLevelShadowColour(0, 0, 0, 1)
+	setSensorsManagerCameraDistances(10000, 43000)
+
+	-- Music
+	setDefaultMusic("data:sound/music/ambient/a08_mission10")
+	setBattleMusic("data:sound/music/battle/b02_turanicraidersshort")
+end
+
+levelDesc = ""; -- Level description displayed in the lobby.
+maxPlayers = 5; -- Maximum number of players allowed on this level.
+
+player = {}; -- Info on each possible player on this level.
+player[0] =
+{
+	id = 0,
+	name = "",
+	resources = 0,
+	raceName = "Hiigaran",
+	startPos = 1
+}
+
+player[1] =
+{
+	id = 1,
+	name = "",
+	resources = 0,
+	raceName = "Hiigaran",
+	startPos = 1
+}
+
+player[2] =
+{
+	id = 2,
+	name = "",
+	resources = 0,
+	raceName = "Hiigaran",
+	startPos = 1
+}
+
+player[3] =
+{
+	id = 3,
+	name = "",
+	resources = 0,
+	raceName = "Hiigaran",
+	startPos = 1
+}
+
+player[4] =
+{
+	id = 4,
+	name = "",
+	resources = 0,
+	raceName = "Hiigaran",
+	startPos = 1
+}
+

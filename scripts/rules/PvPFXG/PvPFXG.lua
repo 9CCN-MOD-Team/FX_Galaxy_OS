@@ -81,7 +81,7 @@ function OnInit()
 		MusicPlayer_Oninit(music_data_original, 0, 3)
 		Rule_Add("ShowMusicMenu")
 --Achievements
-		FX_Achievements_Init("FX2DM")
+		FX_Achievements_Init("FXPVP")
 --------
 		FX_Common_Rule_OnInit()
 end
@@ -96,6 +96,8 @@ function OnStartOrLoad()
 		dofilepath("data:scripts/FX_AchievementControl_TableFunctions.lua")
 		--X System Reload
 		XInitOnLoad()
+		-- 显示AI外交按钮
+		FX_AIContact_OnStartOrLoad()
 end
 function BuildSpeedUp()
 		local BuildingFastSpeed=10

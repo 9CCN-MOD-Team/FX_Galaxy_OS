@@ -105,6 +105,10 @@ function OnStartOrLoad()
 		XInitOnLoad()
 		--生成随机地图列表
 		FXG_scanmaps()
+		--重新载入 table 中的函数
+		dofilepath("locale:localetext.lua")
+		-- 显示AI外交按钮
+		FX_AIContact_OnStartOrLoad()
 end
 
 function BuildSpeedUp()

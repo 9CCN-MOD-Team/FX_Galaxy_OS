@@ -1096,6 +1096,11 @@ unitcapsFamily = {
 	    stringParam = "$38064",
 	  },
 	  {
+	    name = "DefenseCruiser",
+	    numParam = 75,
+	    stringParam = "$38066",
+	  },
+	  {
 	    name = "Mothership",
 	    numParam = 90,
 	    stringParam = "$38056",

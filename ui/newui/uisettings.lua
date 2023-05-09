@@ -654,6 +654,12 @@ GameScreens = {
 		--type = "Achievement",
 	},
 	{
+		name = "Guide",
+		filename = "DATA:\\UI\\NewUI\\Guide.lua",
+		activated = 0,
+		--type = "Guide",
+	},
+	{
 		name = "SubtitleScreen2",
 		filename = "DATA:\\UI\\NewUI\\Subtitle2.lua",
 		activated = 0,

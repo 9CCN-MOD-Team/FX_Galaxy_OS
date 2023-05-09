@@ -143,9 +143,9 @@ addAbility(NewShipType,"WaypointMove")
 addAbility(NewShipType,"FormHyperspaceGateCommand",1,1000,500,0,0)
 addAbility(NewShipType,"CanBeCaptured",30,0.1)
 --addAbility(NewShipType,"CustomCommand",1,"Missile",1,0,1, 1, 1, 1,1,"data:ship/vgr_hyperspace_platform/vgr_hyperspace_platform.lua","Start_LinkHQ","Do_LinkHQ","Finish_LinkHQ","vgr_hyperspace_platform",1.5,1,1,0)
-if (getShipNum(NewShipType, "Custom", 1)==1) then
-addCustomCode(NewShipType,"data:ship/vgr_hyperspace_platform/vgr_hyperspace_platform.lua","","Create_LinkHQ","Update_LinkHQ","Destroy_LinkHQ","vgr_hyperspace_platform",1.15)
-end
+--if (getShipNum(NewShipType, "Custom", 1)==1) then
+--addCustomCode(NewShipType,"data:ship/vgr_hyperspace_platform/vgr_hyperspace_platform.lua","","Create_LinkHQ","Update_LinkHQ","Destroy_LinkHQ","vgr_hyperspace_platform",1.15)
+--end
 LoadModel(NewShipType,1)
 addShield(NewShipType,"EMP",10000,20)
 NewShipType.battleScarCoverage=2

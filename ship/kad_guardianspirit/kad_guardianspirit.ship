@@ -161,6 +161,7 @@ addCustomCode(NewShipType,"data:leveldata/multiplayer/resdata/CustomCode.lua",""
 if (getShipNum(NewShipType, "CustomCommand", 0) == 1) then
 addAbility(NewShipType,"CloakAbility",0,3,30,8000,0,0,0,1)
 end
+addAbility(NewShipType,"CloakAbility",0,2,35,3500,0,0,0,1)
 
 NewShipType.defaultROE="Defensive" --Ä¬ÈÏROE
 NewShipType.defaultStance="Neutral" --Ä¬ÈÏStance

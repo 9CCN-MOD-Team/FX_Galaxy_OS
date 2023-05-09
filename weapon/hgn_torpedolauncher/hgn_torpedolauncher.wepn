@@ -11,6 +11,6 @@ setPenetration(NewWeaponType,5,0.5,{
 },{
   DroneArmour = 0.1,
 })
-setMissileKiller(NewWeaponType,1);setAccuracy(NewWeaponType,1)
+setMissileKiller(NewWeaponType,1);setAccuracy(NewWeaponType,1,{Fighter=0})
 setAngles(NewWeaponType,179,0,0,0,0)
 setMiscValues(NewWeaponType,0,7)

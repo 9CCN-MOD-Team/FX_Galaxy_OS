@@ -36,11 +36,11 @@ AchievementList =
 		localeName="$90079",--"卡洛斯探险家",
 		picWhenLocked="DATA:UI/NewUI/Achievement/Tutoriallocked.tga",
 		picWhenUnLocked="DATA:UI/NewUI/Achievement/Tutorialunlocked.tga",
-		GameModeTags={"FXsingleplayer",},
+		GameModeTags={"Tutorial",},
 		Conditions={},
 		descriptionWhenLocked="$90080",
 		descriptionWhenUnLocked="$90081",
-		maxValue=1,
+		maxValue=3,
 		displayPriority = 0,
 	},
 	FirstVictory=
@@ -48,7 +48,7 @@ AchievementList =
 		localeName="$90029",--"第一次赢得遭遇战",
 		picWhenLocked="DATA:UI/NewUI/Achievement/firstwinlocked.tga",
 		picWhenUnLocked="DATA:UI/NewUI/Achievement/firstwinunlocked.tga",
-		GameModeTags={"FX2DM","FXGDM",},
+		GameModeTags={"FX2DM","FXPVP",},
 		Conditions=
 		{
 			{
@@ -59,6 +59,40 @@ AchievementList =
 		descriptionWhenUnLocked="$90032",
 		maxValue=1,
 		displayPriority = 10,
+	},
+	FirstVictoryInPVP=
+	{
+		localeName="$90221",--"第一次赢得标准对战",
+		picWhenLocked="DATA:UI/NewUI/Achievement/PVPlocked.tga",
+		picWhenUnLocked="DATA:UI/NewUI/Achievement/PVPunlocked.tga",
+		GameModeTags={"FXPVP",},
+		Conditions=
+		{
+			{
+				{"IsPlayerWinInMP"},
+			},
+		},
+		descriptionWhenLocked="$90222",
+		descriptionWhenUnLocked="$90223",
+		maxValue=1,
+		displayPriority = 11,
+	},
+	ManMachine=
+	{
+		localeName="$90224",--"赢得80好感",
+		picWhenLocked="DATA:UI/NewUI/Achievement/rep80locked.tga",
+		picWhenUnLocked="DATA:UI/NewUI/Achievement/rep80unlocked.tga",
+		GameModeTags={"Artifact","FXsingleplayer","FX2DM","FXPVP",},
+		Conditions=
+		{
+			{
+				{"Function",FXA_Rep80},
+			},
+		},
+		descriptionWhenLocked="$90225",
+		descriptionWhenUnLocked="$90226",
+		maxValue=1,
+		displayPriority = 12,
 	},
 	PreciousOfBentusi=
 	{
@@ -123,7 +157,7 @@ AchievementList =
 		localeName="$90055",--"时空先驱",
 		picWhenLocked="DATA:UI/NewUI/Achievement/Pioneerlocked.tga",
 		picWhenUnLocked="DATA:UI/NewUI/Achievement/Pioneerunlocked.tga",
-		GameModeTags={"FXsingleplayer",},
+		GameModeTags={"FXLF",},
 		Conditions={},
 		descriptionWhenLocked="$90056",
 		descriptionWhenUnLocked="$90057",
@@ -135,7 +169,7 @@ AchievementList =
 		localeName="$90058",--"9CCN的老朋友",
 		picWhenLocked="DATA:UI/NewUI/Achievement/9ccnlocked.tga",
 		picWhenUnLocked="DATA:UI/NewUI/Achievement/9ccnunlocked.tga",
-		GameModeTags={"FXsingleplayer",},
+		GameModeTags={"FXLF",},
 		Conditions={},
 		descriptionWhenLocked="$90059",
 		descriptionWhenUnLocked="$90060",
@@ -212,6 +246,34 @@ AchievementList =
 		descriptionWhenLocked="$90136",
 		descriptionWhenUnLocked="$90137",
 		maxValue=1,
-		displayPriority = 120,
+		displayPriority = 130,
+	},
+	TutorialFullComplete=
+	{
+		localeName="$90229",
+		picWhenLocked="DATA:UI/NewUI/Achievement/Tai_HI.tga",
+		picWhenUnLocked="DATA:UI/NewUI/Achievement/TutFull.tga",
+		GameModeTags={"Tutorial",},
+		Conditions={},
+		descriptionWhenLocked="$90227",
+		descriptionWhenUnLocked="$90228",
+		maxValue=1,
+		displayPriority = 140,
+	},
+	PathFullComplete=
+	{
+		localeName="$90230",
+		picWhenLocked="DATA:UI/NewUI/Achievement/Tai_HI.tga",
+		picWhenUnLocked="DATA:UI/NewUI/Achievement/Path37.tga",
+		GameModeTags={"FX_Path",},
+		Conditions={
+			{
+				{"Function",FXA_PathFinish},
+			},
+		},
+		descriptionWhenLocked="$90231",
+		descriptionWhenUnLocked="$90232",
+		maxValue=1,
+		displayPriority = 150,
 	},
 }

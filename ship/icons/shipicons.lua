@@ -1754,15 +1754,8 @@ Vgr_Destroyer = {
 }
 Vgr_defenseCruiser = {
   LargeIcon = {
-    texture = "DATA:\\Ship\\Icons\\icon_ships.mres",
-    textureUV_TL = {
-      408,
-      907,
-    },
-    textureUV_WH = {
-      182,
-      64,
-    },
+    texture = "DATA:\\Ship\\Icons\\icon_ships_vaygr.mres",
+    textureUV = UV_Culc(3,8),
     stretchOnDraw = 1,
   },
 }
@@ -3307,6 +3300,7 @@ Vgr_MS_Sensors_AdvancedArray = Icon_Subsystem_AdvancedArray
 Vgr_C_Sensors_DetectHyperspace = Icon_Subsystem_DetectHyperspace
 Vgr_MS_Sensors_DetectHyperspace = Icon_Subsystem_DetectHyperspace
 Vgr_C_Engine = Icon_Subsystem_Engine
+Vgr_DC_Engine = Icon_Subsystem_Engine
 Vgr_C_Innate_Engine = Icon_Subsystem_Engine
 Vgr_MS_Innate_Engine = Icon_Subsystem_Engine
 Vgr_SY_Innate_Engine = Icon_Subsystem_Engine
